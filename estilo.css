@@ -3,12 +3,12 @@
 
 @font-face {
         font-family: Nunito;
-        src: url('fontes/Nunito/Nunito-Light.ttf');
+        src: url(fontes/Nunito/Nunito-Light.ttf);
     }
 
 @font-face {
         font-family: Asap;
-        src: url('fontes/Asap/Asap-Regular.ttf');
+        src: url(fontes/Asap/Asap-Regular.ttf);
     }
         
 @font-face {
