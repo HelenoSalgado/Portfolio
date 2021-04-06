@@ -14,6 +14,26 @@ body {
 
 }
 
+.hamburguer {
+    width: 2rem;
+    height: 2rem;
+    position: fixed;
+    z-index: 100;
+    top: 1.5rem;
+    right: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    cursor: pointer;
+}
+
+.line {
+    width: 100%;
+    height: 0.1rem;
+    background-color: #ffffff;
+    box-shadow: 1px 1px 1px black;
+}
+
 header {
     width: 100%;
     height: 60vh;
@@ -93,4 +113,27 @@ header {
         transform: translateY(0rem);
         opacity: 1;
     }
+}
+
+.sidebar {
+    width: 15rem;
+    height: 100vh;
+    background-color: rgba(255, 255, 255, 0.507);
+    position: fixed;
+    top: 0;
+    right: 0;
+    border-left: 0.5px solid rgb(198, 43, 226);
+}
+
+.menu-item, a {
+    list-style: none;
+    text-decoration: none;
+    color: rgb(72, 9, 83);
+}
+
+.menu {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
