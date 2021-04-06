@@ -7,6 +7,12 @@
     padding: 0;
 }
 
+:root {
+    --font-primary: 'Baloo 2', 'cursive', sans-serif;
+    --font-secundary:'Josefin Slab', sans-serif;
+    --font-action: 'Mulish', sans-serif;
+}
+
 body {
     background: #d3821244;  
     background: -webkit-linear-gradient(to right, #a8327942, #d3821241);  
@@ -25,6 +31,11 @@ body {
     flex-direction: column;
     justify-content: space-evenly;
     cursor: pointer;
+    transition: 1s;
+}
+
+.show-menu .hamburguer {
+    right: 12rem;
 }
 
 .line {
@@ -32,6 +43,22 @@ body {
     height: 0.1rem;
     background-color: #ffffff;
     box-shadow: 1px 1px 1px black;
+    transition: transform 1s;
+}
+
+.show-menu #line1 {
+    transform: rotate(45deg) translate(.30rem, .4rem);
+    width: 70%;
+}
+
+.show-menu #line2 {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.show-menu #line3 {
+    transform: rotate(-45deg) translate(.25rem, -.4rem);
+    width: 70%;
 }
 
 header {
@@ -71,7 +98,7 @@ header {
 
 .banner h1 {
     font-size: 3.5em;
-    font-family: 'Baloo 2', 'cursive', sans-serif;
+    font-family: var(--font-primary); 
     font-weight: 200;
     color: #ffffff;
     text-shadow: 0.1rem 0.2rem 2px rgba(0, 0, 0, 0.363);
@@ -81,7 +108,7 @@ header {
 }
 
 .banner p {
-    font-family: 'Josefin Slab';
+    font-family: var(--font-secundary); 
     font-size: 1.5rem;
     color: #fff;
     text-shadow: 0.1rem 0.1rem 1px rgba(0, 0, 0, 0.459);
@@ -90,7 +117,8 @@ header {
 }
 
 .banner button {
-    font: 0.8em 'Mulish', sans-serif;
+    font-family: var(--font-action);
+    font-size: 0.8rem;
     color: #fff;
     text-transform: uppercase;
     background: #D38312;  
@@ -118,17 +146,16 @@ header {
 .sidebar {
     width: 15rem;
     height: 100vh;
-    background-color: rgba(255, 255, 255, 0.507);
+    background-color: rgb(255, 255, 255);
     position: fixed;
     top: 0;
-    right: 0;
+    right: -15rem;
     border-left: 0.5px solid rgb(198, 43, 226);
+    transition: all 1s;
 }
 
-.menu-item, a {
-    list-style: none;
-    text-decoration: none;
-    color: rgb(72, 9, 83);
+.show-menu .sidebar {
+    right: 0;
 }
 
 .menu {
@@ -136,4 +163,36 @@ header {
     top: 40%;
     left: 50%;
     transform: translate(-50%, -50%);
+}
+
+.menu-item, .menu-link {
+    list-style: none;
+    text-decoration: none;
+    color: rgb(72, 9, 83);
+    text-align: center;
+    margin-bottom: 1rem;
+    font-family: var(--font-action);
+    font-size: 1.1rem;
+}
+
+.menu-link:hover {
+    color: rgb(5, 5, 5);
+}
+
+.social-media {
+    position: absolute;
+    display: flex;
+    width: 100%;
+    font-size: 2rem;
+    bottom: 2rem;
+    justify-content: space-evenly;
+}
+
+.social-media i {
+    color:  rgb(198, 43, 226);
+    transition: ease-in 0.5s;
+}
+
+.social-media i:hover {
+    color: rgb(26, 25, 25);
 }
