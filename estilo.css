@@ -149,7 +149,7 @@ header {
     background-color: rgb(255, 255, 255);
     position: fixed;
     top: 0;
-    right: -15rem;
+    right: -15.5rem;
     border-left: 0.5px solid rgb(198, 43, 226);
     transition: all 1s;
 }
@@ -232,4 +232,45 @@ header {
 .conhecimento:nth-child(6){
     grid-column: 11/14;
     grid-row: 5/-1;
+}
+
+.sessao-header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sessao-header h1{
+    font-family: var(--font-primary);
+    font-size: 2.5rem;
+    color: #663e07ad;
+    border-bottom: 1px solid rgb(198, 43, 226);
+    margin: 2rem 2rem;
+}
+
+.conhecimento{
+    background-color: #fff;
+    padding: 1rem;
+    border-radius: 15px;
+}
+
+.conhecimento-header{
+    display: flex;
+    align-items: center;
+    color: rgb(198, 43, 226);
+}
+
+.conhecimento-header i{
+    font-size: 2.5rem;
+}
+
+.conhecimento-header h3{
+    font-family: var(--font-secundary);
+    font-size: 2rem;
+    padding-left: 1rem;
+}
+
+.conhecimento-text{
+    font-family: var(--font-secundary);
+    margin-top: 1rem;
 }
