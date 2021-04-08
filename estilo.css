@@ -329,6 +329,7 @@ header {
     position: absolute;
     bottom: 0;
     padding: 2rem;
+    background-color: linear-gradient (to right#424241;
 }
 
 .card-info h2{
