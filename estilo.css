@@ -13,13 +13,6 @@
     --font-action: 'Mulish', sans-serif;
 }
 
-body {
-    background: #d3821244;  
-    background: -webkit-linear-gradient(to right, #a8327942, #d3821241);  
-    background: linear-gradient(to right, #a832794b, #d3821244);     
-
-}
-
 .hamburguer {
     width: 2rem;
     height: 2rem;
@@ -197,11 +190,16 @@ header {
     color: rgb(26, 25, 25);
 }
 
+.sessao-conhecimentos{
+    background-color: rgb(251, 251, 251);
+}
+
 .conhecimentos {
         display: grid;
         grid-template-columns: repeat(16, 1fr);
         grid-template-rows: repeat(6, 6rem);
         row-gap: 1.5rem;
+        padding-bottom: 1.5rem;
 }
 
 .conhecimento:nth-child(1){
@@ -243,15 +241,16 @@ header {
 .sessao-header h1{
     font-family: var(--font-primary);
     font-size: 2.5rem;
-    color: #663e07ad;
+    color: #424241;
     border-bottom: 1px solid rgb(198, 43, 226);
     margin: 2rem 2rem;
 }
 
-.conhecimento{
-    background-color: #fff;
+.conhecimento{  
+    background: linear-gradient(to right, #a432a838, #d3821228);
+    width: fit-content;     
     padding: 1rem;
-    border-radius: 15px;
+    border-radius: 7px;
 }
 
 .conhecimento-header{
@@ -267,10 +266,68 @@ header {
 .conhecimento-header h3{
     font-family: var(--font-secundary);
     font-size: 2rem;
-    padding-left: 1rem;
+    padding: 1rem;
 }
 
 .conhecimento-text{
     font-family: var(--font-secundary);
     margin-top: 1rem;
+}
+
+.conhecimento-img{
+    grid-column: 7/11;
+    grid-row: 3/6;
+    width: 100%;
+}
+
+.conhecimento-img figcaption{
+    color: rgb(37, 36, 36);
+    text-align: center;
+    font-family: var(--font-secundary);
+    font-size: .7rem;
+    font-style: italic;
+    display: none;
+}
+
+.conhecimento-img img{
+    object-fit: cover;
+    width: 100%;
+}
+
+.projetos{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.card{
+    width: 20rem;
+    height: 25rem;
+    position: relative;
+}
+
+
+.card-img{
+    width: 100%;
+    height: 100%;
+    background-color: rgb(54, 1, 56);
+    border-radius: .5rem;
+}
+
+.card-img img{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    border-radius: .5rem;
+    opacity: .8;
+}
+
+.card-info{
+    position: absolute;
+    bottom: 0;
+    padding: 2rem;
+    box-shadow: 0 0.1rem 0.3rem rgba(0, 0, 0, .4);
+}
+
+.card-info h3{
+    font-family: var();
 }
