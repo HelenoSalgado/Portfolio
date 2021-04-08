@@ -295,8 +295,7 @@ header {
 }
 
 .sessao-projetos{
-    margin-left: 
-    margin-right: 
+    margin: 1rem; 
 }
 
 .projetos{
@@ -337,16 +336,38 @@ header {
     font-size: 2rem;
     font-weight: 500;
     color: rgb(246, 241, 241);
+    margin-bottom: 1.5rem;
 }
 
 .card-info h3 {
+    width: 80%;
+    background: linear-gradient(to right, #ffffff8e, #ffffff00);
+    padding: .2rem .5rem;
+    border-radius: 3rem;
     font-family: var(--font-secundary);
+    font-size: 1rem;
     font-weight: bolder;
-    color: #ac1e94;
+    color: #951280;
+    margin-bottom: 1rem;
 }
 
 .card-info p{
+    width: 80%;
     font-family: var(--font-secundary);
     color: #eee;
-    font-weight: bold;
+    font-weight: 400;
+    margin-bottom: 2rem;
+}
+
+.card-info button{
+    width: 8rem;
+    height: 2.5rem;
+    background: #A83279;
+    background: -webkit-linear-gradient(to right, #A83279, #d3a612);  
+    background: linear-gradient(to right, #ac1e94, #d3a612); 
+    font-family: var(--font-action);   
+    font-size: 1.1rem;
+    border: none;
+    color: #fff;
+    border-radius: .5rem;
 }
