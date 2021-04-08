@@ -294,6 +294,11 @@ header {
     width: 100%;
 }
 
+.sessao-projetos{
+    margin-left: 
+    margin-right: 
+}
+
 .projetos{
     display: flex;
     justify-content: space-evenly;
@@ -325,9 +330,23 @@ header {
     position: absolute;
     bottom: 0;
     padding: 2rem;
-    box-shadow: 0 0.1rem 0.3rem rgba(0, 0, 0, .4);
 }
 
-.card-info h3{
-    font-family: var();
+.card-info h2{
+    font-family: var(--font-secundary);
+    font-size: 2rem;
+    font-weight: 500;
+    color: rgb(246, 241, 241);
+}
+
+.card-info h3 {
+    font-family: var(--font-secundary);
+    font-weight: bolder;
+    color: #ac1e94;
+}
+
+.card-info p{
+    font-family: var(--font-secundary);
+    color: #eee;
+    font-weight: bold;
 }
