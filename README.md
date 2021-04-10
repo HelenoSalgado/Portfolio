@@ -2,11 +2,11 @@
 Portifólio do Desenvolvedor
 
 ## Tarefas
-O controle dessas tarefas será realizado no GoitHub.
+O controle dessas tarefas será realizado no GitHub.
 
 # Icones
 
-:package: nova funcionalidade
-:up: atualização
-:beatle: correção de bug
-:checkered-flag: release
+📦 Nova funcionalidade
+🆙 Atualização
+💓 correção de bug
+🏁 release
