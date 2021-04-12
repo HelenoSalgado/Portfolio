@@ -508,7 +508,7 @@ header {
     padding-top: 3rem;
     width: 100%;
     height: 100vh;
-    background-image: url(img/orcamento.jpg); 
+    background-image: url(img/office-orcamento.jpg); 
     background-repeat: no-repeat;
     object-fit:cover;
     display: flex;
@@ -519,9 +519,10 @@ header {
 .orcamento-wrapper{
     width: 60%;
     height: 80%;
-    background: rgba(158, 21, 147, 0.205);
-    background: -webkit-linear-gradient(to right, #a832793f, #0000005d, #d3a6125b);  
-    background: linear-gradient(to right, #a832793f, #0000005d, #d3a6125b); 
+    background-color: rgba(255, 255, 255, 0.164);
+    /*background: rgba(158, 21, 147, 0.205);
+    background: -webkit-linear-gradient(to right, #a832793f, #0000003b, #d3a6123d);  
+    background: linear-gradient(to right, #a832793f, #0000003b, #d3a6123d);*/
     border-radius: 7px;
     box-shadow: .1rem .1rem .3rem rgba(46, 45, 45, 0.788);
     position: relative;
