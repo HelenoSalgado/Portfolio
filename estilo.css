@@ -640,6 +640,7 @@ footer{
 
     #home img{
         object-fit: cover;
+        min-width: 400px
     }
 
     .banner{
