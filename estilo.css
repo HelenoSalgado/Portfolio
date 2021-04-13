@@ -632,11 +632,6 @@ footer{
         margin-right: 0;
     }
 
-    header {
-        min-width: 400px;
-        height: 65vh;
-    }
-
     .banner h1 {
         margin-left: -2rem;
         margin-top: -2rem;
