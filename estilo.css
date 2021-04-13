@@ -780,12 +780,12 @@ footer{
     font-size: 1.3rem;
 }
 
-.sessao-orcamento{ 
+.sessao-orcamento{
+    padding-top: 5rem;
     min-width: 400px;
     min-height: 40rem;
     display: flex;
     align-items: center;
-    padding: .5rem;
 }
 
 .orcamento-wrapper{
