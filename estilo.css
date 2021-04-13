@@ -635,6 +635,7 @@ footer{
 
     #home{
         width: 100%;
+        margin: auto;
     }
 
     .banner h1 {
@@ -833,7 +834,7 @@ footer{
 }
 
 footer{
-    min-width: 400px;
+    width: 100%;
     height: 7rem;
     display: block;
     align-items: center;
@@ -841,6 +842,7 @@ footer{
 }
 
 .footer-content{
+    width: 100%;
     padding-top: 1rem;
     width: 100%;
     display: block;
