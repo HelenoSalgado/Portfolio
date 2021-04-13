@@ -634,8 +634,16 @@ footer{
     }
 
     #home{
+        width: 100vh;
+        height: 75vh;
+    }
+
+    #home img{
         width: 100%;
-        margin: auto;
+    }
+
+    .banner{
+        
     }
 
     .banner h1 {
@@ -753,10 +761,12 @@ footer{
 
 .contato-wrapper{
     width: 100%;
+    height: 100%;
     display: block;
-    height: fit-content;
+    object-fit: cover;
     align-items: center; 
     margin: auto;
+    pos
 }
 
 .contato-left{
