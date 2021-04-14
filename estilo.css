@@ -625,7 +625,7 @@ footer{
     align-items: center;
 }
 
-@media only screen and (max-width: 768px) {
+/*@media only screen and (max-width: 768px) {
 
     body{
         margin-left: 0;
@@ -874,4 +874,4 @@ footer{
     margin-top: 1rem;
 }
 
-}    
+}*/  
