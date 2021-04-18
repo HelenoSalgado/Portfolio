@@ -653,7 +653,7 @@ footer{
      
     .banner {
         object-position: center;
-        top: 10%;
+        top: 12%;
         left: 10%;
     }
     
@@ -665,7 +665,7 @@ footer{
     }
     
     .banner p {
-        font-size: 1rem;
+        font-size: 1.5rem;
     }
     
     .banner button {
@@ -856,7 +856,7 @@ footer{
     justify-content: center;
     min-width: 250px;
     width: 100%;
-    height: 80%;
+    height: fit-content;
     margin-top: 1rem; 
     border-radius: 0;
 }
@@ -866,7 +866,7 @@ footer{
     justify-content: center;
     justify-items: center;
     width: 90%;
-    height: 80%;
+    height: fit-content;
     margin: auto;
     border-radius: 0;
 }
@@ -877,10 +877,10 @@ footer{
     margin-top: -3rem;
     color: #1a1a18;
 }
-
 .sessao-orcamento form{
-    margin-top: 4rem;
     display: block;
+    word-spacing: .7rem;
+    margin-top: 4rem;
     align-items: center;
     padding: 1rem 0;
 }
@@ -888,6 +888,14 @@ footer{
 .sessao-orcamento label{
     margin-top: 1rem;
     font-size: 1.4rem;
+}
+
+.orcamento-wrapper form input{
+    margin-bottom: 1.5rem;
+}
+
+.orcamento-wrapper form button{
+    margin-top: 1rem;
 }
 
 .sessao-orcamento input[type="number"]{
