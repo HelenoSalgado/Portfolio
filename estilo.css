@@ -749,6 +749,7 @@ footer{
         padding: 0;
         justify-content: center;
         align-items: center;
+        border: transparent;
     }
     
     .projetos{
@@ -798,9 +799,10 @@ footer{
         margin: 0;
         width: 100%;
         height:fit-content;
-        margin-top:0;
+        margin-top: 2rem;
         padding: 0;
         object-fit: scale-down;
+        border: transparent;
     }
 
     
@@ -810,6 +812,7 @@ footer{
    object-fit: scale-down;
    margin: auto;
    padding: 0;
+   box-shadow: none;
 }
 
 .contato-left{
@@ -838,7 +841,7 @@ footer{
     display: block;
     justify-content: center;
     align-items: center;
-    margin: 1rem .5rem;
+    margin: 1rem 1rem;
     padding: 0;
 }
 
