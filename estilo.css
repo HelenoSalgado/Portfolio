@@ -625,9 +625,350 @@ footer{
     align-items: center;
 }
 
+@media only screen and (max-width: 700px){
 
-<<<<<<< HEAD
-}*/  
-=======
-}    
->>>>>>> 85529248d27bee67f4777622b3c1de2364e74800
+   html, header, body, footer{
+       position: relative;
+       margin: 0;
+       padding: 0;
+       max-width: 350px;
+    }
+
+    header {
+        min-width: 250px;
+        width: 100%;
+        height: 60vh;
+    }
+    
+    .img-wrapper {
+        width: 100%;
+        height: 100%;
+    }
+    
+    .img-wrapper img {
+        max-width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    
+     
+    .banner {
+        object-position: center;
+        top: 10%;
+        left: 10%;
+    }
+    
+    .banner h1 {
+        width: 98%;
+        font-size: 1.7em;
+        line-height: 3.5rem;
+        margin-bottom: 2rem;
+    }
+    
+    .banner p {
+        font-size: 1rem;
+    }
+    
+    .banner button {
+        font-size: 0.7rem;
+    }
+
+    .hamburguer{
+        top:0;
+        right: 1.3rem;
+    }
+    
+    .sidebar {
+        width: 15rem;
+        height: 100vh;
+    }
+    
+    .show-menu .sidebar {
+        right: 0;
+    }
+    
+    .menu {
+        top: 40%;
+        left: 50%;
+    }
+
+    .social-media{
+        font-size: 1.3rem;
+    }
+
+    .sessao-conhecimentos{
+        min-width: 250px;
+        width: 100%;
+        justify-content: center;
+        justify-items: center;
+        margin: 0;
+    }
+
+    .conhecimentos{
+        width: 70%;
+        display: block;
+        justify-content: center;
+        justify-items: center;
+        margin: auto;
+        padding: 1rem 1rem;
+    }
+
+    .sessao-header{
+        text-align: center;
+    }
+
+    .sessao-header h1{
+        font-size: 1.5rem;
+        margin-top: 2rem;
+    }
+    
+    
+    .conhecimento{ 
+        width: 80%;     
+        padding: .8rem;
+        margin: 1rem auto;
+    }
+    
+    .conhecimento-header{
+        display: block;
+        text-align: center;
+        align-items: center;
+    }
+    
+     .conhecimento-text{
+         text-align: center;
+     }
+    
+    .conhecimento-img{
+        max-width: 100%;
+        margin-top: 2rem;
+    }
+
+    .sessao-projetos{
+        min-width: 250px;
+        margin: 0;
+        padding: 0;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .projetos{
+        display: block;
+        margin: 1rem;
+        padding: 0;
+    }
+    
+    .card{
+        width: 13rem;
+        height: 21rem;
+        margin: 1rem auto;
+        align-items: center;
+    }
+    
+    
+    .card-img{
+        width: 100%;
+        height: 100%;
+        margin: 1rem auto;
+        align-items: center;
+    }
+    
+    
+    .card-info h2{
+        
+    }
+    
+    .card-info h3 {
+        
+    }
+    
+    .card-info p{
+        
+    }
+    
+    .btn{
+      
+    }
+    
+    
+    .sessao-contato{
+        min-width: 250px;
+        display: block;
+        justify-content: center;
+        justify-items: center;
+        margin: 0;
+        width: 100%;
+        height:fit-content;
+        margin-top:0;
+        padding: 0;
+        object-fit: scale-down;
+    }
+
+    
+.contato-wrapper{
+   display: visible;
+   object-fit: scale-down;
+   margin: auto;
+   padding: 0;
+}
+
+.contato-left{
+    display: block;
+    width: 10%;
+    justify-content: center;
+}
+
+.contato-right{
+    display: block;
+    justify-content: center;
+    justify-items: center;
+    width: 90%;
+    padding: 0;
+    /*border-top-left-radius: 7px;
+    border-bottom-left-radius: 7px;*/
+}
+
+
+.sessao-contato h1{
+    font-size: 2rem;
+}
+
+.sessao-contato form{
+    width: 100%;
+    display: block;
+    justify-content: center;
+    align-items: center;
+    margin: .5rem;
+    padding: 0;
+}
+
+.input-group{
+}
+
+.input-group textarea{
+    top: 0.5rem;
+    max-width: 11rem;
+    max-height: 5rem;
+}
+
+.field{
+    width: 9rem;
+    font-size: 1.1rem;
+    height: 2.1rem;
+    margin: 2rem 0;
+    outline: none;
+}
+
+.field-label{
+    left: 0;
+    top: 3rem;
+    font-size: .7rem;    
+}
+
+.btn-submit{
+    width: 80%;
+}
+
+.sessao-orcamento{
+    min-width: 250px;
+    width: 100%;
+    height: 70%;
+    margin-top: 1rem; 
+    border-radius: 7px;
+    display: block;
+    justify-content: center;
+    align-items: center;
+}
+
+.orcamento-wrapper{
+    width: 100%;
+    height: 70%;
+    display: block;
+    justify-content: center;
+    justify-items: center;
+    border-radius: 0px;
+}
+
+.sessao-orcamento h1{
+    text-align: center;
+    font-size: 1.5rem;
+    margin-top: -3rem;
+    color: #1a1a18;
+}
+
+.sessao-orcamento form{
+    margin-top: 4rem;
+    display: block;
+    columns: column;
+    padding: 1rem;
+}
+
+.sessao-orcamento label{
+    margin-top: 1rem;
+    font-size: 1.5;
+}
+
+.sessao-orcamento input[type="number"]{
+    width: 3rem;
+    font-size: 1.5rem;
+}
+
+.btn-orcamento{
+
+}
+
+footer{
+    min-width: 250px;
+    width:90%;
+    height: 8rem;
+    display: block;
+    justify-content: center;
+    justify-items: center;
+    padding: 0 1rem;
+}
+
+.footer-content{
+    width: 90%;
+    display: block;
+    justify-content: center;
+}
+
+.footer-content p{
+    padding-top: 1rem;
+    text-align: center;
+    font-size: 1rem;
+}
+
+.social-list a{
+    font-size: 1.3rem;
+}
+
+.social-list ul{
+    margin-top: 1rem;
+}
+
+.social-list li{
+    width: 100%;
+    list-style: none;
+}
+
+#link-topo{
+    position: fixed;
+    right: 2rem;
+    bottom: 6rem;
+    width: 2rem;
+    height: 2rem;
+    font-size: 1rem;
+    color: white;
+    text-decoration: none;
+    background: rgb(198, 43, 226);
+    box-shadow: .1rem .1rem .3rem rgba(58, 57, 57, 0.747);
+    /*background: -webkit-linear-gradient(to right,#A83279,#d3a612);  
+    background: linear-gradient(to right,#ac1e94, #d3a612);*/
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+}
