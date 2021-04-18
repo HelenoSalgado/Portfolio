@@ -774,23 +774,6 @@ footer{
     }
     
     
-    .card-info h2{
-        
-    }
-    
-    .card-info h3 {
-        
-    }
-    
-    .card-info p{
-        
-    }
-    
-    .btn{
-      
-    }
-    
-    
     .sessao-contato{
         min-width: 250px;
         display: block;
@@ -827,8 +810,6 @@ footer{
     justify-items: center;
     width: 90%;
     padding: 0;
-    /*border-top-left-radius: 7px;
-    border-bottom-left-radius: 7px;*/
 }
 
 
@@ -837,16 +818,12 @@ footer{
 }
 
 .sessao-contato form{
-    width: 100%;
     display: block;
+    width: 100%;
     justify-content: center;
     align-items: center;
     margin: 1rem 1rem;
     padding: 0;
-}
-
-.input-group label{
-    
 }
 
 
@@ -873,22 +850,22 @@ footer{
 }
 
 .sessao-orcamento{
+    display: block;
+    justify-content: center;
     min-width: 250px;
     width: 100%;
     height: 80%;
     margin-top: 1rem; 
     border-radius: 7px;
-    display: block;
-    justify-content: center;
 }
 
 .orcamento-wrapper{
-    width: 90%;
-    height: 80%;
     display: block;
-    margin: auto;
     justify-content: center;
     justify-items: center;
+    width: 90%;
+    height: 80%;
+    margin: auto;
     border-radius: 0px;
 }
 
@@ -916,34 +893,38 @@ footer{
     font-size: 1.5rem;
 }
 
-.btn-orcamento{
-
-}
-
 footer{
     min-width: 250px;
-    width: auto;
-    height: 8rem;
-    display: block;
+    display: flex;
+    grid-template-columns: auto;
     justify-content: center;
     justify-items: center;
+    width: auto;
+    height: fit-content;
     padding: 0 1rem;
 }
 
 .footer-content{
-    width: 90%;
-    display: block;
-    justify-content: center;
+    width: 100%;
+    padding: .4rem;
 }
 
 .footer-content p{
-    padding-top: 1rem;
-    text-align: center;
+    padding: 1rem .7rem;
+    text-align: left;
     font-size: 1rem;
+    border-right: 1px solid #000000;
+}
+
+.social-list{
+    width: 50%;
+    margin: auto;
 }
 
 .social-list a{
+    text-align: center;
     font-size: 1.3rem;
+    margin: .7rem;
 }
 
 .social-list ul{
@@ -951,7 +932,7 @@ footer{
 }
 
 .social-list li{
-    width: 100%;
+    width: 50%;
     list-style: none;
 }
 
@@ -962,6 +943,6 @@ footer{
     width: 2rem;
     height: 2rem;
     font-size: 1rem;
-}
+} 
 
 }
