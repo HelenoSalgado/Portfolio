@@ -779,7 +779,7 @@ footer{
         display: block;
         justify-content: center;
         justify-items: center;
-        margin: 0;
+        margin: 2rem 0;
         width: 100%;
         height:fit-content;
         margin-top: 2rem;
@@ -829,12 +829,12 @@ footer{
 
 .input-group textarea{
     top: 0.5rem;
-    max-width: 13rem;
+    max-width: 15rem;
     max-height: 7rem;
 }
 
 .field{
-    width: 15rem;
+    width: 90%;
     font-size: 1.5rem;
     height: 3rem;
     margin: 2rem 0;
