@@ -922,7 +922,7 @@ footer{
 
 footer{
     min-width: 250px;
-    width:90%;
+    width:100%;
     height: 8rem;
     display: block;
     justify-content: center;
