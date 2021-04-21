@@ -1067,4 +1067,11 @@ footer{
         width: 90%;
         left: 5%;
     }
+    
+    .conhecimento-img{
+        margin-left: 10%;
+    }
+    .conhecimento-img figure{
+        margin-left: 10%;
+    }
 }
