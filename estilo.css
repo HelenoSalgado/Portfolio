@@ -267,12 +267,14 @@ header {
 
 .conhecimento-header i{
     font-size: 2.5rem;
+    color: #770377;
 }
 
 .conhecimento-header h3{
     font-family: var(--font-secundary);
     font-size: 2rem;
     padding: 1rem;
+    color: #770377;
 }
 
 .conhecimento-text{
@@ -507,10 +509,10 @@ header {
 .sessao-orcamento{ 
     padding-top: 3rem;
     width: 100%;
-    height: 100vh;
+    height: 65vh;
     background-image: url(img/office-orcamento.jpg); 
     background-repeat: no-repeat;
-    object-fit:cover;
+    object-fit: cover;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -518,14 +520,14 @@ header {
 
 .orcamento-wrapper{
     width: 60%;
-    height: 80%;
+    height: auto;
     background-color: rgba(255, 255, 255, 0.164);
     /*background: rgba(158, 21, 147, 0.205);
     background: -webkit-linear-gradient(to right, #a832793f, #0000003b, #d3a6123d);  
     background: linear-gradient(to right, #a832793f, #0000003b, #d3a6123d);*/
-    border-radius: 7px;
     box-shadow: .1rem .1rem .3rem rgba(46, 45, 45, 0.788);
     position: relative;
+    border-radius: 7px;
 }
 
 .sessao-orcamento h1{
@@ -550,7 +552,7 @@ header {
 
 .sessao-orcamento label{
     font-family: var(--font-secundary);
-    font-size: 1.5;
+    font-size: 1.5rem;
     font-weight: bold;
     color: #ffffff;
 }
@@ -625,13 +627,17 @@ footer{
     align-items: center;
 }
 
-@media (max-width: 700px){
+@media (max-width: 750px){
 
    html, header, body, footer{
        position: relative;
        margin: 0;
        padding: 0;
        max-width: 600px;
+    }
+
+    body{
+        background-color: rgb(248, 247, 247);;
     }
 
     header {
@@ -654,11 +660,12 @@ footer{
     .banner {
         object-position: center;
         top: 15%;
-        left: 10%;
+        left: 5%;
     }
     
     .banner h1 {
-        width: 98%;
+        width: 100%;
+        max-width: 90%;
         font-size: 3rem;
         line-height: 3.5rem;
         margin-bottom: 2rem;
@@ -673,8 +680,8 @@ footer{
     }
 
     .hamburguer{
-        top:1rem;
-        right: 1.5rem;
+        top: 1rem;
+        right: 1%;
     }
     
     .sidebar {
@@ -703,7 +710,7 @@ footer{
         margin: 0;
         overflow: hidden;
     }
-
+    
     .conhecimentos{
         width: 90%;
         display: block;
@@ -712,11 +719,11 @@ footer{
         margin: auto;
         padding: 1rem 1rem;
     }
-
+    
     .sessao-header{
         text-align: center;
     }
-
+    
     .sessao-header h1{
         font-size: 1.8rem;
         margin-top: 2rem;
@@ -726,7 +733,9 @@ footer{
     .conhecimento{ 
         width: 80%;     
         padding: .8rem;
-        margin: 1rem auto;
+        margin: 2rem auto;
+        border: 1px solid black;
+        box-shadow: 0 .1rem .4rem black;
     }
     
     .conhecimento-header{
@@ -735,22 +744,54 @@ footer{
         align-items: center;
     }
     
-     .conhecimento-text{
-         text-align: center;
-     }
+    .conhecimento-text{
+        text-align: center;
+    }
     
     .conhecimento-img{
         max-width: 100%;
         margin: 4rem 0;
     }
 
-    .sessao-projetos{
+    /*--Linha divisória entre sessões, na diagonal.--*/
+
+    .divisao-top{
+    right: 0;
+    left: 0;
+    width: 100%;
+    height: 3rem;
+    background-color: #2c2a2c;
+    z-index: 0;
+    transform: skewY(6deg);
+    transform-origin: top left;
+}
+
+.divisao-button{
+    right: 0;
+    left: 0;
+    width: 100%;
+    height: 3rem;
+    background-color: #2c2a2c;
+    z-index: 0;
+    transform: skewY(6deg);
+    transform-origin: top right;
+}
+
+.sessao-projetos{
         min-width: 250px;
+        width: 100%;
+        height: auto;
         margin: 0;
-        padding: 0;
+        padding: 0 0 3rem 0;
         justify-content: center;
         align-items: center;
+        background-color: #2c2a2c;
         border: transparent;
+        border-radius: 0;
+    }
+
+    #h1-projetos{
+        color: white;
     }
     
     .projetos{
@@ -780,18 +821,20 @@ footer{
         display: block;
         justify-content: center;
         justify-items: center;
-        margin: 4rem 0;
+        margin: 5rem 0;
         width: 100%;
-        height:fit-content;
+        height: auto;
         padding: 0;
         object-fit: scale-down;
         border-radius: 0;
+        background-color: transparent;
         border: transparent;
     }
 
     
 .contato-wrapper{
    width: 100%;
+   height: auto;
    display: visible;
    object-fit: scale-down;
    margin: auto;
@@ -802,6 +845,7 @@ footer{
 .contato-left{
     display: block;
     width: 10%;
+    height: auto;
     justify-content: center;
     border-radius: 0;
 }
@@ -811,13 +855,15 @@ footer{
     justify-content: center;
     justify-items: center;
     width: 90%;
-    padding: 0;
+    height: auto;
+    padding: 1rem 0;
     border-radius: 0;
 }
 
 
 .sessao-contato h1{
     font-size: 2.3rem;
+    color: black;
 }
 
 .sessao-contato form{
@@ -857,8 +903,9 @@ footer{
     justify-content: center;
     min-width: 250px;
     width: 100%;
-    height: fit-content;
-    margin-top: 1rem; 
+    height: auto;
+    margin: 0 0 5rem 0; 
+    padding-bottom: 1rem;
     border-radius: 0;
 }
 
@@ -867,20 +914,20 @@ footer{
     justify-content: center;
     justify-items: center;
     width: 90%;
-    height: fit-content;
+    height: 70%;
     margin: auto;
     border-radius: 0;
 }
 
 .sessao-orcamento h1{
     text-align: center;
-    font-size: 1.5rem;
+    font-size: 1.6rem;
+    font-weight: 500;
     margin-top: -3rem;
     color: #1a1a18;
 }
 .sessao-orcamento form{
     display: block;
-    word-spacing: .7rem;
     margin-top: 4rem;
     align-items: center;
     padding: 1rem 0;
