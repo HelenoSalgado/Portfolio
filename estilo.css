@@ -784,7 +784,6 @@ footer{
         margin: 2rem auto;
         border: 1px solid black;
         box-shadow: 0 .1rem .4rem black;
-        object-fit: contain;
     }
     
     .conhecimento-header{
@@ -795,6 +794,7 @@ footer{
     
     .conhecimento-text{
         text-align: center;
+        object-fit: fill;
     }
     
     .conhecimento-img{
