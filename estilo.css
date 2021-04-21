@@ -801,6 +801,11 @@ footer{
         margin: 4rem 0;
     }
 
+    .conhecimento-img img{
+        max-width: 450px;
+        margin-left: 6%;
+    }
+
     /*--Linha divisória entre sessões, na diagonal.--*/
 
     .divisao-top{
