@@ -803,7 +803,7 @@ footer{
 
     .conhecimento-img img{
         max-width: 450px;
-        margin-left: 6%;
+        margin-right: 0;
     }
 
     /*--Linha divisória entre sessões, na diagonal.--*/
