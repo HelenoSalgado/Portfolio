@@ -794,7 +794,7 @@ footer{
     
     .conhecimento-text{
         text-align: center;
-        object-fit: fill;
+        width: fit-content;
     }
     
     .conhecimento-img{
