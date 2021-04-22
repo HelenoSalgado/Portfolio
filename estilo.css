@@ -10,7 +10,7 @@
 
 html, body{
     scroll-behavior: smooth;
-    overflow-x: hidden !important;
+    overflow-x: hidden;
 }
 
 :root {
@@ -870,6 +870,11 @@ footer{
         height: 100%;
         margin: 1rem auto;
         align-items: center;
+        overflow: hidden;
+    }
+
+    .card-img img{
+        object-fit: contain;
     }
     
     
