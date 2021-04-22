@@ -280,7 +280,7 @@ header {
 .conhecimento-text{
     font-family: var(--font-secundary);
     margin-top: 1rem;
-    width: fit-content;
+    width: auto;
 }
 
 .conhecimento-img{
