@@ -280,6 +280,7 @@ header {
 .conhecimento-text{
     font-family: var(--font-secundary);
     margin-top: 1rem;
+    width: fit-content;
 }
 
 .conhecimento-img{
@@ -794,7 +795,6 @@ footer{
     
     .conhecimento-text{
         text-align: center;
-        width: fit-content;
     }
     
     .conhecimento-img{
