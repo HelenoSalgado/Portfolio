@@ -693,7 +693,7 @@ footer{
     header#home {
         min-width: 375px;
         width: 100%;
-        height: 65vh;
+        height: 70vh;
     }
     
     .img-wrapper {
@@ -709,7 +709,7 @@ footer{
     
      
     .banner {
-        width: 100%;
+        width: 90%;
         object-position: left;
         top: 15%;
         left: 5%;
