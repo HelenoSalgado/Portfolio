@@ -57,6 +57,14 @@ header#home {
 .show-menu .sidebar {
     right: 0;
 }
+
+.hamburguer{
+    right: .7rem;
+}
+
+a#link-topo{
+    right: .7rem;
+}
     
 .menu {
     top: 40%;
@@ -89,7 +97,7 @@ header#home {
 }
     
 .sessao-header h2{
-    font-size: 2rem;
+    font-size: 1.8rem;
     margin-top: 2rem;
 }
 
@@ -335,6 +343,7 @@ footer{
     justify-items: center;
     width: 100%;
     height: fit-content;
+    height: auto;
     padding: 0;
 }
 
