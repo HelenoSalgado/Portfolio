@@ -343,7 +343,7 @@ footer{
     justify-items: center;
     width: 100%;
     height: fit-content;
-    height: auto;
+    -moz-height: auto;
     padding: 0;
 }
 
