@@ -28,3 +28,19 @@ function atualizarpreco(){
 
   document.querySelector("#preco").innerHTML = `R$ ${preco.toFixed(2)}`
 }
+
+(function(){
+  var setting = {"height":350,"width":500,"zoom":18,"queryString":"Rua 41, 110 - São Sebastião, Brasília - DF, 71693-042, Brasil","place_id":"EkBSdWEgNDEsIDExMCAtIFPDo28gU2ViYXN0acOjbywgQnJhc8OtbGlhIC0gREYsIDcxNjkzLTA0MiwgQnJhc2lsIlASTgo0CjIJnenqedEhWpMRTOlTTnCffWkaHgsQ7sHuoQEaFAoSCfHeJnEoIFqTEXq7UyHowPBBDBBuKhQKEgkdhqh90SFakxEuzGqW9ViHIQ","satellite":false,"centerCoord":[-15.898352604523119,-47.7707782],"cid":"0xa3bc8011f5c80556","lang":"pt","cityUrl":"/brazil/brasilia-14704","cityAnchorText":"","id":"map-9cd199b9cc5410cd3b1ad21cab2e54d3","embed_id":"469373"};
+
+  var d = document;
+  var s = d.createElement('script');
+  s.src = 'https://1map.com/js/script-for-user.js?embed_id=469373';
+  s.async = true;
+
+  s.onload = function (e) {
+    window.OneMap.initMap(setting)
+  };
+
+  var to = d.getElementsByTagName('script')[0];
+  to.parentNode.insertBefore(s, to);
+})();
