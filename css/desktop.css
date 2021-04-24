@@ -509,10 +509,9 @@ header {
     width: 100%;
     height: auto;
     background-image: url(../img/office-orcamento.jpg); 
-    background-size: cover;
     background-repeat: no-repeat;
-    background-position: center;
-    object-fit: cover;
+    background-size: cover;
+    background-position: center center;
     display: flex;
     justify-content: center;
     align-items: center;
