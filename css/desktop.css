@@ -504,6 +504,7 @@ header {
 }
 
 .sessao-orcamento{ 
+    position: relative;
     margin: 4rem 0;
     padding-top: 3rem;
     width: 100%;
@@ -511,7 +512,6 @@ header {
     background-image: url(../img/office-orcamento.jpg); 
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: center center;
     display: flex;
     justify-content: center;
     align-items: center;
