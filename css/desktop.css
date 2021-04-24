@@ -509,7 +509,7 @@ header {
     width: 100%;
     height: auto;
     background-image: url(../img/office-orcamento.jpg); 
-                         'overflow: hidden;'
+    background-size: cover;
     background-repeat: no-repeat;
     object-fit: cover;
     display: flex;
