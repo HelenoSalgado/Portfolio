@@ -511,6 +511,7 @@ header {
     background-image: url(../img/office-orcamento.jpg); 
     background-size: cover;
     background-repeat: no-repeat;
+    background-position: center;
     object-fit: cover;
     display: flex;
     justify-content: center;
