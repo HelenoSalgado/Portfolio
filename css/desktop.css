@@ -649,6 +649,7 @@ footer q{
     position: relative;
     color: white;
     text-align: center;
+    font-style: oblique;
 }
 
 #link-topo{
