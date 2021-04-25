@@ -604,10 +604,12 @@ div.mapa{
 }
 
 footer{
+    position: relative;
     width: 100%;
-    height: 5rem;
+    height: auto;
     background: #424241;
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
 }
@@ -635,6 +637,18 @@ footer{
 
 .social-list li{
     list-style: none;
+}
+
+.versiculo{
+    width: 100%;
+}
+
+footer q{
+    display: block;
+    font-family: var(--font-secundary);
+    position: relative;
+    color: white;
+    text-align: center;
 }
 
 #link-topo{
