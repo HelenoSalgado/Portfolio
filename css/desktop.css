@@ -599,7 +599,7 @@ div.mapa{
     width: 50%;
     height: 100%;
     border: 0;
-    left: 25%;
+    left: 27%;
     border-radius: 3px;
 }
 
@@ -646,7 +646,6 @@ footer{
 footer q{
     display: block;
     font-family: var(--font-secundary);
-    position: relative;
     color: white;
     text-align: center;
     font-style: oblique;
