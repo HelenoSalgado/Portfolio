@@ -4,6 +4,7 @@ html, body{
     margin: 0;
     padding: 0;
     border: 0;
+    font-size: 1rem;
     scroll-behavior: smooth;
 }
 
@@ -194,6 +195,7 @@ header {
 
 .sessao-conhecimentos{
     background-color: rgb(248, 247, 247);
+    padding-bottom: 1rem;
 }
 
 .conhecimentos {
@@ -251,7 +253,7 @@ header {
 .conhecimento{  
     background: linear-gradient(to right, #a432a838, #d3821228);
     width: fit-content;     
-    padding: 1rem;
+    padding: .7rem;
     border-radius: 7px;
     height: fit-content;
 }
@@ -280,7 +282,10 @@ header {
 
 .conhecimento-text p{
     font-family: var(--font-secundary);
-    margin-top: 1.5rem;
+    text-align:end;
+    margin-top: 1rem;
+    height: auto;
+    margin-bottom: 0;
 }
 
 .conhecimento-img{
