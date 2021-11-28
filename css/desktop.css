@@ -415,7 +415,7 @@ h2{
   } 
   
 .sessao-contato{
-    margin: 4rem auto;
+    margin: 0 auto;
     /* border:  #95127f solid 2px;  */
     border-radius: 15px;
     max-width: 1200px;
