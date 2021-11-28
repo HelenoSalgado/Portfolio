@@ -7,7 +7,7 @@
         left: 5%;
     }
 }
-
+/* 
 @media (orientation: landscape){
     
     header#home {
@@ -18,10 +18,4 @@
         width: 90%;
         left: 5%;
     }
-    .conhecimento-img{
-        margin-left: 15%;
-    }
-    .conhecimento-img figure{
-        margin-left: 15%
-    }
-}
+} */
