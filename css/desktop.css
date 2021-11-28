@@ -84,8 +84,9 @@ header {
 }
 .banner {
     width: 90%;
+    height: auto;
     position: absolute;
-    top: 20%;
+    top: 15%;
     left: 20%;
 }
 .banner h1 {
