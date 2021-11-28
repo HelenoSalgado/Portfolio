@@ -324,11 +324,9 @@ h2{
   .slide::-webkit-scrollbar {
     height: 7px; 
   }
-  
   .slide::-webkit-scrollbar-track {
     background: rgba(63, 36, 36, 0);
   }
-  
   .slide::-webkit-scrollbar-thumb {
     background-color: rgba(216, 181, 86, 0);    
     border-radius: 50%;       
