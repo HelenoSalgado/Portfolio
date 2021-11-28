@@ -60,22 +60,19 @@ header {
     position: relative;
     display: contents;
     width: 100%;
-    height: 60vh;
+    height: 100vh;
 }
-
 .img-wrapper {
     width: 100%;
     height: 100%;
     overflow: hidden;
 }
-
 .img-wrapper img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     animation: zoom 25s;
 }
-
 @keyframes zoom {
     0% {
         transform: scale(1.3);
@@ -85,14 +82,12 @@ header {
         transform: scale(1);
     }
 }
-
 .banner {
     width: 90%;
     position: absolute;
     top: 20%;
     left: 20%;
 }
-
 .banner h1 {
     font-size: 3.5em;
     font-family: var(--font-primary); 
@@ -103,7 +98,6 @@ header {
     margin-bottom: 2rem;
     animation: MoveBanner 1s;
 }
-
 .banner p {
     font-family: var(--font-secundary); 
     font-size: 1.5rem;
@@ -112,7 +106,6 @@ header {
     margin-bottom: 2rem;
     animation: MoveBanner 1.2s;
 }
-
 .banner button {
     font-family: var(--font-action);
     font-size: 0.8rem;
@@ -127,7 +120,6 @@ header {
     cursor: pointer;
     animation: MoveBanner 1.4s;
 }
-
 @keyframes MoveBanner {
     0% {
         transform: translateY(10rem);
@@ -139,7 +131,6 @@ header {
         opacity: 1;
     }
 }
-
 .sidebar {
     width: 15rem;
     height: 100vh;
@@ -151,18 +142,15 @@ header {
     transition: all 1s;
     z-index: 99;
 }
-
 .show-menu .sidebar {
     right: 0;
 }
-
 .menu {
     position: absolute;
     top: 40%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
-
 .menu-item, .menu-link {
     list-style: none;
     text-decoration: none;
@@ -172,11 +160,9 @@ header {
     font-family: var(--font-action);
     font-size: 1.1rem;
 }
-
 .menu-link:hover {
     color: rgb(5, 5, 5);
 }
-
 .social-media {
     position: absolute;
     display: flex;
@@ -185,18 +171,15 @@ header {
     bottom: 2rem;
     justify-content: space-evenly;
 }
-
 .social-media i {
     color:  rgb(113, 12, 131);
     transition: ease-in 0.5s;
 }
-
 .social-media i:hover {
     color: rgb(26, 25, 25);
 }
-
 .sessao-conhecimentos{
-    margin: 2rem auto;
+    margin: 4rem auto;
     max-width: 1000px;
     display: flex;
     flex-wrap: wrap;
@@ -215,7 +198,6 @@ h2{
     text-align: center;
     font-size: 2.5rem;
     color: #424241;
-    border-bottom: 1px solid rgb(198, 43, 226);
 }
 .sessao-conhecimentos div i{
     display: block;
@@ -259,18 +241,19 @@ h2{
     width: 100%;
 }
 .sessao-projetos{
-    display: block;
+    position: relative;
     margin: 1rem auto;
     max-width: 1200px;
     /* border:  #95127f4f solid 2px;  */
     border-radius: 5px;
 }
-.projetos{
+/* .projetos{
+    position: relative;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-}
-.card{
+}*/
+ /* .card{
     margin: 1rem auto;
     width: 17rem;
     height: 30rem;
@@ -288,9 +271,17 @@ h2{
     height: 100%;
     border-radius: 5px;
     opacity: .8;
-}
-.card-info{
-    opacity: 0;
+} */
+.meuSlide div {
+    margin: 1rem;
+    position: absolute;
+    width: 17rem;
+    height: 30rem;
+    background:#424241;  
+    background: -webkit-linear-gradient(rgba(0, 0, 0, 0), #000000ad, #000000);  
+    background: linear-gradient (rgba(0, 0, 0, 0), #000000ad, #000000);
+    border-radius: 5px;
+    /* opacity: 0;
     visibility: hidden;
     position: absolute;
     padding: 2rem;
@@ -299,16 +290,16 @@ h2{
     background: -webkit-linear-gradient(rgba(0, 0, 0, 0), #000000);  
     background: linear-gradient (rgba(0, 0, 0, 0), #000000);
     border-radius: 5px;
-    transition: all eease-in .3s;
+    transition: all eease-in .3s; */
 }
-.card-info h3{
+.meuSlide div h3{
     font-family: var(--font-secundary);
     font-size: 2rem;
     font-weight: 500;
     color: rgb(246, 241, 241);
-    margin-bottom: 1.5rem;
+    margin: 90% 0 0 1rem;
 }
-.card-info h4 {
+.meuSlide div h4 {
     width: 80%;
     background: linear-gradient(to right, #ffffff8e, #ffffff00);
     padding: .2rem .5rem;
@@ -317,14 +308,28 @@ h2{
     font-size: 1rem;
     font-weight: bolder;
     color: #951280;
-    margin-bottom: 1rem;
+    margin-left: 1rem;
 }
-.card-info p{
+.meuSlide div p{
     width: 80%;
     font-family: var(--font-secundary);
     color: #eee;
     font-weight: 400;
-    margin-bottom: 2rem;
+    margin-left: 1rem;
+} 
+.meuSlide a{
+    pointer-events:painted;
+    text-decoration: none;
+    color: white;
+    margin-left: 1rem;
+    transition: ease-in .1s;
+}
+.meuSlide a i{
+    font-size: .5rem;
+    margin-left: .5rem;
+}
+.meuSlide a:hover{
+    margin-left: 1.1rem;
 }
 .btn{
     width: 8rem;
@@ -338,17 +343,82 @@ h2{
     color: #fff;
     border-radius: .5rem;
 }
-.card:hover .card-info{
-    bottom: 2rem;
-    opacity: 1;
-    visibility: visible;
-    transition: ease-in .3s;
+.meuSlide{
+    position: relative;
+    pointer-events: none;
 }
+.tap, .tap img{
+    margin: 1rem;
+    width: 17rem;
+    height: 30rem;
+    border-radius: 5px;
+    object-fit: cover;
+}
+ /* .tap img{
+    object-fit: cover;
+}  */
+.slide {
+    position: relative;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    overflow-y: hidden;
+    overflow-x: auto; 
+    max-width: 1000px;
+    border-radius: 5px;
+    margin: 0 auto;
+    height: auto;
+  }
+  .slide::-webkit-scrollbar {
+    height: 7px; 
+  }
+  
+  .slide::-webkit-scrollbar-track {
+    background: rgba(63, 36, 36, 0);
+  }
+  
+  .slide::-webkit-scrollbar-thumb {
+    background-color: rgba(216, 181, 86, 0);    
+    border-radius: 50%;       
+  }
+.pontos{
+    position: absolute;
+    left: 50%;
+    bottom: -3rem;
+    transform: translate(-50%, -50%);
+  }
+   .dot {
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: rgb(233, 232, 232);
+    border-radius: 50%;
+    display: inline-block;
+    transition: .7s ease;
+  }
+  .acao {
+    background-color: rgb(180, 137, 28);
+  }
+ .tap {
+    -webkit-animation-name: tap;
+    -webkit-animation-duration: 1.5s;
+    animation-name: tap;
+    animation-duration: 1.5s;
+  }
+  @-webkit-keyframes tap {
+    from {opacity: .3} 
+    to {opacity: 1}
+  }
+  @keyframes tap {
+    from {opacity: .3} 
+    to {opacity: 1}
+  } 
+  
 .sessao-contato{
-    margin: 1rem auto;
+    margin: 4rem auto;
     /* border:  #95127f solid 2px;  */
     border-radius: 15px;
-    width: 95%;
+    max-width: 1200px;
     height: auto;
     /* background-color: #424241; */
     display: flex;
@@ -356,13 +426,15 @@ h2{
     justify-content: center;
 }
 .contato-wrapper{
-    margin: 2rem 0;
+    display: block;
+    margin: 2rem auto;
     width: 80%;
     height: auto;
-    display: flex;
+    background-color: #eee;
+    padding: 1rem 3rem 3rem 3rem;
     border-radius: 5px; 
 }
-.contato-left{
+/* .contato-left{
     width: 35%;
     background-image: url(../img/web-sobre-contato.jpg);
     background-size: cover;
@@ -371,12 +443,11 @@ h2{
     border-bottom-left-radius: 5px;
 }
 .contato-right{
-    width: 65%;
+    width: 80%;
     background-color: #eee;
     padding: 1rem 3rem 3rem 3rem;
-    border-top-right-radius: 5px;
-    border-bottom-right-radius: 5px;
-}
+    border-radius: 5px;
+}*/
 .sessao-contato h2{
     border-bottom: none;
 }
@@ -430,7 +501,7 @@ h2{
 }
 .sessao-orcamento{ 
     position: relative;
-    margin: 4rem 0;
+    margin: 4rem auto;
     padding-top: 3rem;
     width: 100%;
     height: auto;
@@ -458,11 +529,10 @@ h2{
 .sessao-orcamento h2{
     left: 2rem;
     background-color: #fff;
-    border-radius: 10px;
+    border-radius: 5px;
     padding: 0 1rem;
     font-family: var(--font-primary);
     font-weight: lighter;
-    box-shadow: .1rem .1rem .3rem black;
 }
 .sessao-orcamento form{
     margin: 4rem;
@@ -499,7 +569,7 @@ h2{
     grid-column: 2;
 }
 
-div.mapa{
+/* div.mapa{
     position: relative;
     width: 100%;
     height: 50vh;
@@ -513,7 +583,7 @@ div.mapa{
     border: 0;
     left: 27%;
     border-radius: 3px;
-}
+} */
 
 footer{
     position: relative;
