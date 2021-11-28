@@ -365,7 +365,6 @@ h2{
     from {opacity: .3} 
     to {opacity: 1}
   } 
-  
 .sessao-contato{
     margin: 4rem auto 0 auto;
     border-radius: 15px;
@@ -377,15 +376,12 @@ h2{
 }
 .contato-wrapper{
     display: block;
-    margin: 2rem auto 7rem auto;
+    margin: 1rem auto 4rem auto;
     width: 80%;
     height: auto;
     background-color: #eee;
     padding: 1rem 3rem 3rem 3rem;
     border-radius: 5px; 
-}
-.sessao-contato h2{
-    border-bottom: none;
 }
 .sessao-contato form{
     width: 100%;
@@ -437,7 +433,7 @@ h2{
 }
 .sessao-orcamento{ 
     position: relative;
-    margin: 2rem auto 4rem auto;
+    margin: 1rem auto 4rem auto;
     width: 100%;
     height: auto;
     background-image: url(../img/office-orcamento.jpg); 
@@ -546,6 +542,6 @@ footer q{
         left: 5%;
     }
     .banner h1 {
-        font-size: 3em;
+        font-size: 2.5rem;
     }
 }
