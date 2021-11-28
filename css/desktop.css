@@ -7,7 +7,7 @@ html, body{
     font-size: 16px;
     scroll-behavior: smooth;
     background-color: rgb(248, 247, 247);
-    overflow-X: hidden;
+    overflow: hidden;
 }
 :root {
     --font-primary: 'Baloo 2', 'cursive', sans-serif;
