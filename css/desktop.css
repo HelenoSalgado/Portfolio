@@ -3,7 +3,6 @@ html, body{
     padding: 0;
     border: 0;
     font-size: 16px;
-    -webkit-overflow-scrolling: touch; 
     scroll-behavior: smooth;
     background-color: rgb(248, 247, 247);
     overflow-X: hidden;
@@ -305,14 +304,16 @@ h2{
     pointer-events: none;
 }
 .slide {
-    position: relative;
-    max-width: 1000px;
+    position: inherit;
     display: flex;
+    max-width: 1000px;
     flex-wrap: nowrap;
     justify-content: space-evenly;
     overflow-y: hidden;
     overflow-x: auto; 
     scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch; 
     border-radius: 5px;
     margin: 0 auto;
     height: auto;
@@ -323,6 +324,7 @@ h2{
     height: 30rem;
     border-radius: 5px;
     object-fit: cover;
+    scroll-snap-align: start;
 }
   .slide::-webkit-scrollbar {
     height: 7px; 
