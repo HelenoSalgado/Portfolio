@@ -544,6 +544,6 @@ footer q{
         font-size: 2.5rem;
     }
     .meuSlide a i{
-        font-size: .8rem;
+        font-size: .8rem !important;
     }
 }
