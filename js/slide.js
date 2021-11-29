@@ -23,10 +23,10 @@ var slideIndex = 0;
     document.querySelector("slide")
      addEventListener("wheel" , Event => {
       if(Event.deltaY > 0) {
-        Event.target.scrollBy(300, 0)
+        Event.target.scrollBy(-300, 0)
       }
       else{
-        Event.target.scrollBy(-300, 0)
+        Event.target.scrollBy(300, 0)
       }
     })
 
@@ -57,8 +57,8 @@ var slideIndex = 0;
 
     slider.addEventListener('wheel', (event) => {
       if (event.deltaY > 0) {
-        slider.scrollLeft += 300;
-      } else {
         slider.scrollLeft -= 300;
+      } else {
+        slider.scrollLeft += 300;
       }
     })
