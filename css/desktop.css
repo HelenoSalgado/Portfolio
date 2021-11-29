@@ -234,7 +234,7 @@ h2{
 .sessao-projetos{
     position: relative;
     margin: 1rem auto;
-    max-width: 1200px;
+    max-width: 1000px;
     border-radius: 5px;
 }
 .meuSlide div {
@@ -273,7 +273,8 @@ h2{
     margin-left: 1rem;
 } 
 .meuSlide a{
-    pointer-events:painted;
+    font-family: var(--font-action);
+    pointer-events: painted;
     text-decoration: none;
     color: white;
     margin-left: 1rem;
@@ -313,7 +314,7 @@ h2{
     position: relative;
     display: flex;
     flex-wrap: nowrap;
-    justify-content: center;
+    justify-content: space-evenly;
     overflow-y: hidden;
     overflow-x: auto; 
     max-width: 1000px;
@@ -541,5 +542,8 @@ footer q{
     }
     .banner h1 {
         font-size: 2.5rem;
+    }
+    .meuSlide a i{
+        font-size: .8rem;
     }
 }
