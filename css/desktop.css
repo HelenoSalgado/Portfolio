@@ -252,7 +252,7 @@ h2{
     flex: none;
     width: 19rem;
     height: 30rem;
-    scroll-snap-align: start;
+    scroll-snap-align: center;
     pointer-events: none;
 }
 .text{
@@ -284,9 +284,8 @@ h2{
     margin-left: 1rem;
 }
 .text p{
-    width: 80%;
+    width: 90%;
     font-family: var(--font-secundary);
-    font-size: 1.2rem;
     color: #eee;
     font-weight: 400;
     margin-left: 1rem;
@@ -336,6 +335,18 @@ h2{
     border-radius: 50%;
     display: inline-block;
   }
+  .btn{
+    width: 8rem;
+    height: 2.5rem;
+    background: #A83279;
+    background: -webkit-linear-gradient(to right, #A83279, #d3a612);  
+    background: linear-gradient(to right, #ac1e94, #d3a612); 
+    font-family: var(--font-action);   
+    font-size: 1.1rem;
+    border: none;
+    color: #fff;
+    border-radius: .5rem;
+}
 .sessao-contato{
     margin: 4rem auto 0 auto;
     border-radius: 15px;
