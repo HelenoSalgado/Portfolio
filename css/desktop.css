@@ -237,24 +237,42 @@ h2{
     max-width: 1000px;
     border-radius: 5px;
 }
-.meuSlide div {
-    margin: 1rem;
+.cards{
+    margin-top: 4rem;
+    display: flex;
+    justify-content: space-between;
+    overflow-y: hidden;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch; 
+}
+.card{ 
+    position: relative;
+    flex: none;
+    width: 19rem;
+    height: 30rem;
+    scroll-snap-align: start;
+    pointer-events: none;
+}
+.text{
     position: absolute;
-    width: 17rem;
+    top: 0;
+    width: 18rem;
     height: 30rem;
     background:#424241;  
     background: -webkit-linear-gradient(rgba(0, 0, 0, 0), #000000ad, #000000);  
     background: linear-gradient (rgba(0, 0, 0, 0), #000000ad, #000000);
     border-radius: 5px;
 }
-.meuSlide div h3{
+.text h3{
     font-family: var(--font-secundary);
     font-size: 2rem;
     font-weight: 500;
     color: rgb(246, 241, 241);
     margin: 90% 0 0 1rem;
 }
-.meuSlide div h4 {
+.text h4{
     width: 80%;
     background: linear-gradient(to right, #ffffff8e, #ffffff00);
     padding: .2rem .5rem;
@@ -265,14 +283,14 @@ h2{
     color: #951280;
     margin-left: 1rem;
 }
-.meuSlide div p{
+.text p{
     width: 80%;
     font-family: var(--font-secundary);
     color: #eee;
     font-weight: 400;
     margin-left: 1rem;
-} 
-.meuSlide a{
+}
+.text a{
     font-family: var(--font-action);
     pointer-events: painted;
     text-decoration: none;
@@ -280,59 +298,26 @@ h2{
     margin-left: 1rem;
     transition: ease-in .1s;
 }
-.meuSlide a i{
+.text a i{
     font-size: .5rem;
     margin-left: .5rem;
 }
-.meuSlide a:hover{
+.text a:hover{
     margin-left: 1.1rem;
 }
-.btn{
-    width: 8rem;
-    height: 2.5rem;
-    background: #A83279;
-    background: -webkit-linear-gradient(to right, #A83279, #d3a612);  
-    background: linear-gradient(to right, #ac1e94, #d3a612); 
-    font-family: var(--font-action);   
-    font-size: 1.1rem;
-    border: none;
-    color: #fff;
-    border-radius: .5rem;
-}
-.meuSlide{
-    position: relative;
-    pointer-events: none;
-}
-.slide {
-    position: inherit;
-    display: flex;
-    max-width: 1000px;
-    flex-wrap: nowrap;
-    justify-content: space-evenly;
-    overflow-y: hidden;
-    overflow-x: auto; 
-    scroll-behavior: smooth;
-    scroll-snap-type: x mandatory;
-    -webkit-overflow-scrolling: touch; 
-    border-radius: 5px;
-    margin: 0 auto;
-    height: auto;
-  }
-  .tap, .tap img{
-    margin: 1rem;
-    width: 17rem;
-    height: 30rem;
-    border-radius: 5px;
+.card img{
+    width: 95%;
+    height: 100%;
     object-fit: cover;
-    scroll-snap-align: start;
+    border-radius: 5px;
 }
-  .slide::-webkit-scrollbar {
+  .cards::-webkit-scrollbar {
     height: 7px; 
   }
-  .slide::-webkit-scrollbar-track {
+  .cards::-webkit-scrollbar-track {
     background: rgba(63, 36, 36, 0);
   }
-  .slide::-webkit-scrollbar-thumb {
+  .cards::-webkit-scrollbar-thumb {
     background-color: rgba(216, 181, 86, 0);    
     border-radius: 50%;       
   }
@@ -349,25 +334,7 @@ h2{
     background-color: rgb(233, 232, 232);
     border-radius: 50%;
     display: inline-block;
-    transition: .7s ease;
   }
-  .acao {
-    background-color: #d3a612;
-  }
- .tap {
-    -webkit-animation-name: tap;
-    -webkit-animation-duration: 1.5s;
-    animation-name: tap;
-    animation-duration: 1.5s;
-  }
-  @-webkit-keyframes tap {
-    from {opacity: 1} 
-    to {opacity: 1}
-  }
-  @keyframes tap {
-    from {opacity: 1} 
-    to {opacity: 1}
-  } 
 .sessao-contato{
     margin: 4rem auto 0 auto;
     border-radius: 15px;

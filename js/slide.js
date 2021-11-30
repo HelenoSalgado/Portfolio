@@ -1,26 +1,26 @@
-var slideIndex = 0;
-    showSlides();
+//  var slideIndex = 0;
+//      showSlides();
     
-    function showSlides() {
-      var i;
-      var slides = document.getElementsByClassName("meuSlide");
-      var dots = document.getElementsByClassName("dot");
-      for (i = 0; i < slides.length; i++) {
-        slides[i].style.display = "flex";  
-      }
-      slideIndex++;
-      if (slideIndex > slides.length) {slideIndex = 0} // valor original: 1.   
-      for (i = 0; i < dots.length; i++) {
-        dots[i].className = dots[i].className.replace(" acao", "");
-      }
-      slides[slideIndex-1].style.display = "none";  
-      dots[slideIndex-1].className += " acao";
-      setTimeout(showSlides, 2000); 
-      // Change image every 2 seconds
-    }
-//Habilita Scrool no elemento autores
+//      function showSlides() {
+//        var i;
+//        var slides = document.getElementsByClassName("meuSlide");
+//        var dots = document.getElementsByClassName("dot");
+//        for (i = 0; i < slides.length; i++) {
+//          slides[i].style.display = "flex";  
+//        }
+//        slideIndex++;
+//        if (slideIndex > slides.length) {slideIndex = 0} // valor original: 1.   
+//        for (i = 0; i < dots.length; i++) {
+//          dots[i].className = dots[i].className.replace(" acao", "");
+//        }
+//        slides[slideIndex-1].style.display = "none";  
+//        dots[slideIndex-1].className += " acao";
+//        setTimeout(showSlides, 2000); 
+//        // Change image every 2 seconds
+//      }
 
-    document.querySelector("slide")
+//Habilita Scrool no elemento projetos
+    document.querySelector("cards")
      addEventListener("wheel" , Event => {
       if(Event.deltaY > 0) {
         Event.target.scrollBy(-300, 0)
@@ -31,8 +31,7 @@ var slideIndex = 0;
     })
 
 //Desabilita o Scroll vertical do corpo
-
-  let slider = document.getElementsByClassName('slide')[0]
+  let slider = document.getElementsByClassName('cards')[0]
     function preventDefault(e) {
       e.preventDefault();
     }
