@@ -6,6 +6,8 @@ html, body{
     scroll-behavior: smooth;
     background-color: rgb(248, 247, 247);
     overflow-X: hidden;
+    min-width: 300px;
+    box-sizing: 0;
 }
 :root {
     --font-primary: 'Baloo 2', 'cursive', sans-serif;
@@ -371,6 +373,7 @@ h2{
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding: 0 1rem;
 }
 .input-group{
     position: relative;
