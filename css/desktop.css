@@ -461,6 +461,9 @@ h2{
     border: none;
     padding: 0.3rem;
 }
+.range-{
+    margin-right: .5rem;
+}
 .sessao-orcamento label#preco{
     font-style: oblique;
 }
