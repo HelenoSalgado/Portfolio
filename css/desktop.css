@@ -132,7 +132,7 @@ header {
     position: fixed;
     top: 0;
     right: -15.5rem;
-    border-left: 0.5px solid rgb(198, 43, 226);
+    /* border-left: 0.5px solid rgb(198, 43, 226); */
     transition: all 1s;
     z-index: 99;
 }
