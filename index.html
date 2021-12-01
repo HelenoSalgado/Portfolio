@@ -146,20 +146,18 @@
                     <h2>Contato</h2>
                     <form action="https://formsubmit.co/helenosalgado19@gmail.com" method="post">
                         <input type="hidden" name="_next" value="https://helenosalgado.github.io/Portfolio/enviado.html">
-                        <input type="hidden" name="_autoresponse" value="Recebi sua mensagem, logo em breve darei uma resposta. Obrigado!">
 
-                        <div class="input-group"><input type="text" class="field" id="Nome" placeholder="Nome Completo"><label for="Nome" class="field-label" >Nome</label></div>
+                        <div class="input-group"><input type="text" name="name" class="field" id="Nome" placeholder="Nome Completo"><label for="Nome" class="field-label">Nome</label></div>
 
-                        <div class="input-group"><input type="email" class="field" id="E-mail" placeholder="Seu Melhor E-mail"><label for="E-mail" class="field-label">E-mail</label></div>
+                        <div class="input-group"><input type="email" name="email" class="field" id="E-mail" placeholder="Seu Melhor E-mail"><label for="E-mail" class="field-label">E-mail</label></div>
 
-                        <input type="hidden" name="subject">
-
-                        <div class="input-group"><textarea
+                        <div class="input-group"><textarea name="message"
                         class="field" id="Mensagem" placeholder="Escreva uma Mensagem"></textarea><label for="Mensagem" class="field-label">Mensagem</label></div>
 
                         <button class="btn btn-submit" type="submit">Enviar</button>
 
                         <input type="hidden" name="_captcha" value="false">
+                        <input type="hidden" name="_autoresponse" value="Recebi sua mensagem, logo em breve darei uma resposta. Obrigado!">
                     </form>
             </div>
         </section> 
