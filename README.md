@@ -1,5 +1,5 @@
 # Portifólio
-Aqui estão meus trabalhos conformme vou concluindo-os
+Aqui estão meus trabalhos conforme vou concluindo-os.
 
 # Icones
 
