@@ -369,11 +369,11 @@ h2{
     border-radius: 5px; 
 }
 .sessao-contato form{
-    width: 100%;
+    width: 95%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 0 1rem;
+    margin: 0 auto;
 }
 .input-group{
     position: relative;
@@ -479,8 +479,6 @@ footer{
     position: relative;
     width: 100%;
     background: #424241;
-    /* background: -webkit-linear-gradient(to bottom right, #ce21b1 30%, #d3a612);  
-    background: linear-gradient(to bottom right,#ce21b1 30%, #d3a612); */
 }
 .media-sociais{
     position: relative;
@@ -532,7 +530,13 @@ footer q{
         top: 15%;
         left: 5%;
     }
-    .banner h1 {
+    h2{
+        font-size: 2.3rem;
+    }
+}    
+@media (max-width: 919px){
+      .banner h1 {
         font-size: 3rem;
     }
 }
+
