@@ -1,8 +1,5 @@
 # Portifólio
-Portifólio do Desenvolvedor
-
-## Tarefas
-O controle dessas tarefas será realizado no GitHub.
+Aqui estão meus trabalhos conforme vou concluindo-os.
 
 # Icones
 
