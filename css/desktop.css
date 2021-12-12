@@ -6,7 +6,11 @@ html, body{
     scroll-behavior: smooth;
     background-color: rgb(248, 247, 247);
     overflow-X: hidden;
-    min-width: 300px;
+    min-width: 320px;
+}
+section{
+    max-width: 1200px;
+    min-width: 320px;
 }
 :root {
     --font-primary: 'Baloo 2', 'cursive', sans-serif;
@@ -352,7 +356,6 @@ h2{
 }
 .sessao-contato{
     margin: 4rem auto 0 auto;
-    border-radius: 15px;
     max-width: 1200px;
     height: auto;
     display: flex;
@@ -421,7 +424,6 @@ h2{
     position: relative;
     margin: 1rem auto 4rem auto;
     padding: 0 .5rem;
-    width: 100%;
     height: auto;
     background-image: url(../img/office-orcamento.jpg); 
     background-repeat: no-repeat;
