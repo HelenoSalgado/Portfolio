@@ -361,32 +361,38 @@ h2{
     margin: 4rem auto 0 auto;
     max-width: 1200px;
     height: auto;
-    display: flex;
+    /* display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: center; */
 }
 .contato-wrapper{
     display: block;
     margin: 1rem auto 4rem auto;
+    padding: .5rem;
     width: 80%;
     height: auto;
     background-color: #eee;
-    padding: 1rem 3rem 3rem 3rem;
     border-radius: 5px; 
 }
 .sessao-contato form{
-    width: 95%;
-    display: flex;
+    position: relative;
+    display: block;
+    max-width: 400px;
+    /* display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: center; */
     margin: 0 auto;
 }
-.input-group{
+div.input-group{
     position: relative;
+}
+.input-group input{
+    width: 100%;
 }
 .input-group textarea{
     top: 0.5rem;
-    max-width: 25rem;
+    width: 100% !important;
+    min-width: 10rem;
     max-height: 5rem;
 }
 .field{
@@ -426,7 +432,7 @@ h2{
 .sessao-orcamento{ 
     position: relative;
     margin: 1rem auto 4rem auto;
-    padding: 0 .5rem;
+    padding: 25px;
     height: auto;
     background-image: url(../img/office-orcamento.jpg); 
     background-repeat: no-repeat;
@@ -451,6 +457,9 @@ h2{
     grid-template-columns: auto 1fr;
     column-gap: 2rem;
     row-gap: 2rem;
+}
+.sessao-orcamento form > input{
+    width: 90%;
 }
 .sessao-orcamento label{
     font-family: var(--font-secundary);
