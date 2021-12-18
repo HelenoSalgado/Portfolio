@@ -387,7 +387,7 @@ div.input-group{
     position: relative;
 }
 .input-group input{
-    width: 100%;
+    width: 90%;
 }
 .input-group textarea{
     top: 0.5rem;
