@@ -282,6 +282,7 @@ h2{
     margin: 80% 0 0 1rem;
 }
 .text h4{
+    margin-top: .5rem;
     width: 80%;
     background: linear-gradient(to right, #ffffff8e, #ffffff00);
     padding: .2rem .5rem;
@@ -293,6 +294,7 @@ h2{
     margin-left: 1rem;
 }
 .text p{
+    margin-top: 1rem;
     width: 90%;
     font-family: var(--font-secundary);
     font-size: 1.1rem;
@@ -301,6 +303,7 @@ h2{
     margin-left: 1rem;
 }
 .text a{
+    margin-top: .5rem;
     font-family: var(--font-action);
     pointer-events: painted;
     text-decoration: none;
