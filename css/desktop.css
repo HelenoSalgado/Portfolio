@@ -140,7 +140,6 @@ header {
     position: fixed;
     top: 0;
     right: -15.5rem;
-    /* border-left: 0.5px solid rgb(198, 43, 226); */
     transition: all 1s;
     z-index: 99;
 }
@@ -150,7 +149,7 @@ header {
 .menu {
     position: absolute;
     top: 40%;
-    left: 39%;
+    left: 50%;
     transform: translate(-50%, -50%);
 }
 .menu-item, .menu-link {
@@ -169,7 +168,7 @@ header {
     position: absolute;
     display: flex;
     width: 100%;
-    font-size: 2rem;
+    font-size: 1.5rem;
     bottom: 2rem;
     justify-content: space-evenly;
 }
@@ -452,8 +451,7 @@ div.input-group{
     box-shadow: .1rem .1rem .3rem rgba(46, 45, 45, 0.788);
 }
 .sessao-orcamento form{
-    margin: 3.5rem;
-    padding: 0 1rem;
+    margin: 3rem 4rem;
     display: grid;
     grid-template-columns: auto 1fr;
     column-gap: 2rem;
