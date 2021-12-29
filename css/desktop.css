@@ -124,8 +124,7 @@ header {
 }
 header > div.logo{
     position: fixed;
-    left: 2%; 
-    top: 2%; 
+    top: 0; 
     width: 100%; 
     height: 50px;      
     border-radius: 5px; 
@@ -138,10 +137,8 @@ div.logo > img{
     width: 2rem;
     height: 2rem;
     position: fixed;
-    z-index: 100;
     top: 1.5rem;
     left: 1rem;
-    display: block;
     border-radius: 20px;
     animation: batidas 1s ease-in-out infinite;
 }
