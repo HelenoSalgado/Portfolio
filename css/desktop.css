@@ -135,9 +135,13 @@ header > div.logo{
     animation: caixa-logo 1s ease-in-out infinite;
 }
 div.logo > img{
+    width: 2rem;
+    height: 2rem;
+    position: fixed;
+    z-index: 100;
+    top: 1.5rem;
+    left: 1rem;
     display: block;
-    margin: auto;
-    width: 80px; 
     border-radius: 20px;
     animation: batidas 1s ease-in-out infinite;
 }
