@@ -123,21 +123,21 @@ header {
     animation: MoveBanner 1.4s;
 }
 header > div.logo{
-    position: absolute;
-    left: 50%; 
-    top: 60%; 
-    width: 130px; 
-    height: 130px;      
+    position: fixed;
+    left: 2%; 
+    top: 2%; 
+    width: 100%; 
+    height: 50px;      
     border-radius: 5px; 
     transform: translateX(-30%); 
-    background-color: #fff;
+    /*background-color: #fff;*/
     box-shadow: .5px 1px 3px rgb(255, 255, 255);
     animation: caixa-logo 1s ease-in-out infinite;
 }
 div.logo > img{
     display: block;
     margin: auto;
-    width: 130px; 
+    width: 80px; 
     border-radius: 20px;
     animation: batidas 1s ease-in-out infinite;
 }
