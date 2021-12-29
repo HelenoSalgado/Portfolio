@@ -31,6 +31,67 @@
     <link rel="icon" type="image/png" sizes="32x32" href="/img-icon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/img-icon/favicon-16x16.png">
     <link rel="manifest" href="/site.webmanifest">
+    <style>
+        .sessao-orcamento{ 
+    position: relative;
+    margin: 0 auto;
+    max-width: none;
+    min-height: 100vh;
+    background-image: url(/img/office-orcamento.jpg); 
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+.img-orcamento{
+    position: relative;
+    width: 100%;
+}
+.orcamento-wrapper{
+    position: relative;
+    background-color: rgba(255, 255, 255, 0.164);
+    box-shadow: .1rem .1rem .3rem rgba(46, 45, 45, 0.788);
+}
+.sessao-orcamento form{
+    margin: 4rem;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    column-gap: 1rem;
+    row-gap: 2rem;
+}
+.sessao-orcamento label{
+    font-family: var(--font-secundary);
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #ffffff;
+}
+.sessao-orcamento input[type="number"]{
+    font-family: var(--font-secundary);
+    width: 4rem;
+    font-size: 2rem;
+    outline: none;
+    border-radius: 7px;
+    border: none;
+    padding: .3rem;
+}
+.sessao-orcamento input[type="radio"]{
+    margin-top: 1.5rem;;
+}
+.range-{
+    margin-right: 1rem;
+}
+.sessao-orcamento label#preco{
+    font-style: oblique;
+}
+.btn-orcamento{
+    cursor: pointer;
+    text-transform: uppercase;
+    padding: .5rem;
+    grid-column: 2;
+}
+    </style>
 </head>
 <body class="conteiner">
 
