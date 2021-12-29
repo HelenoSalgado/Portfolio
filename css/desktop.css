@@ -130,6 +130,7 @@ header > div.logo{
     height: 130px;      
     border-radius: 5px; 
     transform: translateX(-50%); 
+    background-color: #fff;
     box-shadow: .5px 1px 3px rgb(255, 255, 255);
     animation: caixa-logo 1s ease-in-out infinite;
 }
@@ -150,7 +151,7 @@ div.logo > img{
         opacity: 1;
     }
 }
-@keyframes batidas {
+/* @keyframes batidas {
     0% {
         width: 150px;
     }
@@ -166,14 +167,14 @@ div.logo > img{
     100%{
         width: 200px;
     }
-}
+} */
 @keyframes caixa-logo{
     0% {
-        box-shadow: .5px 1px 3px rgb(255, 255, 255);
+        box-shadow: .5px 1px 3px rgb(000, 000, 000);
     }
 
     100% {
-        box-shadow: .5px 1px 3px rgba(255, 255, 255, 0.712);
+        box-shadow: .5px 1px 3px rgba(000, 000, 000, 0.712);
     }
 }
 .sidebar {
