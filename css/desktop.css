@@ -60,7 +60,7 @@ header {
     display: block;
     width: 100%;
     height: 100vh;
-    overflow-x: hidden;
+    overflow: hidden;
 }
 .img-wrapper {
     width: 100%;
@@ -122,6 +122,23 @@ header {
     cursor: pointer;
     animation: MoveBanner 1.4s;
 }
+header > div.logo{
+    position: absolute;
+    left: 50%; 
+    top: 60%; 
+    width: 130px; 
+    height: 130px;      
+    border-radius: 5px; 
+    transform: translateX(-50%); 
+    box-shadow: .5px 1px 3px rgb(255, 255, 255);
+    animation: caixa-logo 1s ease-in-out infinite;
+}
+div.logo > img{
+    display: block;
+    margin: auto;
+    width: 130px; 
+    animation: batidas 1s ease-in-out infinite;
+}
 @keyframes MoveBanner {
     0% {
         transform: translateY(10rem);
@@ -131,6 +148,32 @@ header {
     100% {
         transform: translateY(0rem);
         opacity: 1;
+    }
+}
+@keyframes batidas {
+    0% {
+        width: 150px;
+    }
+
+    40%{
+        width: 160px;
+    }
+
+    80% {
+        width: 140px;
+    }
+
+    100%{
+        width: 200px;
+    }
+}
+@keyframes caixa-logo{
+    0% {
+        box-shadow: .5px 1px 3px rgb(255, 255, 255);
+    }
+
+    100% {
+        box-shadow: .5px 1px 3px rgba(255, 255, 255, 0.712);
     }
 }
 .sidebar {
@@ -430,65 +473,6 @@ input{
     height: 2rem;
     margin-bottom: 2rem;
     text-transform: uppercase;
-}
-.sessao-orcamento{ 
-    position: relative;
-    margin: 1rem auto 0 auto;
-    max-width: none;
-    height: auto;
-    background-image: url(../img/office-orcamento.jpg); 
-    background-repeat: no-repeat;
-    background-size: cover;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-}
-.img-orcamento{
-    position: relative;
-    width: 100%;
-}
-.orcamento-wrapper{
-    position: relative;
-    background-color: rgba(255, 255, 255, 0.164);
-    box-shadow: .1rem .1rem .3rem rgba(46, 45, 45, 0.788);
-}
-.sessao-orcamento form{
-    margin: 4rem;
-    display: grid;
-    grid-template-columns: auto 1fr;
-    column-gap: 1rem;
-    row-gap: 2rem;
-}
-.sessao-orcamento label{
-    font-family: var(--font-secundary);
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: #ffffff;
-}
-.sessao-orcamento input[type="number"]{
-    font-family: var(--font-secundary);
-    width: 4rem;
-    font-size: 2rem;
-    outline: none;
-    border-radius: 7px;
-    border: none;
-    padding: .3rem;
-}
-.sessao-orcamento input[type="radio"]{
-    margin-top: 1.5rem;;
-}
-.range-{
-    margin-right: 1rem;
-}
-.sessao-orcamento label#preco{
-    font-style: oblique;
-}
-.btn-orcamento{
-    cursor: pointer;
-    text-transform: uppercase;
-    padding: .5rem;
-    grid-column: 2;
 }
 footer{
     border-top: 2px solid white;
