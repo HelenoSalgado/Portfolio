@@ -25,20 +25,16 @@
     <!-- Biblioteca de animacões conforme scroll. -->
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <!-- CSS local. -->
-    <link rel="stylesheet" href="css/desktop.css">
+    <link rel="stylesheet" href="css/main.css">
     <link rel="apple-touch-icon" sizes="180x180" href="img-icon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="img-icon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="img-icon/favicon-16x16.png">
     <link rel="manifest" href="/site.webmanifest">
 </head>
 <body class="conteiner">
-        <div class="hamburguer">
-            <div class="line" id="line1"></div>
-            <div class="line" id="line2"></div>
-            <div class="line" id="line3"></div>
-        </div>
         
         <header id="home">
+
             <div class="img-wrapper">
                 <picture>
                     <source media="(max-width: 750px)" srcset="img/web-sobre-p.jpg">
@@ -52,11 +48,19 @@
                   <p>Heleno Salgado Lopes</p>
                   <!-- <button>Saiba mais</button> -->
             </div>  
+
             <div class="logo">
+
+                <div class="hamburguer">
+                    <div class="line" id="line1"></div>
+                    <div class="line" id="line2"></div>
+                    <div class="line" id="line3"></div>
+                </div>
+
                 <img src="img/hsl-logo-transparent.png" alt="logo">
             </div>
-        </header>
-        <aside class="sidebar">
+            
+            <aside class="sidebar">
             <nav>
                 <ul class="menu">
                     <li class="menu-item"><a href="#home" class="menu-link">Home</a></li>
@@ -71,7 +75,10 @@
                 <a href="https://www.facebook.com/heleno.salgado.16/"><i class="fab fa-facebook"></i></a>
                 <a href="https://www.instagram.com/heleno_salgado/"><i class="fab fa-instagram"></i></a>
             </div>
+
         </aside>
+        </header>
+        
         <h2 data-aos="fade">Conhecimentos</h2>
         <section class="sessao-conhecimentos"  id="conhecimentos">
             <div data-aos="fade-right">
@@ -168,6 +175,7 @@
              </div> 
         </section>
         <section class="sessao-contato" data-aos="fade-up" id="contato">
+            <div class="img-fundo">
             <div class="contato-wrapper">
                     <h2>Contato</h2>
                     <form action="https://formsubmit.co/helenosalgado19@gmail.com" method="post">
@@ -185,6 +193,7 @@
                         <input type="hidden" name="_captcha" value="false">
                         <input type="hidden" name="_autoresponse" value="Recebi sua mensagem, logo em breve darei uma resposta. Obrigado!">
                     </form>
+            </div>
             </div>
         </section> 
        <!--

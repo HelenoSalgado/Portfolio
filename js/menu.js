@@ -3,6 +3,17 @@ var hamburguer = document.querySelector(".hamburguer");
     document.querySelector(".conteiner").classList.toggle("show-menu");
 });
 
+var lastScrollTop = 30;
+ $(window).scroll(function(event){
+   var st = $(this).scrollTop();
+   if (st > lastScrollTop || st === 30){
+     $('.logo').slideUp("fast");
+   } else {
+     $('.logo').slideDown("fast");
+   }
+   lastScrollTop = st;
+ });
+ 
 document.querySelector("#qtde").addEventListener("change", atualizarpreco)
 document.querySelector("#js").addEventListener("change", atualizarpreco)
 document.querySelector("#layout-sim").addEventListener("change", atualizarpreco)
