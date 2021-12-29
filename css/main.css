@@ -379,7 +379,7 @@ h2{
     height: auto;
     border-radius: 5px;
     background: rgb(253, 253, 253);
-    background: url(../img/web-sobre.jpg) no-repeat center center fixed;
+    background: url(../img/web-sobre-p.jpg) no-repeat center center fixed;
     background-size: cover;
 }
 .contato-wrapper{
