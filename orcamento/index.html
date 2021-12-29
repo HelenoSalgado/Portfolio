@@ -25,15 +25,53 @@
     <!-- Biblioteca de animacões conforme scroll. -->
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <!-- CSS local. -->
-    <link rel="stylesheet" href="/css/desktop.css">
-    <link rel="stylesheet" href="/css/orcamento.css">
+    <link rel="stylesheet" href="file:///C:/Users/HELENO%20SALGADO%20LOPES/Documents/MeusProjetos/Portfolio/css/desktop.css">
+    <link rel="stylesheet" href="file:///C:/Users/HELENO%20SALGADO%20LOPES/Documents/MeusProjetos/Portfolio/css/orcamento.css">
     <link rel="apple-touch-icon" sizes="180x180" href="/img-icon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/img-icon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/img-icon/favicon-16x16.png">
     <link rel="manifest" href="/site.webmanifest">
 </head>
 <body class="conteiner">
-
+    <div class="hamburguer">
+        <div class="line" id="line1"></div>
+        <div class="line" id="line2"></div>
+        <div class="line" id="line3"></div>
+    </div>
+    
+    <header id="home">
+        <div class="img-wrapper">
+            <picture>
+                <source media="(max-width: 750px)" srcset="/img/web-sobre-p.jpg">
+                <source media="(min-width: 800px)" srcset="/img/web-sobre.jpg">
+              <img src="/img/web-sobre.jpg" alt="Imagem">
+            </picture>
+        </div>
+        <div class="banner">
+              <h1>Desenvolve<wbr>dor Web Front End</h1>
+              <p>Heleno Salgado Lopes</p>
+              <!-- <button>Saiba mais</button> -->
+        </div>  
+        <div class="logo">
+            <img src="/img/hsl-logo-transparent.png" alt="logo">
+        </div>
+    </header>
+    <aside class="sidebar">
+        <nav>
+            <ul class="menu">
+                <li class="menu-item"><a href="#home" class="menu-link">Home</a></li>
+                <li class="menu-item"><a href="#conhecimentos" class="menu-link">Conhecimentos</a></li>
+                <li class="menu-item"><a href="#projetos" class="menu-link">Projetos</a></li>
+                <li class="menu-item"><a href="#contato" class="menu-link">Contato</a></li>
+                <li class="menu-item"><a href="/orcamento" class="menu-link">Orçamento</a></li>
+            </ul>
+        </nav>
+        <div class="social-media">
+            <a href="https://github.com/HelenoSalgado/"><i class="fab fa-github-alt"></i></a>
+            <a href="https://www.facebook.com/heleno.salgado.16/"><i class="fab fa-facebook"></i></a>
+            <a href="https://www.instagram.com/heleno_salgado/"><i class="fab fa-instagram"></i></a>
+        </div>
+    </aside>
         <section class="sessao-orcamento" data-aos="fade-up" id="orcamento">
             <div class="orcamento-wrapper">
                 <form action="https://formsubmit.co/helenosalgado19@gmail.com" method="post">
