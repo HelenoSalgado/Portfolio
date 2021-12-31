@@ -205,25 +205,8 @@ div.artigos-relacionados div{
 .artigos-relacionados p{
     height: 75px;
 }
-.conhecimento-img{
-    position: relative;
-}
-.conhecimento-img figure{
-    display: block;
-    margin: 1rem auto;
-    max-width: 500px;
-}
-.conhecimento-img figcaption{
+div.compartilhe{
     display: none;
-    color: rgb(37, 36, 36);
-    text-align: center;
-    font-family: var(--font-secundary);
-    font-size: .7rem;
-    font-style: italic;
-}
-.conhecimento-img img{
-    width: 100%;
-    object-fit: cover;
 }
 div.compartilhe p{
     text-align: center; 
@@ -306,6 +289,12 @@ footer q{
     .artigos-relacionados p{
         height: auto;
     }
+    abbr{
+        text-decoration: none;
+      }
+    div.compartilhe{
+        display: block;
+    }
 }    
 @media (max-width: 919px){
       .banner h1 {
@@ -337,8 +326,8 @@ footer q{
             <aside class="sidebar">
             <nav>
                 <ul class="menu">
-                    <li class="menu-item"><a href="/index.html" class="menu-link">Home</a></li>
-                    <li class="menu-item"><a href="/orcamento/index.html" class="menu-link">Faça um orçamento</a></li>
+                    <li class="menu-item"><a href="/index.html" class="menu-link">PORTFÓLIO</a></li>
+                    <li class="menu-item"><a href="/orcamento/index.html" class="menu-link">FAÇA UM ORÇAMENTO</a></li>
                 </ul>
             </nav>
             <div class="social-media">
@@ -381,16 +370,12 @@ footer q{
             
             </div>
         </main>
-        <!-- <div class="conhecimento-img">
-            <figure data-aos="fade-up">
-                <img src="img/trabalho-remoto.png" loading="lazy" alt="Imagem Conhecimento">
-                <figcaption>Imagem de <a href="https://pixabay.com/pt/users/roadlight-15702095/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=5491798">政徳 吉田</a> por <a href="https://pixabay.com/pt/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=5491798">Pixabay</a></figcaption>
-            </figure>
-       </div> -->
+    
        <div class="compartilhe">
-           <p >COMPARTILHE:</p>
+           <p >Compartilhe:</p>
            <a href="javascript:void(0)" onclick="share()"><i class="fas fa-share-alt"></i></a>
        </div>
+
         <footer>
             <div class="media-sociais">
                 <a href="https://www.facebook.com/heleno.salgado.16/"><i class="fab fa-facebook"></i></a>

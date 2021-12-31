@@ -216,25 +216,25 @@ h2{
     margin-top: .5rem; 
     text-align: right;
 }
-.conhecimento-img{
-    position: relative;
-}
-.conhecimento-img figure{
-    display: block;
-    margin: 1rem auto;
-    max-width: 500px;
-}
-.conhecimento-img figcaption{
+div.compartilhe{
     display: none;
-    color: rgb(37, 36, 36);
-    text-align: center;
-    font-family: var(--font-secundary);
-    font-size: .7rem;
-    font-style: italic;
 }
-.conhecimento-img img{
-    width: 100%;
-    object-fit: cover;
+div.compartilhe p{
+    text-align: center; 
+    margin-top: 2rem; 
+    font-family: var(--font-action);
+    color: #424241;;
+}
+div.compartilhe a{
+    display: block; 
+    margin: .5rem auto; 
+    text-align: center; 
+    font-size: 1.3rem; 
+    color: #424241;
+    transition: .1s ease-in;
+}
+div.compartilhe a:hover{
+    color: #770377b9;
 }
 footer{
     border-top: 2px solid white;
@@ -297,6 +297,9 @@ footer q{
     h2{
         font-size: 2.3rem;
     }
+    div.compartilhe{
+        display: block;
+    }
 }    
 @media (max-width: 919px){
       .banner h1 {
@@ -328,8 +331,8 @@ footer q{
             <aside class="sidebar">
             <nav>
                 <ul class="menu">
-                    <li class="menu-item"><a href="/index.html" class="menu-link">Home</a></li>
-                    <li class="menu-item"><a href="/orcamento/index.html" class="menu-link">Faça um orçamento</a></li>
+                    <li class="menu-item"><a href="/index.html" class="menu-link">PORTFÓLIO</a></li>
+                    <li class="menu-item"><a href="/orcamento/index.html" class="menu-link">FAÇA UM ORÇAMENTO</a></li>
                 </ul>
             </nav>
             <div class="social-media">
@@ -376,14 +379,12 @@ footer q{
             <div>
             </div>
         </section>
-        <!-- <div class="conhecimento-img">
-            <figure data-aos="fade-up">
-                <img src="img/trabalho-remoto.png" loading="lazy" alt="Imagem Conhecimento">
-                <figcaption>Imagem de <a href="https://pixabay.com/pt/users/roadlight-15702095/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=5491798">政徳 吉田</a> por <a href="https://pixabay.com/pt/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=5491798">Pixabay</a></figcaption>
-            </figure>
-       </div> -->
-       <p style="text-align: center; margin-top: 2rem; font-family: var(--font-action);">COMPARTILHE:</p>
-       <a style="display: block; margin: .5rem auto; text-align: center; font-size: 1.3rem; color: #424241;" href="javascript:void(0)" onclick="share()"><i class="fas fa-share-alt"></i></a>
+
+       <div class="compartilhe">
+           <p >Compartilhe:</p>
+           <a href="javascript:void(0)" onclick="share()"><i class="fas fa-share-alt"></i></a>
+        </div>
+
         <footer>
             <p style="color: red;"><em>Esta página encontra-se em desenvolvimento.</em></p>
             <div class="media-sociais">
