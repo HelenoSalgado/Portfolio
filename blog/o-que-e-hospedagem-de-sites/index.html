@@ -190,11 +190,19 @@ article a{
     font-size: 1.5rem;
     font-weight: 600;
 }
-div.botoes{
+div.artigos-relacionados{
     margin-top: 2rem;
     width: 100%;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-evenly;
+}
+div.artigos-relacionados div{
+    margin: 1rem;
+    width: 300px;
+}
+.artigos-relacionados p{
+    height: 70px;
 }
 .conhecimento-img{
     position: relative;
@@ -294,6 +302,9 @@ footer q{
     h2{
         font-size: 2.3rem;
     }
+    .artigos-relacionados p{
+        height: auto;
+    }
 }    
 @media (max-width: 919px){
       .banner h1 {
@@ -343,23 +354,30 @@ footer q{
                 
                 <p>Nós, humanos, sempre que viajamos nos hospedamos em algum lugar. Ali, na hospedagem, alimentamos e podemos descansar em paz. Com sites não é muito diferente, eles também precisam de uma hospedagem. Afinal, pode-se dizer que eles viajam o mundo inteiro. Este site, por exemplo, só está sendo apresentado na tela do seu dispositivo, porque antes foi hospedado e está sendo alimentado pelo &#39;servidor de hospedagem&#39;.</p>
 
-<p>Para esclarecer, todo site precisa está armazenado e  localizado em algum lugar na Rede Mundial de Computadores (sigla em Inglês, WEB), de maneira que, quando for solicitado pelo navegador de algum cliente/usuário, ele seja imediatamente exibido na tela do dispositivo. Todo o conteúdo do site, tais como os arquivos HTML, PHP, CSS, JS, áudios, vídeos e imagens são armazenados pelo servidor de hospedagem (em inglês, Server Hosting), e podem ser solicitados a qualquer hora do dia ou da noite.</p>
+<p>Para esclarecer, todo site precisa está armazenado e  localizado em algum lugar na Rede Mundial de Computadores (sigla em Inglês, WWW), de maneira que, quando for solicitado pelo cliente, ele seja imediatamente exibido na tela do dispositivo. Todo o conteúdo do site, tais como os arquivos HTML, PHP, CSS, JS, áudios, vídeos e imagens são armazenados pelo servidor de hospedagem (em inglês, Server Hosting), e podem ser solicitados a qualquer hora do dia ou da noite.</p>
 
-<p>Diferente da hospedagem para humanos, que está limitada a uma região específica, a hospedagem para sites está disponível para qualquer região do mundo. O site fica hospedado localmente, mas todas as vezes que é solicitado para visualização, o servidor envia uma cópia para o cliente/usuário.</p>
+<p>Diferente da hospedagem para humanos, que está limitada a uma região específica, a hospedagem para sites está disponível para qualquer região do mundo. O site fica hospedado localmente, mas todas as vezes que é solicitado para visualização, o servidor envia uma cópia para o cliente, que é o dispositivo do usuário.</p>
 
-<p>Existem várias empresas que prestam esse serviço, seja de forma gratuita ou paga. Para sites simples que ocupa pouco espaço de armazenamento no servidor, como um portifólio, uma página de links ou até mesmo um blog você encontra hospedagens gratuitas na <a href="https://www.awardspace.com/" target="_blank">Awardspace</a>, <a href="https://www.hostinger.com.br/hospedagem-gratis" target="_blank">Hostinger</a> e <a href="https://infinityfree.net/" target="_blank">InfinityFree</a>, mas essas empresas também oferecem um serviço mais aprimorado por um valor mensal ou anual.</p>
+<p>Existem várias empresas que prestam esse serviço, seja de forma gratuita ou paga. Para sites simples que ocupa pouco espaço de armazenamento, como um portfólio, uma página de links ou até mesmo um blog você encontra hospedagens gratuitas na <a href="https://www.awardspace.com/" target="_blank">Awardspace</a>, <a href="https://www.hostinger.com.br/hospedagem-gratis" target="_blank">Hostinger</a> e <a href="https://infinityfree.net/" target="_blank">InfinityFree</a>, mas essas empresas também oferecem um serviço aprimorado por um valor mensal ou anual.</p>
 
-<p>A cada requisição que é feita pelo navegador, o site precisa estar no ar, precisa responder rapidamente, precisa ser seguro, e você só poderá exigir essas e outras coisas, se você estiver pagando. A empresa de hospedagem tem seus custos, a cada requisição feita é um gasto a mais nos equipamentos, nos megas de internet, na energia elétrica, em tudo.</p>
+<p>A cada requisição que é feita pelo cliente, o site precisa estar no ar, precisa responder rapidamente, precisa ser seguro, e você só poderá exigir essas e outras coisas, se você estiver pagando. A empresa de hospedagem tem seus custos, a cada requisição feita é um gasto a mais nos equipamentos, nos megas de internet, na energia elétrica, em tudo.</p>
 
 <p>Agora, falando da hospedagem gratuita, tem algumas coisas importantes a serem avaliadas, mesmo que seu site seja leve, simples e pequeno, a hospedagem gratuita não suportará todo o tráfico dos usuário se estes forem muitos acessando simultaneamente e/ou exceder um determinado limite de acessos mensal. Essas hospedagens também não costumam oferecer um serviço de segurança satisfatório e pode até limitar os tipos de arquivos usados no site.</p>
 
 <p>Aí fica à sua escolha, a minha dica é que contate um desenvolvedor para fazer um dimensionamento e ver se vale a pena hospedar seu site gratuitamente. De qualquer maneira, se você perceber que o serviço gratuito está sendo insuficiente, você pode mudar para um plano pago imediatamente.</p>
 
-<p>O propósito deste artigo foi mostrar que todo conteúdo do seu site precisa está hospedado em algum lugar da WEB, mas para acessar esse site você precisa ter registrado um nome de domínio e vinculado-o ao seu servidor de hospedagem. Confira: O que é um nome de domínio?</p>
+<p>O propósito deste artigo foi mostrar que todo conteúdo do seu site precisa está hospedado em algum lugar da <abbr title="Abreviação de World Wide Web">WEB</abbr>, mas para acessar esse site você precisa ter registrado um nome de domínio e vinculado-o ao seu servidor de hospedagem, senão, ninguém poderá acessar seu site.</p>
             </article>
-            <div class="botoes">
-                <a class="far fa-arrow-alt-circle-left" href="/blog/index.html"></a>
-            <a class="far fa-arrow-alt-circle-right" href=""></a>
+            <div class="artigos-relacionados">
+                <div>
+                    <p><a href="">Voltar</a></p>
+                   <a class="far fa-arrow-alt-circle-left" href="/blog/index.html"></a> 
+                </div>
+                <div>
+                    <p><a href="">O que é um Nome de Domínio?</a></p>
+                    <a class="far fa-arrow-alt-circle-right" href=""></a>
+                </div>
+            
             </div>
         </main>
         <!-- <div class="conhecimento-img">
