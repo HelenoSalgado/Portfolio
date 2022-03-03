@@ -455,7 +455,7 @@ input{
     text-transform: uppercase;
 }
 footer{
-    border-top: 2px solid #770377;
+    border-top: 1px solid white;
     margin-top: 0;
     padding: 2rem 0;
     position: relative;
