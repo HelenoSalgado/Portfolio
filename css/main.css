@@ -378,8 +378,8 @@ h2{
     max-width: 1200px;
     height: auto;
     border-radius: 5px;
-    background: rgb(253, 253, 253);
-    background: url(../img/web-sobre-p.jpg) no-repeat center left fixed;
+    background: rgb(65, 65, 65);
+    background: url(../img/office-orcamento-m.jpg) no-repeat center left fixed;
     background-size: cover;
 }
 .contato-wrapper{
@@ -388,8 +388,11 @@ h2{
     padding: .5rem;
     width: auto;
     height: auto;
-    background-color: rgba(252, 252, 252, 0.877);
+    background-color: rgba(46, 46, 46, 0.493); 
     border-radius: 5px; 
+}
+.contato-wrapper h2{
+    color: white;
 }
 .sessao-contato form{
     position: relative;
@@ -423,6 +426,7 @@ input{
     height: 2.5rem;
     margin: 2rem 0;
     outline: none;
+    color: white;
 }
 .field-label{
     position: absolute;
@@ -432,6 +436,7 @@ input{
     text-transform: uppercase;
     transition: all .3s;
     opacity: 0;  
+    color: white;
 }
 .field:focus ~ label{
     top: 0;
