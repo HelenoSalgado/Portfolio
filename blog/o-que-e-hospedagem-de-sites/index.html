@@ -19,7 +19,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700;800&family=Josefin+Slab:ital,wght@0,100;0,200;0,300;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Mulish:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <!-- Biblioteca de ícones. -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <!-- Biblioteca de animacões conforme scroll. -->
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <!-- Favicons. -->
@@ -177,7 +177,7 @@ main h1{
 }
 
 main a:hover{
-    color: #770377b9;
+    text-shadow: 1px .2px 1px rgba(0, 0, 0, 0.363);
 }
 article p{
     font-family: var(--font-secundary);
@@ -189,6 +189,12 @@ article p{
 article a{
     font-size: 1.5rem;
     font-weight: 600;
+}
+abbr{
+        text-decoration: none;
+        border-radius: 0 10px;
+        border-bottom: .5px solid #7703777a;;
+        text-shadow: .2px .5px 1px rgba(0, 0, 0, 0.514);
 }
 div.artigos-relacionados{
     margin-top: 2rem;
@@ -226,16 +232,12 @@ div.compartilhe a{
 div.compartilhe a:hover{
     color: #770377b9;
 }
-.compartilhe img{
-    filter: brightness(50%);
-}
 footer{
     border-top: 2px solid white;
     margin-top: 0;
     padding: 2rem 0;
     position: relative;
     width: 100%;
-    background-color: #424241;
 }
 .media-sociais{
     position: relative;
@@ -248,11 +250,13 @@ footer p{
     margin-top: 1rem;
     text-align: center;
     font-family: var(--font-secundary);
-    color: rgb(238, 238, 238);
+    /* color: rgb(238, 238, 238); */
+    color: #424241;;
 }
 footer a{
     margin: 0 1rem;
-    color: #e0e0de;
+    /* color: #e0e0de; */
+    color: #424241;
     font-size: 1.3rem;
 }
 footer a i{
@@ -261,7 +265,7 @@ footer a i{
 footer q{
     display: block;
     font-family: var(--font-secundary);
-    color: white;
+    color: #424241;
     text-align: center;
     font-style: oblique;
 }
@@ -293,9 +297,6 @@ footer q{
     .artigos-relacionados p{
         height: auto;
     }
-    abbr{
-        text-decoration: none;
-      }
     div.compartilhe{
         display: block;
     }
@@ -360,7 +361,7 @@ footer q{
 
 <p>Aí fica à sua escolha, a minha dica é que contate um desenvolvedor para fazer um dimensionamento e ver se vale a pena hospedar seu site gratuitamente. De qualquer maneira, se você perceber que o serviço gratuito está sendo insuficiente, você pode mudar para um plano pago imediatamente.</p>
 
-<p>O propósito deste artigo foi mostrar que todo conteúdo do seu site precisa está hospedado em algum lugar da <abbr title="Abreviação de World Wide Web">Web</abbr>, porém, para acessar esse site você precisa registrar um nome de domínio e vincular ao seu servidor de hospedagem.</p>
+<p>O propósito deste artigo foi mostrar que todo conteúdo do seu site precisa está hospedado em algum lugar da <abbr title="Abreviação de World Wide Web, Rede Mundial de Computadores.">Web</abbr>, porém, para acessar esse site você precisa registrar um nome de domínio e vincular ao seu servidor de hospedagem.</p>
             </article>
             <div class="artigos-relacionados">
                 <div>
@@ -376,13 +377,13 @@ footer q{
         </main>
     
        <div class="compartilhe">
-           <p >Compartilhe:</p>
-           <a href="javascript:void(0)" onclick="share()"><img style="display: block; margin: auto; width: 40px;" src="/img/share.png" alt="compartilhar"></a>
+           <p >COMPARTILHE</p>
+           <a href="javascript:void(0)" onclick="share()"><i class="fa-solid fa-share-nodes"></i></a>
        </div>
 
         <footer>
 
-            <p><a style="text-decoration: underline;" href="mailto:contato@heleno.dev?subject=[Escreva o Assunto Aqui]">contato@heleno.dev</a></p>
+            <p><a style="text-decoration: none;" href="mailto:contato@heleno.dev?subject=[Escreva o Assunto Aqui]">contato@heleno.dev</a></p>
 
             <div class="media-sociais">
                 <a href="https://www.facebook.com/heleno.salgado.16/"><i class="fab fa-facebook"></i></a>

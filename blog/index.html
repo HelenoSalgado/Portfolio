@@ -19,7 +19,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700;800&family=Josefin+Slab:ital,wght@0,100;0,200;0,300;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Mulish:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <!-- Biblioteca de ícones. -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <!-- Biblioteca de animacões conforme scroll. -->
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <!-- Favicons. -->
@@ -190,6 +190,7 @@ h2{
 }
 .sessao-conhecimentos div i:hover{
     font-size: 3rem;
+    box-shadow: none;
 }
 .sessao-conhecimentos h3, a{
     margin: 0;
@@ -200,7 +201,7 @@ h2{
     text-decoration: none;
 }
 .sessao-conhecimentos a:hover{
-    color: #770377b9;
+    text-shadow: 1px .2px 1px rgba(0, 0, 0, 0.363);
 }
 .sessao-conhecimentos p{
     font-family: var(--font-secundary);
@@ -235,9 +236,6 @@ div.compartilhe a{
 }
 div.compartilhe a:hover{
     color: #770377b9;
-}
-.compartilhe img{
-    filter: brightness(50%);
 }
 footer{
     border-top: 2px solid white;
@@ -385,8 +383,8 @@ footer q{
         </section>
 
         <div class="compartilhe">
-            <p >Compartilhe:</p>
-            <a href="javascript:void(0)" onclick="share()"><img style="display: block; margin: auto; width: 40px;" src="/img/share.png" alt="compartilhar"></a>
+            <p >COMPARTILHE</p>
+            <a href="javascript:void(0)" onclick="share()"><i class="fa-solid fa-share-nodes"></i></a>
         </div>
 
         <footer>
