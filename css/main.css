@@ -199,10 +199,7 @@ div.logo > img{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    background-color: rgb(248, 247, 247);background-image: url(/img/20943761_ccexpress.png);
-    background-size: cover cover;
-    background-repeat: no-repeat;
-    background-position: center;
+    background-color: rgb(248, 247, 247);
     padding-bottom: 1rem;
 }
 .sessao-conhecimentos div{
