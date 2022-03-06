@@ -361,6 +361,35 @@ h2{
     border-radius: 50%;
     display: inline-block;
   }
+   .sobremim{
+    width: 100vw; 
+    margin: 5rem auto; 
+    background-color: rgba(31, 31, 31, 0);
+   }
+   .sobremim > div{
+    position: relative;
+    max-width: 600px; 
+    margin: 1rem auto; 
+    padding: 1rem;
+    border-left: 1px solid rgba(56, 56, 56, 0.89);
+    border-right: 1px solid rgba(56, 56, 56, 0.89);
+    border-radius: 50px 0;
+    box-shadow: .5px .5px 5px #951280;
+    /* border-image: linear-gradient(-45deg, rgba(0, 0, 0, 0.541), #951280 60%)1; */
+   }
+   .sobremim > div > img{
+    width: 100px; 
+    border: 5px double #951280; 
+    border-radius: 50%; 
+    filter: brightness(80%);
+   }
+   .sobremim > div > p{
+    font-family: 'Mulish';
+    font-size: 1rem;
+    text-align: right;  
+    /* color: #424241; */
+    color: #951280;
+   }
   .btn{
     width: 8rem;
     height: 2.5rem;
