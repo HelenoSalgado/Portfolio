@@ -518,6 +518,9 @@ footer q{
     h2{
         font-size: 2.3rem;
     }
+    .sessao-contato{
+        border-radius: 0;
+    }
 }    
 @media (max-width: 919px){
       .banner h1 {
