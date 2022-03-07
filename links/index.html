@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700;800&family=Josefin+Slab:ital,wght@0,100;0,200;0,300;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Mulish:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"> 
+    <title>LINKS</title>
+    <style>
+        *{
+            margin: 0;
+        }
+        body{
+            height: 100vh; background-image: url(/img/caminho.jpg); background-repeat: no-repeat; background-position: center; background-size: cover; overflow-y: hidden;
+        }
+        body > div{
+            width: 100%; height: 100%; background-image: linear-gradient(to bottom, rgba(9, 22, 97, 0.418), rgb(70, 10, 94));
+        }
+        .img-perfil{
+            display: block;
+            width: 100px;
+            margin: auto;
+            border: 2px solid rgb(70, 10, 94);
+            border-radius: 50%;
+            box-shadow: 1px 1px 5px black;
+        }
+        h1{
+            font-family: 'Josefin Slab';
+            margin: 1rem 0;
+            text-align: center;
+            color: white;
+            text-shadow: 1px 1px 3px black;
+        }
+        section .projetos{
+           max-width: 800px;
+           margin: 2rem auto;
+           display: flex;
+           flex-wrap: nowrap;
+           align-items: center;
+           align-content: center;
+           background-color: rgba(0, 0, 0, 0.507);
+           border-radius: 10px;
+           box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.829);
+       }
+       .projetos > img{
+           width: 100px;
+           background-color: rgb(255, 255, 255);
+           border-radius: 10px 0 0 10px;
+       }
+       .projetos > p{
+           font-family: 'Mulish';
+           font-size: 1rem;
+           margin: 0 1rem;
+           color: white;
+           text-shadow: .5px .5px 2px rgba(0, 0, 0, 0.507);
+       }
+       a{
+           color: rgb(212, 167, 17);
+           font-weight: bold;
+       }
+       footer{
+           margin-top: 5rem;
+           text-align: center;
+           color: white;
+       }
+       footer > h2{
+           font-family: 'Baloo 2';
+           font-size: 1.3rem;
+       }
+       .media-sociais{
+           margin: .8rem;
+       }
+       .media-sociais a{
+           margin: 0 .5rem;
+           font-size: 1rem;
+       }
+       footer > q{
+           font-family: 'Mulish';
+       }
+    </style>
+</head>
+<body>
+    <div>
+       <img class="img-perfil" src="/img/HELENO SALGADO-p.jpg" alt="">
+
+        <h1>Conheça meus projetos</h1>
+        
+        <section>
+
+            <div class="projetos">
+                <img src="/img/licoes1.jpg" alt="">
+                <p>Meu site de devocionais e artigos de teologia cristã, confira <a href="http://orarelabutar.com/" target="_blank">aqui</a>.</p>
+           </div>
+
+            <div class="projetos">
+                <img src="/img/logo.png" alt=""></a>
+                <p>Meu site profissional de Desenvolvimento Web, Confira <a href="http://heleno.dev/" target="_blank">aqui</a>.</p>
+           </div>
+        </section>
+        <footer>
+            <h2>Minhas Redes Sociais</h2>
+            <div class="media-sociais">
+                <a href="https://www.facebook.com/heleno.salgado.16/"><i class="fab fa-facebook"></i></a>
+                <a href="https://www.instagram.com/heleno_salgado/"><i class="fab fa-instagram"></i></a>
+                <a href="https://github.com/HelenoSalgado/"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/helenosalgado"><i class="fab fa-linkedin"></i></a>
+            </div>   
+            <q>Ao Senhor pertence a salvação - (Jonas 2:9)</q>
+        </footer>
+    </div>   
+</body>
+</html>
