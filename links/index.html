@@ -13,11 +13,17 @@
         *{
             margin: 0;
         }
-        body{
-            height: 100vh; background-image: url(/img/caminho.jpg); background-repeat: no-repeat; background-position: center; background-size: cover;
+        .img-fundo{
+            position: relative;
+            height: 100vh; 
+            background-image: url(/img/caminho.jpg); background-repeat: no-repeat; 
+            background-position: center; 
+            background-size: 100% cover;
         }
-        body > div{
-            width: 100%; height: 100%; background-image: linear-gradient(to bottom, rgba(9, 22, 97, 0.418), rgb(70, 10, 94));
+        .filtro{
+            width: 100%; 
+            height: 100%; 
+            background-image: linear-gradient(to bottom, rgba(9, 22, 97, 0.418), rgb(70, 10, 94));
         }
         .img-perfil{
             display: block;
@@ -29,10 +35,13 @@
         }
         h1{
             font-family: 'Josefin Slab';
-            margin: 1rem 0;
+            margin: 1rem .5rem;
             text-align: center;
             color: white;
             text-shadow: 1px 1px 3px black;
+        }
+        section{
+            padding: 0 1rem;
         }
         section .projetos{
            max-width: 800px;
@@ -44,6 +53,7 @@
            background-color: rgba(0, 0, 0, 0.507);
            border-radius: 10px;
            box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.829);
+           overflow: hidden;
        }
        .projetos > img{
            width: 100px;
@@ -82,9 +92,10 @@
        }
     </style>
 </head>
-<body>
-    <div>
-       <img class="img-perfil" src="/img/HELENO SALGADO-p.jpg" alt="">
+<body class="img-fundo">
+    <div class="filtro">
+
+       <img class="img-perfil" src="/img/HELENO-SALGADO-p.jpg" alt="">
 
         <h1>Conheça meus projetos</h1>
         
