@@ -370,7 +370,7 @@ h2{
     border-radius: 50%;
     display: inline-block;
   }
-  section.mais-informacoes{
+  .sessao-informacoes{
       position: relative;
       max-width: 1200px;
       margin: 6rem auto 0 auto;
@@ -403,6 +403,23 @@ h2{
     color: #ffffff;
     text-shadow: .5px .5px 1px black;
    }
+   .orcamento1 button{
+    display: block; font-family: 'Mulish'; font-size: .9rem; width: fit-content; padding: .5rem; margin: 1rem auto; background-color: rgb(143, 17, 115); border-radius: 5px; box-shadow: 2px 1px 10px #fff; animation: luminosidade 2s ease infinite;
+   }
+   @keyframes luminosidade {
+       0%{ 
+           box-shadow: 2px 1px 10px #fff;
+       }
+       25%{
+           box-shadow: 1px .5px 6px #fff;
+       }
+       50%{
+           box-shadow: 3px 2px 12px #fff;
+       }
+       100%{
+           box-shadow: none;
+       }
+   }
   .btn{
     width: 8rem;
     height: 2.5rem;
@@ -416,7 +433,7 @@ h2{
     border-radius: .5rem;
 }
 .sessao-contato{
-    margin: 0 auto;
+    margin: 0 auto 3rem auto;
     max-width: 1200px;
     height: auto;
     border-radius: 0 0 5px 5px;
@@ -426,7 +443,7 @@ h2{
 }
 .contato-wrapper{
     display: block;
-    margin: 0 auto 3rem auto;
+    margin: 0 auto;
     padding: .5rem;
     width: auto;
     height: auto;
@@ -559,6 +576,9 @@ footer q{
     }
     h2{
         font-size: 2.3rem;
+    }
+    .sessao-informacoes{
+        border-radius: 0;
     }
     .sessao-contato{
         border-radius: 0;
