@@ -22,8 +22,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&display=swap" rel="stylesheet">
     <!-- Biblioteca de ícones. -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    <!-- Biblioteca de animacões conforme scroll. -->
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     
     <link rel="apple-touch-icon" sizes="180x180" href="/img-icon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/img-icon/favicon-32x32.png">
@@ -388,7 +386,8 @@ footer q{
         <div class="banner">
               <h1>Desenvolve<wbr>dor Web Front End</h1>
               <p>Heleno Salgado Lopes</p>
-              <button><a style="color: white; text-decoration: none;" href="/index.html">Saiba mais</a></button>
+              <q style="font-family: 'Mulish'; color: #fff;">A persistência é o caminho do êxito.</q><br>
+              <div style="margin-top: 1rem; color: #fff; font-style: italic;">Charles Chaplin</div>
         </div>  
 
         <div class="logo">
@@ -420,7 +419,7 @@ footer q{
 
     </header>
     
-        <section class="sessao-orcamento" data-aos="fade-up" id="orcamento">
+        <section class="sessao-orcamento" data-aos="fade" id="orcamento">
             <div class="orcamento-wrapper">
                 <form action="https://formsubmit.co/helenosalgado19@gmail.com" method="post">
                     <input type="hidden" name="_next" value="https://helenosalgado.github.io/Portfolio/orcamento-form.html">
@@ -452,21 +451,13 @@ footer q{
                 </form>
             </div>
         </section>
-        <p style="font-family: var(--font-action); font-size: 1.2rem; margin-top: 1rem; text-align: center;">Tens Dúvidas? Fale comigo.</p>
+        <footer style="border: none;"> 
+            <p style="font-family: var(--font-action); margin-top: 1rem; font-size: 1.2rem; text-align: center;">Tens Dúvidas? Fale comigo.</p>
         <a href="https://wa.me/message/QBPTYVHS7CKQG1"><img style="display: block; max-width: 80px; margin: auto;" src="/img/Whatsapp.png" alt="botão do Whatsapp"></a>
 
         <p style="
- font-family: var(--font-secundary);
- font-size: 1.2rem;
- text-align: center;
- margin: 2rem auto;
- padding: .7rem;
- border-radius: 3px;
- border: 1px solid black;
- font-weight: bold; background-color: rgb(238, 237, 237); width: 100px;">
- <a style="text-decoration: none; color:darkmagenta;" href="https://helenosalgado.github.io/Portfolio/">VOLTAR</a></p>
-
-        <footer>
+ font-family: var(--font-secundary); font-size: 1.2rem; text-align: center; margin: 2rem auto; padding: .7rem; border-radius: 3px; font-weight: bold; text-shadow: 5px 5px 20px rgb(255, 255, 255);">
+ <a style="text-decoration: none; color:#fff;" href="https://helenosalgado.github.io/Portfolio/">VOLTAR</a></p>
             <div class="media-sociais">
                 <a href="https://www.facebook.com/heleno.salgado.16/"><i class="fab fa-facebook"></i></a>
                 <a href="https://www.instagram.com/heleno_salgado/"><i class="fab fa-instagram"></i></a>
@@ -481,19 +472,5 @@ footer q{
             <i class="fas fa-arrow-up"></i>
         </a>
     <script src="/js/menu.js"></script>
-    <!-- Script da animação com scroll. -->
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-       <script>
-         AOS.init({
-           duration: 1000,
-        //    aos: fade-up,
-        //    offset: 200,
-        //    delay: 50,
-        //    easing: ease-in-out,
-        //    mirror: true,
-        //    once: false,
-        //    placement: top-center,
-    });
-  </script>
 </body>
 </html>
