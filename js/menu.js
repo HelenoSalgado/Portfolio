@@ -3,6 +3,18 @@ var hamburguer = document.querySelector(".hamburguer");
     document.querySelector(".conteiner").classList.toggle("show-menu");
 });
  
+function alternaTema() {
+  let temaEscuro = document.querySelector("#temaEscuro");
+  let temaClaro = document.querySelector("#temaClaro");
+  if (temaEscuro.disabled) {
+      temaEscuro.disabled = false;
+      temaClaro.disabled = true;
+  } else {
+      temaEscuro.disabled = true;
+      temaClaro.disabled = false;
+  }
+}
+
 document.querySelector("#qtde").addEventListener("change", atualizarpreco)
 document.querySelector("#js").addEventListener("change", atualizarpreco)
 document.querySelector("#layout-sim").addEventListener("change", atualizarpreco)
