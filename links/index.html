@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700;800&family=Josefin+Slab:ital,wght@0,100;0,200;0,300;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Mulish:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"> 
     <title>LINKS</title>
@@ -15,63 +18,188 @@
         }
         .img-fundo{
             position: relative;
-            /* height: 110vh;  */
-            background-image: url(/img/caminho.jpg); background-repeat: no-repeat; 
-            background-position: center; 
-            background-size: 100% cover;
+            background: #000;
+            background-image: url(../img/caminho.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+            
         }
-        .filtro{
-            padding-top: 1rem;
-            padding-bottom: 3rem;
-            width: 100%; 
-            height: 110%; 
-            background-image: linear-gradient(to bottom, #0916616b, #460a5e);
+        div.cabecalho{
+            margin-top: -20px;
+            padding: 1rem 0;
+            background-color: rgba(3, 3, 3, 0.726);
+            border-bottom: 2px solid #000;
         }
         .img-perfil{
             display: block;
-            width: 100px;
+            width: 120px;
             margin: auto;
-            border: 2px solid rgb(70, 10, 94);
+            padding: .5rem 0;
             border-radius: 50%;
-            box-shadow: 1px 1px 5px #000000;
         }
-        h1, h2{
-            font-family: 'Baloo 2';
-            line-height: 2rem;
-            margin: 1rem .5rem;
-            text-align: center;
-            color: white;
-            text-shadow: .3px .3px 3px #000;
-        }
-        section{
-            margin-top: 2rem;
-            padding: 0 1rem;
-        }
-        section .projetos{
-           max-width: 800px;
-           margin: 2rem auto;
-           display: flex;
-           flex-wrap: nowrap;
-           align-items: center;
-           align-content: center;
-           background-color: #0000005d;
-           border-radius: 10px;
-           box-shadow: 1px 1px 3px #000000d3;
-           overflow: hidden;
+        .media-sociais{
+           text-align: center;
+           margin: .8rem;
        }
-       .projetos > img{
-           width: 100px;
-           background-color: #ffffff;
-           border-radius: 10px 0 0 10px;
+       .media-sociais a{
+           margin: 0 .5rem;
+           font-size: 1.3rem;
        }
-       .projetos > p{
-           font-family: 'Mulish';
-           font-size: 1rem;
-           font-weight: bold;
-           margin: 0 1rem;
-           color: #fff;
-           text-shadow: .5px .5px 2px rgba(0, 0, 0, 0.507);
-       }
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Montserrat', sans-serif;
+}
+.container h1 {
+  font-size: 1.5rem;
+  padding: 0.5rem;
+  font-weight: bold;
+  letter-spacing: 0.1rem;
+  text-align: center;
+  color: white;
+  overflow: hidden;
+}
+.container h1 span.typed-text {
+  font-weight: normal;
+  color: #c29500;
+  text-shadow: 1px 1px 3px #000;
+}
+.container h1 span.cursor {
+  display: inline-block;
+  background-color: #d4a711;
+  margin-left: 0.1rem;
+  width: 2px;
+  animation: blink 2s infinite;
+}
+.container p span.cursor.typing {
+  animation: none;
+}
+@keyframes blink {
+  0%  { background-color: #d4a711; }
+  49% { background-color: #d4a711; }
+  50% { background-color: transparent; }
+  99% { background-color: transparent; }
+  100%  { background-color: #d4a711; }
+}
+
+.sessao-projetos{
+    position: relative;
+    padding: 0 1rem;
+    margin: 3rem auto;
+    max-width: 1200px;
+    border-radius: 5px;
+}
+.cards{
+    margin-top: 4rem;
+    display: flex;
+    justify-content: space-between;
+    overflow-y: hidden;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch; 
+}
+.card{ 
+    position: relative;
+    flex: none;
+    width: 18.9rem;
+    height: 30rem;
+    scroll-snap-align: center;
+    pointer-events: none;
+}
+@keyframes mover {
+    to{
+        margin-bottom: 0;
+    }
+    from{
+        margin-bottom: 1rem;
+    }
+}
+.text{
+    position: absolute;
+    top: 0;
+    width: 18rem;
+    height: 30rem;
+    background:#424241;  
+    background: -webkit-linear-gradient(rgba(0, 0, 0, 0), #000000ad, #000000);  
+    background: linear-gradient (rgba(0, 0, 0, 0), #000000ad, #000000);
+    border-radius: 5px;
+}
+.text h3{
+    font-family:'Montserrat', sans-serif;
+    font-size: 2rem;
+    font-weight: 500;
+    color: rgb(246, 241, 241);
+    margin: 80% 0 0 1rem;
+}
+.text h4{
+    margin-top: .5rem;
+    width: 80%;
+    background: linear-gradient(to right, #ffffff8e, #ffffff00);
+    padding: .2rem .5rem;
+    border-radius: 3rem;
+    font-family: 'Mulish', sans-serif;
+    font-size: 1rem;
+    font-weight: bolder;
+    color: #d4a711;
+    margin-left: 1rem;
+}
+.text p{
+    margin-top: 1rem;
+    width: 90%;
+    font-family: 'Mulish', sans-serif;
+    font-size: 1.1rem;
+    color: #eee;
+    font-weight: 400;
+    margin-left: 1rem;
+}
+.text a{
+    margin-top: .5rem;
+    font-family: 'Mulish';
+    pointer-events: painted;
+    text-decoration: none;
+    color: #d4a711;
+    margin-left: 1rem;
+    transition: ease-in .1s;
+}
+.text a i{
+    font-size: .5rem;
+    margin-left: .5rem;
+}
+.text a:hover{
+    margin-left: 1.1rem;
+}
+.card img{
+    width: 95%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+}
+  .cards::-webkit-scrollbar {
+    height: 7px; 
+  }
+  .cards::-webkit-scrollbar-track {
+    background: rgba(63, 36, 36, 0);
+  }
+  .cards::-webkit-scrollbar-thumb {
+    background-color: rgba(216, 181, 86, 0);    
+    border-radius: 50%;       
+  }
+.pontos{
+    position: absolute;
+    left: 50%;
+    bottom: -3rem;
+    transform: translate(-50%, -50%);
+  }
+   .dot {
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: rgb(233, 232, 232);
+    border-radius: 50%;
+    display: inline-block;
+  }
        a{
            color: #d4a711;  
        }
@@ -80,25 +208,14 @@
            text-align: center;
            color: #fff;
        }
-       footer > h2{
-           font-size: 1.3rem;
-       }
-       .media-sociais{
-           margin: .8rem;
-       }
-       .media-sociais a{
-           margin: 0 .5rem;
-           font-size: 1rem;
-       }
-       footer > q{
+       footer > p{
+           margin: 1rem .5rem;
            font-family: 'Mulish';
            font-size: .9rem;
        }    
        @media (min-width: 750px){
         /* and (max-width: 950px) */
-        .img-fundo{
-            background-size: 100% 100%;
-        }
+       
        }
        /* @media (max-width: 750px) and (orientation: landscape){ 
         .filtro{
@@ -108,34 +225,148 @@
     </style>
 </head>
 <body class="img-fundo">
-    <div class="filtro">
 
-       <img class="img-perfil" src="/img/HELENO-SALGADO-p.jpg" alt="">
+    <div class="cabecalho">
 
-        <h1>Conheça meus Projetos</h1>
-        
-        <section>
+       <img class="img-perfil" src="../img/HELENO-SALGADO-p.jpg" alt="">
 
-            <div class="projetos">
-                <img src="/img/licoes1.jpg" alt="">
-                <p>Site de devocionais e artigos de teologia cristã, confira <a href="http://orarelabutar.com/" target="_blank">aqui</a>.</p>
-           </div>
-
-            <div class="projetos">
-                <img src="/img/hsl-logo.png" alt=""></a>
-                <p>Site profissional de Desenvolvimento Web, Confira <a href="http://heleno.dev/" target="_blank">aqui</a>.</p>
-           </div>
-        </section>
-        <footer>
-            <h2>Redes Sociais</h2>
-            <div class="media-sociais">
-                <a href="https://www.facebook.com/heleno.salgado.16/"><i class="fab fa-facebook"></i></a>
-                <a href="https://www.instagram.com/heleno_salgado/"><i class="fab fa-instagram"></i></a>
-                <a href="https://github.com/HelenoSalgado/"><i class="fab fa-github"></i></a>
-                <a href="https://www.linkedin.com/in/helenosalgado"><i class="fab fa-linkedin"></i></a>
-            </div>   
-            <q>Ao Senhor pertence a salvação - (Jonas 2:9)</q>
-        </footer>
+    <div class="media-sociais">
+        <a href="https://www.facebook.com/heleno.salgado.16/"><i class="fab fa-facebook"></i></a>
+        <a href="https://www.instagram.com/heleno_salgado/"><i class="fab fa-instagram"></i></a>
+        <a href="https://github.com/HelenoSalgado/"><i class="fab fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/helenosalgado"><i class="fab fa-linkedin"></i></a>
     </div>   
+
+    <div class="container">
+        <h1>Heleno Salgado  <span class="typed-text"></span><span class="cursor">&nbsp;</span></h1>
+      </div>
+      
+    </div>
+
+    <section class="sessao-projetos">
+        <div class="cards">
+            <div class="card"><img src="../img/Orar-e-Labutar.jpg" loading="lazy" alt="">
+                <div class="text">
+                    <h3>Orar e Labutar</h3>
+                    <h4>Teologia</h4>
+                    <p>Leia ótimos artigos e ouça podcast sobre teologia e vida cristã.</p>
+                    <a href="https://orarelabutar.com">orarelabutar.com<i class="fas fa-link"></i></a>
+                </div>
+            </div>
+            <div class="card">
+                <img src="../img/hsl-logo.png" loading="lazy" alt="">
+                <div class="text">
+                    <h3>Developer</h3>
+                    <h4>Tecnologia</h4>
+                    <p>Página profissional de desenvolvimento web.</p>
+                    <a href="https://heleno.dev">heleno.dev<i class="fas fa-link"></i></a>
+                </div>
+            </div>
+            <div class="card"> 
+                <img src="../img/mario-ferreira.jpg" loading="lazy" alt="">
+                <div class="text">
+                    <h3>Mário Ferreira</h3>
+                    <h4>Filosofia, Acervo</h4>
+                    <p>Em desenvolvimento. Para reunir obras sobre e do filósofo.</p>
+                    <a href="https://acervomarioferreira.com.br" >acervomarioferreira.com.br<i class="fas fa-link"></i></a>
+                </div>
+            </div>
+        </div>
+     <div class="pontos">
+        <span class="dot"></span> 
+        <span class="dot"></span> 
+        <span class="dot"></span>   
+        <span class="dot"></span>  
+     </div> 
+</section>
+        <footer>
+            <p>Heleno Salgado Lopes &copy; 2022</p>
+        </footer>
+    
+    <script>const typedTextSpan = document.querySelector(".typed-text");
+        const cursorSpan = document.querySelector(".cursor");
+        
+        const textArray = ["Meus Projetos", "Front End Developer", "Blog Cristão", "Com Muito Carinho"];
+        const typingDelay = 200;
+        const erasingDelay = 100;
+        const newTextDelay = 2000; // Delay between current and next text
+        let textArrayIndex = 0;
+        let charIndex = 0;
+        
+        function type() {
+          if (charIndex < textArray[textArrayIndex].length) {
+            if(!cursorSpan.classList.contains("typing")) cursorSpan.classList.add("typing");
+            typedTextSpan.textContent += textArray[textArrayIndex].charAt(charIndex);
+            charIndex++;
+            setTimeout(type, typingDelay);
+          } 
+          else {
+            cursorSpan.classList.remove("typing");
+            setTimeout(erase, newTextDelay);
+          }
+        }
+        
+        function erase() {
+          if (charIndex > 0) {
+            if(!cursorSpan.classList.contains("typing")) cursorSpan.classList.add("typing");
+            typedTextSpan.textContent = textArray[textArrayIndex].substring(0, charIndex-1);
+            charIndex--;
+            setTimeout(erase, erasingDelay);
+          } 
+          else {
+            cursorSpan.classList.remove("typing");
+            textArrayIndex++;
+            if(textArrayIndex>=textArray.length) textArrayIndex=0;
+            setTimeout(type, typingDelay + 1100);
+          }
+        }
+        
+        document.addEventListener("DOMContentLoaded", function() { // On DOM Load initiate the effect
+          if(textArray.length) setTimeout(type, newTextDelay + 250);
+        });
+
+        //Habilita Scrool no elemento projetos
+    document.querySelector("cards")
+     addEventListener("wheel" , Event => {
+      if(Event.deltaY > 0) {
+        Event.target.scrollBy(-300, 0)
+      }
+      else{
+        Event.target.scrollBy(300, 0)
+      }
+    })
+
+//Desabilita o Scroll vertical do corpo
+  let slider = document.getElementsByClassName('cards')[0]
+    function preventDefault(e) {
+      e.preventDefault();
+    }
+
+    var supportsPassive = false;
+    try {
+      window.addEventListener("test", null, Object.defineProperty({}, 'passive', {
+        get: function () { supportsPassive = true; }
+      }));
+    } catch (e) { }
+
+    var wheelOpt = supportsPassive ? { passive: false } : false;
+    var wheelEvent = 'onwheel' in document.createElement('div') ? 'wheel' : 'mousewheel';
+
+    slider.addEventListener('mouseenter', () => {
+      window.addEventListener(wheelEvent, preventDefault, wheelOpt)
+    })
+
+    slider.addEventListener('mouseleave', () => {
+      window.removeEventListener(wheelEvent, preventDefault, wheelOpt);
+    })
+
+    slider.addEventListener('wheel', (event) => {
+      if (event.deltaY > 0) {
+        slider.scrollLeft += 300;
+      } else {
+        slider.scrollLeft -= 300;
+      }
+    })
+        </script>
 </body>
 </html>
