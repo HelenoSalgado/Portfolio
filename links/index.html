@@ -112,7 +112,7 @@ div.cabecalho{
     margin: 1rem;
     scroll-snap-align: center;
     pointer-events: none;
-    box-shadow: -2px -2px 5px rgb(9, 107, 131);
+    box-shadow: -2px 2px 5px rgb(9, 107, 131);
 }
 @keyframes mover {
     to{
@@ -197,19 +197,23 @@ div.cabecalho{
 .mao{
   display: none;
   margin-top: -1rem;
-  font-size: 2rem; color: white; margin-left: 93%;
+  font-size: 2rem; 
+  text-aligin: end;
+  color: white; 
+  margin-right: 2rem;
   animation: deslizar 2s ease;
   animation-iteration-count: infinite;
+  overflow: hidden;
 }
 @keyframes deslizar {
   0%{
-    margin-left: 93%;
+   margin-right: 2rem;
   }
   50%{
-    margin-left: 90%;
+   margin-right: 1.5rem;
   }
   100%{
-    margin-left: 93%;
+    margin-right: 2rem;
   }
 }
 footer{
