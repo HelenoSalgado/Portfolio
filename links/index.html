@@ -183,29 +183,33 @@ div.cabecalho{
     border-radius: 5px;
 }
 .cards::-webkit-scrollbar {
-  margin-top: 1rem;
-  width: 80%;
   height: 7px; 
+  padding: 1px;
 }
 .cards::-webkit-scrollbar-track {
-  background: rgb(241, 238, 228);
+  background: rgba(228, 234, 241, 0.651);
 }
 .cards::-webkit-scrollbar-thumb {
   background-color: rgb(199, 155, 11);    
-  border-radius: 5px;       
+  border-radius: 5px;  
+  margin: 1px;     
 }
 .mao{
   display: none;
   margin-top: -1rem;
-  font-size: 2rem; color: white; margin-left: 95%;
-  animation: deslizar 2s ease-in;
+  font-size: 2rem; color: white; margin-left: 93%;
+  animation: deslizar 2s ease;
+  animation-iteration-count: infinite;
 }
 @keyframes deslizar {
-  to{
-    rotate: (0deg);
+  0%{
+    margin-left: 93%;
   }
-  from{
-    rotate: (45deg);
+  50%{
+    margin-left: 90%;
+  }
+  100%{
+    margin-left: 93%;
   }
 }
 footer{
@@ -278,7 +282,7 @@ footer > p{
 </div>
 </section>
 
-<i class="fa-thin fa-hand-pointer mao"></i>
+<i class="far fa-arrow-alt-circle-right mao"></i>
 
         <footer>
             <p>Heleno Salgado Lopes &copy; 2022</p>
