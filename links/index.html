@@ -10,41 +10,46 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700;800&family=Josefin+Slab:ital,wght@0,100;0,200;0,300;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Mulish:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"> 
+
     <title>LINKS</title>
+  
     <style>
-        *{
-            margin: 0;
-        }
-        .img-fundo{
-            position: relative;
-            background: #000;
-            background-image: url(../img/caminho.png);
-            background-repeat: no-repeat;
-            background-size: cover;
-            
-        }
-        div.cabecalho{
-            margin-top: -20px;
-            padding: 1rem 0;
-            background-color: rgba(3, 3, 3, 0.726);
-            border-bottom: 2px solid #000;
-        }
-        .img-perfil{
-            display: block;
-            width: 120px;
-            margin: auto;
-            padding: .5rem 0;
-            border-radius: 50%;
-        }
-        .media-sociais{
-           text-align: center;
-           margin: .8rem;
-       }
-       .media-sociais a{
-           margin: 0 .5rem;
-           font-size: 1.3rem;
-       }
+*{
+  margin: 0;
+}
+.img-fundo{
+  position: relative;
+  background-color: #0000;
+  background-image: linear-gradient(160deg, #111111 0%, #01191a 100%);
+}
+a{
+    color: #d4a711;  
+}
+div.cabecalho{
+  max-width: 600px;
+  margin: -20px auto 0 auto;
+  padding: 1rem 0;
+}
+.img-perfil{
+  display: block;
+  width: 120px;
+  margin: auto;
+  padding: .5rem 0;
+  border-radius: 50%;
+}
+.media-sociais{
+  text-align: center;
+  margin: .8rem;
+}
+.media-sociais a{
+  margin: 0 .5rem;
+  font-size: 1.3rem;
+  background: -webkit-linear-gradient(#c29500, rgb(255, 255, 255));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
 .container {
   display: flex;
   justify-content: center;
@@ -52,7 +57,7 @@
   font-family: 'Montserrat', sans-serif;
 }
 .container h1 {
-  height: 70px;
+  height: 80px;
   font-size: 1.5rem;
   padding: 0.5rem;
   font-weight: bold;
@@ -83,11 +88,9 @@
   99% { background-color: transparent; }
   100%  { background-color: #d4a711; }
 }
-
 .sessao-projetos{
     position: relative;
-    padding: 0 1rem;
-    margin: 3rem auto;
+    margin: 5rem auto 3rem auto;
     max-width: 1200px;
     border-radius: 5px;
 }
@@ -104,10 +107,12 @@
 .card{ 
     position: relative;
     flex: none;
-    width: 18.9rem;
+    width: 18rem;
     height: 30rem;
+    margin: 1rem;
     scroll-snap-align: center;
     pointer-events: none;
+    box-shadow: -2px -2px 5px rgb(9, 107, 131);
 }
 @keyframes mover {
     to{
@@ -172,64 +177,61 @@
     margin-left: 1.1rem;
 }
 .card img{
-    width: 95%;
+    width: 100%;
     height: 100%;
     object-fit: cover;
     border-radius: 5px;
 }
-  .cards::-webkit-scrollbar {
-    height: 7px; 
+.cards::-webkit-scrollbar {
+  margin-top: 1rem;
+  width: 80%;
+  height: 7px; 
+}
+.cards::-webkit-scrollbar-track {
+  background: rgb(241, 238, 228);
+}
+.cards::-webkit-scrollbar-thumb {
+  background-color: rgb(199, 155, 11);    
+  border-radius: 5px;       
+}
+.mao{
+  display: none;
+  margin-top: -1rem;
+  font-size: 2rem; color: white; margin-left: 95%;
+  animation: deslizar 2s ease-in;
+}
+@keyframes deslizar {
+  to{
+    rotate: (0deg);
   }
-  .cards::-webkit-scrollbar-track {
-    background: rgba(63, 36, 36, 0);
+  from{
+    rotate: (45deg);
   }
-  .cards::-webkit-scrollbar-thumb {
-    background-color: rgba(216, 181, 86, 0);    
-    border-radius: 50%;       
-  }
-.pontos{
-    position: absolute;
-    left: 50%;
-    bottom: -3rem;
-    transform: translate(-50%, -50%);
-  }
-   .dot {
-    height: 15px;
-    width: 15px;
-    margin: 0 2px;
-    background-color: rgb(233, 232, 232);
-    border-radius: 50%;
-    display: inline-block;
-  }
-       a{
-           color: #d4a711;  
-       }
-       footer{
-           margin-top: 5rem;
-           text-align: center;
-           color: #fff;
-       }
-       footer > p{
-           margin: 1rem .5rem;
-           font-family: 'Mulish';
-           font-size: .9rem;
-       }    
-       @media (min-width: 750px){
-        /* and (max-width: 950px) */
-       
-       }
-       /* @media (max-width: 750px) and (orientation: landscape){ 
-        .filtro{
-             height: 100%;
-       } 
-       } */
+}
+footer{
+    margin-top: 5rem;
+    text-align: center;
+    color: #fff;
+}
+footer > p{
+    margin: 1rem .5rem;
+    font-family: 'Mulish';
+    font-size: .9rem;
+}    
+@media (max-width: 750px){   
+  .mao{
+    display: block;
+  }  
+}   
     </style>
+
 </head>
+
 <body class="img-fundo">
 
-    <div class="cabecalho">
+<div class="cabecalho">
 
-       <img class="img-perfil" src="../img/HELENO-SALGADO-p.jpg" alt="">
+    <img class="img-perfil" src="HELENO-SALGADO-p.jpg" alt="">
 
     <div class="media-sociais">
         <a href="https://www.facebook.com/heleno.salgado.16/"><i class="fab fa-facebook"></i></a>
@@ -239,135 +241,134 @@
     </div>   
 
     <div class="container">
-        <h1>Heleno Salgado  <span class="typed-text"></span><span class="cursor">&nbsp;</span></h1>
-      </div>
-      
+        <h1><span style="display: block;">Heleno Salgado </span><span class="typed-text"></span><span class="cursor">&nbsp;</span></h1>
     </div>
+      
+ </div>
 
-    <section class="sessao-projetos">
-        <div class="cards">
-            <div class="card"><img src="../img/Orar-e-Labutar.jpg" loading="lazy" alt="">
-                <div class="text">
-                    <h3>Orar e Labutar</h3>
-                    <h4>Teologia</h4>
-                    <p>Leia ótimos artigos e ouça podcast sobre teologia e vida cristã.</p>
-                    <a href="https://orarelabutar.com">orarelabutar.com<i class="fas fa-link"></i></a>
-                </div>
-            </div>
-            <div class="card">
-                <img src="../img/hsl-logo.png" loading="lazy" alt="">
-                <div class="text">
-                    <h3>Developer</h3>
-                    <h4>Tecnologia</h4>
-                    <p>Página profissional de desenvolvimento web.</p>
-                    <a href="https://heleno.dev">heleno.dev<i class="fas fa-link"></i></a>
-                </div>
-            </div>
-            <div class="card"> 
-                <img src="../img/mario-ferreira.jpg" loading="lazy" alt="">
-                <div class="text">
-                    <h3>Mário Ferreira</h3>
-                    <h4>Filosofia, Acervo</h4>
-                    <p>Em desenvolvimento. Para reunir obras sobre e do filósofo.</p>
-                    <a href="https://acervomarioferreira.com.br" >acervomarioferreira.com.br<i class="fas fa-link"></i></a>
-                </div>
-            </div>
-        </div>
-     <div class="pontos">
-        <span class="dot"></span> 
-        <span class="dot"></span> 
-        <span class="dot"></span>   
-        <span class="dot"></span>  
-     </div> 
+<section class="sessao-projetos">
+<div class="cards">
+    <div class="card">
+      <img src="Orar-e-Labutar.jpg" alt="">
+      <div class="text">
+        <h3>Orar e Labutar</h3>
+          <h4>Teologia</h4>
+          <p>Leia ótimos artigos e ouça podcast sobre teologia e vida cristã.</p>
+          <a href="https://orarelabutar.com">orarelabutar.com<i class="fas fa-link"></i></a>
+      </div>
+    </div>
+    <div class="card">
+     <img src="hsl-logo.jpg" alt="">
+      <div class="text">
+          <h3>Developer</h3>
+          <h4>Tecnologia</h4>
+          <p>Página profissional de desenvolvimento web.</p>
+          <a href="https://heleno.dev">heleno.dev<i class="fas fa-link"></i></a>
+      </div>
+    </div>
+  <div class="card"> 
+    <img src="mario-ferreira.jpg" alt="">
+    <div class="text">
+         <h3>Mário Ferreira</h3>
+         <h4>Filosofia, Acervo</h4>
+         <p>Em desenvolvimento. Para reunir obras sobre e do filósofo.</p>
+         <a href="https://acervomarioferreira.com.br" >acervomarioferreira.com.br<i class="fas fa-link"></i></a>
+    </div>
+  </div>
+</div>
 </section>
+
+<i class="fa-thin fa-hand-pointer mao"></i>
+
         <footer>
             <p>Heleno Salgado Lopes &copy; 2022</p>
         </footer>
     
-    <script>const typedTextSpan = document.querySelector(".typed-text");
-        const cursorSpan = document.querySelector(".cursor");
+<script>
+    const typedTextSpan = document.querySelector(".typed-text");
+    const cursorSpan = document.querySelector(".cursor");
         
-        const textArray = ["Meus Projetos", "Front End Developer", "Blog Cristão", "Com Muito Carinho"];
-        const typingDelay = 200;
-        const erasingDelay = 100;
-        const newTextDelay = 2000; // Delay between current and next text
-        let textArrayIndex = 0;
-        let charIndex = 0;
-        
-        function type() {
-          if (charIndex < textArray[textArrayIndex].length) {
-            if(!cursorSpan.classList.contains("typing")) cursorSpan.classList.add("typing");
-            typedTextSpan.textContent += textArray[textArrayIndex].charAt(charIndex);
-            charIndex++;
-            setTimeout(type, typingDelay);
-          } 
-          else {
-            cursorSpan.classList.remove("typing");
-            setTimeout(erase, newTextDelay);
-          }
-        }
-        
-        function erase() {
-          if (charIndex > 0) {
-            if(!cursorSpan.classList.contains("typing")) cursorSpan.classList.add("typing");
-            typedTextSpan.textContent = textArray[textArrayIndex].substring(0, charIndex-1);
-            charIndex--;
-            setTimeout(erase, erasingDelay);
-          } 
-          else {
-            cursorSpan.classList.remove("typing");
-            textArrayIndex++;
-            if(textArrayIndex>=textArray.length) textArrayIndex=0;
-            setTimeout(type, typingDelay + 1100);
-          }
-        }
-        
-        document.addEventListener("DOMContentLoaded", function() { // On DOM Load initiate the effect
-          if(textArray.length) setTimeout(type, newTextDelay + 250);
-        });
+    const textArray = ["Teologia", "Tecnologia", "Filosofia", "com AMOR ❤️"];
+    const typingDelay = 200;
+    const erasingDelay = 100;
+    const newTextDelay = 2000; // Delay between current and next text
+    let textArrayIndex = 0;
+    let charIndex = 0;
 
-        //Habilita Scrool no elemento projetos
-    document.querySelector("cards")
-     addEventListener("wheel" , Event => {
-      if(Event.deltaY > 0) {
-        Event.target.scrollBy(-300, 0)
+    function type() {
+      if (charIndex < textArray[textArrayIndex].length) {
+      if(!cursorSpan.classList.contains("typing")) cursorSpan.classList.add("typing");
+      typedTextSpan.textContent += textArray[textArrayIndex].charAt(charIndex);
+      charIndex++;
+      setTimeout(type, typingDelay);
+    } 
+      else {
+      cursorSpan.classList.remove("typing");
+      setTimeout(erase, newTextDelay);
       }
-      else{
-        Event.target.scrollBy(300, 0)
-      }
-    })
+    }  
 
-//Desabilita o Scroll vertical do corpo
-  let slider = document.getElementsByClassName('cards')[0]
-    function preventDefault(e) {
-      e.preventDefault();
+    function erase() {
+      if (charIndex > 0) {
+      if(!cursorSpan.classList.contains("typing")) cursorSpan.classList.add("typing");
+      typedTextSpan.textContent = textArray[textArrayIndex].substring(0, charIndex-1);
+      charIndex--;
+      setTimeout(erase, erasingDelay);
+    } 
+      else {
+      cursorSpan.classList.remove("typing");
+      textArrayIndex++;
+      if(textArrayIndex>=textArray.length) textArrayIndex=0;
+      setTimeout(type, typingDelay + 1100);
+      }
     }
+        
+    document.addEventListener("DOMContentLoaded", function() { // On DOM Load initiate the effect
+      if(textArray.length) setTimeout(type, newTextDelay + 250);
+    });
 
-    var supportsPassive = false;
-    try {
-      window.addEventListener("test", null, Object.defineProperty({}, 'passive', {
-        get: function () { supportsPassive = true; }
-      }));
-    } catch (e) { }
+    // //Habilita Scrool no elemento projetos
+    // document.querySelector("cards")
+    //  addEventListener("wheel" , Event => {
+    //   if(Event.deltaY > 0) {
+    //     Event.target.scrollBy(-300, 0)
+    //   }
+    //   else{
+    //     Event.target.scrollBy(300, 0)
+    //   }
+    // })
 
-    var wheelOpt = supportsPassive ? { passive: false } : false;
-    var wheelEvent = 'onwheel' in document.createElement('div') ? 'wheel' : 'mousewheel';
+    // //Desabilita o Scroll vertical do corpo
+    // let slider = document.getElementsByClassName('cards')[0]
+    // function preventDefault(e) {
+    // e.preventDefault();
+    // }
 
-    slider.addEventListener('mouseenter', () => {
-      window.addEventListener(wheelEvent, preventDefault, wheelOpt)
-    })
+    // var supportsPassive = false;
+    // try {
+    //   window.addEventListener("test", null, Object.defineProperty({}, 'passive', {
+    //     get: function () { supportsPassive = true; }
+    //   }));
+    // } catch (e) { }
 
-    slider.addEventListener('mouseleave', () => {
-      window.removeEventListener(wheelEvent, preventDefault, wheelOpt);
-    })
+    // var wheelOpt = supportsPassive ? { passive: false } : false;
+    // var wheelEvent = 'onwheel' in document.createElement('div') ? 'wheel' : 'mousewheel';
 
-    slider.addEventListener('wheel', (event) => {
-      if (event.deltaY > 0) {
-        slider.scrollLeft += 300;
-      } else {
-        slider.scrollLeft -= 300;
-      }
-    })
-        </script>
+    // slider.addEventListener('mouseenter', () => {
+    //   window.addEventListener(wheelEvent, preventDefault, wheelOpt)
+    // })
+
+    // slider.addEventListener('mouseleave', () => {
+    //   window.removeEventListener(wheelEvent, preventDefault, wheelOpt);
+    // })
+
+    // slider.addEventListener('wheel', (event) => {
+    //   if (event.deltaY > 0) {
+    //     slider.scrollLeft += 300;
+    //   } else {
+    //     slider.scrollLeft -= 300;
+    //   }
+    // })
+</script>
 </body>
 </html>
