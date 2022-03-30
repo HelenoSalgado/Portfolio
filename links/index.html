@@ -11,6 +11,7 @@
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://heleno.dev/links" />
     <meta property="og:image" content="https://heleno.dev/img-icon/android-chrome-512x512.png" />
+    <link rel="shortcut icon" href="android-chrome-192x192.png" type="image/x-icon">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -29,6 +30,17 @@
   position: relative;
   background-color: #0000;
   background-image: linear-gradient(160deg, #111111 0%, #01191a 100%);
+}
+section{
+  margin: 5rem auto;
+}
+h1, h2, h3, a, span{
+  font-family: 'Montserrat', sans-serif;
+  color: #fff
+}
+h4, p{
+  font-family: 'Mulish', sans-serif;
+  color: #fff;
 }
 a{
     color: #d4a711;  
@@ -52,7 +64,7 @@ div.cabecalho{
 .media-sociais a{
   margin: 0 .5rem;
   font-size: 1.3rem;
-  background: -webkit-linear-gradient(#c29500, rgb(255, 255, 255));
+  background-image: -webkit-linear-gradient(#c29500, rgb(255, 255, 255));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -60,16 +72,14 @@ div.cabecalho{
   display: flex;
   justify-content: center;
   align-items: center;
-  font-family: 'Montserrat', sans-serif;
 }
 .container h1 {
-  height: 80px;
+  height: 70px;
   font-size: 1.5rem;
   padding: 0.5rem;
   font-weight: bold;
   letter-spacing: 0.1rem;
   text-align: center;
-  color: white;
   overflow: hidden;
 }
 .container h1 span.typed-text {
@@ -96,7 +106,6 @@ div.cabecalho{
 }
 .sessao-projetos{
     position: relative;
-    margin: 5rem auto 2rem auto;
     max-width: 1200px;
     border-radius: 5px;
 }
@@ -118,17 +127,8 @@ div.cabecalho{
     margin: 1rem;
     scroll-snap-align: center;
     pointer-events: none;
-    /*box-shadow: -2px -2px 5px rgb(9, 107, 131);*/
     border-radius: 5px;
     border: 2px solid rgb(9, 107, 131);
-}
-@keyframes mover {
-    to{
-        margin-bottom: 0;
-    }
-    from{
-        margin-bottom: 1rem;
-    }
 }
 .text{
     position: absolute;
@@ -141,20 +141,17 @@ div.cabecalho{
     border-radius: 5px;
 }
 .text h3{
-    font-family:'Montserrat', sans-serif;
     font-size: 2rem;
     font-weight: 500;
-    color: rgb(246, 241, 241);
     margin: 80% 0 0 1rem;
     text-shadow: 2px 2px 0px #000;
 }
 .text h4{
     margin-top: .5rem;
     width: 80%;
-    background: linear-gradient(to right, #ffffff8e, #ffffff00);
+    background-image: linear-gradient(to right, #01191a, #01191a00);
     padding: .2rem .5rem;
     border-radius: 3rem;
-    font-family: 'Mulish', sans-serif;
     font-size: 1rem;
     font-weight: bolder;
     color: #d4a711;
@@ -163,16 +160,13 @@ div.cabecalho{
 .text p{
     margin-top: 1rem;
     width: 90%;
-    font-family: 'Mulish', sans-serif;
     font-size: 1.1rem;
-    color: #eee;
     font-weight: 400;
     margin-left: 1rem;
     text-shadow: .3px .3px 1px #000;
 }
 .text a{
     margin-top: .5rem;
-    font-family: 'Mulish';
     pointer-events: painted;
     text-decoration: none;
     color: #d4a711;
@@ -204,40 +198,48 @@ div.cabecalho{
   border-radius: 5px;  
   margin: 1px;     
 }
-        container-mao{
-            overflow: hidden;
-       }
-.mao{
-  display: none;
-  margin-top: -1rem;
-  font-size: 2rem; 
-  color: rgb(9, 107, 131);
-  margin-left: 80%;
-  animation: deslizar 2s ease;
-  animation-iteration-count: infinite;
+div.cont-slide{
+  display: flex; 
+  flex-wrap: nowrap; 
+  justify-content: center;
 }
-@keyframes deslizar {
-  0%{
-   margin-left: 80%;
-  }
-  50%{
-   margin-left: 83%;
-  }
-  100%{
-    margin-left: 80%;
-  }
+div.cont-slide span{
+  display: inline; 
+  margin: 1rem;
+  width: 20px; 
+  height: 20px; 
+  background-color: #096b83; 
+  border: .5px solid #fff;
+  border-radius: 50%;
 }
 section.posts-recentes{
   max-width: 600px;
-  margin: 4rem auto 0 auto;
-  font-family: 'Montserrat', sans-serif;
-  color: white;
   padding: 0 1rem;
 }
 section.posts-recentes div, a{
    margin: 1rem 0;
    font-size: 1.1rem;
    text-decoration: none;
+}
+section.bio{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+section.bio div{
+  max-width: 400px;
+  min-width: 300px;
+  margin: 1rem;
+}
+section.bio div > img{
+  /* opacity: .5; */
+  width: 350px;
+  border-radius: 20% 50%;
+  filter: brightness(70%);
+}
+section.bio div > p{
+  font-size: 1rem;
+  margin-top: 2rem;
 }
 footer{
     position: relative;
@@ -255,7 +257,6 @@ footer span.aspas{
 footer span.citacao{
     max-width: 500px;
     margin: auto;
-    font-family: 'Montserrat', sans-serif;
     font-size: 1.3rem;
     line-height: 1.6rem;
     background: -webkit-linear-gradient(right, #c79b0b, #096b83);
@@ -263,11 +264,6 @@ footer span.citacao{
     -webkit-text-fill-color: transparent;
     
 }
-@media (max-width: 750px){   
-  .mao{
-    display: block;
-  }  
-}   
     </style>
 
 </head>
@@ -327,9 +323,12 @@ footer span.citacao{
       </div>
     </div>
 </div>
+<div class="cont-slide">
+  <span></span>
+  <span></span>
+  <span></span>
+</div>
 </section>
-
-    <p class="container-mao"><a style="color: none; text-decoration: none; overflow: hidden;" href="#s03"><i class="far fa-arrow-alt-circle-right mao"></i></a></p>
 
 <section class="posts-recentes">
 <h2>Posts Recentes</h2>
@@ -342,6 +341,16 @@ footer span.citacao{
 <div>
 <a href="https://acervomarioferreira.com.br/mario-ferreira-dos-santos-e-o-nosso-futuro">Mario Ferreira do Santos e o Nosso Futuro.</a>
 </div>
+</section>
+
+<section class="bio">
+  <div>
+    <img src="IMG-20211227-WA0133.jpg" alt="">
+  </div>
+  <div>
+    <h2>BIO</h2>
+    <p>Mora em Brasília - DF, tem 25 anos. Atualmente Estuda Teologia no Instituto Reformado Santo Evangelho - IRSE. Cursa desenvolvimento Web pelo programa <em>One - Oracle Next Education</em>. Dentre outas coisas, gosta de aproveitar a família, os verdadeiros amigos e, entreter-se na cultura livresca, nos clássicos, nos bons.</p>
+  </div>
 </section>
 
         <footer>
