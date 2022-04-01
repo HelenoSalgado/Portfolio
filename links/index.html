@@ -26,6 +26,12 @@
 *{
   margin: 0;
 }
+:root{
+  --cor-primaria:#01191a; 
+  --cor-secundaria:#096b83;
+  --cor-font: #fff;
+  --cor-destaque: #c79b0b;
+}
 .img-fundo{
   position: relative;
   background-color: #0000;
@@ -36,14 +42,14 @@ section{
 }
 h1, h2, a, span{
   font-family: 'Montserrat', sans-serif;
-  color: #fff
+  color: var(--cor-font)
 }
 h3, h4, p{
   font-family: 'Mulish', sans-serif;
-  color: #fff;
+  color: var(--cor-font);
 }
 a{
-    color: #d4a711;  
+    color: var(--cor-destaque);  
 }
 div.cabecalho{
   max-width: 600px;
@@ -75,21 +81,20 @@ div.cabecalho{
 }
 .container h1 {
   height: 70px;
-  font-size: 1.5rem;
+  font: 1.5rem, bold;
   padding: 0.5rem;
-  font-weight: bold;
   letter-spacing: 0.1rem;
   text-align: center;
   overflow: hidden;
 }
 .container h1 span.typed-text {
   font-weight: normal;
-  color: #c29500;
+  color: var(--cor-destaque);
   text-shadow: 1px 1px 3px #000;
 }
 .container h1 span.cursor {
   display: inline-block;
-  background-color: #d4a711;
+  background-color: var(--cor-destaque);
   margin-left: 0.1rem;
   width: 2px;
   animation: blink 2s infinite;
@@ -98,11 +103,11 @@ div.cabecalho{
   animation: none;
 }
 @keyframes blink {
-  0%  { background-color: #d4a711; }
-  49% { background-color: #d4a711; }
+  0%  { background-color: var(--cor-destaque); }
+  49% { background-color: var(--cor-destaque); }
   50% { background-color: transparent; }
   99% { background-color: transparent; }
-  100%  { background-color: #d4a711; }
+  100% { background-color: var(--cor-destaque); }
 }
 .sessao-projetos{
     position: relative;
@@ -128,7 +133,7 @@ div.cabecalho{
     scroll-snap-align: center;
     pointer-events: none;
     border-radius: 5px;
-    border: 2px solid rgb(9, 107, 131);
+    border: 2px solid var(--cor-secundaria);
 }
 .text{
     position: absolute;
@@ -144,7 +149,7 @@ div.cabecalho{
     font-size: 2rem;
     font-weight: 500;
     margin: 80% 0 0 1rem;
-    text-shadow: 2px 2px 0px #000;
+    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.507);
 }
 .text h4{
     margin-top: .5rem;
@@ -152,16 +157,14 @@ div.cabecalho{
     background-image: linear-gradient(to right, #01191a, #01191a00);
     padding: .2rem .5rem;
     border-radius: 3rem;
-    font-size: 1rem;
-    font-weight: bolder;
-    color: #d4a711;
+    font: 1rem, bolder;
+    color: var(--cor-destaque);
     margin-left: 1rem;
 }
 .text p{
     margin-top: 1rem;
     width: 90%;
-    font-size: 1.1rem;
-    font-weight: 400;
+    font: 1.1rem 400;
     margin-left: 1rem;
     text-shadow: .3px .3px 1px #000;
 }
@@ -170,7 +173,7 @@ div.cabecalho{
     font-family: 'Mulish', sans-serif;
     pointer-events: painted;
     text-decoration: none;
-    color: #d4a711;
+    color: var(--cor-destaque);
     margin-left: 1rem;
     transition: ease-in .1s;
 }
@@ -195,7 +198,7 @@ div.cabecalho{
   background: rgba(228, 234, 241, 0.651);
 }
 .cards::-webkit-scrollbar-thumb {
-  background-color: rgb(199, 155, 11);    
+  background-color: var(--cor-destaque);    
   border-radius: 5px;  
   margin: 1px;     
 }
@@ -209,7 +212,7 @@ div.cont-slide span{
   margin: 1rem;
   width: 20px; 
   height: 20px; 
-  background-color: #096b83; 
+  background-color: var(--cor-secundaria); 
   border: .5px solid #fff;
   border-radius: 50%;
 }
@@ -234,7 +237,7 @@ section.bio div{
 }
 .fundo-gradiente{
   background: linear-gradient(#096b83, #fff);
-  border: 1px solid #096b83;
+  border: 1px solid var(--cor-secundaria);
   border-radius: 19% 50%;
 }
 section.bio div > img{
@@ -242,12 +245,11 @@ section.bio div > img{
   height: cover;
   background: linear-gradient(#096b83, #fff);
   opacity: .7;
-  border: 1px solid #096b83;
+  border: 1px solid var(--cor-secundaria);
   border-radius: 20% 50%;
-  /* filter: brightness(50%); */
 }
 section.bio div > p{
-  font-size: 1rem;
+  font-size: 1.1rem;
   margin-top: 2rem;
 }
 footer{
@@ -268,7 +270,7 @@ footer span.citacao{
     margin: auto;
     font-size: 1.3rem;
     line-height: 1.6rem;
-    background: -webkit-linear-gradient(right, #c79b0b, #096b83);
+    background: -webkit-linear-gradient(right, var(--cor-destaque), #096b83);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     
