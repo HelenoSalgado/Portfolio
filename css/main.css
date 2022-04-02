@@ -98,7 +98,7 @@ div.banner {
     background: transparent;
     backdrop-filter: blur(3px);
     -webkit-backdrop-filter: blur(3px);
-    padding: 2rem;
+    padding: .5rem;
     color: var(--cor-destaque);
     border: 1px solid transparent;
     border-radius: 5px;
