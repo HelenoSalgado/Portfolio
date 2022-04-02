@@ -74,26 +74,22 @@ section{
 }
 header {
     position: relative;
-    max-width: 1400px;
-    height: 100vh;
+    max-width: 1300px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    height: auto;
     margin: auto;
 }
 div.img-wrapper {
-    position: absolute;
-    top: 15%;
-    right: 5%;
     max-width: 500px;
-    max-height: 500px;
+    margin-top: 4rem;
 }
 div.img-wrapper img {
     width: 100%;
-    height: 100%;
 }
 div.banner {
-    position: absolute;
-    top: 30%;
-    left: 10%;
-    height: auto;
+    margin-top: 20%;
     object-fit: contain;
     background: transparent;
     backdrop-filter: blur(3px);
@@ -265,7 +261,6 @@ div.logo > img{
     scroll-snap-type: x mandatory;
     scroll-behavior: smooth;
     -webkit-overflow-scrolling: touch; 
-    
 }
 .card{ 
     position: relative;
@@ -550,13 +545,8 @@ footer q{
     align-items: center;
 }
 @media (max-width: 750px){
-    div.banner {
-        position: absolute;
-        top: 15%;
-        left: 1%;
-    }
-    div.img-wrapper {
-        top: 40%;
+    div.banner h1{
+        
     }
     h2{
         font-size: 2.3rem;
@@ -569,6 +559,9 @@ footer q{
       div.banner h1 {
         font-size: 2.8rem;
         line-height: 2.8rem;
+    }
+    div.img-wrapper {
+        margin-top: 0;
     }
 }
 @media (max-width: 750px) and (orientation: landscape){ 
