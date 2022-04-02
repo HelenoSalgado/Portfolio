@@ -6,7 +6,7 @@
 :root{
     --cor-primaria: rgb(247, 247, 247);
     --cor-font: #2b2c2c;
-    --cor-destaque: #b340e0;
+    --cor-destaque: #9c27ca;
     --font-primary: 'Baloo 2', 'cursive', sans-serif;
     --font-secundary:'Josefin Slab', sans-serif;
     --font-action: 'Mulish', sans-serif;
@@ -224,7 +224,7 @@ div.logo > img{
 }
 .sessao-conhecimentos p{
     font-size: 1.2rem;
-    text-align: end;
+    text-align: justify;
     margin-top: 1rem;
     color: var(--cor-font);
 }
