@@ -143,7 +143,6 @@ div.logo > img{
         transform: translateY(10rem);
         opacity: 0;
     }
-
     100% {
         transform: translateY(0rem);
         opacity: 1;
@@ -222,6 +221,18 @@ div.logo > img{
   font-style: oblique;
   text-align: right;  
  }
+ .orcamento1 button{
+    display: block; 
+    font-size: .9rem; 
+    width: fit-content; 
+    padding: .5rem; 
+    margin: 1rem auto;  
+    border: 2px solid var(--cor-destaque);
+    border-radius: 5px; 
+   }
+ .orcamento1 a{
+    color: #fff;
+ } 
  button{
   background: #730c88;
   background: -webkit-linear-gradient(to right, #730c88, #bc56e4);  
@@ -242,7 +253,6 @@ div.logo > img{
     padding-bottom: 1rem;
 }
 .sessao-conhecimentos > h2{
-    display: none;
     width: 100%;
     margin-bottom: 1rem;
 }
@@ -399,18 +409,6 @@ div.logo > img{
     border-radius: 50%;
     display: inline-block;
   }
-   .orcamento1 button{
-    display: block; 
-    font-size: .9rem; 
-    width: fit-content; 
-    padding: .5rem; 
-    margin: 1rem auto;  
-    border: 2px solid var(--cor-destaque);
-    border-radius: 5px; 
-   }
-   .orcamento1 a{
-       color: #fff;
-   }
   .btn{
     width: 8rem;
     height: 2.5rem;
@@ -437,14 +435,11 @@ div.logo > img{
 }
 .contato-wrapper h2{
     margin-top: 5rem;
-    color: white;
+    color: #eee;
 }
 .sessao-contato form{
     position: relative;
     max-width: 500px;
-    /* display: flex;
-    flex-direction: column;
-    align-items: center;  */
     margin: 0 auto;
 }
 div.input-group{
@@ -487,10 +482,6 @@ input{
     top: 0;
     opacity: 10;
 }
-/* .field:focus{
-    border-bottom: 2px dashed #424241;
-    border-bottom: 1px solid;
-} */
 .btn-submit{
     display: block;
     margin: auto;
@@ -527,7 +518,6 @@ footer a i{
 footer q{
     display: block;
     font-family: var(--font-secundary);
-    /* color: white; */
     text-align: center;
     font-style: oblique;
 }
