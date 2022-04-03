@@ -28,27 +28,38 @@
     <link rel="icon" type="image/png" sizes="16x16" href="/img-icon/favicon-16x16.png">
     <link rel="manifest" href="/site.webmanifest">
     <style>
-        *{
+  *{
     margin: 0;
     padding: 0;
     border: none;
 }
-
+:root{
+    --cor-primaria: rgb(247, 247, 247);
+    --cor-font: #2b2c2c;
+    --cor-destaque: #9c27ca;
+    --font-primary: 'Baloo 2', 'cursive', sans-serif;
+    --font-secundary:'Josefin Slab', sans-serif;
+    --font-action: 'Mulish', sans-serif;
+}
 body{
     font-size: 16px;
     scroll-behavior: smooth;
-    background-color: rgb(248, 247, 247);
+    background-color: var(--cor-primaria);
     overflow-X: hidden;
     min-width: 320px;
+}
+p{
+    font-family: var(--font-secundary);
+}
+a{
+    font-family: var(--font-action);
+    color: var(--cor-destaque);
+    text-decoration: none;
 }
 section{
     max-width: 1200px;
     min-width: 320px;
-}
-:root {
-    --font-primary: 'Baloo 2', 'cursive', sans-serif;
-    --font-secundary:'Josefin Slab', sans-serif;
-    --font-action: 'Mulish', sans-serif;
+    margin: 5rem auto 2rem auto;
 }
 .hamburguer {
     width: 2rem;
@@ -69,7 +80,7 @@ section{
 .line {
     width: 100%;
     height: 0.1rem;
-    background-color: #ffffff;
+    background-color: var(--cor-primaria);
     box-shadow: 1px 1px 1px black;
     transition: transform 1s;
 }
@@ -85,73 +96,47 @@ section{
     transform: rotate(-45deg) translate(.25rem, -.4rem);
     width: 70%;
 }
+
 header {
     position: relative;
-    display: block;
-    width: 100%;
-    height: 100vh;
-    overflow: hidden;
-}
-.img-wrapper {
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-}
-.img-wrapper img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    animation: zoom 25s;
-}
-@keyframes zoom {
-    0% {
-        transform: scale(1.3);
-    }
-
-    100% {
-        transform: scale(1);
-    }
-}
-.banner {
-    width: 90%;
+    max-width: 1300px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
     height: auto;
-    position: absolute;
-    object-fit: contain;
-    top: 15%;
-    left: 20%;
+    margin: auto;
 }
-.banner h1 {
+div.img-wrapper {
+    max-width: 500px;
+    margin-top: 4rem;
+}
+div.img-wrapper img {
+    width: 100%;
+}
+div.banner {
+    margin-top: 20%;
+    object-fit: contain;
+    padding: .5rem;
+    color: var(--cor-destaque);
+    border: 1px solid transparent;
+    border-radius: 5px;
+    z-index: 90;
+}
+div.banner h1 {
     font-size: 3.5em;
     font-family: var(--font-primary); 
     font-weight: 200;
-    color: #ffffff;
-    text-shadow: 0.1rem 0.2rem 2px rgba(0, 0, 0, 0.363);
+    text-shadow: 1px 1px 2px #000000a9;
     line-height: 3.5rem;
-    margin-top: 4rem;
-    margin-bottom: 2rem;
+    word-break: break-all;
+    -ms-word-break: break-all;
     animation: MoveBanner 1s;
 }
-.banner p {
-    font-family: var(--font-secundary); 
+div.banner p { 
     font-size: 1.5rem;
-    color: #fff;
-    text-shadow: 0.1rem 0.1rem 1px rgba(0, 0, 0, 0.459);
-    margin-bottom: 2rem;
+    text-shadow: 1px 1px 2px #000000a9;
+    margin: .5rem 0  1rem .5rem;
     animation: MoveBanner 1.2s;
-}
-.banner button {
-    font-family: var(--font-action);
-    font-size: 0.8rem;
-    color: #fff;
-    text-transform: uppercase;
-    background: #D38312;  
-    background: -webkit-linear-gradient(to right, #A83279, #d3a612c4);  
-    background: linear-gradient(to right, #ac1e94, #d3a612be);     
-    padding: 0.5rem 0.8rem;  
-    border: 1px solid #fff ; 
-    border-radius: 7px; 
-    cursor: pointer;
-    animation: MoveBanner 1.4s;
 }
 header > div.logo{
     position: fixed;
@@ -159,7 +144,7 @@ header > div.logo{
     width: 100%;  
     height: 60px;  
     z-index: 100;  
-    background-color: white;
+    background-color: var(--cor-primaria);
     box-shadow: .2px .2px 3px rgba(0, 0, 0, 0.527); 
 }
 div.logo > img{
@@ -180,7 +165,7 @@ div.logo > img{
 .sidebar {
     width: 15rem;
     height: 100vh;
-    background-color: white;
+    background-color: var(--cor-primaria);
     position: fixed;
     top: 0;
     right: -15.5rem;
@@ -199,7 +184,7 @@ div.logo > img{
 .menu-item, .menu-link {
     list-style: none;
     text-decoration: none;
-    color: rgb(72, 9, 83);
+    color: var(--cor-destaque);
     text-align: center;
     margin-bottom: 1rem;
     font-family: var(--font-action);
@@ -217,18 +202,27 @@ div.logo > img{
     justify-content: space-evenly;
 }
 .social-media i {
-    color:  rgb(113, 12, 131);
+    color:  var(--cor-destaque);
     transition: ease-in 0.5s;
 }
 .social-media i:hover {
     color: rgb(26, 25, 25);
 }
+button{
+  background: #730c88;
+  background: -webkit-linear-gradient(to right, #730c88, #bc56e4);  
+  background: linear-gradient(to right, #730c88, #bc56e4); 
+  box-shadow: 1px 1px 3px #0000006e; 
+  transition: .3s;
+ }
+ button:hover{
+  background: -webkit-linear-gradient(to right, #bc56e4, #730c88 );  
+  background: linear-gradient(to right, #bc56e4, #730c88); 
+  box-shadow: 1px 1px 3px #00000093;
+ }
   .btn{
     width: 8rem;
-    height: 2.5rem;
-    background: #A83279;
-    background: -webkit-linear-gradient(to right, #A83279, #d3a612);  
-    background: linear-gradient(to right, #ac1e94, #d3a612); 
+    height: 2.5rem; 
     font-family: var(--font-action);   
     font-size: 1.1rem;
     border: none;
@@ -241,6 +235,13 @@ div.logo > img{
     margin-top: 0;
     width: 100%;
     text-align: center;
+}
+h2{
+    font-family: var(--font-primary);
+    margin: 2rem 0;
+    text-align: center;
+    font-size: 2.5rem;
+    color: #414141;
 }
 .sessao-orcamento{ 
     position: relative;
@@ -261,7 +262,7 @@ div.logo > img{
 }
 .orcamento-wrapper{
     position: relative;
-    background-color: rgba(255, 255, 255, 0.164);
+    background: rgba(255, 255, 255, 0.164);
     box-shadow: .1rem .1rem .3rem rgba(46, 45, 45, 0.788);
 }
 .sessao-orcamento form{
@@ -302,22 +303,20 @@ div.logo > img{
     grid-column: 2;
 }
 footer{
-    border-top: 2px solid white;
     margin-top: 0;
     padding: 2rem 0;
     position: relative;
     width: 100%;
-    background-color: #424241;
 }
 footer p{
     margin-top: 1rem;
     text-align: center;
     font-family: var(--font-secundary);
-    color: rgb(238, 238, 238);
+    color: var(--cor-font);
 }
 footer a{
     margin: 0 1rem;
-    color: #e0e0de;
+    color: var(--cor-font);
     font-size: 1.3rem;
 }
 footer a i{
@@ -326,7 +325,6 @@ footer a i{
 footer q{
     display: block;
     font-family: var(--font-secundary);
-    color: white;
     text-align: center;
     font-style: oblique;
 }
@@ -337,58 +335,51 @@ footer q{
     width: 2rem;
     height: 2rem;
     font-size: 1rem;
-    color: white;
-    text-decoration: none;
-    background: rgb(198, 43, 226);
+    color: var(--cor-destaque);
+    background: var(--cor-primaria);
     box-shadow: .1rem .1rem .3rem rgba(58, 57, 57, 0.747);
-    border-radius: 5px;
+    border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
+@media (max-width: 919px){
+    div.banner h1 {
+      font-size: 2.8rem;
+      line-height: 2.8rem;
+  }
+  div.img-wrapper {
+      margin-top: 0;
+  }
+}
 @media (max-width: 750px){
-    .banner {
-        position: absolute;
-        top: 15%;
-        left: 5%;
-    }
     h2{
         font-size: 2.3rem;
     }
-    .orcamento-wrapper{
-        height: 100vh;
-    }
-}    
-@media (max-width: 919px){
-      .banner h1 {
-        font-size: 3rem;
-    }
-}
+}  
 @media (max-width: 750px) and (orientation: landscape){ 
     div.logo{
           display: none;
       } 
-    }
+}
     </style>
 </head>
 <body class="conteiner">
 
     <header id="home">
 
+        <div class="banner">
+            <h1>Desenvolvedor <br> Web Front End</h1>
+            <p>Heleno Salgado Lopes</p>
+      </div>  
+
         <div class="img-wrapper">
             <picture>
-                <source media="(max-width: 750px)" srcset="/img/web-sobre-p.jpg">
-                <source media="(min-width: 800px)" srcset="/img/web-sobre.jpg">
-              <img src="/img/web-sobre.jpg" alt="Imagem">
+                <source media="(max-width: 750px)" srcset="">
+                <source media="(min-width: 800px)" srcset="">
+              <img src="/img/development-1280.png" alt="Imagem">
             </picture>
         </div>
-
-        <div class="banner">
-              <h1>Desenvolve<wbr>dor Web Front End</h1>
-              <p>Heleno Salgado Lopes</p>
-              <q style="font-family: 'Mulish'; color: #fff;">A persistência é o caminho do êxito.</q><br>
-              <div style="margin-top: 1rem; color: #fff; font-style: italic;">Charles Chaplin</div>
-        </div>  
 
         <div class="logo">
 
@@ -418,8 +409,11 @@ footer q{
     </aside>
 
     </header>
-    
+
+    <h2>Orçamento</h2>
+
         <section class="sessao-orcamento" data-aos="fade" id="orcamento">
+            
             <div class="orcamento-wrapper">
                 <form action="https://formsubmit.co/helenosalgado19@gmail.com" method="post">
                     <input type="hidden" name="_next" value="https://helenosalgado.github.io/Portfolio/orcamento-form.html">
@@ -456,8 +450,8 @@ footer q{
         <a href="https://wa.me/message/QBPTYVHS7CKQG1"><img style="display: block; max-width: 80px; margin: auto;" src="/img/Whatsapp.png" alt="botão do Whatsapp"></a>
 
         <p style="
- font-family: var(--font-secundary); font-size: 1.2rem; text-align: center; margin: 2rem auto; padding: .7rem; border-radius: 3px; font-weight: bold; text-shadow: 5px 5px 20px rgb(255, 255, 255);">
- <a style="text-decoration: none; color:#fff;" href="https://helenosalgado.github.io/Portfolio/">VOLTAR</a></p>
+ font-family: var(--font-secundary); font-size: 1.2rem; text-align: center; margin: 2rem auto; padding: .7rem; border-radius: 3px; font-weight: bold; text-shadow: 1px 1px 3px #949494;">
+ <a style="text-decoration: none; color:#9c27ca;" href="https://helenosalgado.github.io/Portfolio/">VOLTAR</a></p>
             <div class="media-sociais">
                 <a href="https://www.facebook.com/heleno.salgado.16/"><i class="fab fa-facebook"></i></a>
                 <a href="https://www.instagram.com/heleno_salgado/"><i class="fab fa-instagram"></i></a>
