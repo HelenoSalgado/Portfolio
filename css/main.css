@@ -113,7 +113,7 @@ div.banner h1 {
 div.banner p { 
     font-size: 1.5rem;
     text-shadow: 1px 1px 2px #000000a9;
-    margin: 1rem 0  1rem 3rem;
+    margin: .5rem 0  1rem .5rem;
     animation: MoveBanner 1.2s;
 }
 div.banner ul > li{
