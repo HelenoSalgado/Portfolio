@@ -113,7 +113,7 @@ div.banner h1 {
 div.banner p { 
     font-size: 1.5rem;
     text-shadow: 1px 1px 2px #000000a9;
-    margin-bottom: 2rem;
+    margin: 1rem 0  1rem 3rem;
     animation: MoveBanner 1.2s;
 }
 div.banner ul > li{
@@ -419,6 +419,7 @@ div.logo > img{
     border-radius: .5rem;
 }
 .sessao-contato{
+    margin-top: 7rem;
     height: auto;
     border-radius: 0 0 5px 5px;
     background: var(--cor-primaria);
