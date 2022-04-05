@@ -556,6 +556,9 @@ footer q{
     h2{
         font-size: 2.3rem;
     }
+    .sessao-informacoes{
+        border-radius: 0;
+    }
     .conhecimento-img figure{
         max-width: 400px;
     }
