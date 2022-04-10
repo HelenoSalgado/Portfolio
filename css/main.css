@@ -326,9 +326,9 @@ div.logo > img{
 }
 .cards{
     margin-top: 4rem;
-    padding-left: 2rem;
+    padding-left: 1rem;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     justify-items: center;
     overflow-y: hidden;
     overflow-x: auto;
