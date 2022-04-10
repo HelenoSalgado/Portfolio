@@ -582,9 +582,12 @@ footer q{
         border-radius: 0;
     }
 }  
-@media (max-width: 382px){
+@media (max-width: 380px){
+    div.banner{
+        margin-left: -20px;
+    }
     div.banner h1{
-        font-size: 2.3rem;
+        font-size: 2.5rem;
     }
 }
 @media (max-width: 750px) and (orientation: landscape){ 
