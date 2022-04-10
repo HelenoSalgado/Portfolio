@@ -360,7 +360,7 @@ div.logo > img{
     font-weight: 600;
     line-height: 1.7rem;
     color: #fff;
-    margin: 70% 0 0 1rem;
+    margin: 60% 0 0 1rem;
 }
 .text h4{
     margin-top: .5rem;
@@ -386,6 +386,7 @@ div.logo > img{
     margin-top: .5rem;
     width: fit-content;
     padding: 3px;
+    font-size: .9rem;
     pointer-events: painted;
     margin-left: 1rem;
     transition: ease-in .1s;
