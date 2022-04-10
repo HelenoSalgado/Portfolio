@@ -326,8 +326,10 @@ div.logo > img{
 }
 .cards{
     margin-top: 4rem;
+    padding-left: 2rem;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
+    justify-items: center;
     overflow-y: hidden;
     overflow-x: auto;
     scroll-snap-type: x mandatory;
@@ -337,16 +339,16 @@ div.logo > img{
 .card{ 
     position: relative;
     flex: none;
-    width: 19rem;
-    height: 30rem;
+    width: 17rem;
+    height: 25rem;
     scroll-snap-align: center;
     pointer-events: none;
 }
 .text{
     position: absolute;
     top: 0;
-    width: 18rem;
-    height: 30rem;
+    width: 15rem;
+    height: 25rem;
     background:#2c3e50af, #2c3e5086, #2c3e50;  
     background: -webkit-linear-gradient(#2c3e50af, #2c3e5086, #2c3e50);  
     background: linear-gradient (#2c3e50af, #2c3e5086, #2c3e50);
@@ -358,7 +360,7 @@ div.logo > img{
     font-weight: 600;
     line-height: 1.7rem;
     color: #fff;
-    margin: 80% 0 0 1rem;
+    margin: 70% 0 0 1rem;
 }
 .text h4{
     margin-top: .5rem;
@@ -398,7 +400,7 @@ div.logo > img{
     margin-left: 1.1rem;
 }
 .card img{
-    width: 94.5%;
+    width: 88.5%;
     height: 100%;
     object-fit: cover;
     border-radius: 5px;
@@ -560,15 +562,22 @@ footer q{
     align-items: center;
 }
 @media (max-width: 919px){
-    div.banner h1 {
-      font-size: 2.8rem;
+  div.banner h1 {
       line-height: 2.8rem;
   }
   div.img-wrapper {
       margin-top: 0;
   }
 }
+@media (min-width: 750px){
+    div.banner h1{
+        font-size: 3.5rem;
+    }
+}
 @media (max-width: 750px){
+    div.banner h1{
+        font-size: 2.7rem;
+    }
     h2{
         font-size: 2.3rem;
     }
@@ -582,7 +591,7 @@ footer q{
         border-radius: 0;
     }
 }  
-@media (max-width: 380px){
+@media (max-width: 383px){
     div.banner{
         margin-left: -20px;
     }
