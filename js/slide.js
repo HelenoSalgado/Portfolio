@@ -1,23 +1,20 @@
-//  var slideIndex = 0;
-//      showSlides();
-    
-//      function showSlides() {
-//        var i;
-//        var slides = document.getElementsByClassName("meuSlide");
-//        var dots = document.getElementsByClassName("dot");
-//        for (i = 0; i < slides.length; i++) {
-//          slides[i].style.display = "flex";  
-//        }
-//        slideIndex++;
-//        if (slideIndex > slides.length) {slideIndex = 0} // valor original: 1.   
-//        for (i = 0; i < dots.length; i++) {
-//          dots[i].className = dots[i].className.replace(" acao", "");
-//        }
-//        slides[slideIndex-1].style.display = "none";  
-//        dots[slideIndex-1].className += " acao";
-//        setTimeout(showSlides, 2000); 
-//        // Change image every 2 seconds
-//      }
+var slideIndex = 1;
+slideDivs(slideIndex);
+
+function showDivs(n) {
+  slideDivs(slideIndex += n);
+}
+
+function slideDivs(n) {
+  var i;
+  var x = document.querySelectorAll(".slide-certificado");
+  if (n > x.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  x[slideIndex-1].style.display = "block";  
+}
 
 //Habilita Scrool no elemento projetos
     document.querySelector("cards")

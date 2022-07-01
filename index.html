@@ -1,237 +1,317 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, user-scalable=no">
-    <meta http-equiv="Cache-Control" content="no-store" />
-    <meta name="author" content="Heleno Salgado">
-    <title>PORTFÓLIO</title>
-    <meta name="description" content="Desenvolvo sites personalizados e interativos, com aplicações diversas. Venha conferir!">
-    <meta property="og:title" content="PORTFÓLIO" />
-    <meta property="og:description" content="Desenvolvo sites personalizados e interativos, com aplicações diversas. Venha conferir!" />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://heleno.dev/" />
-    <meta property="og:image" content="https://heleno.dev/img-icon/android-chrome-512x512.png" />
-    <!-- Fontes do google fontes. -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700;800&family=Josefin+Slab:ital,wght@0,100;0,200;0,300;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Mulish:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-    <!-- Biblioteca de ícones. -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <!-- Biblioteca de animacões conforme scroll. -->
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-    <!-- CSS local. -->
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="apple-touch-icon" sizes="180x180" href="img-icon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="img-icon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="img-icon/favicon-16x16.png">
-    <link rel="manifest" href="/site.webmanifest">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, user-scalable=no">
+  <meta http-equiv="Cache-Control" content="no-store" />
+  <meta name="author" content="Heleno Salgado">
+  <title>PORTFÓLIO</title>
+  <meta name="description" content="Desenvolvo sites personalizados e interativos, com aplicações diversas. Venha conferir!">
+  <meta property="og:title" content="PORTFÓLIO" />
+  <meta property="og:description" content="Desenvolvo sites personalizados e interativos, com aplicações diversas. Venha conferir!" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://heleno.dev/" />
+  <meta property="og:image" content="https://heleno.dev/img-icon/android-chrome-512x512.png" />
+  <!-- Fontes do google fontes. -->
+  <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet"> -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700&family=Poppins:wght@300&display=swap" rel="stylesheet">
+  <!-- Biblioteca de ícones.-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- CSS local. -->
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/estado.css">
+  <link rel="apple-touch-icon" sizes="180x180" href="img-icon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="img-icon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="img-icon/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
 </head>
-<body class="conteiner">
-        
-        <header id="home">
-
-            <div class="banner">
-                <h1>Desenvolvedor <br> Web Front End</h1>
-                <p>Heleno Salgado Lopes</p>
-          </div>  
-
-            <div class="img-wrapper" data-aos="zoom-in">
-                <picture>
-                    <source media="(max-width: 750px)" srcset="">
-                    <source media="(min-width: 800px)" srcset="">
-                  <img src="img/development-1280.png" alt="Imagem">
-                </picture>
+<body class="container">
+  <header id="home">
+    <div class="logo">
+      <div class="menu-hamburguer">
+        <div class="line" id="line1"></div>
+        <div class="line" id="line2"></div>
+        <div class="line" id="line3"></div>
+      </div>  
+      <i class="fa-solid fa-volume-low"></i>
+      <img src="img/hsl-logo-transparent-150px.png" alt="logo">
+    </div>
+    <div class="apresentacao">
+      <div class="banner">
+        <h1>Olá, sou Heleno Salgado Lopes</h1>
+        <p>Sou estudante e aspirante à <span>programador Front-end</span> Júnior, sigo firme e otimista &#x1F60A;. Tenho 25 anos, brasileiro, formado em técnico em agropecuária, estudante de Teologia e apaixonado por programação, sou aluno no <em>One - Oracle Next Education</em>, um programa da Oracle em parceria com a Alura Cursos.</p>
+        <button><a href="https://www.linkedin.com/in/helenosalgado">Linked<i class="fab fa-linkedin inclina"></i></a></button>
+        <img src="img/cv.png" alt="Meu currículo">
+      </div> 
+      <div class="img-wrapper">
+        <picture>
+          <source media="(max-width: 750px)" srcset="">
+          <source media="(min-width: 800px)" srcset="">
+          <img src="img/development-600.png" alt="Imagem">
+        </picture>
+      </div> 
+    </div>
+    <aside class="sidebar">
+      <nav>
+        <ul class="menu">
+          <li class="menu-item"><a href="#sobre" class="menu-link">SOBRE</a></li>
+          <li class="menu-item"><a href="#conhecimentos" class="menu-link">CONHECIMENTOS</a></li>
+          <li class="menu-item"><a href="#certificados" class="menu-link">CERTIFICADOS</a></li>
+          <li class="menu-item"><a href="#github" class="menu-link">GITHUB</a></li>
+          <li class="menu-item"><a href="#projetos" class="menu-link">PROJETOS</a></li>
+          <li class="menu-item"><a href="#contato" class="menu-link">CONTATO</a></li>
+          <!-- <li class="menu-item"><a href="/orcamento/index.html" class="menu-link">ORÇAMENTO</a></li> -->
+          <li class="menu-item"><a href="/blog/index.html" class="menu-link">BLOG</a></li>
+        </ul>
+      </nav>
+      <div class="social-media">
+        <a href="https://www.linkedin.com/in/helenosalgado"><i class="fab fa-linkedin"></i></a>
+        <a href="https://www.instagram.com/heleno_salgado/"><i class="fab fa-instagram"></i></a>
+        <a href="https://github.com/HelenoSalgado/"><i class="fab fa-github-alt"></i></a>
+      </div>
+    </aside>
+    <audio class="som-menu-on" src="sons/puxado.wav"></audio>
+    <audio class="som-menu-of" src="sons/transicao.wav"></audio>
+    <audio class="som-volume" src="sons/pop.wav"></audio>
+    <!-- Som baixado de https://freesound.org/s/277031/ -->
+  </header>
+  <svg class="weve-header" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 150">
+    <path fill="#14171a" fill-opacity="1" d="M0,64L80,53.3C160,43,320,21,480,21.3C640,21,800,43,960,53.3C1120,64,1280,64,1360,64L1440,64L1440,0L1360,0C1280,0,1120,0,960,0C800,0,640,0,480,0C320,0,160,0,80,0L0,0Z"></path>
+  </svg>
+  <section class="sobre-mim" id="sobre">
+    <div class="sobre-mim-container">
+      <div>
+        <h3><span>Experiência</span> <span>Profissional</span></h3>
+        <img src="img/HELENO-SALGADO-p.jpg" alt="">
+      </div>
+      <div>
+        <p>Apesar de nunca ter ocupado um cargo de programação, tive uma experiência que julgo interessante. Em 2016 eu começava a trabalhar como professor numa Escola Família Agrícola (EFA). Fui coordenador, professor e tinha sob minha tutoria um grupo de nove alunos. Foram dias incríveis de grandes aprendizados, naturalmente desenvolvi habilidades como inteligência emocional, pensamento crítico para resoluções de problemas, e aprendi o valor e a importância de se trabalhar numa equipe conectada. Hoje, passados cinco anos, estou determinado a trabalhar como desenvolvedor Front-end da web e acredito que poderei seguir compartilhando conhecimento.</p>
+        </div>
+      </div>
+    </section>
+    <section class="secao-conhecimentos" id="conhecimentos"> 
+      <h2>Tecnologias</h2>
+      <div class="container-conhecimentos"> 
+          <div>
+            <i class="fab fa-html5"></i>
+            <h3>HTML</h3>
+            <p>É a linguagem de marcação padrão para a criação de páginas da Web, além do <strong>conteúdo, tem uma parte semântica importante para os mecanismos de busca.</strong></p>
+        </div>
+        <div>
+            <i class="fab fa-css3-alt"></i>
+            <h3>CSS</h3>
+            <p>É a linguagem responsável por estilizar a página web e especificar o layout. <strong>O CSS descreve como os elementos HTML devem ser exibidos.</strong></p>
+        </div>
+        <div>
+            <i class="fas fa-pencil-alt"></i>
+            <h3>Design</h3>
+            <p><strong>É o que dá palatividade ao projeto</strong>. Existem técnicas bem definidas que vai desde o layouts, passando pelo conteúdo até a melhor cor a ser aplicada nas páginas.</p>
+        </div>
+        <div>
+            <i class="fab fa-js"></i>
+            <h3>JavaScript</h3>
+            <p>O JavaScript cuida das interações com o usuário e <strong>programa o comportamento das páginas da web.</strong></p>
+        </div>
+        <div>
+          <i class="fa-brands fa-git-alt"></i>
+          <h3>Git</h3>
+          <p>O sistema de controle de versão distribuído, o git, permite a manutenção do código e o <strong>trabalho em equipe.</strong></p>
+        </div>
+        <div>
+            <i class="fa-brands fa-wordpress"></i>
+            <h3>Wordpress</h3>
+            <p>O wordpress facilita a criação de sites de conteúdo dinâmicos ou <strong>loja virtual com o Woocommerce</strong>.</p>
+      </div>
+    </div>
+  </section>
+    <svg class="weve-conhecimentos" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 150">
+      <path fill="#1e252e" fill-opacity="1" d="M0,64L80,53.3C160,43,320,21,480,21.3C640,21,800,43,960,53.3C1120,64,1280,64,1360,64L1440,64L1440,0L1360,0C1280,0,1120,0,960,0C800,0,640,0,480,0C320,0,160,0,80,0L0,0Z"></path>
+    </svg>
+  <section class="secao-certificados" id="certificados">
+    <div class="container-certificados">
+      <h2>Certificados</h2>
+      <div class="certificados">
+         <div class="certificado">
+           <img class="slide-certificado" src="img/certificado-javascript01-700.webp" alt="">
+         </div>
+         <div class="certificado">
+          <img class="slide-certificado" src="img/certificado-javascript02-700.webp" alt="">
+         </div>
+         <div class="certificado">
+          <img class="slide-certificado" src="img/certificado-javascript03-700.webp" alt="">
+         </div>
+         <div class="certificado">
+          <img class="slide-certificado" src="img/certificado-git-e-github-700.webp" alt="">
+         </div>
+         <div class="certificado">
+          <img class="slide-certificado" src="img/certificado-ie-700.webp" alt="">
+         </div>
+         <div class="slide-button">
+         <button onclick="showDivs(1)"><img src="img/seta-a-esquerda.png" alt=""></button>
+         <button onclick="showDivs(-1)"><img src="img/seta-para-a-direita.png" alt=""></button>
+        </div>
+      </div>
+    </div>
+    <audio class="som-certificados" src="sons/puxado-pop.wav"></audio>
+    <!-- <div> Ícones feitos por <a href="https://www.freepik.com" title="Freepik"> Freepik </a> from <a href="https://www.flaticon.com/br/" title="Flaticon">www.flaticon.com'</a></div> -->
+  </section>
+  <svg class="weve-certificados" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 150">
+    <path fill="#14171a" fill-opacity="1" d="M0,64L80,53.3C160,43,320,21,480,21.3C640,21,800,43,960,53.3C1120,64,1280,64,1360,64L1440,64L1440,0L1360,0C1280,0,1120,0,960,0C800,0,640,0,480,0C320,0,160,0,80,0L0,0Z"></path>
+  </svg>
+  <section class="info-github" id="github">
+    <div class="github-container">
+      <h2>Atividades do GitHub</h2>
+      <div class="github-atividade">
+        <!-- <a href="https://github.com/HelenoSalgado"> --> 
+          <div>
+            <p>Diariamente estou fazendo commit de códigos para projetos no github. Praticar constantemente é a maneira mais eficaz de reter o conhecimento, e não somente isso, mas através dos eventuais problemas você aumenta o repertório de possíveis soluções.</p>
+          </div>
+          <div>
+            <img src="https://github-readme-stats.vercel.app/api?username=HelenoSalgado&show_icons=true&theme=dracula&include_all_commits=true&count_private=true/"/>
+          </div>
+          <div>
+            <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=HelenoSalgado&layout=compact&langs_count=8&theme=dracula"/>
+          </div>
+          <div>
+            <p>Depois de dominar as linguagens base do Front-end, pretendo expandir um pouco além, aprendendo outras linguagens e bibliotecas, mas não com o objetivo de ser especialista em muitas linguagens de programação, porque é impossível.</p>
+          </div>
+        </div>
+        <button><a href="https://github.com/HelenoSalgado/">GitHub<i class="fab fa-github inclina"></i></a></button>
+      </div>
+    </section>
+    <svg class="weve-github" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 150">
+      <path fill="#1e252e" fill-opacity="1" d="M0,64L80,53.3C160,43,320,21,480,21.3C640,21,800,43,960,53.3C1120,64,1280,64,1360,64L1440,64L1440,0L1360,0C1280,0,1120,0,960,0C800,0,640,0,480,0C320,0,160,0,80,0L0,0Z"></path>
+    </svg>
+    <section class="projetos" id="projetos">
+      <div class="container-projetos">
+        <h2>Projetos e Desafios</h2>
+        <div class="card-projetos">
+          <div class="card"><img class="card-capa" src="img/seo-6271942_640.webp" alt="">
+            <div class="card-text">
+              <h3>Leide Marketing</h3>
+              <h4>HTML, CSS, JS</h4>
+              <p>Página individual, semelhante ao Linktr.ee, para vender cursos e capturar leads.</p>
+              <button>
+                <a href="https://leidemarketing.com" target="_blank" class="ver"><i class="fas fa-link"></i></a>
+              </button>
             </div>
-
-            <div class="logo">
-
-                <div class="hamburguer">
-                    <div class="line" id="line1"></div>
-                    <div class="line" id="line2"></div>
-                    <div class="line" id="line3"></div>
-                </div>
-
-                <img src="img/hsl-logo-transparent.png" alt="logo">
+          </div>
+          <div class="card"><img class="card-capa" src="img/a-book-1840910_640.webp" alt="">
+            <div class="card-text">
+              <h3>Acervo Mário Ferreira</h3>
+              <h4>HTML e CSS</h4>
+              <p>Acervo virtual com a finalidade de reunir as obras do filósofo brasileiro, Mário Ferreira dos Santos.</p>
+              <button>
+                <a href="https://acervomarioferreira.com.br" target="_blank"><i class="fas fa-link"></i></a>
+              </button>
             </div>
-            
-            <aside class="sidebar">
-            <nav>
-                <ul class="menu">
-                    <li class="menu-item"><a href="#home" class="menu-link"><s>HOME</s></a></li>
-                    <li class="menu-item"><a href="#conhecimentos" class="menu-link">CONHECIMENTOS</a></li>
-                    <li class="menu-item"><a href="#projetos" class="menu-link">PROJETOS</a></li>
-                    <li class="menu-item"><a href="#contato" class="menu-link">CONTATO</a></li>
-                    <li class="menu-item"><a href="/orcamento/index.html" class="menu-link">ORÇAMENTO</a></li>
-                    <li class="menu-item"><a href="/blog/index.html" class="menu-link">BLOG</a></li>
-                </ul>
-            </nav>
-            <div class="social-media">
-                <a href="https://www.linkedin.com/in/helenosalgado"><i class="fab fa-linkedin"></i></a>
-                <a href="https://www.instagram.com/heleno_salgado/"><i class="fab fa-instagram"></i></a>
-                <a href="https://github.com/HelenoSalgado/"><i class="fab fa-github-alt"></i></a>
+          </div>
+          <div class="card"><img class="card-capa" src="img/orar-e-labutar.webp" alt="">
+            <div class="card-text">
+              <h3>Orar e Labutar</h3>
+              <h4>HTML, CSS, JS</h4>
+              <p>Site de carater religioso com varias paginas e posts por categorias, menu animado e aplicações diversas.</p>
+              <button>
+                <a href="https://orarelabutar.com" target="_blank"><i class="fas fa-link"></i></a>
+              </button>
             </div>
-
-        </aside>
-        </header>
-        <section class="sessao-informacoes">
-            <div class="curva">
-            <div class="sobremim" data-aos="fade">
-                <div>
-                <img src="img/HELENO-SALGADO-p.jpg"  alt="Imagem de Heleno Salgado">
-                <p>Olá, tudo bem? Seja bem vindo ao meu sitio, navegue e veja como posso te servir. Desenvolvo sites modernos e reponsivos para celulares, tabletes e desktops. Crio Leading Pages eficientes para seus produtos e serviços, lojas virtuais, sites empresariais, portfólios e tudo o mais relacionado à interface web e sua integração com tecnologias backend. Seu projeto será adequadamente dimensionado, levo sempre em conta as limitações de recursos do cliente. No final das contas você terá um projeto bem ajustado e eficiente.</p>
-                </div>
-                </div>
-                <div class="orcamento1">
-                    <button><a href="https://heleno.dev/orcamento">FAÇA UM ORÇAMENTO</a></button>
-                </div>
+          </div>
+          <div class="card"><img class="card-capa" src="img/like.webp" alt="">
+            <div class="card-text">
+              <h3>Botão de Curtir</h3>
+              <h4>HTML, CSS, JS, PHP, SQL</h4>
+              <p>Um desafio que fiz para desenvolver habilidades de lógica de programação e FECTH API do JavaScript.</p>
+              <button>
+                <a href="https://orarelabutar.com" target="_blank"><i class="fas fa-link"></i></a>
+              </button>
             </div>
-            </section>
-        <section class="sessao-conhecimentos"  id="conhecimentos">
-
-            <h2 data-aos="fade">Tecnologias</h2>
-
-            <div data-aos="fade-right">
-                <div>
-                    <i class="fab fa-html5"></i>
-                    <h3>HTML</h3>
-                </div>
-                <div data-aos="fade-up">
-                    <p>É a linguagem de marcação padrão para a criação de páginas da Web, além do <strong>conteúdo, tem uma parte semântica importante para os mecanismos de busca.</strong></p>
-                </div>
+          </div>
+          <div class="card"><img style="z-index: 1;" class="card-capa" src="img/cybersecurity-6673412_640.webp" alt="">
+            <div class="card-text">
+              <h3>Encriptador de Texto</h3>
+              <h4>HTML, CSS, JS</h4>
+              <p>Desafio desenvolvido como parte das atividades do programa One - Oracle Next Education.</p>
+              <button>
+                <a href="https://orarelabutar.com" target="_blank"><i class="fas fa-link"></i></a>
+              </button>
             </div>
-            <div data-aos="fade-right">
-                <div>
-                    <i class="fab fa-css3-alt"></i>
-                    <h3>CSS</h3>
-                </div>
-                <div data-aos="fade-up">
-                    <p>É a linguagem responsável por estilizar a página web e especificar o layout. <strong>O CSS descreve como os elementos HTML devem ser exibidos.</strong></p>
-                </div>
+          </div>
+          <div class="card"><img class="card-capa" src="img/work-developer.webp" alt="">
+            <div class="card-text">
+              <h3>E-commerce</h3>
+              <h4>HTML, CSS, JS</h4>
+              <p>Site para loja virtual em andamento, proposta de desafio do programa One - Oracle Next Education.</p>
+              <progress style="height: 30px;"></progress>
             </div>
-            <div data-aos="fade-right">
-                <div>
-                    <i class="fas fa-pencil-alt"></i>
-                    <h3>Design</h3>
-                </div>
-                <div data-aos="fade-up">
-                    <p>É o que dá palatividade ao projeto. Existem técnicas bem definidas que vai desde a <strong>responsividade de layouts, passando pelo conteúdo até a melhor cor a ser aplicada nas páginas.</strong></p>
-                </div>
+          </div>
+          <div>
+          </div>
+        </div>
+        <audio class="som-projetos" src="sons/puxado-pop.wav"></audio>
+      </section>
+      <svg class="weve-projetos" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 150">
+        <path fill="#14171a" fill-opacity="1" d="M0,64L80,53.3C160,43,320,21,480,21.3C640,21,800,43,960,53.3C1120,64,1280,64,1360,64L1440,64L1440,0L1360,0C1280,0,1120,0,960,0C800,0,640,0,480,0C320,0,160,0,80,0L0,0Z">
+        </path>
+      </svg>
+      <section class="hobbies" id="hobbies">
+        <h2>Hobbies</h2>
+         <div class="container-hobbies">
+           <div>
+             <i class="fa-solid fa-guitar"></i>
+             <p>Gosto de ouvir o som da viola, porém ainda estou aprendendo a tocar. As músicas raízes são, para mim, as melhores.</p>
             </div>
-            <div data-aos="fade-right">
-                <div>
-                    <i class="fab fa-js"></i>
-                    <h3>JavaScript</h3>
-                </div>
-                <div data-aos="fade-up">
-                    <p>O JavaScript cuida das interações com o usuário e <strong>programa o comportamento das páginas da web.</strong></p>
-                </div>
+           <div>
+             <i class="fa-solid fa-book-open"></i>
+             <p>A literatura clássica e universal tem um lugar especial no meu coração; posso contar sempre com a companhia dos bons.</p>
             </div>
-             <div data-aos="fade-right">
-                <div>
-                    <i class="fa-brands fa-wordpress"></i>
-                    <h3>Wordpress</h3>
-                </div>
-                <div data-aos="fade-up">
-                    <p>Você também pode querer usar o Wordpress para criar seu site de conteúdo ou <strong>Loja Virtual com o Woocommerce.</strong> Se este for o caso posso construir seu site ou auxiliá-lo.</p>
-                </div>
-            </div>
-            </div>
-        </section>
-        <div class="conhecimento-img">
-            <figure data-aos="zoom-in">
-                <img src="img/remote-5491798.png" loading="lazy" alt="Imagem Conhecimento">
-                <figcaption>Imagem de <a href="https://pixabay.com/pt/users/roadlight-15702095/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=5491798">政徳 吉田</a> por <a href="https://pixabay.com/pt/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=5491798">Pixabay</a></figcaption>
-            </figure>
-       </div>
-        <section>
-        </section>
-        <section class="sessao-projetos" data-aos="fade-up" id="projetos">
-                <h2>Projetos</h2>
-                <div class="cards">
-                    <div class="card"><img src="img/Orar-e-Labutar.jpg" loading="lazy" alt="">
-                        <div class="text">
-                            <h3>Orar e Labutar</h3>
-                            <h4>HTML, CSS, JS</h4>
-                            <p>Site de carater religioso com varias paginas e posts por categorias, menu animado e aplicações diversas.</p>
-                            <a href="https://orarelabutar.com" target="_blank">orarelabutar.com<i class="fas fa-link"></i></a>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <img src="img/leidemara.jpeg" loading="lazy" alt="">
-                        <div class="text">
-                            <h3>Leide Marketing</h3>
-                            <h4>HTML, CSS, JS</h4>
-                            <p>Página individual, semelhante ao Linktr.ee, para vender cursos e capturar leads.</p>
-                            <a href="https://leidemarketing.com" target="_blank">leidemarketing.com<i class="fas fa-link"></i></a>
-                        </div>
-                    </div>
-                    <div class="card"> 
-                        <img src="img/mario-ferreira.jpg" loading="lazy" alt="">
-                        <div class="text">
-                            <h3>Acervo Mário Ferreira</h3>
-                            <h4>HTML e CSS</h4>
-                            <p>Acervo virtual com a finalidade de reunir as obras do filósofo brasileiro, Mário Ferreira dos Santos.</p>
-                            <a href="https://acervomarioferreira.com.br" target="_blank">acervomarioferreira.com.br<i class="fas fa-link"></i></a>
-                        </div>
-                    </div>
-                </div>
-             <div class="pontos">
-                <span class="dot"></span> 
-                <span class="dot"></span> 
-                <span class="dot"></span>   
-             </div> 
-        </section>
-        <section class="sessao-contato" id="contato">
-            <h2>Contato</h2>
-            <div class="img-fundo">
-            <div class="contato-wrapper">
-                    <form action="https://formsubmit.co/helenosalgado19@gmail.com" method="post">
-                        <input type="hidden" name="_next" value="https://helenosalgado.github.io/Portfolio/enviado.html">
-
-                        <div class="input-group"><input type="text" name="name" class="field" id="Nome" placeholder="Nome Completo" required><label for="Nome" class="field-label">Nome</label></div>
-
-                        <div class="input-group"><input type="email" name="email" class="field" id="E-mail" placeholder="Seu Melhor E-mail" required><label for="E-mail" class="field-label">E-mail</label></div>
-
-                        <div class="input-group"><textarea name="message"
-                        class="field" id="Mensagem" placeholder="Escreva uma Mensagem"></textarea><label for="Mensagem" class="field-label">Mensagem</label></div>
-
-                        <button class="btn btn-submit" type="submit">Enviar</button>
-
-                        <input type="hidden" name="_captcha" value="false">
-                        <input type="hidden" name="_autoresponse" value="Recebi sua mensagem, logo em breve darei uma resposta. Obrigado!">
-                    </form>
-            </div>
-            </div>
-        </section> 
-        <footer>
-            <div class="media-sociais">
-                <a href="https://www.linkedin.com/in/helenosalgado"><i class="fab fa-linkedin"></i></a>
-                <a href="https://www.instagram.com/heleno_salgado/"><i class="fab fa-instagram"></i></a>
-                <a href="https://github.com/HelenoSalgado/"><i class="fab fa-github"></i></a>
-            </div>   
-                <p>&copy; 2021 Heleno Salgado Lopes.</p>
-            <q>Ao Senhor pertence a salvação - (Jonas 2:9)</q> 
-    </footer>
-        <a href="#home" id="link-topo">
-            <i class="fas fa-arrow-up"></i>
+         </div>
+      </section>
+      <svg class="weve-hobbies" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 150">
+        <path fill="#1e252e" fill-opacity="1" d="M0,64L80,53.3C160,43,320,21,480,21.3C640,21,800,43,960,53.3C1120,64,1280,64,1360,64L1440,64L1440,0L1360,0C1280,0,1120,0,960,0C800,0,640,0,480,0C320,0,160,0,80,0L0,0Z">
+        </path>
+      </svg>
+      <footer>
+        <!-- 
+          Imagem extraída do seguinte site:
+          https://www.joshwcomeau.com/_next/image/?url=%2Fimages%2Fshadow-palette%2Fslopes.png&w=3840&q=75
+        -->
+        <span class="luzes"></span><span class="luzes"></span><span class="luzes"></span><span class="luzes"></span><span class="luzes"></span><span class="luzes"></span><span class="luzes"></span><span class="luzes"></span><span class="luzes"></span><span class="luzes"></span><span class="luzes"></span><span class="luzes"></span><span class="luzes"></span><span class="luzes"></span><span class="luzes"></span>
+        <p class="mensagem-contato">Posso ajudá-lo(a) em alguma coisa? mande-me uma mensagem, responderei o mais rápido possível.</p>
+        <div class="contato" id="contato">
+        <form action="" method="post">
+          <input class="input-nome" type="text" placeholder="Nome Completo">
+          <input class="input-email" type="email" placeholder="Email">
+          <textarea class="input-texto" name="" id="" cols="30" rows="7" placeholder="Envie-me uma mensagem."></textarea>
+          <span class="mensagem-erro"></span>
+          <button type="submit" class="pushable">
+            <span class="shadow"></span>
+            <span class="edge"></span>
+            <span class="front">
+              Enviar
+            </span>
+          </button> 
+          <audio class="button-enviar" src="sons/button-mola.wav"></audio>
+        </form>
+        <div>
+          <img src="img/heleno-formatura.webp" alt="Dia da minha formatura">
+        </div>
+      </div>
+        <div class="copy">
+          <a href="https://heleno.dev/blog">BLOG</a>
+          <p>&copy; 2022 Heleno Salgado Lopes | Obrigado pela visita.</p>
+          <img style="width: 40px; vertical-align: middle; background-color: #eee; border-radius: 7px;" src="img/hsl-logo-transparent-150px.png" alt="">
+        </div>
+        <a href="#home" class="link-topo">
+           <i class="fas fa-arrow-up"></i>
         </a>
-    <script src="js/menu.js"></script>
-    <script src="js/slide.js"></script>
-    <!-- Script da animação com scroll. -->
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-       <script>
-         AOS.init({
-           duration: 1000,
-        //    aos: fade-up,
-        //    offset: 200,
-        //    delay: 50,
-        //    easing: ease-in-out,
-        //    mirror: true,
-        //    once: false,
-        //    placement: top-center,
-    });
-  </script>
-</body>
-</html>
+      </footer>
+      <script src="js/animation.js"></script>
+    </body>
+    </html>
