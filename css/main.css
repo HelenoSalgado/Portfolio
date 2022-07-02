@@ -901,9 +901,9 @@ footer textarea{
     .container-hobbies div{
         border: none;
     }
-    .card-capa{
+    /* .card-capa{
         display: none;
-    }
+    } */
     .contato div{
         margin-top: 50px;
         max-width: 300px;
