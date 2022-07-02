@@ -230,14 +230,13 @@ header::before{
     position: relative;
     max-width: 800px;
     margin: auto;
-    border-radius: 7px;
-    box-shadow: var(--shadow-elevation-medium);
+    /* box-shadow: var(--shadow-elevation-medium); */
 }
 .sobre-mim-container div:first-child{
     position: relative;
     width: 100%;
     height: auto;
-    background-color: var(--cor-destaque);
+    /* background-color: var(--cor-destaque); */
     border-radius: 7px 7px 0 0;
 }
 .sobre-mim-container h3{
@@ -889,8 +888,21 @@ footer textarea{
     .img-wrapper{
        display: none;
     }
+    .sobre-mim-container, 
+    .github-container div, 
+    .container-hobbies div{
+        box-shadow: none;
+    }
     .banner{
         backdrop-filter: none;
+    }
+    .github-atividade div, 
+    .card, 
+    .container-hobbies div{
+        border: none;
+    }
+    .card-capa{
+        display: none;
     }
     .contato div{
         margin-top: 50px;
