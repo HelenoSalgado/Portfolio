@@ -215,48 +215,21 @@ header::before{
     background-color: var(--cor-secundaria);
     padding: 50px 0;
 }
-@keyframes backgroundMove {
-    0%{
-       background-position: 0% 50%;
-    }
-    50%{
-       background-position: 100% 50%;
-    }
-    100%{
-       background-position: 0% 50%;
-    }
-}
 .sobre-mim-container{
     position: relative;
     max-width: 800px;
     margin: auto;
-    /* box-shadow: var(--shadow-elevation-medium); */
 }
-.sobre-mim-container div:first-child{
+.sobre-mim-container div{
     position: relative;
     width: 100%;
     height: auto;
-    /* background-color: var(--cor-destaque); */
     border-radius: 7px 7px 0 0;
 }
 .sobre-mim-container h3{
     text-align: center;
     font-size: 1.5rem;
     color: var(--cor-font);
-}
-.sobre-mim-container div:last-child{
-    position: relative;
-}
-.sobre-mim-container img{
-    display: none;
-    position: absolute;
-    top: -140px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 170px;
-    border: 2px solid var(--cor-destaque);
-    border-radius: 50%;
-    box-shadow: var(--shadow-elevation-medium);
 }
 .sobre-mim-container p{
     text-align: center;
