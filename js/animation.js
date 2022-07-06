@@ -24,12 +24,12 @@ hamburguer.addEventListener('click', () =>{
     if (iVolume == 0) {
       somMenuOn.play();
     }
-    //desenho.addEventListener('mousemove', sinalMouse);
+    desenho.addEventListener('mousemove', sinalMouse);
   }else{
     if (iVolume == 0) {
       somMenuOf.play();
     }
-    //desenho.removeEventListener('mousemove', sinalMouse);
+    desenho.removeEventListener('mousemove', sinalMouse);
   }
 
 })
@@ -127,6 +127,7 @@ function slideDivs(n){
 enviar.addEventListener("click", (event) => {
 
   event.preventDefault();
+
   if (iVolume == 0) {
     somEnviar.play();
   }
@@ -143,7 +144,8 @@ enviar.addEventListener("click", (event) => {
     'Por favor, digite um nome e um email',
     'Por favor, digite um nome',
     'Por favor, digite um email',
-    'Por favor, escreva uma mensage'
+    'Por favor, escreva uma mensage',
+    'Obrigado, email enviado com Sucesso.'
   ]
 
   if (inputNome == "" && inputEmail == "" && inputTexto == "") {
@@ -161,6 +163,20 @@ enviar.addEventListener("click", (event) => {
   }else if(inputTexto == ""){
     error.innerHTML += mensagem[4];
     return
+  }else{
+
+    const postEmail = new Request("https://formsubmit.co/helenosalgado19@gmail.com", {
+    method: "POST",
+    body: new FormData( document.querySelector("form") )
+    });
+
+    fetch(postEmail).then( response => {
+      return response.text(); // ou return response.json();
+    } )
+    .then ( result => {
+      error.innerHTML += mensagem[5];
+    });
+
   }
 })
 
