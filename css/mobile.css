@@ -1,0 +1,27 @@
+/* CSS mobile */
+@media (max-width: 650px) {
+    .img-wrapper{
+       display: none;
+    }
+    .sobre-mim-container, 
+    .github-container div, 
+    .container-hobbies div{
+        box-shadow: none;
+    }
+    .banner{
+        backdrop-filter: none;
+    }
+    .github-atividade div, 
+    .card, 
+    .container-hobbies div{
+        border: none;
+    }
+    /* .card-capa{
+        display: none;
+    } */
+    .contato div{
+        margin-top: 50px;
+        max-width: 300px;
+        height: 300px;
+    }
+}
