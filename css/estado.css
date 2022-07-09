@@ -11,6 +11,9 @@
 .banner img:hover{
     box-shadow: 2px 2px 5px rgb(255, 255, 255);
 }
+.slide-button button img:hover{
+    height: 70%;
+}
 .card:hover{
     box-shadow: 2px 1px 5px #fff;
 }

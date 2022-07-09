@@ -36,6 +36,7 @@ body::-webkit-scrollbar-track {
 body::-webkit-scrollbar-thumb {
   background-color: var(--cor-secundaria);
   border-radius: 20px;
+  /* border: .1px solid var(--cor-font); */
 }
 h2, h3{
   font-family: var(--font-primary);
