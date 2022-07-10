@@ -182,6 +182,7 @@ footer input{
     caret-color: var(--cor-destaque);
 }
 .fa-user-tie, .fa-at{
+    display: none;
     position: absolute;
     top: 14px;
     right: 95px;

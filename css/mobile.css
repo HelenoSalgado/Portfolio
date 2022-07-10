@@ -25,6 +25,7 @@
         width: 100%;
     }
     .fa-user-tie, .fa-at{
+        display: inline-block;
         right: 0;
     }
 }
