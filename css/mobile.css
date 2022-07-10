@@ -16,12 +16,15 @@
     .container-hobbies div{
         border: none;
     }
-    /* .card-capa{
-        display: none;
-    } */
     .contato div{
         margin-top: 50px;
         max-width: 300px;
         height: 300px;
+    }
+    footer input{
+        width: 100%;
+    }
+    .fa-user-tie, .fa-at{
+        right: 0;
     }
 }
