@@ -54,10 +54,27 @@
     </div>
     <div class="apresentacao">
       <div class="banner">
-        <h1>Olá, sou Heleno Salgado Lopes</h1>
-        <p>Sou estudante e aspirante à <span>programador Front-end</span> Júnior, sigo firme e otimista &#x1F60A;. Tenho 25 anos, brasileiro, formado em técnico em agropecuária, estudante de Teologia e apaixonado por programação, sou aluno no <em>One - Oracle Next Education</em>, um programa da Oracle em parceria com a Alura Cursos.</p>
-        <button><a href="https://www.linkedin.com/in/helenosalgado">Linked<i class="fab fa-linkedin inclina"></i></a></button>
-        <img src="img/cv-60px.png" alt="Meu currículo">
+       <h1>Olá, sou Heleno Salgado Lopes</h1>
+        <p>Sou estudante e aspirante à <span class="destaque">programador Front-end</span> Júnior, sigo firme e otimista &#x1F60A;. Tenho 25 anos,     brasileiro, formado em técnico em agropecuária, estudante de Teologia e apaixonado por programação, sou aluno no <em>One - Oracle Next Education</em>, um programa da Oracle em parceria com a Alura Cursos.</p>
+        <div class="botoes">
+
+           <button class="botao-linkedin botao-inclina">
+             <a href="https://www.linkedin.com/in/helenosalgado">Linked<i class="fab fa-linkedin icone-inclina"></i></a>
+           </button>
+
+           <button class="empurravel botao-empurravel-curriculo" role="document">
+
+             <span class="sombra botao-sombra-curriculo"></span>
+             <span class="borda botao-borda-curriculo"></span>
+             <span class="frente botao-frente-curriculo">
+               <!-- <a href="doc/curriculo-heleno-salgado.pdf" target="_blank" rel="noopener noreferrer"></a> -->
+               CURRÍCULO 
+               <svg stroke="currentColor" fill="none" stroke-width="4" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg" style="margin-bottom: -1;"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+             </span>
+
+           </button>
+
+        </div>
       </div> 
       <div class="img-wrapper">
        <picture>
@@ -313,17 +330,24 @@
         <p class="mensagem-contato">Posso ajudá-lo(a) em alguma coisa? mande-me uma mensagem, responderei o mais rápido possível.</p>
         <div class="contato" id="contato">
           <form action="https://formsubmit.co/helenosalgado19@gmail.com" method="post">
-            <input class="input-nome" type="text" name="nome" placeholder="Nome Completo">
-            <input class="input-email" type="email" name="email" placeholder="Email">
-            <textarea class="input-texto" name="mensage" cols="30" rows="7" placeholder="Envie-me uma mensagem."></textarea>
-            <span class="mensagem-erro"></span>
-            <button type="submit" class="pushable">
-              <span class="shadow"></span>
-              <span class="edge"></span>
-              <span class="front">
-                Enviar
-              </span>
-            </button> 
+            <label for="nome">
+            <i class="fa-solid fa-user-tie"></i>
+             <input class="input-nome" type="text" name="nome"  placeholder="Nome Completo">
+          </label>
+          <label for="email">
+            <i class="fa-solid fa-at"></i>
+             <input class="input-email" type="email" name="email" placeholder="Email">
+          </label>
+          <textarea class="input-texto" name="mensage" cols="30" rows="7" placeholder="Envie-me uma mensagem."></textarea>
+          <span class="mensagem-alerta"></span>
+          <button type="submit" class="empurravel">
+            <span class="sombra"></span>
+            <span class="borda"></span>
+            <span class="frente frente-enviar">
+              Enviar
+              <i class="fa-solid fa-envelope"></i>
+            </span>
+          </button> 
             <audio class="button-enviar" src="sons/button-mola.wav"></audio>
             <input type="hidden" name="_captcha" value="false">
           </form>

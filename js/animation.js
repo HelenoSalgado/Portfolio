@@ -1,11 +1,12 @@
 var hamburguer = document.querySelector('.menu-hamburguer'); 
-var botoes = document.querySelectorAll('button');
-var icone = document.querySelectorAll('.inclina');
+var botaoCurriculo = document.querySelector('.botao-empurravel-curriculo');
+var botoes = document.querySelectorAll('.botao-inclina');
+var icone = document.querySelectorAll('.icone-inclina');
 var cardProjetos = document.querySelectorAll('.card');
 var img = document.querySelectorAll(".card-capa");
 var textFocus = document.querySelectorAll('.card-text');
 var desenho = document.querySelector('body');
-var enviar = document.querySelector('.pushable');
+var enviar = document.querySelector('form button');
 var somMenuOn = document.querySelector('.som-menu-on');
 var somMenuOf = document.querySelector('.som-menu-of');
 var somCertificados = document.querySelector('.som-certificados');
@@ -32,6 +33,16 @@ hamburguer.addEventListener('click', () =>{
     desenho.removeEventListener('mousemove', sinalMouse);
   }
 
+})
+
+botaoCurriculo.addEventListener("click", () => {
+  const urlCv = "https://heleno.dev/doc/curriculo-heleno-salgado.pdf";
+  if (iVolume == 0) {
+    somEnviar.play();
+  }
+  setTimeout(() => {
+    window.open(urlCv, '_blank noopener noreferrer').focus();
+  }, 500);
 })
 
 function sinalMouse(event){
@@ -131,54 +142,66 @@ enviar.addEventListener("click", (event) => {
   if (iVolume == 0) {
     somEnviar.play();
   }
-  
+
   var inputNome = document.querySelector(".input-nome").value;
   var inputEmail = document.querySelector(".input-email").value;
   var inputTexto = document.querySelector(".input-texto").value;
-  var error = document.querySelector(".mensagem-erro");
+  var alert = document.querySelector(".mensagem-alerta");
 
-  error.innerHTML = "";
+  alert.innerHTML = "";
+
+  var verificaEmail = {
+     arroba: inputEmail.indexOf("@") > -1,
+     ponto: inputEmail.indexOf(".") > -1
+  }
 
   var mensagem = [
     'Por favor, preencha todos os campos.', 
     'Por favor, digite um nome e um email',
     'Por favor, digite um nome',
     'Por favor, digite um email',
-    'Por favor, escreva uma mensage',
-    'Obrigado, email enviado com Sucesso.'
+    'Por favor, escreva uma mensagem',
+    'Obrigado, email enviado com Sucesso.',
+    'Ops... Parece que seu e-mail está incompleto'
   ]
 
   if (inputNome == "" && inputEmail == "" && inputTexto == "") {
-    error.innerHTML += mensagem[0];
+    alert.innerHTML += mensagem[0];
     return
   }else if(inputNome == "" && inputEmail == ""){
-    error.innerHTML += mensagem[1];
+    alert.innerHTML += mensagem[1];
     return
   }else if(inputNome == "") {
-    error.innerHTML += mensagem[2];
+    alert.innerHTML += mensagem[2];
     return
   }else if(inputEmail == ""){
-    error.innerHTML += mensagem[3];
+    alert.innerHTML += mensagem[3];
     return
   }else if(inputTexto == ""){
-    error.innerHTML += mensagem[4];
+    alert.innerHTML += mensagem[4];
     return
+  }else if(verificaEmail.arroba == true 
+        && verificaEmail.ponto == true){
+
+        const postEmail = new Request("https://formsubmit.co/helenosalgado19@gmail.com", {
+          method: "POST",
+          body: new FormData( document.querySelector("form") )
+        });
+
+       fetch(postEmail).then( response => {
+          return response.text();
+       })
+       .then ( result => {
+          alert.innerHTML += mensagem[5];
+          alert.classList.add("mensagem-sucesso");
+          var form = document.querySelector("form");
+          form.reset();
+       });
   }else{
-
-    const postEmail = new Request("https://formsubmit.co/helenosalgado19@gmail.com", {
-    method: "POST",
-    body: new FormData( document.querySelector("form") )
-    });
-
-    fetch(postEmail).then( response => {
-      return response.text(); // ou return response.json();
-    } )
-    .then ( result => {
-      error.innerHTML += mensagem[5];
-    });
-
+    alert.innerHTML += mensagem[6];
   }
 })
+
 
 
 
