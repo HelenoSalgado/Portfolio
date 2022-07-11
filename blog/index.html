@@ -24,10 +24,10 @@
     <!-- Biblioteca de animacões conforme scroll. -->
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <!-- Favicons. -->
-    <link rel="apple-touch-icon" sizes="180x180" href="/img-icon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/img-icon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/img-icon/favicon-16x16.png">
-    <link rel="manifest" href="/site.webmanifest">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/img-icon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/img-icon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/img-icon/favicon-16x16.png">
+    <link rel="manifest" href="/assets/site.webmanifest">
 
 </head>
 <body class="conteiner">
@@ -41,7 +41,7 @@
                     <div class="line" id="line3"></div>
                 </div>
 
-                <img src="/img/hsl-logo-transparent.png" alt="logo">
+                <img src="/assets/img/hsl-logo-transparent.png" alt="logo">
             </div>
             
             <aside class="sidebar">
@@ -116,14 +116,14 @@
         <a href="#home" id="link-topo">
             <i class="fas fa-arrow-up"></i>
         </a>
-    <script src="/js/menu.js"></script>
+    <script src="/assets/js/menu.js"></script>
     <script>
         function share(){
             if (navigator.share !== undefined) {
                 navigator.share({
                     title: 'Desenvolvedor Front End',
                     text: 'Conhecendo algumas tecnologias da Rede Mundial de Computadores.',
-                    url: 'https://heleno.dev/',
+                    url: 'https://heleno.dev/blog',
                 })
                 .then(() => console.log('Successful share'))
                 .catch((error) => console.log('Error sharing', error));
