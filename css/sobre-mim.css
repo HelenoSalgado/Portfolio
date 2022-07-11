@@ -19,13 +19,11 @@
     position: relative;
     max-width: 800px;
     margin: auto;
-    /* box-shadow: var(--shadow-elevation-medium); */
 }
 .sobre-mim-container div:first-child{
     position: relative;
     width: 100%;
     height: auto;
-    /* background-color: var(--cor-destaque); */
     border-radius: 7px 7px 0 0;
 }
 .sobre-mim-container h3{
@@ -36,19 +34,7 @@
 .sobre-mim-container div:last-child{
     position: relative;
 }
-.sobre-mim-container img{
-    display: none;
-    position: absolute;
-    top: -140px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 170px;
-    border: 2px solid var(--cor-destaque);
-    border-radius: 50%;
-    box-shadow: var(--shadow-elevation-medium);
-}
 .sobre-mim-container p{
-    text-align: center;
     font-size: 1.1rem;
     line-height: 1.5rem;
     color: #fff;

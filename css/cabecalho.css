@@ -73,11 +73,10 @@ header::before{
     padding: 0 3px;
 }
 .banner .botoes{
-    width: 250px;
     height: 50px;
     display: flex;
-    justify-content: space-around;
     align-items: center;
+    padding-left: 7px;
 }
 .botao-linkedin{
     position: relative;
@@ -90,7 +89,7 @@ header::before{
     box-shadow: 2px 2px 5px var(--cor-primaria);
 }
 .botao-empurravel-curriculo {
-    margin-top: 0;
+    margin: 0 0 0 20px;
     width: 140px;
     height: 40px;
     padding: 0;
