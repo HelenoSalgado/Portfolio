@@ -1,0 +1,58 @@
+/*Tema Claro */
+body{
+    background-color: rgb(248, 247, 247);
+}
+.line {
+    background-color: #ffffff;
+}
+.logo, .header-article, main{ 
+    background-color: rgb(248, 247, 247);
+}
+.fa-sun, .fa-star-half-stroke{
+    color: var(--cor-primaria);
+}
+.menu-link:hover {
+    color: rgb(5, 5, 5);
+}
+.social-media i:hover {
+    color: rgb(26, 25, 25);
+}
+main h1{
+    color: #424241;
+}
+main a:hover{
+    text-shadow: 1px .2px 1px rgba(0, 0, 0, 0.363);
+}
+article p{
+    color: rgb(49, 49, 49);
+}
+abbr{
+    text-shadow: .2px .5px 1px rgba(0, 0, 0, 0.514);
+}
+div.compartilhe p{
+    color: #424241;
+}
+div.compartilhe a{
+    color: #424241;
+}
+div.compartilhe a:hover{
+    color: var(--cor-destaque);
+}
+footer{
+    border-top: 2px solid #fff;
+}
+footer p{
+    color: #424241;;
+}
+footer a{
+    color: #424241;
+}
+footer q{
+    color: #424241;
+}
+#link-topo{
+    color: white;
+    text-decoration: none;
+    background: var(--cor-destaque);
+    box-shadow: .1rem .1rem .3rem rgba(58, 57, 57, 0.747);
+}

@@ -1,0 +1,40 @@
+/*Tema Claro */
+body{
+    background-color: var(--cor-primaria);
+}
+.line {
+    background-color: #ffffff;
+}
+.logo, .header-article{
+    background-color: var(--cor-primaria);
+}
+.menu-item, .menu-link {
+    color: var(--cor-destaque);
+}
+.menu-link:hover,
+.social-media i:hover,
+.artigos-relacionados div p a:hover,
+.fa-arrow-alt-circle-left:hover,
+.fa-arrow-alt-circle-right:hover{
+    color: #fff;
+}
+.fa-sun, .fa-star-half-stroke{
+    color: #fff;
+}
+main {
+    background-color: var(--cor-primaria);
+}
+main a{
+    color: var(--cor-destaque);
+}
+main h1, article p, .compartilhe p, .compartilhe a,
+footer p, footer a, footer q {
+    color: #eee;
+}
+.compartilhe a:hover{
+    color: var(--cor-destaque);
+}
+#link-topo{
+    color: white;
+    box-shadow: .1rem .1rem .3rem rgba(58, 57, 57, 0.747);
+}

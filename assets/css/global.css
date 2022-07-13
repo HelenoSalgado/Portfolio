@@ -22,7 +22,6 @@ html{
   scrollbar-width: thin;
 }
 body {
-  background-color: var(--cor-primaria);
   overflow-X: hidden;
   min-width: 320px;
 }
@@ -34,6 +33,7 @@ body::-webkit-scrollbar-track {
 } 
 body::-webkit-scrollbar-thumb {
   background-color: var(--cor-secundaria);
+  height: 50px;
   border-radius: 20px;
 }
 h2, h3{

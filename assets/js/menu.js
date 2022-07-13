@@ -1,4 +1,4 @@
-var hamburguer = document.querySelector(".hamburguer"); 
+var hamburguer = document.querySelector(".menu-hamburguer"); 
   hamburguer.addEventListener("click", function(){
     document.querySelector(".conteiner").classList.toggle("show-menu");
 });
