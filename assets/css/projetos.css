@@ -1,6 +1,7 @@
 /* Seção projetos */
 .projetos{
     position: relative;
+    background-color: var(--cor-primaria);
     padding-bottom: 50px;
 }
 .container-projetos{
