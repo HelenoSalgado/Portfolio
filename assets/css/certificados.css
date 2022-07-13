@@ -2,7 +2,7 @@
 .secao-certificados{
     position: relative;
     width: 100%;
-    background-color: var(--cor-primaria);
+    /* background-color: var(--cor-primaria); */
     padding-bottom: 50px;
 }
 .container-certificados{
