@@ -23,7 +23,7 @@
     <link rel="stylesheet" href="/blog/css/article.css">
     <link id="temaEscuro" rel="stylesheet" href="/blog/css/mode-dark.css">
     <link id="temaClaro" rel="stylesheet" href="/blog/css/mode-light.css">
-    <link rel="stylesheet" href="/assets/css/form.css/form-contato.css">
+    <link rel="stylesheet" href="/blog/css/newsletter/article-newsletter.css">
     <!-- Biblioteca de ícones. -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <!-- Favicons. -->
@@ -102,18 +102,24 @@
         <!-- <div class="article-contact">
             <p><a style="text-decoration: none;" href="mailto:contato@heleno.dev?subject=[Escreva o Assunto Aqui]">contato@heleno.dev</a></p>
         </div> -->
-        <div class="contact-information">
+        <div class="article-newsletter">
 
-            <form class="article-form-contact" action="https://formsubmit.co/helenosalgado19@gmail.com" method="post">
-              <label for="nome">
+            <form class="newsletter-form" action="https://formsubmit.co/helenosalgado19@gmail.com" method="post">
+            <div class="group-name">
+                <label for="nome">
+                NOME COMPLETO
+                </label>
+                <input class="input-nome" type="text" name="nome">
+            </div>
+            <div class="group-email">
+                <label for="email">
+                EMAIL
+                </label>
+                <input class="input-email" type="email" name="email">
+            </div>
             
-               <input class="input-nome" type="text" name="nome"  placeholder="Nome Completo">
-            </label>
-            <label for="email">
-                       
-               <input class="input-email" type="email" name="email" placeholder="Email">
-            </label>
-            <textarea class="input-texto" name="mensage" cols="30" rows="7" placeholder="Envie-me uma mensagem."></textarea>
+            
+            <!-- <textarea class="input-texto" name="mensage" cols="30" rows="7" placeholder="Envie-me uma mensagem."></textarea> -->
             <span class="mensagem-alerta"></span>
             <button type="submit" class="empurravel">
               <span class="sombra"></span>
@@ -123,22 +129,24 @@
                 <i class="fa-solid fa-envelope"></i>
               </span>
             </button> 
-              <audio class="button-enviar" src="assets/sons/button-mola.wav"></audio>
+              <audio class="button-enviar" src="/assets/sons/button-mola.wav"></audio>
               <input type="hidden" name="_captcha" value="false">
             </form>
 
-
-        <div class="copyright">
-           <p>&copy; 2021 Heleno Salgado Lopes.</p>
-           <q>Ao Senhor pertence a salvação - (Jonas 2:9)</q> 
-        </div>   
+            <div class="api-frases-aleatorias">
+                <blockquote class="frases-aleatorias">
+                 
+                </blockquote>
+            </div>
         </div>
         <div class="media-sociais">
             <a href="https://www.facebook.com/heleno.salgado.16/"><i class="fab fa-facebook"></i></a>
             <a href="https://www.instagram.com/heleno_salgado/"><i class="fab fa-instagram"></i></a>
             <a href="https://github.com/HelenoSalgado/"><i class="fab fa-github"></i></a>
         </div> 
-           
+        <div class="copyright">
+           <p>&copy;2022 Heleno Salgado Lopes | Obrigado pela visita.</p>
+        </div> 
     </footer>
     <a href="#home" id="link-topo">
         <i class="fas fa-arrow-up"></i>

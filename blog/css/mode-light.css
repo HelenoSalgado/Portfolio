@@ -38,9 +38,6 @@ div.compartilhe a{
 div.compartilhe a:hover{
     color: var(--cor-destaque);
 }
-footer{
-    border-top: 2px solid #fff;
-}
 footer p{
     color: #424241;;
 }
