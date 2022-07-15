@@ -86,13 +86,19 @@ enviar.addEventListener("click", (event) => {
 
 function shareUrl(e){ 
   var url = window.location.href.toString();   
-  console.log(url); 
   var share = e.target;
   console.log(share.src)
-  if(share.src == "https://heleno.dev/blog/img/icons/facebook_icon.svg"){
 
-    location.href= "www.facebook.com/sharer/sharer.php?u=" + url;
-    
+  if(share.src == "http://127.0.0.1:5500/blog/img/icons/facebook_icon.svg"){
+   
+  var urlShare = "www.facebook.com/sharer/sharer.php?u=" + url;
+
+  window.location.href.toString(urlShare);
+
+  console.log( url = window.location.href.hash = urlShare)
+   
+  window.open(urlShare, '_blank').focus();
+
   }
 }
 
