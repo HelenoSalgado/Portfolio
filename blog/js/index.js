@@ -87,17 +87,14 @@ enviar.addEventListener("click", (event) => {
 function shareUrl(e){ 
   var url = window.location.href.toString();   
   var share = e.target;
-  console.log(share.src)
 
   if(share.src == "https://heleno.dev/blog/img/icons/facebook_icon.svg"){
    
   var urlShare = "www.facebook.com/sharer/sharer.php?u=" + url;
 
-  window.location.href = urlShare;
+  location.href = urlShare;
 
   console.log(urlShare)
-   
-  window.open(urlShare, '_blank').focus();
 
   }
 }
