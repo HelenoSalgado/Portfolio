@@ -89,7 +89,7 @@ function shareUrl(e){
   console.log(url); 
   var share = e.target;
   console.log(share.src)
-  if(share.src == "https:/blog/img/icons/facebook_icon.svg"){
+  if(share.src == "https://heleno.dev/blog/img/icons/facebook_icon.svg"){
 
     location.href= "www.facebook.com/sharer/sharer.php?u=" + url;
     
