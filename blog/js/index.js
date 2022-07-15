@@ -85,28 +85,35 @@ enviar.addEventListener("click", (event) => {
   })
 
 function shareUrl(e){ 
+
   var url = window.location.href.toString();   
   var share = e.target;
 
   if(share.src == "https://heleno.dev/blog/img/icons/facebook_icon.svg"){
-   
-  var urlShare = "www.facebook.com/sharer/sharer.php?u=" + url;
-
-  location.href = urlShare;
-
-  console.log(urlShare)
-
+     window.location.href = "https://www.facebook.com/sharer/sharer.php?u=" + url;
+  }
+  if(share.src == "https://heleno.dev/blog/img/icons/whatsapp_icon.svg"){
+     window.location.href = "https://api.whatsapp.com/send?text=" + url;
+  }
+  if(share.src == "https://heleno.dev/blog/img/icons/twitter_icon.svg"){
+     window.location.href = "https://twitter.com/intent/tweet?url=[" + url + "]&text=[Encontrei um artigo interessante, venha conferir!]&via=[@HelenoSalgado]&hashtags=[frontend, html, css, javascript]" + url;
+  }
+  if(share.src == "https://heleno.dev/blog/img/icons/linkedin_icon.svg"){
+     window.location.href = "https://www.linkedin.com/shareArticle?mini=true&url=" + url;
+  }
+  if(share.src == "https://heleno.dev/blog/img/icons/pocket_logo.svg"){
+     window.location.href = "https://getpocket.com/save?url=" + url;
   }
 }
 
-var apiFrases = document.querySelector(".frases-aleatorias");
+// var apiFrases = document.querySelector(".frases-aleatorias");
 
-async function getFrases() {
+// async function getFrases() {
 
-    const response = await fetch("https://positive-vibes-api.herokuapp.com/quotes/random");
-    var data = await response.json();
+//     const response = await fetch("https://positive-vibes-api.herokuapp.com/quotes/random");
+//     var data = await response.json();
     
 
-}
-getFrases();
-apiFrases.textContent = "rgmipodtgopdmkhlf bmkrglrefmkg bkopsrldbglkbgerd slfbmfḉes dlmf lkepsflbp erres bplte,ṕbrfkfreo hbprmel gekeh obyymp ";
+// }
+// getFrases();
+// apiFrases.textContent = "rgmipodtgopdmkhlf bmkrglrefmkg bkopsrldbglkbgerd slfbmfḉes dlmf lkepsflbp erres bplte,ṕbrfkfreo hbprmel gekeh obyymp ";
