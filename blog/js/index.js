@@ -23,16 +23,16 @@ function alternaTema(checked) {
 
     
 }
-
+var iVolume = 0;
 var somEnviar = document.querySelector('.button-enviar');
 var enviar = document.querySelector('form button');
 enviar.addEventListener("click", (event) => {
 
     event.preventDefault();
   
-    // if (iVolume == 0) {
-    //   somEnviar.play();
-    // }
+    if (iVolume == 0) {
+      somEnviar.play();
+     }
   
     var inputNome = document.querySelector(".input-nome").value;
     var inputEmail = document.querySelector(".input-email").value;
@@ -84,16 +84,16 @@ enviar.addEventListener("click", (event) => {
     }
   })
 
-function share(){
-    if (navigator.share !== undefined) {
-        navigator.share({
-            title: 'Desenvolvedor Front End',
-            text: 'Conhecendo algumas tecnologias da Rede Mundial de Computadores.',
-            url: 'https://heleno.dev/blog/o-que-e-hospedagem-de-sites',
-        })
-        .then(() => console.log('Successful share'))
-        .catch((error) => console.log('Error sharing', error));
-    }
+function shareUrl(e){ 
+  var url = window.location.href.toString();   
+  console.log(url); 
+  var share = e.target;
+  console.log(share.src)
+  if(share.src == "http://127.0.0.1:5500/blog/img/icons/facebook_icon.svg"){
+
+    location.href= "www.facebook.com/sharer/sharer.php?u=" + url;
+    
+  }
 }
 
 var apiFrases = document.querySelector(".frases-aleatorias");

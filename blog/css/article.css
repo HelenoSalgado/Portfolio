@@ -102,14 +102,14 @@ main {
     background-color: rgb(248, 247, 247);
     padding: 1rem;
 }
-main a{
+/* main article a{
     margin: 0;
     font-family: var(--font-secundary);
-    font-size: 2rem;
+    font-size: inherit;
     color: var(--cor-destaque);
     transition: .1s ease-in;
     text-decoration: none;
-}
+} */
 
 main h1{
     margin-top: 3rem;
@@ -130,8 +130,8 @@ article p{
     color: rgb(49, 49, 49);
 }
 article a{
-    font-size: 1.5rem;
     font-weight: 600;
+    font-size: inherit;
 }
 abbr{
     text-decoration: none;
@@ -152,33 +152,52 @@ abbr{
     min-width: 300px;
 }
 .artigos-relacionados p{
-    height: 75px;
-    line-height: 1.7rem;
+    height: auto;
 }
-.artigos-relacionados div p a:hover,
+.fa-arrow-alt-circle-left,
+.fa-arrow-alt-circle-right,
+.artigos-relacionados p a{
+    font-size: 1.7rem;
+}
+.fa-arrow-alt-circle-left:hover,
+.fa-arrow-alt-circle-right:hover,
+.artigos-relacionados p a:hover,
 .fa-arrow-alt-circle-left:hover,
 .fa-arrow-alt-circle-right:hover{
     color: #000;
 }
-div.compartilhe{
-    display: none;
+.compartilhe{
+    padding: 2rem 0;
 }
-div.compartilhe p{
-    text-align: center; 
-    margin-top: 2rem; 
+.compartilhe p{
+    display: inline;
+    margin: 2rem .3rem .3rem 0; 
     font-family: var(--font-action);
+    font-size: .9rem;
     color: #424241;
 }
-div.compartilhe a{
-    display: block; 
-    width: 50px;
-    margin: .5rem auto; 
-    text-align: center; 
+.compartilhe i{
     font-size: 1.3rem; 
     color: #424241;
+    vertical-align: middle;
     transition: .1s ease-in;
 }
-div.compartilhe a:hover{
+.compartilhe-icons{ 
+    margin-top: .5rem;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 10px;
+}
+.compartilhe-icons img{
+    width: 35px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.compartilhe-icons img:hover{
+    filter: drop-shadow(1px 1px 1px var(--cor-primaria));
+}
+.compartilhe a:hover{
     color: var(--cor-destaque);
 }
 footer{
@@ -226,26 +245,24 @@ footer{
 .media-sociais a i:hover{
     color: var(--cor-primaria);
 }
-footer q{
-    font-family: var(--font-secundary);
-    color: #424241;
-    font-style: oblique;
-}
-#link-topo{
+.link-topo{
     position: fixed;
-    right: 1rem;
-    bottom: 2rem;
-    width: 2rem;
-    height: 2rem;
+    top: 90%;
+    right: 10px;
+    width: 40px;
+    height: 40px;
     font-size: 1rem;
-    color: white;
-    text-decoration: none;
-    background: var(--cor-destaque);
-    box-shadow: .1rem .1rem .3rem rgba(58, 57, 57, 0.747);
-    border-radius: 5px;
+    color: #fff;
+    background: var(--cor-primaria);
+    box-shadow: 1px 1px 3px var(--cor-font);
+    border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
+    z-index: 1;
+}
+.fa-arrow-up{
+    text-shadow: .1px .1px 1px #fff;
 }
 @media (max-width: 750px){
     .banner {
@@ -258,9 +275,6 @@ footer q{
     }
     .artigos-relacionados p{
         height: auto;
-    }
-    div.compartilhe{
-        display: block;
     }
 }    
 @media (max-width: 919px){

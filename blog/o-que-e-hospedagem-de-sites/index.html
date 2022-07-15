@@ -32,8 +32,8 @@
     <link rel="icon" type="/image/png" sizes="16x16" href="/assets/img-icon/favicon-16x16.png">
     <link rel="manifest" href="/assets/img-icon/site.webmanifest">
 </head>
-<body class="conteiner">
-    <header id="home" class="header-article">
+<body>
+    <header id="article-header" class="header-article">
         <img class="logo" style=" width: 65px;" src="/assets/img/hsl-logo-transparent.png" alt="logo">
         <nav class="navigation">
             <ul class="navigation-menu">
@@ -79,6 +79,17 @@
             
             <p>O propósito deste artigo foi mostrar que todo conteúdo do seu site precisa está hospedado em algum lugar da <abbr title="Abreviação de World Wide Web, Rede Mundial de Computadores.">Web</abbr>, porém, para acessar esse site você precisa registrar um nome de domínio e vincular ao seu servidor de hospedagem.</p>
         </article>
+        <div class="compartilhe" onclick="shareUrl(event)">
+            <p >COMPARTILHE</p>
+            <i class="fa-solid fa-share-nodes"></i>
+            <div class="compartilhe-icons">
+            <img src="../img/icons/facebook_icon.svg" alt="icone do Facebbok" title="Facebook">
+            <img src="../img/icons/whatsapp_icon.svg" alt="icone de WhatsApp" title="WhatsApp">
+            <img src="../img/icons/twitter_icon.svg" alt="icone de Twitter" title="Twitter">
+            <img src="../img/icons/linkedin_icon.svg" alt="icone do Linkedin" title="Linkedin">
+            <img src="../img/icons/pocket_logo.svg" alt="icone do pocket" title="Pocket">
+            </div>
+        </div>
         <div class="artigos-relacionados">
             <div>
                 <p><a href="/blog/index.html">Voltar</a></p>
@@ -90,10 +101,6 @@
             </div>
         </div>
     </main>
-    <div class="compartilhe">
-        <p >COMPARTILHE</p>
-        <a href="javascript:void(0)" onclick="share()"><i class="fa-solid fa-share-nodes"></i></a>
-    </div>
     <footer>
         <!-- <p style="font-family: var(--font-action); font-size: 1.2rem; margin-top: 1rem; text-align: center;">Tens Dúvidas? Fale comigo.</p>
         <a href="https://wa.me/message/QBPTYVHS7CKQG1"><img style="display: block; max-width: 60px; margin: auto;" src="/assets/img/Whatsapp.png" alt="botão do Whatsapp"></a> --> 
@@ -132,7 +139,7 @@
               <audio class="button-enviar" src="/assets/sons/button-mola.wav"></audio>
               <input type="hidden" name="_captcha" value="false">
             </form>
-
+            
             <div class="api-frases-aleatorias">
                 <blockquote class="frases-aleatorias">
                  
@@ -147,13 +154,15 @@
         <div class="copyright">
            <p>&copy;2022 Heleno Salgado Lopes | Obrigado pela visita.</p>
         </div> 
+        <a href="#article-header" class="link-topo">
+            <i class="fas fa-arrow-up"></i>
+        </a>
+        <audio preload="auto" class="button-enviar" src="/assets/sons/button-mola.wav"></audio>
     </footer>
-    <a href="#home" id="link-topo">
-        <i class="fas fa-arrow-up"></i>
-    </a>
-    <script src="/assets/js/menu.js"></script>
+    
+    <!-- <script src="/assets/js/menu.js"></script> -->
     <script src="/blog/js/index.js"></script>
-    <div vw class="enabled">
+    <!-- <div vw class="enabled">
         <div vw-access-button class="active"></div>
         <div vw-plugin-wrapper>
             <div class="vw-plugin-top-wrapper"></div>
@@ -162,6 +171,6 @@
     <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
     <script>
         new window.VLibras.Widget('https://vlibras.gov.br/app');
-    </script>
+    </script> -->
 </body>
 </html>
