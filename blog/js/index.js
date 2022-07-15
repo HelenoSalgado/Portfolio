@@ -89,13 +89,13 @@ function shareUrl(e){
   var share = e.target;
   console.log(share.src)
 
-  if(share.src == "http://127.0.0.1:5500/blog/img/icons/facebook_icon.svg"){
+  if(share.src == "https://heleno.dev/blog/img/icons/facebook_icon.svg"){
    
   var urlShare = "www.facebook.com/sharer/sharer.php?u=" + url;
 
-  window.location.href.toString(urlShare);
+  window.location.href = urlShare;
 
-  console.log( url = window.location.href.hash = urlShare)
+  console.log(urlShare)
    
   window.open(urlShare, '_blank').focus();
 
