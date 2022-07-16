@@ -26,18 +26,62 @@ section{
     height: 60px;
     justify-content: space-around;
     align-items: center;
+    padding-left: 60px;
     /* transition: all 1s; */
 }
 .navigation-menu{
-    width: 90%;
-    height: 60px;
     display: flex;
-    justify-content: end;
     align-items: center;
-    column-gap: 50px;
+    width: 100%;
+    max-width: 1000px;
+    margin: auto;
+    height: 60px;
+    padding-left: 0;
+}
+.menu-item:first-child{
+  
 }
 .menu-item{
-   list-style: none;
+    flex-basis: 400px;
+    position: relative;
+    list-style: none; 
+}
+.menu-link img{
+    width: 17px;
+    vertical-align: middle;
+}
+.up-arrow{
+    transform: rotate(0.5turn);
+}
+.menu-item-articles{
+    position: fixed;
+    top: 40px;
+    background-color: rgb(248, 247, 247);
+    padding: 10px;
+    border: .5px solid var(--cor-destaque);
+    border-radius: 7px; 
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.301);
+    transition: 150ms ease-in;
+    visibility: hidden;
+    opacity: 0;
+}
+.item-articles-visible{
+    top: 50px;
+    visibility: visible;
+    opacity: 10;
+}
+.menu-item-articles a{
+    position: relative;
+    font-family: var(--font-secundary);
+    display: block;
+    margin-bottom: 10px;
+    text-decoration: overline;
+    transition: 100ms ease-in;
+}
+.menu-item-articles a:hover{
+    font-weight: bold;
+    background-color: #e7e7e7;
+    margin-left: .3rem;
 }
 .menu-hamburguer {
     width: 2rem;
@@ -68,13 +112,12 @@ section{
     transform: rotate(-45deg) translate(.25rem, -.4rem);
     width: 70%;
 }
-.social-media {
-    display: none;
-    position: absolute;
-    display: flex;
-    width: 100%;
-    bottom: 2rem;
-    justify-content: space-evenly;
+.fa-volume-low{
+    position: absolute; 
+    top:15px; 
+    right: 60px;
+    color: var(--cor-destaque); 
+    font-size: 32px; 
 }
 .dark-mode{
     position: absolute;
@@ -102,16 +145,29 @@ main {
     background-color: rgb(248, 247, 247);
     padding: 1rem;
 }
-/* main article a{
-    margin: 0;
-    font-family: var(--font-secundary);
-    font-size: inherit;
-    color: var(--cor-destaque);
-    transition: .1s ease-in;
-    text-decoration: none;
-} */
-
-main h1{
+.autor{
+    margin-top: 50px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 20px;
+    color: #2c2c2c;
+}
+.autor img{
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+}
+.autor h4{
+    font-size: 1.3rem;
+    line-height: 1.4rem;
+    color: #2c2c2c;
+}
+.autor time{
+    color: #424241;
+    font-family: var(--font-primary);
+}
+.article h1{
     margin-top: 3rem;
     font-family: var(--font-primary);
     text-align: left;
@@ -119,19 +175,18 @@ main h1{
     font-size: 2.5rem;
     color: #424241;
 }
-
-main a:hover{
-    text-shadow: 1px .2px 1px rgba(0, 0, 0, 0.363);
-}
 article p{
     font-family: var(--font-secundary);
     font-size: 1.3rem;
     margin-top: 1.5rem;
     color: rgb(49, 49, 49);
 }
-article a{
+.article-link{
     font-weight: 600;
     font-size: inherit;
+}
+.article-link{
+    text-shadow: 1px .2px 1px rgba(0, 0, 0, 0.363);
 }
 abbr{
     text-decoration: none;
@@ -140,7 +195,7 @@ abbr{
     text-shadow: .2px .5px 1px rgba(0, 0, 0, 0.514);
 }
 .artigos-relacionados{
-    margin-top: 2rem;
+    margin: 5rem 0;
     width: 100%;
     display: flex;
     flex-wrap: wrap;
@@ -150,21 +205,10 @@ abbr{
     margin: 1rem;
     max-width: 400px;
     min-width: 300px;
+    font-size: 1.7rem;
 }
 .artigos-relacionados p{
     height: auto;
-}
-.fa-arrow-alt-circle-left,
-.fa-arrow-alt-circle-right,
-.artigos-relacionados p a{
-    font-size: 1.7rem;
-}
-.fa-arrow-alt-circle-left:hover,
-.fa-arrow-alt-circle-right:hover,
-.artigos-relacionados p a:hover,
-.fa-arrow-alt-circle-left:hover,
-.fa-arrow-alt-circle-right:hover{
-    color: #000;
 }
 .compartilhe{
     padding: 2rem 0;
@@ -197,16 +241,35 @@ abbr{
 .compartilhe-icons img:hover{
     filter: drop-shadow(1px 1px 1px var(--cor-primaria));
 }
-.compartilhe a:hover{
-    color: var(--cor-destaque);
+.like {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border: 1px solid var(--cor-font);
+    border-radius: 5px;
+    min-width: 60px;
+    height: 35px;
+    padding: 5px;
+    cursor: pointer;
 }
+.like:hover svg path {
+    fill: #ff0000e1
+}
+
 footer{
+    position: relative;
     width: 100%;
-    height: auto;
-    padding: 20px 0;
+    padding: 20px 0 0 0;
     background-color: #e7e7e7;
+    min-height: calc(100vh - 60px);
 }
-.article-newsletter{
+.newsletter-message > p:first-child{
+    font-size: 1.8rem;
+    max-width: 600px;
+    margin: 2rem auto;
+    line-height: 1.9rem;
+}
+.newsletter{
     position: relative;
     display: flex;
     flex-wrap: wrap;
@@ -215,24 +278,27 @@ footer{
     padding: 2rem 0;
     width: 100%;
 }
-.api-frases-aleatorias{
+.sobre-mim h4{
+    max-width: 400px;
+    font-size: 1.7rem;
+}
+.sobre-mim{
+    margin-top: 2rem;
     margin: 30px 0;
-    width: 50%;
+    color: #2c2c2c;
 }
-.frases-aleatorias{
+.sobre-mim-texto{
+    max-width: 500px;
     font-family: var(--font-secundary);
-    font-size: 1.5rem;
-    /* border: 1px solid var(--cor-destaque);
-    border-radius: 7px; */
-    padding: 10px;
-    /* box-shadow: var(--shadow-elevation-medium); */
+    font-size: 1.2rem;
 }
-.media-sociais, .copyright{
+.media-sociais, 
+.copyright{
     display: block;
     text-align: center;
-    margin-top: 1rem;
+    margin-top: .5rem;
     font-family: var(--font-secundary);
-    color: #424241;;
+    color: #424241;
 }
 .copyright{
     font-size: 1rem;
@@ -273,9 +339,6 @@ footer{
     h2{
         font-size: 2.3rem;
     }
-    .artigos-relacionados p{
-        height: auto;
-    }
 }    
 @media (max-width: 919px){
     .banner h1 {
@@ -286,28 +349,4 @@ footer{
     div.logo{
         display: none;
     } 
-}
-
-/* Transição para temas */
-.transicao-tema{
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: #eee;
-    opacity: .5;
-    animation: transicao 300ms ease;
-}
-@keyframes transicao {
-    0%{
-       opacity: 10;
-    }
-    50%{
-       opacity: 0;
-    }
-    100%{
-       opacity: 10;
-    }
 }

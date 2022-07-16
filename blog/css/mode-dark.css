@@ -5,10 +5,12 @@ body{
 .line {
     background-color: #fff;
 }
-.logo, .header-article{
+.logo, 
+.header-article{
     background-color: var(--cor-primaria);
 }
-.menu-item, .menu-link {
+.menu-item, 
+.menu-link {
     color: var(--cor-destaque);
 }
 .menu-link:hover,
@@ -16,23 +18,29 @@ main a:hover,
 .social-media i:hover,
 .artigos-relacionados div p a:hover,
 .fa-arrow-alt-circle-left:hover,
-.fa-arrow-alt-circle-right:hover,
-.compartilhe a:hover{
+.fa-arrow-alt-circle-right:hover{
     color: #fff;
 }
 main a:hover{
     text-shadow: 1px .2px 1px rgba(0, 0, 0, 0.363);
 }
-.fa-sun, .fa-star-half-stroke{
+.fa-sun, 
+.fa-star-half-stroke{
     color: #fff;
 }
 main {
     background-color: var(--cor-primaria);
 }
-main h1, article p, .compartilhe p, .compartilhe a,
-footer p, footer a, footer q {
+.autor h4, 
+.autor time, 
+.article h1, 
+.article p, 
+.compartilhe p, 
+.count-motion,
+footer p, 
+footer a{
     color: #eee;
 }
-.compartilhe a:hover{
-    color: var(--cor-destaque);
+.compartilhe-icons img:hover{
+    filter: drop-shadow(1px 1px 1px #fff);
 }

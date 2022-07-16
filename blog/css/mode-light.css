@@ -5,20 +5,27 @@ body{
 .line {
     background-color: #ffffff;
 }
-.logo, .header-article, main{ 
+.logo, 
+.header-article, 
+main{ 
     background-color: rgb(248, 247, 247);
 }
 .fa-sun, .fa-star-half-stroke{
     color: var(--cor-primaria);
 }
 .menu-link:hover, 
+.menu-item-articles a:hover,
 .social-media i:hover,
 main a:hover,
-.compartilhe a:hover{
+.fa-arrow-alt-circle-left:hover,
+.fa-arrow-alt-circle-right:hover,
+.artigos-relacionados a:hover{
     color: var(--cor-primaria);
 }
-main h1,
-article p,
+.autor h4,
+.autor time,
+.article h1,
+.article p,
 .compartilhe p,
 .compartilhe a,
 footer p,

@@ -33,12 +33,20 @@
     <link rel="manifest" href="/assets/img-icon/site.webmanifest">
 </head>
 <body>
-    <header id="article-header" class="header-article">
-        <img class="logo" style=" width: 65px;" src="/assets/img/hsl-logo-transparent.png" alt="logo">
+    <header id="header" class="header-article">
+        <img class="logo" style="width: 65px;" src="/assets/img/hsl-logo-transparent.png" alt="logo">
         <nav class="navigation">
             <ul class="navigation-menu">
-                <li class="menu-item"><a href="/index.html" class="menu-link">PORTFÓLIO</a></li>
-                <li class="menu-item"><a href="/form/orcamento/index.html" class="menu-link">FAÇA UM ORÇAMENTO</a></li>
+                <li class="menu-item"><a class="menu-link menu-link-articles" href="#/#">ARTIGOS <img src="../img/icons/angle-arrow-down_icon.svg" alt=""></a> 
+                    <div class="menu-item-articles"> 
+                        <a href="">O que é um nome de domínio?</a>
+                        <a href="">O que é um nome de domínio?</a>
+                        <a href="">O que é um nome de domínio?</a>
+                    </div>
+                </li>
+                <li class="menu-item">
+                    <a href="/form/orcamento/index.html" class="menu-link">FAÇA UM ORÇAMENTO</a>
+                </li>
             </ul>
             <div class="menu-hamburguer">
                 <div class="line" id="line1"></div>
@@ -51,25 +59,35 @@
             <a href="https://www.facebook.com/heleno.salgado.16/"><i class="fab fa-facebook"></i></a>
             <a href="https://www.instagram.com/heleno_salgado/"><i class="fab fa-instagram"></i></a>
         </div>    -->
-    
-            <label class="dark-mode">
-                <i class="fa-solid fa-sun"></i>
-                <input type="checkbox" onclick="alternaTema(checked)">
-            </label>
-
+        <i class="fa-solid fa-volume-low"></i>
+        <label class="dark-mode">
+            <i class="fa-solid fa-sun"></i>
+            <input type="checkbox" onclick="alternaTema(checked)">
+        </label>
     </header>
     <main>
-        <article>
-        
+        <article class="article">
+            
+            <div class="autor">
+                <img src="/assets/img/HELENO-SALGADO-p.jpg" alt="Foto do Autor do artigo">
+                <div>
+                    <h4>HELENO SALGADO LOPES</h4>
+                    <time>
+                        03/01/2022
+                    </time> 
+                </div>
+            </div>
+            
+            
             <h1>O que é uma hospedagem de sites</h1>
             
             <p>Sempre que viajamos nos hospedamos em algum lugar. Ali, na hospedagem, alimentamos e podemos descansar em paz. Com sites não é muito diferente, eles também precisam de uma hospedagem. Afinal, pode-se dizer que eles viajam o mundo inteiro. Este site, por exemplo, só está sendo apresentado na tela do seu dispositivo, porque antes foi hospedado e está sendo alimentado pelo &#39;servidor de hospedagem&#39;.</p>
             
             <p>Para esclarecer, todo site precisa está armazenado e  localizado em algum lugar na Rede Mundial de Computadores (sigla em Inglês, WWW), de maneira que, quando for solicitado pelo cliente, ele seja imediatamente exibido na tela do dispositivo. Todo o conteúdo do site, tais como os arquivos HTML, PHP, CSS, JS, áudios, vídeos e imagens são armazenados pelo servidor de hospedagem e podem ser solicitados a qualquer hora do dia ou da noite.</p>
-    
+            
             <p>Diferente da hospedagem para humanos, que está limitada a uma região específica, a hospedagem para sites está disponível para qualquer região do mundo. O site fica hospedado localmente, mas todas as vezes que é solicitado para visualização, o servidor envia uma cópia para o cliente, que é o dispositivo do usuário.</p>
             
-            <p>Existem várias empresas que prestam esse serviço, seja de forma gratuita ou paga. Para sites simples que ocupa pouco espaço de armazenamento, como um portfólio, uma página de links ou até mesmo um blog você encontra hospedagens gratuitas na <a href="https://www.awardspace.com/" target="_blank">Awardspace</a>, <a href="https://www.hostinger.com.br/hospedagem-gratis" target="_blank">Hostinger</a> e <a href="https://infinityfree.net/" target="_blank">InfinityFree</a>, mas essas empresas também oferecem um serviço aprimorado por um valor mensal ou anual.</p>
+            <p>Existem várias empresas que prestam esse serviço, seja de forma gratuita ou paga. Para sites simples que ocupa pouco espaço de armazenamento, como um portfólio, uma página de links ou até mesmo um blog você encontra hospedagens gratuitas na <a class="article-link" href="https://www.awardspace.com/" target="_blank">Awardspace</a>, <a class="article-link" href="https://www.hostinger.com.br/hospedagem-gratis" target="_blank">Hostinger</a> e <a class="article-link" href="https://infinityfree.net/" target="_blank">InfinityFree</a>, mas essas empresas também oferecem um serviço aprimorado por um valor mensal ou anual.</p>
             
             <p>A cada requisição que é feita pelo cliente, o site precisa estar no ar, precisa responder rapidamente, precisa ser seguro, e você só poderá exigir essas e outras coisas, se você estiver pagando. A empresa de hospedagem tem seus custos, a cada requisição feita é um gasto a mais nos equipamentos, nos megas de internet, na energia elétrica, em tudo.</p>
             
@@ -78,99 +96,121 @@
             <p>Aí fica à sua escolha, a minha dica é que contate um desenvolvedor para fazer um dimensionamento e ver se vale a pena hospedar seu site gratuitamente. De qualquer maneira, se você perceber que o serviço gratuito está sendo insuficiente, você pode mudar para um plano pago imediatamente.</p>
             
             <p>O propósito deste artigo foi mostrar que todo conteúdo do seu site precisa está hospedado em algum lugar da <abbr title="Abreviação de World Wide Web, Rede Mundial de Computadores.">Web</abbr>, porém, para acessar esse site você precisa registrar um nome de domínio e vincular ao seu servidor de hospedagem.</p>
+            <audio preload="auto" class="article-link-sound" src="/assets/sons/puxado-pop.wav"></audio>
         </article>
         <div class="compartilhe" onclick="shareUrl(event)">
             <p >COMPARTILHE</p>
             <i class="fa-solid fa-share-nodes"></i>
+            
             <div class="compartilhe-icons">
-            <img src="../img/icons/facebook_icon.svg" alt="icone do Facebbok" title="Facebook">
-            <img src="../img/icons/whatsapp_icon.svg" alt="icone de WhatsApp" title="WhatsApp">
-            <img src="../img/icons/twitter_icon.svg" alt="icone de Twitter" title="Twitter">
-            <img src="../img/icons/linkedin_icon.svg" alt="icone do Linkedin" title="Linkedin">
-            <img src="../img/icons/pocket_logo.svg" alt="icone do pocket" title="Pocket">
+                <img src="../img/icons/facebook_icon.svg" alt="icone do Facebbok" title="Facebook">
+                <img src="../img/icons/whatsapp_icon.svg" alt="icone de WhatsApp" title="WhatsApp">
+                <img src="../img/icons/twitter_icon.svg" alt="icone de Twitter" title="Twitter">
+                <img src="../img/icons/linkedin_icon.svg" alt="icone do Linkedin" title="Linkedin">
+                <img src="../img/icons/pocket_logo.svg" alt="icone do pocket" title="Pocket">
+                <div class="like">
+                    <svg
+                    width="27"
+                    height="23"
+                    viewBox="0 0 23 20"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    >
+                    <path
+                    d="M11.9649 3.12832C8.29171 -2.5454 0.857422 0.545461 0.857422 6.72603C0.857422 11.3672 11.0494 18.6272 11.9649 19.5712C12.8866 18.6272 22.5717 11.3672 22.5717 6.72603C22.5717 0.592318 15.6449 -2.5454 11.9649 3.12832Z"
+                    fill="#ff000086"
+                    />
+                </svg>
+                <span class="count-motion">10
+                    
+                </span>
             </div>
         </div>
-        <div class="artigos-relacionados">
-            <div>
-                <p><a href="/blog/index.html">Voltar</a></p>
-                <a class="far fa-arrow-alt-circle-left" href="/blog/index.html"></a> 
-            </div>
-            <div>
-                <p><a href="">O que é um Nome de Domínio?</a></p>
-                <a class="far fa-arrow-alt-circle-right" href=""></a>
-            </div>
-        </div>
-    </main>
-    <footer>
-        <!-- <p style="font-family: var(--font-action); font-size: 1.2rem; margin-top: 1rem; text-align: center;">Tens Dúvidas? Fale comigo.</p>
+    </div>
+    
+</div>
+<hr>
+<div class="artigos-relacionados">
+    <div>
+        <p><a href="/blog/index.html">Voltar</a></p>
+        <a class="far fa-arrow-alt-circle-left" href="/blog/index.html"></a> 
+    </div>
+    <div>
+        <p><a href="#">O que é um Nome de Domínio?</a></p>
+        <a class="far fa-arrow-alt-circle-right" href=""></a>
+    </div>
+</div>
+</main>
+<footer>
+    <!-- <p style="font-family: var(--font-action); font-size: 1.2rem; margin-top: 1rem; text-align: center;">Tens Dúvidas? Fale comigo.</p>
         <a href="https://wa.me/message/QBPTYVHS7CKQG1"><img style="display: block; max-width: 60px; margin: auto;" src="/assets/img/Whatsapp.png" alt="botão do Whatsapp"></a> --> 
-       
-
+        
+        
         <!-- <div class="article-contact">
             <p><a style="text-decoration: none;" href="mailto:contato@heleno.dev?subject=[Escreva o Assunto Aqui]">contato@heleno.dev</a></p>
         </div> -->
-        <div class="article-newsletter">
+        <div class="newsletter-message">
+
+            <p>
+                Assine minha newsletter, escrevo sobre HTML, CSS e JavaScript. Sem span!
+            </p>
+      
+        <div class="newsletter">
 
             <form class="newsletter-form" action="https://formsubmit.co/helenosalgado19@gmail.com" method="post">
-            <div class="group-name">
-                <label for="nome">
-                NOME COMPLETO
-                </label>
-                <input class="input-nome" type="text" name="nome">
-            </div>
-            <div class="group-email">
-                <label for="email">
-                EMAIL
-                </label>
-                <input class="input-email" type="email" name="email">
-            </div>
-            
-            
-            <!-- <textarea class="input-texto" name="mensage" cols="30" rows="7" placeholder="Envie-me uma mensagem."></textarea> -->
-            <span class="mensagem-alerta"></span>
-            <button type="submit" class="empurravel">
-              <span class="sombra"></span>
-              <span class="borda"></span>
-              <span class="frente frente-enviar">
-                Enviar
-                <i class="fa-solid fa-envelope"></i>
-              </span>
-            </button> 
-              <audio class="button-enviar" src="/assets/sons/button-mola.wav"></audio>
-              <input type="hidden" name="_captcha" value="false">
+                <div class="group-name">
+                    <label for="nome">
+                        NOME COMPLETO
+                    </label>
+                    <input class="input-nome" type="text" name="nome">
+                </div>
+                <div class="group-email">
+                    <label for="email">
+                        EMAIL
+                    </label>
+                    <input class="input-email" type="email" name="email">
+                </div>
+                
+                
+                <!-- <textarea class="input-texto" name="mensage" cols="30" rows="7" placeholder="Envie-me uma mensagem."></textarea> -->
+                <span class="mensagem-alerta"></span>
+                <button type="submit" class="empurravel">
+                    <span class="sombra"></span>
+                    <span class="borda"></span>
+                    <span class="frente frente-enviar">
+                        Enviar
+                        <i class="fa-solid fa-envelope"></i>
+                    </span>
+                </button> 
+                <audio class="button-enviar" src="/assets/sons/button-mola.wav"></audio>
+                <input type="hidden" name="_captcha" value="false">
             </form>
             
-            <div class="api-frases-aleatorias">
-                <blockquote class="frases-aleatorias">
-                 
-                </blockquote>
+            <div class="sobre-mim">
+                <h4>SOBRE O AUTOR</h4>
+                <p class="sobre-mim-texto">
+
+                </p>
             </div>
         </div>
+        </div>
+        <hr>
         <div class="media-sociais">
             <a href="https://www.facebook.com/heleno.salgado.16/"><i class="fab fa-facebook"></i></a>
             <a href="https://www.instagram.com/heleno_salgado/"><i class="fab fa-instagram"></i></a>
             <a href="https://github.com/HelenoSalgado/"><i class="fab fa-github"></i></a>
         </div> 
         <div class="copyright">
-           <p>&copy;2022 Heleno Salgado Lopes | Obrigado pela visita.</p>
+            <p>&copy;2022 Heleno Salgado Lopes | Obrigado pela visita.</p>
         </div> 
-        <a href="#article-header" class="link-topo">
-            <i class="fas fa-arrow-up"></i>
-        </a>
-        <audio preload="auto" class="button-enviar" src="/assets/sons/button-mola.wav"></audio>
     </footer>
-    
+    <audio preload="auto" class="pop-sound" src="/assets/sons/pop.wav"></audio>
+    <audio preload="auto" class="button-enviar" src="/assets/sons/button-mola.wav"></audio>
+    <a href="#" class="link-topo">
+            <i class="fas fa-arrow-up"></i>
+    </a>
     <!-- <script src="/assets/js/menu.js"></script> -->
     <script src="/blog/js/index.js"></script>
-    <!-- <div vw class="enabled">
-        <div vw-access-button class="active"></div>
-        <div vw-plugin-wrapper>
-            <div class="vw-plugin-top-wrapper"></div>
-        </div>
-    </div>
-    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
-    <script>
-        new window.VLibras.Widget('https://vlibras.gov.br/app');
-    </script> -->
+    <script src="/blog/js/article.js"></script>
 </body>
 </html>

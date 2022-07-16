@@ -1,4 +1,18 @@
+var iVolume = 0;
+var volume = document.querySelector(".header-article i");
+var popSound = document.querySelector(".pop-sound");
+var articleLink = document.querySelectorAll(".article-link");
+var articleLinkSound = document.querySelector(".article-link-sound");
+var submitSound = document.querySelector('.button-enviar');
+var submit = document.querySelector('form button');
+
+
+
 function alternaTema(checked) {
+  
+  if(iVolume == 0){
+     popSound.play();
+  }
 
     let darkMode = document.querySelector("#temaClaro");
     let lightMode = document.querySelector("#temaEscuro");
@@ -23,15 +37,34 @@ function alternaTema(checked) {
 
     
 }
-var iVolume = 0;
-var somEnviar = document.querySelector('.button-enviar');
-var enviar = document.querySelector('form button');
-enviar.addEventListener("click", (event) => {
+
+
+volume.addEventListener("click", () =>{
+  
+  if (iVolume == 0) {
+    volume.classList.add("fa-volume-xmark");
+    iVolume++;
+  }else{
+    popSound.play();
+    volume.classList.remove("fa-volume-xmark");
+    iVolume--;
+  }
+})
+
+articleLink.forEach((link) => {
+  link.addEventListener("mouseover", (link) =>{
+    if (iVolume == 0) {
+      articleLinkSound.play();
+    }
+  }) 
+});
+
+submit.addEventListener("click", (event) => {
 
     event.preventDefault();
   
     if (iVolume == 0) {
-      somEnviar.play();
+      submitSound.play();
      }
   
     var inputNome = document.querySelector(".input-nome").value;
@@ -84,6 +117,15 @@ enviar.addEventListener("click", (event) => {
     }
   })
 
+var soundIcons = document.querySelectorAll(".compartilhe-icons img");
+soundIcons.forEach((icon) => {
+  icon.addEventListener("mouseover", () =>{
+    if (iVolume == 0) {
+      articleLinkSound.play();
+    }
+  })
+});
+
 function shareUrl(e){ 
 
   var url = window.location.href.toString();   
@@ -106,14 +148,13 @@ function shareUrl(e){
   }
 }
 
-// var apiFrases = document.querySelector(".frases-aleatorias");
+var like = document.querySelector(".like");
+like.addEventListener("click", () =>{
+  if (iVolume == 0) {
+    popSound.play();
+   }
+})
 
-// async function getFrases() {
+var sobreMim = document.querySelector(".sobre-mim-texto");
 
-//     const response = await fetch("https://positive-vibes-api.herokuapp.com/quotes/random");
-//     var data = await response.json();
-    
-
-// }
-// getFrases();
-// apiFrases.textContent = "rgmipodtgopdmkhlf bmkrglrefmkg bkopsrldbglkbgerd slfbmfḉes dlmf lkepsflbp erres bplte,ṕbrfkfreo hbprmel gekeh obyymp ";
+sobreMim.textContent = "Mora no interior de Minas Gerais, tem 25 anos. Estuda Teologia no Instituto Reformado Santo Evangelho - IRSE. Cursa desenvolvimento Web pelo programa One - Oracle Next Education. Gosta de aproveitar a família, os verdadeiros amigos e, entreter-se na cultura livresca, nos clássicos, nos bons.";
