@@ -13,13 +13,14 @@
 .newsletter-form label{
     position: absolute;
     color: rgb(34, 34, 34);
+    text-transform: uppercase;
 }
 .newsletter-form input{
     margin-top: 40px;
     width: 100%;
     border: none;
     outline: none;
-    border-bottom: 2px solid var(--cor-destaque);
+    border-bottom: 1px solid var(--cor-destaque);
     background-color: transparent;
     padding: 0;
     color: #fff;
@@ -28,6 +29,7 @@
 }
 .newsletter-form input:focus{
     margin-top: 45px;
+    border-bottom-width: 2px;
 }
 .newsletter-form label:focus{
     color: var(--cor-destaque);

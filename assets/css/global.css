@@ -25,14 +25,13 @@ body {
   min-width: 320px;
 }
 body::-webkit-scrollbar {
-  width: 10px;
+  width: 8px;
 }
 body::-webkit-scrollbar-track {
   background-color: rgb(247, 247, 247);
 } 
 body::-webkit-scrollbar-thumb {
-   /* background-color: var(--cor-secundaria);*/
-  height: 50px;
+  background-color: #14171a54;
   border-radius: 20px;
 } 
 h1, h2, h3, h4{

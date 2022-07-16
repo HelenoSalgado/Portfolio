@@ -15,3 +15,22 @@ menuArticle.addEventListener("click", () =>{
         menuArticleVisible++;
     }
 })
+
+var resultSearch = document.querySelector(".search");
+var inputSearch = document.querySelector(".search-link");
+
+inputSearch.addEventListener("click", () =>{
+
+
+   var divSearch = document.createElement("div");
+   divSearch.classList.add("gcse-search");
+
+   resultSearch.classList.add("menu-item-search");
+   resultSearch.appendChild(divSearch);
+
+       
+       scriptSearch = document.createElement("script");
+       scriptSearch.src = "https://cse.google.com/cse.js?cx=f0865c1f9edece276";
+       resultSearch.appendChild(scriptSearch)
+       
+})

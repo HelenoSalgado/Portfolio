@@ -1,5 +1,6 @@
 body{
     background-color: rgb(248, 247, 247);
+    padding-top: 60px;
 }
 section{
     max-width: 1200px;
@@ -8,10 +9,10 @@ section{
 .header-article {
     position: fixed;
     width: 100%;
-    height: 60px;
+    height: auto;
     top: 0;  
     z-index: 10;  
-    background-color: rgb(248, 247, 247);
+    background-color: #f8f7f7;
     box-shadow: .2px .2px 3px rgba(0, 0, 0, 0.527); 
     overflow: hidden;
 }
@@ -23,7 +24,7 @@ section{
 .navigation{
     display: flex;
     width: 100%;
-    height: 60px;
+    height: auto;
     justify-content: space-around;
     align-items: center;
     padding-left: 60px;
@@ -38,13 +39,16 @@ section{
     height: 60px;
     padding-left: 0;
 }
-.menu-item:first-child{
-  
-}
 .menu-item{
     flex-basis: 400px;
     position: relative;
     list-style: none; 
+}
+.menu-link{
+    text-transform: uppercase;
+    transition: 200ms ease-in;
+    padding: 10px;
+    border-radius: 3px;
 }
 .menu-link img{
     width: 17px;
@@ -55,6 +59,10 @@ section{
 }
 .menu-item-articles{
     position: fixed;
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 500px;
+    gap: 20px;
     top: 40px;
     background-color: rgb(248, 247, 247);
     padding: 10px;
@@ -73,15 +81,33 @@ section{
 .menu-item-articles a{
     position: relative;
     font-family: var(--font-secundary);
-    display: block;
-    margin-bottom: 10px;
-    text-decoration: overline;
+    margin: 10px;
+    border-left: 3px solid var(--cor-destaque);
+    padding: 0 .5rem;
     transition: 100ms ease-in;
 }
-.menu-item-articles a:hover{
+.menu-link:hover,
+.menu-item-articles a:hover,
+.search-link:hover,
+.recommendation li:hover{
     font-weight: bold;
     background-color: #e7e7e7;
     margin-left: .3rem;
+}
+.search-link{
+    flex-basis: 50px;
+    cursor: pointer;
+    padding: 10px;
+    text-align: center;
+    border-radius: 3px;
+    transition: 200ms ease-in;
+}
+.menu-item-search{
+    position: sticky;
+    top: 60px;
+    max-width: 1000px;
+    margin: auto;
+    z-index: 2;
 }
 .menu-hamburguer {
     width: 2rem;
@@ -112,35 +138,37 @@ section{
     transform: rotate(-45deg) translate(.25rem, -.4rem);
     width: 70%;
 }
+.config{
+    position: relative;
+    background-color: #e7e7e7;
+    height: 40px;
+    display: inline-flex;
+    align-items: center;
+    column-gap: 20px;
+    padding: 10px;
+    border-radius: 3px;
+}
 .fa-volume-low{
-    position: absolute; 
-    top:15px; 
+    display: inline-block;
     right: 60px;
     color: var(--cor-destaque); 
     font-size: 32px; 
 }
-.dark-mode{
-    position: absolute;
-    top: 30px;
-    transform: translateY(-50%);
-    right: 10px;
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-}
 .dark-mode input{
+    position: absolute;
     opacity: 0;
 }
 .fa-sun, .fa-star-half-stroke{
+    display: inline-block;
     font-size: 30px;
     cursor: pointer;
-    transition: 300ms ease;
+    transition: 200ms ease-in;
 }
 .fa-sun:hover, .fa-star-half-stroke:hover{
     color: var(--cor-destaque);
 }
 main {
-    margin: 2rem auto;
+    margin: 0 auto 2rem auto; 
     max-width: 1000px;
     background-color: rgb(248, 247, 247);
     padding: 1rem;
@@ -162,6 +190,7 @@ main {
     font-size: 1.3rem;
     line-height: 1.4rem;
     color: #2c2c2c;
+    text-transform: uppercase;
 }
 .autor time{
     color: #424241;
@@ -260,7 +289,7 @@ footer{
     position: relative;
     width: 100%;
     padding: 20px 0 0 0;
-    background-color: #e7e7e7;
+    background-color: #f1f1f1;
     min-height: calc(100vh - 60px);
 }
 .newsletter-message > p:first-child{
@@ -281,6 +310,7 @@ footer{
 .sobre-mim h4{
     max-width: 400px;
     font-size: 1.7rem;
+    text-transform: uppercase;
 }
 .sobre-mim{
     margin-top: 2rem;
@@ -292,15 +322,36 @@ footer{
     font-family: var(--font-secundary);
     font-size: 1.2rem;
 }
+.rodape02{
+    background-color: #ffffff;
+}
+.recommendation{
+    display: flex;
+    justify-content: space-around;
+    align-items: baseline;
+    padding: 20px;
+    gap: 20px;
+    border-bottom: 1px solid var(--cor-primaria);
+}
+.recommendation div{
+    flex: 1 1 300px;
+    height: auto;
+}
+.recommendation li{
+    list-style: none;
+    border-left: 3px solid #2c2c2c;
+    padding: 0 .5rem;
+    margin: 1rem 0;
+    width: fit-content;
+    transition: 100ms ease-in;
+}
 .media-sociais, 
 .copyright{
-    display: block;
-    text-align: center;
-    margin-top: .5rem;
-    font-family: var(--font-secundary);
-    color: #424241;
+    color: var(--cor-primaria);
 }
 .copyright{
+    font-family: var(--font-secundary);
+    margin: .5rem;
     font-size: 1rem;
 }
 .media-sociais a i{

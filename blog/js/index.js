@@ -1,5 +1,5 @@
 var iVolume = 0;
-var volume = document.querySelector(".header-article i");
+var volume = document.querySelector(".sound");
 var popSound = document.querySelector(".pop-sound");
 var articleLink = document.querySelectorAll(".article-link");
 var articleLinkSound = document.querySelector(".article-link-sound");
@@ -25,7 +25,6 @@ function alternaTema(checked) {
         darkMode.disabled = true;
         iconeTema.classList.remove("fa-sun");
         iconeTema.classList.add("fa-star-half-stroke");
-        console.log(iconeTema)
 
     }
     if (checked == false) {
