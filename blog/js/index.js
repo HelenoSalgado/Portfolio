@@ -6,8 +6,6 @@ var articleLinkSound = document.querySelector(".article-link-sound");
 var submitSound = document.querySelector('.button-enviar');
 var submit = document.querySelector('form button');
 
-
-
 function alternaTema(checked) {
   
   if(iVolume == 0){
@@ -36,7 +34,6 @@ function alternaTema(checked) {
 
     
 }
-
 
 volume.addEventListener("click", () =>{
   

@@ -47,11 +47,11 @@ section{
 .menu-link{
     text-transform: uppercase;
     transition: 200ms ease-in;
-    padding: 10px;
+    padding: 10px 0;
     border-radius: 3px;
 }
-.menu-link img{
-    width: 17px;
+.menu-link svg{
+    width: 18px;
     vertical-align: middle;
 }
 .up-arrow{
@@ -61,12 +61,12 @@ section{
     position: fixed;
     display: flex;
     flex-wrap: wrap;
-    max-width: 500px;
+    max-width: 300px;
     gap: 20px;
     top: 40px;
     background-color: rgb(248, 247, 247);
     padding: 10px;
-    border: .5px solid var(--cor-destaque);
+    /* border: .5px solid var(--cor-destaque); */
     border-radius: 7px; 
     box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.301);
     transition: 150ms ease-in;
@@ -74,16 +74,15 @@ section{
     opacity: 0;
 }
 .item-articles-visible{
-    top: 50px;
+    top: 70px;
     visibility: visible;
     opacity: 10;
 }
 .menu-item-articles a{
     position: relative;
     font-family: var(--font-secundary);
-    margin: 10px;
     border-left: 3px solid var(--cor-destaque);
-    padding: 0 .5rem;
+    padding: .5rem;
     transition: 100ms ease-in;
 }
 .menu-link:hover,
@@ -94,6 +93,10 @@ section{
     background-color: #e7e7e7;
     margin-left: .3rem;
 }
+.menu-link:hover{
+    padding: 10px;
+    margin-left: 0;
+}
 .search-link{
     flex-basis: 50px;
     cursor: pointer;
@@ -103,8 +106,10 @@ section{
     transition: 200ms ease-in;
 }
 .menu-item-search{
-    position: sticky;
-    top: 60px;
+    position: fixed;
+    top: 40px;
+    left: 50%;
+    transform: translate(-50%);
     max-width: 1000px;
     margin: auto;
     z-index: 2;
@@ -169,7 +174,7 @@ section{
 }
 main {
     margin: 0 auto 2rem auto; 
-    max-width: 1000px;
+    max-width: 1100px;
     background-color: rgb(248, 247, 247);
     padding: 1rem;
 }
@@ -195,6 +200,17 @@ main {
 .autor time{
     color: #424241;
     font-family: var(--font-primary);
+}
+.container-article{
+    position: relative;
+    display: flex;
+    column-gap: 50px;
+    /* column-count: 2;
+    column-width: 300px;
+    margin: auto;   */
+}
+.article{
+    flex: 1;
 }
 .article h1{
     margin-top: 3rem;
@@ -222,6 +238,23 @@ abbr{
     border-radius: 0 10px;
     border-bottom: .5px solid var(--cor-destaque);
     text-shadow: .2px .5px 1px rgba(0, 0, 0, 0.514);
+}
+.aside-article{
+    background-color: #e7e7e7;
+    width: 20%;
+    height: fit-content;
+    position: sticky;
+    top: 150px;
+    right: 0;
+    padding: 10px;
+    border-radius: 3px;
+}
+.aside-article-nav{
+    display: flex;
+    flex-direction: column;
+}
+.aside-article-nav a{
+    padding: 10px 0;
 }
 .artigos-relacionados{
     margin: 5rem 0;

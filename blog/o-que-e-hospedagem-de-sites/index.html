@@ -37,7 +37,10 @@
         <img class="logo" style="width: 65px;" src="/assets/img/hsl-logo-transparent.png" alt="logo">
         <nav class="navigation">
             <ul class="navigation-menu">
-                <li class="menu-item"><a class="menu-link menu-link-articles" href="#/#">artigos <img src="../img/icons/angle-arrow-down_icon.svg" alt=""></a> 
+                <li class="menu-item">
+                    <a class="menu-link menu-link-articles" href="#/#">posts 
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                    </a> 
                     <div class="menu-item-articles"> 
                         <a href="">HTML</a>
                         <a href="">CSS</a>
@@ -92,7 +95,6 @@
             .gsc-search-button-v2:hover{
                 background-color: #14171a;
             }
-            
             .gsc-control-cse {
                 padding: 0;
             }
@@ -102,9 +104,13 @@
             .gsc-control-wrapper-cse {
                 margin-top: 30px;
                 padding: 20px;
-                border: 0.5px solid #971ac9;
                 border-radius: 7px;
                 box-shadow: 1px 1px 5px #0000007a;
+                /* height: 500px; */
+            }
+            .gsc-results-wrapper-visible {
+                height: 400px;
+                overflow: auto;
             }
             .gsc-input{
                 height: 40px;
@@ -112,38 +118,53 @@
         </style>
     </div>
     <main>
-        <article class="article">
-            
-            <div class="autor">
-                <img src="/assets/img/HELENO-SALGADO-p.jpg" alt="Foto do Autor do artigo">
-                <div>
-                    <h4>Heleno Salgado Lopes</h4>
-                    <time>
-                        03/01/2022
-                    </time> 
+        <div class="container-article">
+            <article class="article">
+                
+                <div class="autor">
+                    <img src="/assets/img/HELENO-SALGADO-p.jpg" alt="Foto do Autor do artigo">
+                    <div>
+                        <h4>Heleno Salgado Lopes</h4>
+                        <time>
+                            03/01/2022
+                        </time> 
+                    </div>
                 </div>
-            </div>
-            
-            
-            <h1>O que é uma hospedagem de sites</h1>
-            
-            <p>Sempre que viajamos nos hospedamos em algum lugar. Ali, na hospedagem, alimentamos e podemos descansar em paz. Com sites não é muito diferente, eles também precisam de uma hospedagem. Afinal, pode-se dizer que eles viajam o mundo inteiro. Este site, por exemplo, só está sendo apresentado na tela do seu dispositivo, porque antes foi hospedado e está sendo alimentado pelo &#39;servidor de hospedagem&#39;.</p>
-            
-            <p>Para esclarecer, todo site precisa está armazenado e  localizado em algum lugar na Rede Mundial de Computadores (sigla em Inglês, WWW), de maneira que, quando for solicitado pelo cliente, ele seja imediatamente exibido na tela do dispositivo. Todo o conteúdo do site, tais como os arquivos HTML, PHP, CSS, JS, áudios, vídeos e imagens são armazenados pelo servidor de hospedagem e podem ser solicitados a qualquer hora do dia ou da noite.</p>
-            
-            <p>Diferente da hospedagem para humanos, que está limitada a uma região específica, a hospedagem para sites está disponível para qualquer região do mundo. O site fica hospedado localmente, mas todas as vezes que é solicitado para visualização, o servidor envia uma cópia para o cliente, que é o dispositivo do usuário.</p>
-            
-            <p>Existem várias empresas que prestam esse serviço, seja de forma gratuita ou paga. Para sites simples que ocupa pouco espaço de armazenamento, como um portfólio, uma página de links ou até mesmo um blog você encontra hospedagens gratuitas na <a class="article-link" href="https://www.awardspace.com/" target="_blank">Awardspace</a>, <a class="article-link" href="https://www.hostinger.com.br/hospedagem-gratis" target="_blank">Hostinger</a> e <a class="article-link" href="https://infinityfree.net/" target="_blank">InfinityFree</a>, mas essas empresas também oferecem um serviço aprimorado por um valor mensal ou anual.</p>
-            
-            <p>A cada requisição que é feita pelo cliente, o site precisa estar no ar, precisa responder rapidamente, precisa ser seguro, e você só poderá exigir essas e outras coisas, se você estiver pagando. A empresa de hospedagem tem seus custos, a cada requisição feita é um gasto a mais nos equipamentos, nos megas de internet, na energia elétrica, em tudo.</p>
-            
-            <p>Agora, falando da hospedagem gratuita, tem algumas coisas importantes a serem avaliadas, mesmo que seu site seja leve, simples e pequeno, a hospedagem gratuita não suportará todo o tráfico dos usuário se estes forem muitos acessando simultaneamente e/ou exceder um determinado limite de acessos mensal. Essas hospedagens também não costumam oferecer um serviço de segurança satisfatório e pode até limitar os tipos de arquivos usados no site.</p>
-            
-            <p>Aí fica à sua escolha, a minha dica é que contate um desenvolvedor para fazer um dimensionamento e ver se vale a pena hospedar seu site gratuitamente. De qualquer maneira, se você perceber que o serviço gratuito está sendo insuficiente, você pode mudar para um plano pago imediatamente.</p>
-            
-            <p>O propósito deste artigo foi mostrar que todo conteúdo do seu site precisa está hospedado em algum lugar da <abbr title="Abreviação de World Wide Web, Rede Mundial de Computadores.">Web</abbr>, porém, para acessar esse site você precisa registrar um nome de domínio e vincular ao seu servidor de hospedagem.</p>
-            <audio preload="auto" class="article-link-sound" src="/assets/sons/puxado-pop.wav"></audio>
-        </article>
+                
+                
+                <h1>O que é uma hospedagem de sites</h1>
+                
+                <p>Sempre que viajamos nos hospedamos em algum lugar. Ali, na hospedagem, alimentamos e podemos descansar em paz. Com sites não é muito diferente, eles também precisam de uma hospedagem. Afinal, pode-se dizer que eles viajam o mundo inteiro. Este site, por exemplo, só está sendo apresentado na tela do seu dispositivo, porque antes foi hospedado e está sendo alimentado pelo &#39;servidor de hospedagem&#39;.</p>
+                
+                <p>Para esclarecer, todo site precisa está armazenado e  localizado em algum lugar na Rede Mundial de Computadores (sigla em Inglês, WWW), de maneira que, quando for solicitado pelo cliente, ele seja imediatamente exibido na tela do dispositivo. Todo o conteúdo do site, tais como os arquivos HTML, PHP, CSS, JS, áudios, vídeos e imagens são armazenados pelo servidor de hospedagem e podem ser solicitados a qualquer hora do dia ou da noite.</p>
+                
+                <p>Diferente da hospedagem para humanos, que está limitada a uma região específica, a hospedagem para sites está disponível para qualquer região do mundo. O site fica hospedado localmente, mas todas as vezes que é solicitado para visualização, o servidor envia uma cópia para o cliente, que é o dispositivo do usuário.</p>
+                
+                <p>Existem várias empresas que prestam esse serviço, seja de forma gratuita ou paga. Para sites simples que ocupa pouco espaço de armazenamento, como um portfólio, uma página de links ou até mesmo um blog você encontra hospedagens gratuitas na <a class="article-link" href="https://www.awardspace.com/" target="_blank">Awardspace</a>, <a class="article-link" href="https://www.hostinger.com.br/hospedagem-gratis" target="_blank">Hostinger</a> e <a class="article-link" href="https://infinityfree.net/" target="_blank">InfinityFree</a>, mas essas empresas também oferecem um serviço aprimorado por um valor mensal ou anual.</p>
+                
+                <p>A cada requisição que é feita pelo cliente, o site precisa estar no ar, precisa responder rapidamente, precisa ser seguro, e você só poderá exigir essas e outras coisas, se você estiver pagando. A empresa de hospedagem tem seus custos, a cada requisição feita é um gasto a mais nos equipamentos, nos megas de internet, na energia elétrica, em tudo.</p>
+                
+                <p>Agora, falando da hospedagem gratuita, tem algumas coisas importantes a serem avaliadas, mesmo que seu site seja leve, simples e pequeno, a hospedagem gratuita não suportará todo o tráfico dos usuário se estes forem muitos acessando simultaneamente e/ou exceder um determinado limite de acessos mensal. Essas hospedagens também não costumam oferecer um serviço de segurança satisfatório e pode até limitar os tipos de arquivos usados no site.</p>
+                
+                <p>Aí fica à sua escolha, a minha dica é que contate um desenvolvedor para fazer um dimensionamento e ver se vale a pena hospedar seu site gratuitamente. De qualquer maneira, se você perceber que o serviço gratuito está sendo insuficiente, você pode mudar para um plano pago imediatamente.</p>
+                
+                <p>O propósito deste artigo foi mostrar que todo conteúdo do seu site precisa está hospedado em algum lugar da <abbr title="Abreviação de World Wide Web, Rede Mundial de Computadores.">Web</abbr>, porém, para acessar esse site você precisa registrar um nome de domínio e vincular ao seu servidor de hospedagem.</p>
+                
+                <audio preload="auto" class="article-link-sound" src="/assets/sons/puxado-pop.wav"></audio>
+            </article>
+            <aside class="aside-article">
+                <nav class="aside-article-nav">
+                    <h3>índice</h3>
+                    <a href="#">navegação Lorem ipsum dolor sit</a>
+                    <a href="#">navegação</a>
+                    <a href="#">navegação</a>
+                    <a href="#">navegação</a>
+                    <a href="#">navegação</a>
+                    <a href="#">navegação</a>
+                    <a href="#">navegação</a>
+                </nav>
+            </aside>
+        </div>
         <div class="compartilhe" onclick="shareUrl(event)">
             <p >COMPARTILHE</p>
             <i class="fa-solid fa-share-nodes"></i>
@@ -241,7 +262,7 @@
             </div>
         </div>
         <div class="rodape02">
-            <sidebar class="recommendation">
+            <aside class="recommendation">
                 <div>
                     <h3>Sites Recomendados</h3>
                     <li><a href="https://www.w3schools.com/">W3Shools</a></li>
@@ -265,7 +286,7 @@
                     <a href="https://github.com/HelenoSalgado/"><i class="fab fa-github"></i></a>
                 </div> 
                 
-            </sidebar>
+            </aside>
             <div class="copyright">
                 <p>&copy;2022 Heleno Salgado Lopes | Obrigado pela visita.</p>
             </div> 
