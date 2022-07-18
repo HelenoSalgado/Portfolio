@@ -1,41 +1,54 @@
 /*Tema Claro */
-body{
+body, footer{
     background-color: rgb(248, 247, 247);
+}
+.aside-article{
+    background-color: #e7e7e7;
+}
+.aside-article-nav h3{
+    color: #424241;;
 }
 .line {
     background-color: #ffffff;
 }
-.logo, 
-.header-article, 
-main{ 
+.logo, .header-fixed, main{ 
     background-color: rgb(248, 247, 247);
 }
-.fa-sun, .fa-star-half-stroke{
+.fa-sun, .fa-star-half-stroke, .search-link{
+    color: var(--cor-destaque);
+}
+.menu-link:hover, .menu-item-articles a:hover, .fa-volume-low:hover, .fa-sun:hover, .search-link:hover, .social-media i:hover,
+main a:hover, .fa-arrow-alt-circle-left:hover, .fa-arrow-alt-circle-right:hover, .artigos-relacionados a:hover{
     color: var(--cor-primaria);
 }
-.menu-link:hover, 
-.menu-item-articles a:hover,
-.fa-volume-low:hover,
-.search-link:hover,
-.social-media i:hover,
-main a:hover,
-.fa-arrow-alt-circle-left:hover,
-.fa-arrow-alt-circle-right:hover,
-.artigos-relacionados a:hover{
-    color: var(--cor-primaria);
+.compartilhe-icons img:hover{
+    filter: drop-shadow(1px 1px 1px rgb(68, 68, 68));
 }
-.autor h4,
-.autor time,
-.article h1,
-.article p,
-.compartilhe p,
-.compartilhe a,
-footer p,
-footer a{
+.config, .menu-link:hover, .menu-item-articles a:hover, .search-link:hover, .recommendation li:hover{
+    font-weight: bold;
+    background-color: #e7e7e7;
+    margin-left: .3rem;
+}
+.autor h4, .autor time, .article h1, .article p, .compartilhe p, .compartilhe a, .sobre-mim h4, footer p, footer a{
     color: #424241;
 }
 abbr{
     text-shadow: .2px .5px 1px rgba(0, 0, 0, 0.514);
+}
+.newsletter-message{
+    background-color: #e7e7e7;
+}
+.newsletter-message > p:first-child{
+    color: #2c2c2c;
+}
+.rodape02, .recommendation{
+    background-color: #ffffff;
+}
+.recommendation h3{
+    color: #424241
+}
+.media-sociais a i:hover{
+    color: var(--cor-primaria);
 }
 .link-topo{
     background: var(--cor-destaque);

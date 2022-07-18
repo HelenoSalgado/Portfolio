@@ -1,46 +1,43 @@
 /*Tema Claro */
-body{
+body, .menu-item-articles, main, .recommendation{
     background-color: var(--cor-primaria);
 }
 .line {
     background-color: #fff;
 }
-.logo, 
-.header-article{
+.logo, .header-fixed{
     background-color: var(--cor-primaria);
 }
-.menu-item, 
-.menu-link {
+.menu-item, .menu-link, .fa-sun, .fa-star-half-stroke {
     color: var(--cor-destaque);
 }
-.menu-link:hover,
-main a:hover,
-.social-media i:hover,
-.artigos-relacionados div p a:hover,
-.fa-arrow-alt-circle-left:hover,
-.fa-arrow-alt-circle-right:hover{
+.menu-link:hover, .menu-item-articles a:hover, .search-link:hover, .recommendation li:hover{
+    background-color: var(--cor-secundaria);
+}
+.menu-link:hover{
+    padding: 10px;
+    margin-left: 0;
+}
+.config{
+    background-color: var(--cor-secundaria);
+}
+.menu-link:hover, main a:hover, .search-link:hover, .media-sociais a i:hover,
+.fa-volume-low:hover, .fa-star-half-stroke:hover, .artigos-relacionados div p a:hover, .fa-arrow-alt-circle-left:hover, .fa-arrow-alt-circle-right:hover{
     color: #fff;
 }
 main a:hover{
     text-shadow: 1px .2px 1px rgba(0, 0, 0, 0.363);
 }
-.fa-sun, 
-.fa-star-half-stroke{
-    color: #fff;
-}
-main {
-    background-color: var(--cor-primaria);
-}
-.autor h4, 
-.autor time, 
-.article h1, 
-.article p, 
-.compartilhe p, 
-.count-motion,
-footer p, 
-footer a{
+.autor h4, .autor time, .article h1, .article p, .aside-article-nav h3,.compartilhe p, .count-motion,footer p, footer a,.newsletter-message > p:first-child, .sobre-mim h4, .recommendation h3{
     color: #eee;
 }
 .compartilhe-icons img:hover{
     filter: drop-shadow(1px 1px 1px #fff);
+}
+.aside-article, footer, .rodape02{
+    background-color: var(--cor-secundaria);
+}
+.recommendation li:hover{
+    font-weight: bold;
+    margin-left: .3rem;
 }

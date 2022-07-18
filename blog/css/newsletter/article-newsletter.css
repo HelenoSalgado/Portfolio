@@ -3,7 +3,6 @@
     display: flex;
     flex-direction: column;
     gap: 10px;
-    font-family: var(--font-primary);
     font-size: 1.3rem;
     padding: 5px;
 }
@@ -12,10 +11,12 @@
 } */
 .newsletter-form label{
     position: absolute;
-    color: rgb(34, 34, 34);
+    font-family: var(--font-primary);
+    color: #424241;
     text-transform: uppercase;
 }
 .newsletter-form input{
+    font-family: var(--font-secundary);
     margin-top: 40px;
     width: 100%;
     border: none;
@@ -23,9 +24,12 @@
     border-bottom: 1px solid var(--cor-destaque);
     background-color: transparent;
     padding: 0;
-    color: #fff;
+    color: #424241;
     caret-color: var(--cor-destaque);
     transition: 200ms ease-in;
+}
+.group-name{
+    margin-bottom: 20px;
 }
 .newsletter-form input:focus{
     margin-top: 45px;
@@ -61,11 +65,10 @@ footer textarea{
     padding: 5px;
 }
 .mensagem-alerta{
-    padding: 5px 0;
+    font-family: var(--font-primary);
     color: #ff0000;
 }
 .mensagem-sucesso{
-    padding: 5px 0;
     color: var(--cor-destaque);
 }
 .frente-enviar{

@@ -41,11 +41,10 @@ inputSearch.addEventListener("click", () =>{
        countSearch--;
 
    }else if(countSearch == 0){
-    
+        
        
    }
-   
-       
+     
 })
 
 main.addEventListener("click", () =>{

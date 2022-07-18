@@ -1,4 +1,5 @@
 body{
+    position: relative;
     background-color: rgb(248, 247, 247);
     padding-top: 60px;
 }
@@ -6,19 +7,17 @@ section{
     max-width: 1200px;
     min-width: 320px;
 }
-.header-article {
+.header-fixed {
     position: fixed;
     width: 100%;
     height: auto;
-    top: 0;  
+    top: 0;
     z-index: 10;  
     background-color: #f8f7f7;
     box-shadow: .2px .2px 3px rgba(0, 0, 0, 0.527); 
     overflow: hidden;
 }
-.logo{
-    position: absolute;
-    top: 0;   
+.logo{  
     background-color: rgb(248, 247, 247);
 }
 .navigation{
@@ -27,14 +26,12 @@ section{
     height: auto;
     justify-content: space-around;
     align-items: center;
-    padding-left: 60px;
-    /* transition: all 1s; */
+    padding: 0 10px;
 }
 .navigation-menu{
     display: flex;
     align-items: center;
     width: 100%;
-    max-width: 1000px;
     margin: auto;
     height: 60px;
     padding-left: 0;
@@ -84,14 +81,6 @@ section{
     border-left: 3px solid var(--cor-destaque);
     padding: .5rem;
     transition: 100ms ease-in;
-}
-.menu-link:hover,
-.menu-item-articles a:hover,
-.search-link:hover,
-.recommendation li:hover{
-    font-weight: bold;
-    background-color: #e7e7e7;
-    margin-left: .3rem;
 }
 .menu-link:hover{
     padding: 10px;
@@ -153,24 +142,18 @@ section{
     padding: 10px;
     border-radius: 3px;
 }
-.fa-volume-low{
-    display: inline-block;
-    right: 60px;
+.fa-volume-low, .fa-sun, .feed, .fa-star-half-stroke{
+    font-size: 25px;
+    cursor: pointer; 
     color: var(--cor-destaque); 
-    font-size: 32px; 
+    transition: 200ms ease-in;
+}
+.fa-volume-low{
+    right: 60px;
 }
 .dark-mode input{
     position: absolute;
     opacity: 0;
-}
-.fa-sun, .fa-star-half-stroke{
-    display: inline-block;
-    font-size: 30px;
-    cursor: pointer;
-    transition: 200ms ease-in;
-}
-.fa-sun:hover, .fa-star-half-stroke:hover{
-    color: var(--cor-destaque);
 }
 main {
     margin: 0 auto 2rem auto; 
@@ -205,11 +188,9 @@ main {
     position: relative;
     display: flex;
     column-gap: 50px;
-    /* column-count: 2;
-    column-width: 300px;
-    margin: auto;   */
 }
 .article{
+    position: relative;
     flex: 1;
 }
 .article h1{
@@ -224,7 +205,7 @@ article p{
     font-family: var(--font-secundary);
     font-size: 1.3rem;
     margin-top: 1.5rem;
-    color: rgb(49, 49, 49);
+    color: #313131;
 }
 .article-link{
     font-weight: 600;
@@ -232,6 +213,9 @@ article p{
 }
 .article-link{
     text-shadow: 1px .2px 1px rgba(0, 0, 0, 0.363);
+}
+.article-link:visited{
+    color: #614681;
 }
 abbr{
     text-decoration: none;
@@ -253,8 +237,14 @@ abbr{
     display: flex;
     flex-direction: column;
 }
+.aside-article-nav h3{
+    text-transform: uppercase;
+    color: #424241;;
+}
 .aside-article-nav a{
-    padding: 10px 0;
+    font-size: .9rem;
+    padding: 5px 0;
+    font-family: var(--font-secundary);
 }
 .artigos-relacionados{
     margin: 5rem 0;
@@ -317,18 +307,21 @@ abbr{
 .like:hover svg path {
     fill: #ff0000e1
 }
-
 footer{
     position: relative;
     width: 100%;
+    background-color: rgb(240, 240, 240);
     padding: 20px 0 0 0;
-    background-color: #f1f1f1;
     min-height: calc(100vh - 60px);
 }
+.newsletter-message{
+    padding-top: 3rem;
+}
 .newsletter-message > p:first-child{
-    font-size: 1.8rem;
-    max-width: 600px;
-    margin: 2rem auto;
+    font-size: 1.7rem;
+    color: #2c2c2c;
+    max-width: 500px;
+    margin: 2rem 0 0 50px;
     line-height: 1.9rem;
 }
 .newsletter{
@@ -337,12 +330,13 @@ footer{
     flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
-    padding: 2rem 0;
+    padding: 3rem 0 4rem 0;
     width: 100%;
 }
 .sobre-mim h4{
     max-width: 400px;
     font-size: 1.7rem;
+    color: #424241;
     text-transform: uppercase;
 }
 .sobre-mim{
@@ -356,25 +350,29 @@ footer{
     font-size: 1.2rem;
 }
 .rodape02{
+    padding-top: 2rem;
     background-color: #ffffff;
 }
 .recommendation{
     display: flex;
     justify-content: space-around;
     align-items: baseline;
+    flex-wrap: wrap;
     padding: 20px;
     gap: 20px;
-    border-bottom: 1px solid var(--cor-primaria);
 }
 .recommendation div{
     flex: 1 1 300px;
     height: auto;
 }
+.recommendation h3{
+    color: #424241
+}
 .recommendation li{
     list-style: none;
     border-left: 3px solid #2c2c2c;
-    padding: 0 .5rem;
-    margin: 1rem 0;
+    padding: .5rem;
+    margin: .5rem 0;
     width: fit-content;
     transition: 100ms ease-in;
 }
@@ -383,8 +381,8 @@ footer{
     color: var(--cor-primaria);
 }
 .copyright{
-    font-family: var(--font-secundary);
-    margin: .5rem;
+    text-align: center;
+    padding: .5rem;
     font-size: 1rem;
 }
 .media-sociais a i{

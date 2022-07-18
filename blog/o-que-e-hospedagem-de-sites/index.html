@@ -33,9 +33,11 @@
     <link rel="manifest" href="/assets/img-icon/site.webmanifest">
 </head>
 <body>
-    <header id="header" class="header-article">
-        <img class="logo" style="width: 65px;" src="/assets/img/hsl-logo-transparent.png" alt="logo">
+    <header id="header" >
+        <div class="header-fixed">
         <nav class="navigation">
+            <img class="logo" style="width: 65px;" src="/assets/img/hsl-logo-transparent.png" alt="logo">
+
             <ul class="navigation-menu">
                 <li class="menu-item">
                     <a class="menu-link menu-link-articles" href="#/#">posts 
@@ -45,7 +47,7 @@
                         <a href="">HTML</a>
                         <a href="">CSS</a>
                         <a href="">JavaScript</a>
-                        <a href="">Diversos</a>
+                        <a href="">Fora do Escopo</a>
                     </div>
                 </li>
                 <li class="menu-item">
@@ -54,15 +56,6 @@
                 <li class="menu-item search-link">
                     <i class="fa-solid fa-magnifying-glass"></i>
                 </li>
-                <!-- <style>
-                    .gsc-search-button-v2{
-                        background-color: #971ac9;
-                        border: none;
-                    }
-                    .gsc-search-button-v2:hover{
-                        background-color: #14171a;
-                    }
-                </style> -->
             </ul>
             <div class="config">
                 <i class="fa-solid fa-volume-low sound"></i>
@@ -70,18 +63,21 @@
                     <i class="fa-solid fa-sun"></i>
                     <input type="checkbox" onclick="alternaTema(checked)">
                 </label>
+                <svg class="feed" width="19" height="19" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" data-svg="rss"><circle cx="3.12" cy="16.8" r="1.85" fill="#971ac9"></circle><path fill="none" stroke="#971ac9" stroke-width="1.1" d="M1.5,8.2 C1.78,8.18 2.06,8.16 2.35,8.16 C7.57,8.16 11.81,12.37 11.81,17.57 C11.81,17.89 11.79,18.19 11.76,18.5"></path><path fill="none" stroke="#971ac9" stroke-width="1.1" d="M1.5,2.52 C1.78,2.51 2.06,2.5 2.35,2.5 C10.72,2.5 17.5,9.24 17.5,17.57 C17.5,17.89 17.49,18.19 17.47,18.5"></path>
+                </svg>
             </div>
-            <div class="menu-hamburguer">
+            <!-- <div class="menu-hamburguer">
                 <div class="line" id="line1"></div>
                 <div class="line" id="line2"></div>
                 <div class="line" id="line3"></div>
-            </div> 
+            </div>  -->
         </nav>
         <!-- <div class="social-media">
             <a href="https://github.com/HelenoSalgado/"><i class="fab fa-github-alt"></i></a>
             <a href="https://www.facebook.com/heleno.salgado.16/"><i class="fab fa-facebook"></i></a>
             <a href="https://www.instagram.com/heleno_salgado/"><i class="fab fa-instagram"></i></a>
         </div>    -->
+        </div>
     </header>
     <div class="search">
         <style>
@@ -130,9 +126,8 @@
                         </time> 
                     </div>
                 </div>
-                
-                
-                <h1>O que é uma hospedagem de sites</h1>
+
+                <h1>O que é uma hospedagem de sites</h1> 
                 
                 <p>Sempre que viajamos nos hospedamos em algum lugar. Ali, na hospedagem, alimentamos e podemos descansar em paz. Com sites não é muito diferente, eles também precisam de uma hospedagem. Afinal, pode-se dizer que eles viajam o mundo inteiro. Este site, por exemplo, só está sendo apresentado na tela do seu dispositivo, porque antes foi hospedado e está sendo alimentado pelo &#39;servidor de hospedagem&#39;.</p>
                 
@@ -219,7 +214,7 @@
         <div class="newsletter-message">
             
             <p>
-                Assine minha newsletter, escrevo sobre HTML, CSS e JavaScript. Sem span!
+                Escrevo sobre HTML, CSS e JavaScript | newsletter!
             </p>
             
             <div class="newsletter">
@@ -267,16 +262,22 @@
                     <h3>Sites Recomendados</h3>
                     <li><a href="https://www.w3schools.com/">W3Shools</a></li>
                     <li><a href="https://developer.mozilla.org/">MDN Web Docs</a></li>
-                    <li><a href=""></a></li>
-                    <li><a href=""></a></li>
+                    <li><a href="https://www.joshwcomeau.com/">Josh Comeau (em Inglês)</a></li>
+                    <li><a href="http://www.maujor.com/">Maujor</a></li>
                 </div>
                 <div>
                     <h3>Materiais Gratuitos</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero molestias nisi quam doloribus doloremque quod architecto nihil at, officia odio velit reiciendis, quis explicabo labore cum repellat necessitatibus libero amet.</p>
+                    <li><a href="https://www.cursoemvideo.com/">Curso em Video</a></li>
+                    <li><a href="https://www.horadecodar.com.br/">Hora de Codar</a></li>
+                    <li><a href="https://balta.io/cursos">balta.io</a></li>
+                    <li><a href=""></a></li>
                 </div>
                 <div>
-                    <h3>Outros artigos do autor</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus quos ea provident adipisci doloremque eveniet tempore, temporibus incidunt officia consectetur perspiciatis debitis? Voluptate ea animi neque quisquam ratione consequatur omnis?</p>
+                    <h3>Fora do Escopo</h3>
+                    <li><a href="https://santoevangelho.com.br/">Instituto Reformado Santo Evangelho</a></li>
+                    <li><a href="https://www.brasilparalelo.com.br/sobre">Brasil Paralelo</a></li>
+                    <li><a href=""></a></li>
+                    <li><a href=""></a></li>
                 </div>
                 <div class="media-sociais">
                     <h3>Redes sociais</h3>
