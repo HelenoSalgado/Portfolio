@@ -413,22 +413,16 @@ footer{
     text-shadow: .1px .1px 1px #fff;
 }
 @media (max-width: 750px){
-    .banner {
-        position: absolute;
-        top: 15%;
-        left: 5%;
-    }
     h2{
         font-size: 2.3rem;
     }
+    .aside-article{
+        display: none;
+    }
 }    
 @media (max-width: 919px){
-    .banner h1 {
-        font-size: 3rem;
-    }
+   
 }
 @media (max-width: 750px) and (orientation: landscape){ 
-    div.logo{
-        display: none;
-    } 
+   
 }
