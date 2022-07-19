@@ -43,7 +43,7 @@ inputSearch.addEventListener("click", () =>{
         resultSearch.appendChild(scriptSearch)
 
         i--;
-        
+
        }
 
        countSearch--;
@@ -57,6 +57,8 @@ inputSearch.addEventListener("click", () =>{
 
 main.addEventListener("click", () =>{
     var artigos = document.querySelector(".menu-item-articles");
+    var arrow = document.querySelector(".menu-link-articles svg")
     artigos.classList.remove("item-articles-visible");
+    arrow.classList.remove("up-arrow");
     resultSearch.style.display = "none";
 })

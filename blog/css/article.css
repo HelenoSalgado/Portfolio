@@ -426,14 +426,13 @@ footer{
     .navigation-menu{
         position: fixed;
         padding-top: 20px;
-        top: 43px;
+        top: 42px;
         right: -101%;
         flex-direction: column;
         justify-content: end;
         height: auto;
         background-color: #f8f7f7;
         transition: 500ms ease-in;
-        border-bottom: 1px solid var(--cor-destaque);
     }
     .menu-item-articles{
         top: 95px;
