@@ -31,7 +31,7 @@ main a:hover{
 .autor h4, .autor time, .article h1, .article p, .aside-article-nav h3,.compartilhe p, .count-motion,footer p, footer a,.newsletter-message > p:first-child, .sobre-mim h4, .recommendation h3{
     color: #eee;
 }
-.compartilhe-icons img:hover{
+.compartilhe-icons img:hover, .media-sociais a img{
     filter: drop-shadow(1px 1px 1px #fff);
 }
 .aside-article, footer, .rodape02{

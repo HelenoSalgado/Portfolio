@@ -6,9 +6,6 @@
     font-size: 1.3rem;
     padding: 5px;
 }
-/* .group-name, .group-email{
-    position: relative;
-} */
 .newsletter-form label{
     position: absolute;
     font-family: var(--font-primary);
