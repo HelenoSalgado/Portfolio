@@ -3,7 +3,7 @@ body, .menu-item-articles, main, .recommendation{
     background-color: var(--cor-primaria);
 }
 .line {
-    background-color: #fff;
+    background-color: var(--cor-destaque);
 }
 .logo, .header-fixed{
     background-color: var(--cor-primaria);
@@ -37,7 +37,7 @@ main a:hover{
 .aside-article, footer, .rodape02{
     background-color: var(--cor-secundaria);
 }
-.recommendation li:hover{
+.menu-item-articles a:hover, .recommendation li:hover{
     font-weight: bold;
     margin-left: .3rem;
 }

@@ -23,26 +23,34 @@ menuArticle.addEventListener("click", () =>{
 
 var resultSearch = document.querySelector(".search");
 var inputSearch = document.querySelector(".search-link");
+var i = 1;
 
 inputSearch.addEventListener("click", () =>{
 
    if (countSearch == 1) {
-    
-       var divSearch = document.createElement("div");
-       divSearch.classList.add("gcse-search");
 
-       resultSearch.classList.add("menu-item-search");
-       resultSearch.appendChild(divSearch);
+       resultSearch.style.display = "block";
 
-       scriptSearch = document.createElement("script");
-       scriptSearch.src = "https://cse.google.com/cse.js?cx=f0865c1f9edece276";
-       resultSearch.appendChild(scriptSearch)
+       if (i == 1) {
+        var divSearch = document.createElement("div");
+        divSearch.classList.add("gcse-search");
+
+        resultSearch.classList.add("menu-item-search");
+        resultSearch.appendChild(divSearch);
+
+        scriptSearch = document.createElement("script");
+        scriptSearch.src = "https://cse.google.com/cse.js?cx=f0865c1f9edece276";
+        resultSearch.appendChild(scriptSearch)
+
+        i--;
+        
+       }
 
        countSearch--;
 
    }else if(countSearch == 0){
-        
-       
+        resultSearch.style.display = "none";
+        countSearch++;
    }
      
 })
@@ -50,6 +58,5 @@ inputSearch.addEventListener("click", () =>{
 main.addEventListener("click", () =>{
     var artigos = document.querySelector(".menu-item-articles");
     artigos.classList.remove("item-articles-visible");
-
-    //resultSearch.style.position = "absolute";
+    resultSearch.style.display = "none";
 })

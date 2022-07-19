@@ -5,6 +5,23 @@ var articleLink = document.querySelectorAll(".article-link");
 var articleLinkSound = document.querySelector(".article-link-sound");
 var submitSound = document.querySelector('.button-enviar');
 var submit = document.querySelector('form button');
+var iMenu = 1
+
+var hamburguer = document.querySelector(".menu-hamburguer"); 
+  hamburguer.addEventListener("click", function(){
+    hamburguer.classList.toggle("show-menu");
+    var menu = document.querySelector(".navigation-menu");
+    
+    if (iMenu == 1) {
+      menu.style.right = "0";
+      iMenu++;
+    }
+    else{
+      menu.style.right = "-101%";
+      iMenu--;
+    }
+    
+});
 
 function alternaTema(checked) {
   

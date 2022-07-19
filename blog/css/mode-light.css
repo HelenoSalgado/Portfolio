@@ -2,14 +2,8 @@
 body, footer{
     background-color: rgb(248, 247, 247);
 }
-.aside-article{
-    background-color: #e7e7e7;
-}
-.aside-article-nav h3{
-    color: #424241;;
-}
 .line {
-    background-color: #ffffff;
+    background-color: var(--cor-destaque);
 }
 .logo, .header-fixed, main{ 
     background-color: rgb(248, 247, 247);
@@ -17,8 +11,18 @@ body, footer{
 .fa-sun, .fa-star-half-stroke, .search-link{
     color: var(--cor-destaque);
 }
+.menu-item-articles{
+    background-color: rgb(248, 247, 247);
+}
+.aside-article{
+    background-color: #e7e7e7;
+}
+.aside-article-nav h3{
+    color: #424241;;
+}
+
 .menu-link:hover, .menu-item-articles a:hover, .fa-volume-low:hover, .fa-sun:hover, .search-link:hover, .social-media i:hover,
-main a:hover, .fa-arrow-alt-circle-left:hover, .fa-arrow-alt-circle-right:hover, .artigos-relacionados a:hover{
+main a:hover, .fa-arrow-alt-circle-left:hover, .fa-arrow-alt-circle-right:hover, .artigos-relacionados div p a:hover{
     color: var(--cor-primaria);
 }
 .compartilhe-icons img:hover{
