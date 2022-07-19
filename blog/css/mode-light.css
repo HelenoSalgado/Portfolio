@@ -21,15 +21,14 @@ body, footer{
     color: #424241;;
 }
 
-.menu-link:hover, .menu-item-articles a:hover, .fa-volume-low:hover, .fa-sun:hover, .search-link:hover, .social-media i:hover,
-main a:hover, .fa-arrow-alt-circle-left:hover, .fa-arrow-alt-circle-right:hover, .artigos-relacionados div p a:hover{
+.menu-link:hover, .menu-item-articles a:hover, .search-link:hover,
+main a:hover, .artigos-relacionados div p a:hover{
     color: var(--cor-primaria);
 }
-.compartilhe-icons img:hover{
+.menu-link img:hover, .search-link img:hover, .compartilhe-icons img:hover{
     filter: drop-shadow(1px 1px 1px rgb(68, 68, 68));
 }
 .config, .menu-link:hover, .menu-item-articles a:hover, .search-link:hover, .recommendation li:hover{
-    font-weight: bold;
     background-color: #e7e7e7;
     margin-left: .3rem;
 }

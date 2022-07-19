@@ -55,6 +55,11 @@ section{
     width: 18px;
     vertical-align: middle;
 }
+.menu-item a img{
+    margin: 0;
+    vertical-align: middle;
+    margin-bottom: 4px;
+}
 .up-arrow{
     transform: rotate(0.5turn);
 }
@@ -93,8 +98,9 @@ section{
 .search-link{
     flex-basis: 50px;
     cursor: pointer;
-    padding: 10px;
+    padding: 8px;
     text-align: center;
+    vertical-align: middle;
     border-radius: 3px;
     transition: 200ms ease-in;
 }
@@ -139,19 +145,19 @@ section{
     background-color: #e7e7e7;
     height: 40px;
     display: inline-flex;
+    justify-content: space-around;
     align-items: center;
     column-gap: 20px;
-    padding: 10px;
+    padding: 5px;
+    margin-left: 10px;
     border-radius: 3px;
 }
-.fa-volume-low, .fa-sun, .feed, .fa-star-half-stroke{
-    font-size: 25px;
+.sound, .dark-mode img, .feed{
     cursor: pointer; 
-    color: var(--cor-destaque); 
     transition: 200ms ease-in;
 }
-.fa-volume-low{
-    right: 60px;
+.dark-mode img{
+    margin-top: 3px;
 }
 .dark-mode input{
     position: absolute;
@@ -205,10 +211,11 @@ main {
 article p{
     font-size: 1.3rem;
     margin-top: 1.5rem;
+    line-height: 1.6rem;
     color: #313131;
 }
 .article-link{
-    font-weight: 600;
+    font-weight: 500;
     font-size: inherit;
 }
 .article-link{
@@ -289,7 +296,7 @@ abbr{
     border-radius: 50%;
     cursor: pointer;
 }
-.compartilhe-icons img:hover{
+.sound:hover, .dark-mode img:hover, .feed:hover, .compartilhe-icons img:hover, .media-sociais a img:hover{
     filter: drop-shadow(1px 1px 1px var(--cor-primaria));
 }
 .like {
@@ -384,32 +391,19 @@ footer{
     padding: .5rem;
     font-size: 1rem;
 }
-.media-sociais a i{
+.media-sociais a img{
     margin: 1rem 1rem 0 0;
-    font-size: 1.5rem;
+    opacity: .7;
     transition: 200ms ease;
-}
-.media-sociais a i:hover{
-    color: var(--cor-primaria);
-}
+}  
 .link-topo{
     position: fixed;
-    top: 90%;
+    bottom: 20px;
     right: 10px;
     width: 40px;
     height: 40px;
-    font-size: 1rem;
-    color: #fff;
-    background: var(--cor-primaria);
-    box-shadow: 1px 1px 3px var(--cor-font);
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     z-index: 1;
-}
-.fa-arrow-up{
-    text-shadow: .1px .1px 1px #fff;
+    border-radius: 50%;
 }
 @media (max-width: 750px){
     h2{

@@ -13,9 +13,9 @@
     /* Sombra para fundo de cor primária */
     --shadow-color: 210deg 22% 2%;
     /* Fontes */
-   --font-primary: 'Baloo 2', 'cursive', sans-serif;
-   --font-secundary: 'Poppins', sans-serif;
-   --font-action: Verdana, Geneva, Tahoma, sans-serif;
+   --font-primary: Garamond, 'Copperplate' sans-serif;
+   --font-secundary: 'Optima', 'Lucida Sans', 'Calibri', 'Cambria',  'Perpetua', 'Lucida Bright';
+   --font-action: Garamond, 'Calibri', sans-serif; 
 }
 html{
   scroll-behavior: smooth;

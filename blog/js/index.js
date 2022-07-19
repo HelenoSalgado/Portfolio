@@ -31,22 +31,20 @@ function alternaTema(checked) {
 
     let darkMode = document.querySelector("#temaClaro");
     let lightMode = document.querySelector("#temaEscuro");
-    let iconeTema = document.querySelector(".dark-mode i");
+    let iconeTema = document.querySelector(".dark-mode img");
     
 
     if (checked == true) {
 
         lightMode.disabled = false;
         darkMode.disabled = true;
-        iconeTema.classList.remove("fa-sun");
-        iconeTema.classList.add("fa-star-half-stroke");
+        iconeTema.src = "/blog/img/icons/mode-dark.svg";
 
     }
     if (checked == false) {
         lightMode.disabled = true;
         darkMode.disabled = false;
-        iconeTema.classList.remove("fa-star-half-stroke");
-        iconeTema.classList.add("fa-sun");
+        iconeTema.src = "/blog/img/icons/clear-sun.svg";
     }
 
     
