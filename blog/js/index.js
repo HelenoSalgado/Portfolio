@@ -29,35 +29,33 @@ function alternaTema(checked) {
      popSound.play();
   }
 
-    let darkMode = document.querySelector("#temaClaro");
-    let lightMode = document.querySelector("#temaEscuro");
     let iconeTema = document.querySelector(".dark-mode img");
-    
+    let styleMode = document.querySelector("head");
+    let dark = document.createElement("link")
+    dark.rel = "stylesheet";
 
     if (checked == true) {
-
-        lightMode.disabled = false;
-        darkMode.disabled = true;
+        dark.href = "/blog/css/mode-dark.css";
         iconeTema.src = "/blog/img/icons/mode-dark.svg";
 
     }
     if (checked == false) {
-        lightMode.disabled = true;
-        darkMode.disabled = false;
+        dark.href = "/blog/css/mode-light.css";
         iconeTema.src = "/blog/img/icons/clear-sun.svg";
     }
 
-    
+    styleMode.appendChild(dark);
+
 }
 
 volume.addEventListener("click", () =>{
   
   if (iVolume == 0) {
-    volume.classList.add("fa-volume-xmark");
+    volume.src = "/blog/img/icons/sound-mute.svg";
     iVolume++;
   }else{
     popSound.play();
-    volume.classList.remove("fa-volume-xmark");
+    volume.src = "/blog/img/icons/sound.svg";
     iVolume--;
   }
 })

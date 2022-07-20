@@ -18,7 +18,6 @@ section{
 }
 .logo{  
     margin-right: 20px;
-    width: 35px;
 }
 .navigation{
     display: flex;
@@ -163,6 +162,10 @@ section{
     position: absolute;
     opacity: 0;
 }
+.config, .menu-link:hover, .menu-item-articles a:hover, .search-link:hover, .recommendation li:hover{
+    background-color: #e7e7e7;
+    margin-left: .3rem;
+}
 main {
     margin: 0 auto 2rem auto; 
     max-width: 1100px;
@@ -211,7 +214,6 @@ main {
 article p{
     font-size: 1.3rem;
     margin-top: 1.5rem;
-    line-height: 1.6rem;
     color: #313131;
 }
 .article-link{
@@ -338,6 +340,80 @@ footer{
     padding: 3rem 0 4rem 0;
     width: 100%;
 }
+.newsletter-form{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-size: 1.3rem;
+    padding: 5px;
+}
+.newsletter-form label{
+    position: absolute;
+    font-family: var(--font-primary);
+    color: #424241;
+    text-transform: uppercase;
+}
+.newsletter-form input{
+    font-family: var(--font-secundary);
+    margin-top: 40px;
+    width: 100%;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid var(--cor-destaque);
+    background-color: transparent;
+    padding: 0;
+    color: #424241;
+    caret-color: var(--cor-destaque);
+    transition: 200ms ease-in;
+}
+.group-name{
+    margin-bottom: 20px;
+}
+.newsletter-form input:focus{
+    margin-top: 45px;
+    border-bottom-width: 2px;
+}
+.newsletter-form label:focus{
+    color: var(--cor-destaque);
+}
+.fa-user-tie, .fa-at{
+    display: none;
+    position: absolute;
+    top: 14px;
+    right: 95px;
+    opacity: .7;
+}
+.fa-envelope{
+    vertical-align: middle;
+}
+.newsletter-form input::placeholder, 
+textarea::placeholder{
+    color: var(--cor-font);
+}
+footer textarea{
+    background: #14171a2f;
+    background: -webkit-linear-gradient(to right, #971ac954, #971ac90a);
+    background: linear-gradient(to right, #971ac954, #971ac90a); 
+    color: #fff;
+    font-size: 1.3rem;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    caret-color: var(--cor-destaque);
+    padding: 5px;
+}
+.mensagem-alerta{
+    font-family: var(--font-primary);
+    color: #ff0000;
+}
+.mensagem-sucesso{
+    color: var(--cor-destaque);
+}
+.frente-enviar{
+    padding-left: 0;
+    padding-right: 0;
+}
 .sobre-mim h4{
     max-width: 400px;
     font-size: 1.7rem;
@@ -411,8 +487,14 @@ footer{
     .aside-article{
         display: none;
     }
+    .container-article {
+        display: block;
+    }
 } 
 @media (max-width: 500px){
+    .logo{  
+        margin-right: 0;
+    }
     .menu-hamburguer{
         width: 40px;
     }
@@ -433,7 +515,7 @@ footer{
         z-index: 10;
     }
     .menu-item{
-        flex: 1 1 50px; 
+        flex: 1 1 35px; 
     }
     .navigation{
         justify-content: space-between;
