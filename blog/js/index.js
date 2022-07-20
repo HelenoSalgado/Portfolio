@@ -11,13 +11,18 @@ var hamburguer = document.querySelector(".menu-hamburguer");
   hamburguer.addEventListener("click", function(){
     hamburguer.classList.toggle("show-menu");
     var menu = document.querySelector(".navigation-menu");
+    var config = document.querySelector(".config");
     
     if (iMenu == 1) {
+      setTimeout(() => {
+        config.style.opacity = "10"
+      }, 500);
       menu.style.right = "0";
       iMenu++;
     }
     else{
       menu.style.right = "-101%";
+      config.style.opacity = "0"
       iMenu--;
     }
     

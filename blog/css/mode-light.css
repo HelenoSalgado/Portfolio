@@ -22,7 +22,7 @@ body, footer{
 }
 
 .menu-link:hover, .menu-item-articles a:hover, .search-link:hover,
-main a:hover, .artigos-relacionados div p a:hover{
+main a:hover, .artigos-relacionados div p a:hover, .recommendation li a{
     color: var(--cor-primaria);
 }
 .menu-link img:hover, .search-link img:hover, .compartilhe-icons img:hover{
@@ -30,7 +30,7 @@ main a:hover, .artigos-relacionados div p a:hover{
 }
 .config, .menu-link:hover, .menu-item-articles a:hover, .search-link:hover, .recommendation li:hover{
     background-color: #e7e7e7;
-    margin-left: .3rem;
+    margin-left: .2rem;
 }
 .autor h4, .autor time, .article h1, .article p, .compartilhe p, .compartilhe a, .sobre-mim h4, footer p, footer a{
     color: #424241;

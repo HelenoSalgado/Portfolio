@@ -377,16 +377,6 @@ footer{
 .newsletter-form label:focus{
     color: var(--cor-destaque);
 }
-.fa-user-tie, .fa-at{
-    display: none;
-    position: absolute;
-    top: 14px;
-    right: 95px;
-    opacity: .7;
-}
-.fa-envelope{
-    vertical-align: middle;
-}
 .newsletter-form input::placeholder, 
 textarea::placeholder{
     color: var(--cor-font);
@@ -402,6 +392,9 @@ footer textarea{
     border-radius: 5px;
     caret-color: var(--cor-destaque);
     padding: 5px;
+}
+.frente-enviar img{
+    vertical-align: middle;
 }
 .mensagem-alerta{
     font-family: var(--font-primary);
@@ -457,6 +450,9 @@ footer textarea{
     width: fit-content;
     transition: 100ms ease-in;
 }
+.recommendation li a{
+    color: var(--cor-primaria);
+}
 .media-sociais, 
 .copyright{
     color: var(--cor-primaria);
@@ -498,10 +494,14 @@ footer textarea{
     .menu-hamburguer{
         width: 40px;
     }
+    .config{
+        opacity: 0;
+        transition: 200ms ease;
+    }
     .navigation-menu{
         position: fixed;
         padding-top: 20px;
-        top: 41px;
+        top: 40px;
         right: -101%;
         flex-direction: column;
         justify-content: end;
