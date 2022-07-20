@@ -12,279 +12,470 @@
     <meta property="og:type" content="website" />
     <meta defer property="og:url" content="https://heleno.dev/blog/o-que-e-hospedagem-de-sites" />
     <meta property="og:image" content="https://heleno.dev/img-icon/android-chrome-512x512.png" />
-    <meta http-equiv="Cache-Control" content="must-revalidate, public, max-age=8640000" >
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700&family=Poppins:ital,wght@0,200;0,300;1,200&display=swap" rel="stylesheet">
-    <!-- CSS -->
-    <!-- Favicons. -->
-    <link rel="apple-touch-icon" sizes="180x180" href="/assets/img-icon/apple-touch-icon.png">
-    <link rel="icon" type="/image/png" sizes="32x32" href="/assets/img-icon/favicon-32x32.png">
-    <link rel="icon" type="/image/png" sizes="16x16" href="/assets/img-icon/favicon-16x16.png">
-    <link rel="manifest" href="/assets/img-icon/site.webmanifest">
-
-    <style>
-        *, *::before, *::after {box-sizing: border-box;}* {margin: 0;}* {scrollbar-width: thin;}html, body {position: relative;scroll-behavior: smooth;}input, button, textarea, select {font: inherit;}#root, #__next {isolation: isolate;}:root{--cor-primaria: #14171a;--cor-secundaria: #1e252e;--cor-font: #dddddd;--cor-destaque: #971ac9;--shadow-color: 214deg 34% 5%;--shadow-elevation-medium: 0.3px 0.5px 0.7px hsl(var(--shadow-color) / 0.10), 0.8px 1.6px 2px -0.8px hsl(var(--shadow-color) / 0.10), 2.1px 4.1px 5.2px -1.7px hsl(var(--shadow-color) / 0.10), 5px 10px 12.6px -2.5px hsl(var(--shadow-color) / 0.10);--shadow-color: 210deg 22% 2%;--font-primary: 'Baloo 2', cursive;--font-secundary: 'Poppins', sans-serif;;--font-action: 'Poppins', sans-serif;;}body {-webkit-font-smoothing: antialiased;font-size: 16px;overflow-X: hidden;min-width: 320px;background-color: rgb(248, 247, 247);padding-top: 30px;}body::-webkit-scrollbar {width: 8px;}body::-webkit-scrollbar-track {background-color: rgb(247, 247, 247);}body::-webkit-scrollbar-thumb {background-color: #14171a54;border-radius: 20px;}h1, h2, h3, h4{overflow-wrap: break-word;font-family: var(--font-primary);color: #424241;}p, input{overflow-wrap: break-word;font-family: var(--font-secundary);color: #313131;}a, .title-article-related{font-family: var(--font-action);color: var(--cor-destaque);text-decoration: none;}.empurravel {position: relative;width: 9rem;border: none;background: transparent;padding: 0;cursor: pointer;outline-offset: 4px;transition: filter 250ms;}.sombra {position: absolute;top: 0;left: 0;width: 100%;height: 100%;border-radius: 12px;background: hsl(0deg 0% 0% / 0.25);will-change: transform;transform: translateY(2px);transition: transform 600ms cubic-bezier(.3, .7, .4, 1);}.borda {position: absolute;top: 0;left: 0;width: 100%;height: 100%;border-radius: 12px;background: linear-gradient( to left, hsl(283, 77%, 45%) 0%, hsl(283, 89%, 28%) 8%, hsl(283, 89%, 28%) 92%, hsl(283, 77%, 45%) 100% );}.frente {display: block;position: relative;padding: 12px 42px;border-radius: 12px;font-family: var(--font-action);font-weight: 700;font-size: 1.25rem;color: white;background: hsl(283, 77%, 45%);will-change: transform;transform: translateY(-4px);transition: transform 600ms cubic-bezier(.3, .7, .4, 1);}.empurravel:hover {filter: brightness(110%);}.empurravel:hover .frente {transform: translateY(-6px);transition: transform 250ms cubic-bezier(.3, .7, .4, 1.5);}.empurravel:active .frente {transform: translateY(-2px);transition: transform 34ms;}.empurravel:hover .sombra {transform: translateY(4px);transition: transform 250ms cubic-bezier(.3, .7, .4, 1.5);}.empurravel:active .sombra {transform: translateY(1px);transition: transform 34ms;}.empurravel:focus:not(:focus-visible) {outline: none;}section{max-width: 1200px;min-width: 320px;}.header-fixed {position: fixed;width: 100%;height: auto;top: 0;z-index: 10;background-color: #f8f7f7;overflow: hidden;}.logo{margin-right: 20px;}.navigation{display: flex;width: 100%;max-width: 1100px;height: auto;margin: auto;justify-content: space-around;align-items: center;padding: 0 15px;}.navigation-menu{display: flex;justify-content: center;align-items: center;width: 100%;max-width: 1000px;margin: auto;height: 60px;padding-left: 0;}.menu-item{flex: 1 1 200px;position: relative;list-style: none;}.menu-link{text-transform: uppercase;font-weight: bolder;padding: 10px 0;border-radius: 3px;}.menu-link svg{width: 18px;vertical-align: middle;}.menu-item a img{margin: 0;vertical-align: middle;margin-bottom: 4px;}.up-arrow{transform: rotate(0.5turn);}.menu-item-articles{position: fixed;display: flex;flex-wrap: wrap;max-width: 300px;gap: 20px;top: 40px;background-color: rgb(248, 247, 247);padding: 10px;border-radius: 7px;box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.301);visibility: hidden;opacity: 0;}.item-articles-visible{top: 70px;visibility: visible;opacity: 10;}.menu-item-articles a{position: relative;font-family: var(--font-secundary);border-left: 3px solid var(--cor-destaque);padding: .5rem;}.menu-link:hover{padding: 10px;margin-left: 0;}.search-link{flex-basis: 50px;cursor: pointer;padding: 8px;text-align: center;vertical-align: middle;border-radius: 3px;}.menu-item-search{position: fixed;top: 40px;left: 50%;transform: translate(-50%);max-width: 1000px;margin: auto;z-index: 2;}.menu-hamburguer{width: 0;height: 40px;display: flex;flex-direction: column;justify-content: space-evenly;cursor: pointer;transition: 1s;}.line {width: 100%;height: 3px;background-color: var(--cor-destaque);transition: transform 1s;}.show-menu #line1 {transform: rotate(45deg) translate(6px, 6px);width: 70%;}.show-menu #line2 {opacity: 0;visibility: hidden;}.show-menu #line3 {transform: rotate(-45deg) translate(8px, -9px);width: 70%;}.config{position: relative;background-color: #e7e7e7;height: 40px;display: inline-flex;justify-content: space-around;align-items: center;column-gap: 20px;padding: 5px;margin-left: 10px;border-radius: 3px;}.dark-mode img{margin-top: 3px;}.dark-mode input{position: absolute;opacity: 0;}.config, .menu-link:hover, .menu-item-articles a:hover, .search-link:hover, .recommendation li:hover{background-color: #e7e7e7;margin-left: .3rem;}main {margin: 0 auto 2rem auto;max-width: 1100px;background-color: rgb(248, 247, 247);padding: 1rem;}.autor{margin-top: 50px;display: flex;justify-content: start;align-items: center;gap: 20px;color: #2c2c2c;}.autor img{width: 70px;height: 70px;border-radius: 50%;}.autor h4{font-size: 1.3rem;line-height: 1.4rem;text-transform: uppercase;}.autor time{font-family: var(--font-primary);}.container-article{position: relative;display: flex;column-gap: 50px;}.article{position: relative;flex: 1;}.article h1{margin-top: 3rem;text-align: left;line-height: 2.5rem;font-size: 2.5rem;}article p{font-size: 1.2rem;margin-top: 1.5rem;line-height: 1.6rem;}.article-link{font-weight: 500;font-size: inherit;}.article-link{text-shadow: 1px .2px 1px rgba(0, 0, 0, 0.363);}.article-link:visited{color: #614681;}abbr{text-decoration: none;border-radius: 0 10px;border-bottom: .5px solid var(--cor-destaque);text-shadow: .2px .5px 1px rgba(0, 0, 0, 0.514);}.aside-article{background-color: #e7e7e7;width: 20%;height: fit-content;position: sticky;top: 150px;right: 0;padding: 10px;border-radius: 3px;}.aside-article-nav{display: flex;flex-direction: column;}.aside-article-nav h3{text-transform: uppercase;}.aside-article-nav a{font-size: .9rem;padding: 5px 0;}.compartilhe{padding: 2rem 0;}.compartilhe p{display: inline;margin: 2rem .3rem .3rem 0;text-transform: uppercase;font-size: .9rem;}.compartilhe-icons{margin-top: .5rem;display: flex;justify-content: start;align-items: center;gap: 10px;}.compartilhe-icons img{border-radius: 50%;cursor: pointer;}.like {display: flex;justify-content: space-around;align-items: center;border: 1px solid var(--cor-font);border-radius: 5px;min-width: 60px;height: 35px;padding: 5px;cursor: pointer;}.like:hover svg path {fill: #ff0000e1 }.artigos-relacionados{margin: 5rem 0;width: 100%;display: flex;flex-wrap: wrap;}.artigos-relacionados div{margin-right: 2rem;max-width: 400px;min-width: 300px;}.title-article-related{max-width: 300px;font-size: 1.5rem;line-height: 2rem;}.artigos-relacionados img{transition: 300ms ease-in;border: .5px solid var(--cor-destaque);border-radius: 7px;}.artigos-relacionados img:hover{filter: contrast(120%);border: .5px solid var(--cor-primaria) }.sound:hover, .dark-mode img:hover, .feed:hover, .compartilhe-icons img:hover, .media-sociais a img:hover{filter: drop-shadow(1px 1px 1px var(--cor-primaria));}footer{position: relative;width: 100%;background-color: rgb(240, 240, 240);padding: 20px 0 0 0;min-height: calc(100vh - 60px);}.newsletter-message{max-width: 1100px;margin: auto;}.newsletter-message > p:first-child{font-size: 1.7rem;max-width: 500px;padding: 2rem 0 0 20px;line-height: 1.9rem;}.newsletter{width: 100%;margin: auto;display: flex;flex-wrap: wrap;justify-content: center;align-items: center;padding: 3rem 0 4rem 0;}.newsletter-form{flex: 1 1 400px;display: flex;flex-direction: column;font-size: 1.3rem;gap: 10px;padding: 0 20px;}.newsletter-form label{position: absolute;font-family: var(--font-primary);color: #424241;text-transform: uppercase;}.newsletter-form input{margin-top: 40px;width: 100%;border: none;outline: none;border-bottom: 1px solid var(--cor-destaque);background-color: transparent;padding: 0;caret-color: var(--cor-destaque);}.group-name{margin-bottom: 20px;}.newsletter-form input:focus{margin-top: 45px;border-bottom-width: 2px;}.newsletter-form label:focus{color: var(--cor-destaque);}.newsletter-form input::placeholder, textarea::placeholder{color: var(--cor-font);}.frente-enviar img{vertical-align: middle;}.mensagem-alerta{font-family: var(--font-primary);color: #ff0000;}.mensagem-sucesso{color: var(--cor-destaque);}.frente-enviar{padding-left: 0;padding-right: 0;}.sobre-mim{flex: 1 1 400px;padding: 20px;}.sobre-mim h4{max-width: 400px;font-size: 1.7rem;text-transform: uppercase;}.sobre-mim-texto{font-size: 1.2rem;}.rodape02{padding-top: 2rem;background-color: #ffffff;}.recommendation{display: flex;justify-content: space-around;align-items: baseline;flex-wrap: wrap;padding: 20px;gap: 20px;}.recommendation div{flex: 1 1 200px;height: auto;margin-bottom: 20px;}.recommendation h3{color: #424241;text-transform: capitalize;}.recommendation li{list-style: none;border-left: 3px solid #2c2c2c;padding: .5rem;margin: .5rem 0;width: fit-content;}.recommendation li a{color: var(--cor-primaria);}.media-sociais, .copyright{color: var(--cor-primaria);}.copyright{text-align: center;padding: .5rem;font-size: 1rem;}.media-sociais a img{margin: 1rem 1rem 0 0;opacity: .7;}.link-topo{position: fixed;bottom: 20px;right: 10px;width: 40px;height: 40px;z-index: 1;border-radius: 50%;}@media (max-width: 750px){h2{font-size: 2.3rem;}.aside-article{display: none;}.container-article {display: block;}.recommendation{gap: 10px;}}@media (max-width: 500px){.logo{margin-right: 0;}.menu-hamburguer{width: 40px;}.config{opacity: 0;transition: 200ms ease;}.navigation-menu{position: fixed;padding-top: 20px;top: 40px;right: -101%;flex-direction: column;justify-content: end;height: auto;background-color: #f8f7f7;transition: 500ms ease-in;}.menu-item-articles{top: 95px;left: 50px;z-index: 10;}.menu-item{flex: 1 1 35px;}.navigation{justify-content: space-between;padding: 0 10px;}.search{top: 200px;z-index: 100;width: 100%;}}.menu-link:hover, .menu-item-articles a:hover, .search-link:hover, main a:hover, .title-article-related:hover, .recommendation li a{color: var(--cor-primaria);}.menu-item-articles a, .menu-link, .menu-item-articles, .search-link, .sound, .dark-mode img, .feed, .title-article-related, .newsletter-form input, .recommendation li, .media-sociais a img{transition: 150ms ease-in;}.sound, .dark-mode img, .feed{cursor: pointer;}
-    </style>
-</head>
-<body>
-    <header id="header" class="header-fixed">
-        <nav class="navigation">
-            <img width="35" height="40" class="logo" src="/blog/img/hsl-logo-transparent.webp" alt="logo">
-            <ul class="navigation-menu">
-                <li class="menu-item">
-                    <a class="menu-link menu-link-articles" href="#/#">Posts 
-                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
-                    </a> 
-                    <div class="menu-item-articles"> 
-                        <a href="">HTML</a>
-                        <a href="">CSS</a>
-                        <a href="">JavaScript</a>
-                        <a href="">Fora do escopo</a>
-                    </div>
-                </li>
-                <li class="menu-item">
-                    <a href="mailto:contato@heleno.dev?subject=[Escreva o Assunto Aqui]" class="menu-link">Email <img width="23" height="23" src="/blog/img/icons/email.svg" alt="Ilustração de email" title="Enviar Email"></a>
-                </li> 
-                <li class="menu-item search-link">
-                    <img width="20" height="20" src="/blog/img/icons/search.svg" alt="Lupa de pesquisa" title="Pesquisar">
-                </li>
-            </ul>
-            <div class="config">
-                <img width="25" height="25" class="sound" src="/blog/img/icons/sound.svg" alt="som de interatividade" title="Som">
-                <label class="dark-mode">
-                    <img width="20" height="20" src="/blog/img/icons/clear-sun.svg" title="Modo Noturno" alt="Modo Noturno">
-                    <input type="checkbox" onclick="alternaTema(checked)">
-                </label>
-                <img width="20" height="20" class="feed" src="/blog/img/icons/feed.svg" title="Feed" alt="Feed de posts">
-            </div>
-            <div class="menu-hamburguer">
-                <div class="line" id="line1"></div>
-                <div class="line" id="line2"></div>
-                <div class="line" id="line3"></div>
-            </div> 
-        </nav>
-    </header>
-    <div class="search">
+    <meta http-equiv="cache-control" content="max-age=8640000" />
+    <meta http-equiv="Pragma" content="public">
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700&family=Poppins:ital,wght@0,200;0,300;1,200&display=swap" rel="stylesheet"> -->
+        <!-- CSS -->
+        <!-- Favicons. -->
+        <link rel="apple-touch-icon" sizes="180x180" href="/assets/img-icon/apple-touch-icon.png">
+        <link rel="icon" type="/image/png" sizes="32x32" href="/assets/img-icon/favicon-32x32.png">
+        <link rel="icon" type="/image/png" sizes="16x16" href="/assets/img-icon/favicon-16x16.png">
+        <link rel="manifest" href="/assets/img-icon/site.webmanifest">
+        
         <style>
-            .gsc-search-button-v2{
-                background-color: #971ac9;
-                height: 40px;
-                border: none;
-                border-radius: 5px;
-                transition: 200ms ease-in;
+            /* devanagari */
+            @font-face {
+                font-family: 'Baloo 2';
+                font-style: normal;
+                font-weight: 500;
+                font-display: swap;
+                src: url(https://fonts.gstatic.com/s/baloo2/v14/wXKrE3kTposypRyd51ncANwr.woff2) format('woff2');
+                unicode-range: U+0900-097F, U+1CD0-1CF6, U+1CF8-1CF9, U+200C-200D, U+20A8, U+20B9, U+25CC, U+A830-A839, U+A8E0-A8FB;
             }
-            .gsc-search-button-v2:hover{
-                background-color: #14171a;
+            /* vietnamese */
+            @font-face {
+                font-family: 'Baloo 2';
+                font-style: normal;
+                font-weight: 500;
+                font-display: swap;
+                src: url(https://fonts.gstatic.com/s/baloo2/v14/wXKrE3kTposypRyd51fcANwr.woff2) format('woff2');
+                unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB;
             }
-            .gsc-control-cse {
-                padding: 0;
-                border: none;
+            /* latin-ext */
+            @font-face {
+                font-family: 'Baloo 2';
+                font-style: normal;
+                font-weight: 500;
+                font-display: swap;
+                src: url(https://fonts.gstatic.com/s/baloo2/v14/wXKrE3kTposypRyd51bcANwr.woff2) format('woff2');
+                unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
             }
-            form.gsc-search-box {
-                max-width: 600px;
+            /* latin */
+            @font-face {
+                font-family: 'Baloo 2';
+                font-style: normal;
+                font-weight: 500;
+                font-display: swap;
+                src: url(https://fonts.gstatic.com/s/baloo2/v14/wXKrE3kTposypRyd51jcAA.woff2) format('woff2');
+                unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
             }
-            .gsc-control-wrapper-cse {
-                margin-top: 30px;
-                padding: 20px;
-                border-radius: 7px;
-                box-shadow: 1px 1px 5px #0000007a;
+            /* devanagari */
+            @font-face {
+                font-family: 'Baloo 2';
+                font-style: normal;
+                font-weight: 600;
+                font-display: swap;
+                src: url(https://fonts.gstatic.com/s/baloo2/v14/wXKrE3kTposypRyd51ncANwr.woff2) format('woff2');
+                unicode-range: U+0900-097F, U+1CD0-1CF6, U+1CF8-1CF9, U+200C-200D, U+20A8, U+20B9, U+25CC, U+A830-A839, U+A8E0-A8FB;
             }
-            .gsc-results-wrapper-visible {
-                height: 400px;
-                overflow: auto;
+            /* vietnamese */
+            @font-face {
+                font-family: 'Baloo 2';
+                font-style: normal;
+                font-weight: 600;
+                font-display: swap;
+                src: url(https://fonts.gstatic.com/s/baloo2/v14/wXKrE3kTposypRyd51fcANwr.woff2) format('woff2');
+                unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB;
             }
-            .gsc-input{
-                height: 40px;
+            /* latin-ext */
+            @font-face {
+                font-family: 'Baloo 2';
+                font-style: normal;
+                font-weight: 600;
+                font-display: swap;
+                src: url(https://fonts.gstatic.com/s/baloo2/v14/wXKrE3kTposypRyd51bcANwr.woff2) format('woff2');
+                unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
             }
-        </style>
-    </div>
-    <main>
-        <div class="container-article">
-            <article class="article">
-                
-                <div class="autor">
-                    <img src="/blog/img/HELENO-SALGADO-p.webp" alt="Foto do Autor do artigo">
-                    <div>
-                        <h4>Heleno Salgado Lopes</h4>
-                        <time>
-                            03/01/2022
-                        </time> 
-                    </div>
-                </div>
-
-                <h1>O que é uma hospedagem de sites</h1> 
-                
-                <p>Sempre que viajamos nos hospedamos em algum lugar. Ali, na hospedagem, alimentamos e podemos descansar em paz. Com sites não é muito diferente, eles também precisam de uma hospedagem. Afinal, pode-se dizer que eles viajam o mundo inteiro. Este site, por exemplo, só está sendo apresentado na tela do seu dispositivo, porque antes foi hospedado e está sendo alimentado pelo &#39;servidor de hospedagem&#39;.</p>
-                
-                <p>Para esclarecer, todo site precisa estar armazenado e  localizado em algum lugar na Rede Mundial de Computadores (sigla em Inglês, WWW), de maneira que, quando for solicitado pelo cliente, ele seja imediatamente exibido na tela do dispositivo. Todo o conteúdo do site, tais como os arquivos HTML, PHP, CSS, JS, áudios, vídeos e imagens são armazenados pelo servidor de hospedagem e podem ser solicitados a qualquer hora do dia ou da noite.</p>
-                
-                <p>Diferente da hospedagem para humanos, que está limitada a uma região específica, a hospedagem para sites está disponível para qualquer região do mundo. O site fica hospedado localmente, mas todas as vezes que é solicitado para visualização, o servidor envia uma cópia para o cliente, que é o dispositivo do usuário.</p>
-                
-                <p>Existem várias empresas que prestam esse serviço, seja de forma gratuita ou paga. Para sites simples que ocupa pouco espaço de armazenamento, como um portfólio, uma página de links ou até mesmo um blog você encontra hospedagens gratuitas na <a class="article-link" href="https://www.awardspace.com/" target="_blank">Awardspace</a>, <a class="article-link" href="https://www.hostinger.com.br/hospedagem-gratis" target="_blank">Hostinger</a> e <a class="article-link" href="https://infinityfree.net/" target="_blank">InfinityFree</a>, mas essas empresas também oferecem um serviço aprimorado por um valor mensal ou anual.</p>
-                
-                <p>A cada requisição que é feita pelo cliente, o site precisa estar no ar, precisa responder rapidamente, precisa ser seguro, e você só poderá exigir essas e outras coisas, se você estiver pagando. A empresa de hospedagem tem seus custos, a cada requisição feita é um gasto a mais nos equipamentos, nos megas de internet, na energia elétrica, em tudo.</p>
-                
-                <p>Agora, falando da hospedagem gratuita, tem algumas coisas importantes a serem avaliadas, mesmo que seu site seja leve, simples e pequeno, a hospedagem gratuita não suportará todo o tráfico dos usuário se estes forem muitos acessando simultaneamente e/ou exceder um determinado limite de acessos mensal. Essas hospedagens também não costumam oferecer um serviço de segurança satisfatório e pode até limitar os tipos de arquivos usados no site.</p>
-                
-                <p>Aí fica à sua escolha, a minha dica é que contate um desenvolvedor para fazer um dimensionamento e ver se vale a pena hospedar seu site gratuitamente. De qualquer maneira, se você perceber que o serviço gratuito está sendo insuficiente, você pode mudar para um plano pago imediatamente.</p>
-                
-                <p>O propósito deste artigo foi mostrar que todo conteúdo do seu site precisa está hospedado em algum lugar da <abbr title="Abreviação de World Wide Web, Rede Mundial de Computadores.">Web</abbr>, porém, para acessar esse site você precisa registrar um nome de domínio e vincular ao seu servidor de hospedagem.</p>
-                
-                <audio preload="auto" class="article-link-sound" src="/assets/sons/puxado-pop.wav"></audio>
-            </article>
-            <aside class="aside-article">
-                <nav class="aside-article-nav">
-                    <h3>índice</h3>
-                    <a href="#">navegação Lorem ipsum dolor sit</a>
-                    <a href="#">navegação</a>
-                    <a href="#">navegação</a>
-                    <a href="#">navegação</a>
-                    <a href="#">navegação</a>
-                    <a href="#">navegação</a>
-                    <a href="#">navegação</a>
-                </nav>
-            </aside>
-        </div>
-        <div class="compartilhe" onclick="shareUrl(event)">
-            <p >Compartilhe</p>
-            <i class="fa-solid fa-share-nodes"></i>
+            /* latin */
+            @font-face {
+                font-family: 'Baloo 2';
+                font-style: normal;
+                font-weight: 600;
+                font-display: swap;
+                src: url(https://fonts.gstatic.com/s/baloo2/v14/wXKrE3kTposypRyd51jcAA.woff2) format('woff2');
+                unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+            }
+            /* devanagari */
+            @font-face {
+                font-family: 'Baloo 2';
+                font-style: normal;
+                font-weight: 700;
+                font-display: swap;
+                src: url(https://fonts.gstatic.com/s/baloo2/v14/wXKrE3kTposypRyd51ncANwr.woff2) format('woff2');
+                unicode-range: U+0900-097F, U+1CD0-1CF6, U+1CF8-1CF9, U+200C-200D, U+20A8, U+20B9, U+25CC, U+A830-A839, U+A8E0-A8FB;
+            }
+            /* vietnamese */
+            @font-face {
+                font-family: 'Baloo 2';
+                font-style: normal;
+                font-weight: 700;
+                font-display: swap;
+                src: url(https://fonts.gstatic.com/s/baloo2/v14/wXKrE3kTposypRyd51fcANwr.woff2) format('woff2');
+                unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB;
+            }
+            /* latin-ext */
+            @font-face {
+                font-family: 'Baloo 2';
+                font-style: normal;
+                font-weight: 700;
+                font-display: swap;
+                src: url(https://fonts.gstatic.com/s/baloo2/v14/wXKrE3kTposypRyd51bcANwr.woff2) format('woff2');
+                unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+            }
+            /* latin */
+            @font-face {
+                font-family: 'Baloo 2';
+                font-style: normal;
+                font-weight: 700;
+                font-display: swap;
+                src: url(https://fonts.gstatic.com/s/baloo2/v14/wXKrE3kTposypRyd51jcAA.woff2) format('woff2');
+                unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+            }
+            /* devanagari */
+            @font-face {
+                font-family: 'Poppins';
+                font-style: italic;
+                font-weight: 200;
+                font-display: swap;
+                src: url(https://fonts.gstatic.com/s/poppins/v20/pxiDyp8kv8JHgFVrJJLmv1pVFteOcEg.woff2) format('woff2');
+                unicode-range: U+0900-097F, U+1CD0-1CF6, U+1CF8-1CF9, U+200C-200D, U+20A8, U+20B9, U+25CC, U+A830-A839, U+A8E0-A8FB;
+            }
+            /* latin-ext */
+            @font-face {
+                font-family: 'Poppins';
+                font-style: italic;
+                font-weight: 200;
+                font-display: swap;
+                src: url(https://fonts.gstatic.com/s/poppins/v20/pxiDyp8kv8JHgFVrJJLmv1pVGdeOcEg.woff2) format('woff2');
+                unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+            }
+            /* latin */
+            @font-face {
+                font-family: 'Poppins';
+                font-style: italic;
+                font-weight: 200;
+                font-display: swap;
+                src: url(https://fonts.gstatic.com/s/poppins/v20/pxiDyp8kv8JHgFVrJJLmv1pVF9eO.woff2) format('woff2');
+                unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+            }
+            /* devanagari */
+            @font-face {
+                font-family: 'Poppins';
+                font-style: normal;
+                font-weight: 200;
+                font-display: swap;
+                src: url(https://fonts.gstatic.com/s/poppins/v20/pxiByp8kv8JHgFVrLFj_Z11lFc-K.woff2) format('woff2');
+                unicode-range: U+0900-097F, U+1CD0-1CF6, U+1CF8-1CF9, U+200C-200D, U+20A8, U+20B9, U+25CC, U+A830-A839, U+A8E0-A8FB;
+            }
+            /* latin-ext */
+            @font-face {
+                font-family: 'Poppins';
+                font-style: normal;
+                font-weight: 200;
+                font-display: swap;
+                src: url(https://fonts.gstatic.com/s/poppins/v20/pxiByp8kv8JHgFVrLFj_Z1JlFc-K.woff2) format('woff2');
+                unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+            }
+            /* latin */
+            @font-face {
+                font-family: 'Poppins';
+                font-style: normal;
+                font-weight: 200;
+                font-display: swap;
+                src: url(https://fonts.gstatic.com/s/poppins/v20/pxiByp8kv8JHgFVrLFj_Z1xlFQ.woff2) format('woff2');
+                unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+            }
+            /* devanagari */
+            @font-face {
+                font-family: 'Poppins';
+                font-style: normal;
+                font-weight: 300;
+                font-display: swap;
+                src: url(https://fonts.gstatic.com/s/poppins/v20/pxiByp8kv8JHgFVrLDz8Z11lFc-K.woff2) format('woff2');
+                unicode-range: U+0900-097F, U+1CD0-1CF6, U+1CF8-1CF9, U+200C-200D, U+20A8, U+20B9, U+25CC, U+A830-A839, U+A8E0-A8FB;
+            }
+            /* latin-ext */
+            @font-face {
+                font-family: 'Poppins';
+                font-style: normal;
+                font-weight: 300;
+                font-display: swap;
+                src: url(https://fonts.gstatic.com/s/poppins/v20/pxiByp8kv8JHgFVrLDz8Z1JlFc-K.woff2) format('woff2');
+                unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+            }
+            /* latin */
+            @font-face {
+                font-family: 'Poppins';
+                font-style: normal;
+                font-weight: 300;
+                font-display: swap;
+                src: url(https://fonts.gstatic.com/s/poppins/v20/pxiByp8kv8JHgFVrLDz8Z1xlFQ.woff2) format('woff2');
+                unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+            }
             
-            <div class="compartilhe-icons">
-                <img width="41" height="41" src="../img/icons/facebook_icon.svg" alt="icone do Facebbok" title="Facebook">
-                <img width="41" height="41" src="../img/icons/whatsapp_icon.svg" alt="icone de WhatsApp" title="WhatsApp">
-                <img width="41" height="41" src="../img/icons/twitter_icon.svg" alt="icone de Twitter" title="Twitter">
-                <img width="41" height="41" src="../img/icons/linkedin_icon.svg" alt="icone do Linkedin" title="Linkedin">
-                <img width="41" height="41" src="../img/icons/pocket_logo.svg" alt="icone do pocket" title="Pocket">
-                <div class="like">
-                    <svg
-                    width="27"
-                    height="23"
-                    viewBox="0 0 23 20"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                    >
-                    <path
-                    d="M11.9649 3.12832C8.29171 -2.5454 0.857422 0.545461 0.857422 6.72603C0.857422 11.3672 11.0494 18.6272 11.9649 19.5712C12.8866 18.6272 22.5717 11.3672 22.5717 6.72603C22.5717 0.592318 15.6449 -2.5454 11.9649 3.12832Z"
-                    fill="#ff000086"
-                    />
-                </svg>
-                <span class="count-motion">10
+            *, *::before, *::after {box-sizing: border-box;}* {margin: 0;}* {scrollbar-width: thin;}html, body {position: relative;scroll-behavior: smooth;}input, button, textarea, select {font: inherit;}#root, #__next {isolation: isolate;}:root{--cor-primaria: #14171a;--cor-secundaria: #1e252e;--cor-font: #dddddd;--cor-destaque: #971ac9;--shadow-color: 214deg 34% 5%;--shadow-elevation-medium: 0.3px 0.5px 0.7px hsl(var(--shadow-color) / 0.10), 0.8px 1.6px 2px -0.8px hsl(var(--shadow-color) / 0.10), 2.1px 4.1px 5.2px -1.7px hsl(var(--shadow-color) / 0.10), 5px 10px 12.6px -2.5px hsl(var(--shadow-color) / 0.10);--shadow-color: 210deg 22% 2%;--font-primary: 'Baloo 2', cursive;--font-secundary: 'Poppins', sans-serif;;--font-action: 'Poppins', sans-serif;;}body {-webkit-font-smoothing: antialiased;font-size: 16px;overflow-X: hidden;min-width: 320px;background-color: rgb(248, 247, 247);padding-top: 30px;}body::-webkit-scrollbar {width: 8px;}body::-webkit-scrollbar-track {background-color: rgb(247, 247, 247);}body::-webkit-scrollbar-thumb {background-color: #14171a54;border-radius: 20px;}h1, h2, h3, h4{overflow-wrap: break-word;font-family: var(--font-primary);color: #424241;}p, input{overflow-wrap: break-word;font-family: var(--font-secundary);color: #313131;}a, .title-article-related{font-family: var(--font-action);color: var(--cor-destaque);text-decoration: none;}.empurravel {position: relative;width: 9rem;border: none;background: transparent;padding: 0;cursor: pointer;outline-offset: 4px;transition: filter 250ms;}.sombra {position: absolute;top: 0;left: 0;width: 100%;height: 100%;border-radius: 12px;background: hsl(0deg 0% 0% / 0.25);will-change: transform;transform: translateY(2px);transition: transform 600ms cubic-bezier(.3, .7, .4, 1);}.borda {position: absolute;top: 0;left: 0;width: 100%;height: 100%;border-radius: 12px;background: linear-gradient( to left, hsl(283, 77%, 45%) 0%, hsl(283, 89%, 28%) 8%, hsl(283, 89%, 28%) 92%, hsl(283, 77%, 45%) 100% );}.frente {display: block;position: relative;padding: 12px 42px;border-radius: 12px;font-family: var(--font-action);font-weight: 700;font-size: 1.25rem;color: white;background: hsl(283, 77%, 45%);will-change: transform;transform: translateY(-4px);transition: transform 600ms cubic-bezier(.3, .7, .4, 1);}.empurravel:hover {filter: brightness(110%);}.empurravel:hover .frente {transform: translateY(-6px);transition: transform 250ms cubic-bezier(.3, .7, .4, 1.5);}.empurravel:active .frente {transform: translateY(-2px);transition: transform 34ms;}.empurravel:hover .sombra {transform: translateY(4px);transition: transform 250ms cubic-bezier(.3, .7, .4, 1.5);}.empurravel:active .sombra {transform: translateY(1px);transition: transform 34ms;}.empurravel:focus:not(:focus-visible) {outline: none;}section{max-width: 1200px;min-width: 320px;}.header-fixed {position: fixed;width: 100%;height: auto;top: 0;z-index: 10;background-color: #f8f7f7;overflow: hidden;}.logo{margin-right: 20px;}.navigation{display: flex;width: 100%;max-width: 1100px;height: auto;margin: auto;justify-content: space-around;align-items: center;padding: 0 15px;}.navigation-menu{display: flex;justify-content: center;align-items: center;width: 100%;max-width: 1000px;margin: auto;height: 60px;padding-left: 0;}.menu-item{flex: 1 1 200px;position: relative;list-style: none;}.menu-link{text-transform: uppercase;font-weight: bolder;padding: 10px 0;border-radius: 3px;}.menu-link svg{width: 18px;vertical-align: middle;}.menu-item a img{margin: 0;vertical-align: middle;margin-bottom: 4px;}.up-arrow{transform: rotate(0.5turn);}.menu-item-articles{position: fixed;display: flex;flex-wrap: wrap;max-width: 300px;gap: 20px;top: 40px;background-color: rgb(248, 247, 247);padding: 10px;border-radius: 7px;box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.301);visibility: hidden;opacity: 0;}.item-articles-visible{top: 70px;visibility: visible;opacity: 10;}.menu-item-articles a{position: relative;font-family: var(--font-secundary);border-left: 3px solid var(--cor-destaque);padding: .5rem;}.menu-link:hover{padding: 10px;margin-left: 0;}.search-link{flex-basis: 50px;cursor: pointer;padding: 8px;text-align: center;vertical-align: middle;border-radius: 3px;}.menu-item-search{position: fixed;top: 40px;left: 50%;transform: translate(-50%);max-width: 1000px;margin: auto;z-index: 2;}.menu-hamburguer{width: 0;height: 40px;display: flex;flex-direction: column;justify-content: space-evenly;cursor: pointer;transition: 1s;}.line {width: 100%;height: 3px;background-color: var(--cor-destaque);transition: transform 1s;}.show-menu #line1 {transform: rotate(45deg) translate(6px, 6px);width: 70%;}.show-menu #line2 {opacity: 0;visibility: hidden;}.show-menu #line3 {transform: rotate(-45deg) translate(8px, -9px);width: 70%;}.config{position: relative;background-color: #e7e7e7;height: 40px;display: inline-flex;justify-content: space-around;align-items: center;column-gap: 20px;padding: 5px;margin-left: 10px;border-radius: 3px;}.dark-mode img{margin-top: 3px;}.dark-mode input{position: absolute;opacity: 0;}.config, .menu-link:hover, .menu-item-articles a:hover, .search-link:hover, .recommendation li:hover{background-color: #e7e7e7;margin-left: .3rem;}main {margin: 0 auto 2rem auto;max-width: 1100px;background-color: rgb(248, 247, 247);padding: 1rem;}.autor{margin-top: 50px;display: flex;justify-content: start;align-items: center;gap: 20px;color: #2c2c2c;}.autor img{width: 70px;height: 70px;border-radius: 50%;}.autor h4{font-size: 1.3rem;line-height: 1.4rem;text-transform: uppercase;}.autor time{font-family: var(--font-primary);}.container-article{position: relative;display: flex;column-gap: 50px;}.article{position: relative;flex: 1;}.article h1{margin-top: 3rem;text-align: left;line-height: 2.5rem;font-size: 2.5rem;}article p{font-size: 1.2rem;margin-top: 1.5rem;line-height: 1.6rem;}.article-link{font-weight: 500;font-size: inherit;}.article-link{text-shadow: 1px .2px 1px rgba(0, 0, 0, 0.363);}.article-link:visited{color: #614681;}abbr{text-decoration: none;border-radius: 0 10px;border-bottom: .5px solid var(--cor-destaque);text-shadow: .2px .5px 1px rgba(0, 0, 0, 0.514);}.aside-article{background-color: #e7e7e7;width: 20%;height: fit-content;position: sticky;top: 150px;right: 0;padding: 10px;border-radius: 3px;}.aside-article-nav{display: flex;flex-direction: column;}.aside-article-nav h3{text-transform: uppercase;}.aside-article-nav a{font-size: .9rem;padding: 5px 0;}.compartilhe{padding: 2rem 0;}.compartilhe p{display: inline;margin: 2rem .3rem .3rem 0;text-transform: uppercase;font-size: .9rem;}.compartilhe-icons{margin-top: .5rem;display: flex;justify-content: start;align-items: center;gap: 10px;}.compartilhe-icons img{border-radius: 50%;cursor: pointer;}.like {display: flex;justify-content: space-around;align-items: center;border: 1px solid var(--cor-font);border-radius: 5px;min-width: 60px;height: 35px;padding: 5px;cursor: pointer;}.like:hover svg path {fill: #ff0000e1 }.artigos-relacionados{margin: 5rem 0;width: 100%;display: flex;flex-wrap: wrap;}.artigos-relacionados div{margin-right: 2rem;max-width: 400px;min-width: 300px;}.title-article-related{max-width: 300px;font-size: 1.5rem;line-height: 2rem;}.artigos-relacionados img{transition: 300ms ease-in;border: .5px solid var(--cor-destaque);border-radius: 7px;}.artigos-relacionados img:hover{filter: contrast(120%);border: .5px solid var(--cor-primaria) }.sound:hover, .dark-mode img:hover, .feed:hover, .compartilhe-icons img:hover, .media-sociais a img:hover{filter: drop-shadow(1px 1px 1px var(--cor-primaria));}footer{position: relative;width: 100%;background-color: rgb(240, 240, 240);padding: 20px 0 0 0;min-height: calc(100vh - 60px);}.newsletter-message{max-width: 1100px;margin: auto;}.newsletter-message > p:first-child{font-size: 1.7rem;max-width: 500px;padding: 2rem 0 0 20px;line-height: 1.9rem;}.newsletter{width: 100%;margin: auto;display: flex;flex-wrap: wrap;justify-content: center;align-items: center;padding: 3rem 0 4rem 0;}.newsletter-form{flex: 1 1 400px;display: flex;flex-direction: column;font-size: 1.3rem;gap: 10px;padding: 0 20px;}.newsletter-form label{position: absolute;font-family: var(--font-primary);color: #424241;text-transform: uppercase;}.newsletter-form input{margin-top: 40px;width: 100%;border: none;outline: none;border-bottom: 1px solid var(--cor-destaque);background-color: transparent;padding: 0;caret-color: var(--cor-destaque);}.group-name{margin-bottom: 20px;}.newsletter-form input:focus{margin-top: 45px;border-bottom-width: 2px;}.newsletter-form label:focus{color: var(--cor-destaque);}.newsletter-form input::placeholder, textarea::placeholder{color: var(--cor-font);}.frente-enviar img{vertical-align: middle;}.mensagem-alerta{font-family: var(--font-primary);color: #ff0000;}.mensagem-sucesso{color: var(--cor-destaque);}.frente-enviar{padding-left: 0;padding-right: 0;}.sobre-mim{flex: 1 1 400px;padding: 20px;}.sobre-mim h4{max-width: 400px;font-size: 1.7rem;text-transform: uppercase;}.sobre-mim-texto{font-size: 1.2rem;}.rodape02{padding-top: 2rem;background-color: #ffffff;}.recommendation{display: flex;justify-content: space-around;align-items: baseline;flex-wrap: wrap;padding: 20px;gap: 20px;}.recommendation div{flex: 1 1 200px;height: auto;margin-bottom: 20px;}.recommendation h3{color: #424241;text-transform: capitalize;}.recommendation li{list-style: none;border-left: 3px solid #2c2c2c;padding: .5rem;margin: .5rem 0;width: fit-content;}.recommendation li a{color: var(--cor-primaria);}.media-sociais, .copyright{color: var(--cor-primaria);}.copyright{text-align: center;padding: .5rem;font-size: 1rem;}.media-sociais a img{margin: 1rem 1rem 0 0;opacity: .7;}.link-topo{position: fixed;bottom: 20px;right: 10px;width: 40px;height: 40px;z-index: 1;border-radius: 50%;}@media (max-width: 750px){h2{font-size: 2.3rem;}.aside-article{display: none;}.container-article {display: block;}.recommendation{gap: 10px;}}@media (max-width: 500px){.logo{margin-right: 0;}.menu-hamburguer{width: 40px;}.config{opacity: 0;transition: 200ms ease;}.navigation-menu{position: fixed;padding-top: 20px;top: 40px;right: -101%;flex-direction: column;justify-content: end;height: auto;background-color: #f8f7f7;transition: 500ms ease-in;}.menu-item-articles{top: 95px;left: 50px;z-index: 10;}.menu-item{flex: 1 1 35px;}.navigation{justify-content: space-between;padding: 0 10px;}.search{top: 200px;z-index: 100;width: 100%;}}.menu-link:hover, .menu-item-articles a:hover, .search-link:hover, main a:hover, .title-article-related:hover, .recommendation li a{color: var(--cor-primaria);}.menu-item-articles a, .menu-link, .menu-item-articles, .search-link, .sound, .dark-mode img, .feed, .title-article-related, .newsletter-form input, .recommendation li, .media-sociais a img{transition: 150ms ease-in;}.sound, .dark-mode img, .feed{cursor: pointer;}
+        </style>
+    </head>
+    <body>
+        <header id="header" class="header-fixed">
+            <nav class="navigation">
+                <img width="35" height="40" class="logo" src="/blog/img/hsl-logo-transparent.webp" alt="logo">
+                <ul class="navigation-menu">
+                    <li class="menu-item">
+                        <a class="menu-link menu-link-articles" href="#/#">Posts 
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                        </a> 
+                        <div class="menu-item-articles"> 
+                            <a href="">HTML</a>
+                            <a href="">CSS</a>
+                            <a href="">JavaScript</a>
+                            <a href="">Fora do escopo</a>
+                        </div>
+                    </li>
+                    <li class="menu-item">
+                        <a href="mailto:contato@heleno.dev?subject=[Escreva o Assunto Aqui]" class="menu-link">Email <img width="23" height="23" src="/blog/img/icons/email.svg" alt="Ilustração de email" title="Enviar Email"></a>
+                    </li> 
+                    <li class="menu-item search-link">
+                        <img width="20" height="20" src="/blog/img/icons/search.svg" alt="Lupa de pesquisa" title="Pesquisar">
+                    </li>
+                </ul>
+                <div class="config">
+                    <img width="25" height="25" class="sound" src="/blog/img/icons/sound.svg" alt="som de interatividade" title="Som">
+                    <label class="dark-mode">
+                        <img width="20" height="20" src="/blog/img/icons/clear-sun.svg" title="Modo Noturno" alt="Modo Noturno">
+                        <input type="checkbox" onclick="alternaTema(checked)">
+                    </label>
+                    <img width="20" height="20" class="feed" src="/blog/img/icons/feed.svg" title="Feed" alt="Feed de posts">
+                </div>
+                <div class="menu-hamburguer">
+                    <div class="line" id="line1"></div>
+                    <div class="line" id="line2"></div>
+                    <div class="line" id="line3"></div>
+                </div> 
+            </nav>
+        </header>
+        <div class="search">
+            <style>
+                .gsc-search-button-v2{
+                    background-color: #971ac9;
+                    height: 40px;
+                    border: none;
+                    border-radius: 5px;
+                    transition: 200ms ease-in;
+                }
+                .gsc-search-button-v2:hover{
+                    background-color: #14171a;
+                }
+                .gsc-control-cse {
+                    padding: 0;
+                    border: none;
+                }
+                form.gsc-search-box {
+                    max-width: 600px;
+                }
+                .gsc-control-wrapper-cse {
+                    margin-top: 30px;
+                    padding: 20px;
+                    border-radius: 7px;
+                    box-shadow: 1px 1px 5px #0000007a;
+                }
+                .gsc-results-wrapper-visible {
+                    height: 400px;
+                    overflow: auto;
+                }
+                .gsc-input{
+                    height: 40px;
+                }
+            </style>
+        </div>
+        <main>
+            <div class="container-article">
+                <article class="article">
                     
-                </span>
+                    <div class="autor">
+                        <img src="/blog/img/HELENO-SALGADO-p.webp" alt="Foto do Autor do artigo">
+                        <div>
+                            <h4>Heleno Salgado Lopes</h4>
+                            <time>
+                                03/01/2022
+                            </time> 
+                        </div>
+                    </div>
+                    
+                    <h1>O que é uma hospedagem de sites</h1> 
+                    
+                    <p>Sempre que viajamos nos hospedamos em algum lugar. Ali, na hospedagem, alimentamos e podemos descansar em paz. Com sites não é muito diferente, eles também precisam de uma hospedagem. Afinal, pode-se dizer que eles viajam o mundo inteiro. Este site, por exemplo, só está sendo apresentado na tela do seu dispositivo, porque antes foi hospedado e está sendo alimentado pelo &#39;servidor de hospedagem&#39;.</p>
+                    
+                    <p>Para esclarecer, todo site precisa estar armazenado e  localizado em algum lugar na Rede Mundial de Computadores (sigla em Inglês, WWW), de maneira que, quando for solicitado pelo cliente, ele seja imediatamente exibido na tela do dispositivo. Todo o conteúdo do site, tais como os arquivos HTML, PHP, CSS, JS, áudios, vídeos e imagens são armazenados pelo servidor de hospedagem e podem ser solicitados a qualquer hora do dia ou da noite.</p>
+                    
+                    <p>Diferente da hospedagem para humanos, que está limitada a uma região específica, a hospedagem para sites está disponível para qualquer região do mundo. O site fica hospedado localmente, mas todas as vezes que é solicitado para visualização, o servidor envia uma cópia para o cliente, que é o dispositivo do usuário.</p>
+                    
+                    <p>Existem várias empresas que prestam esse serviço, seja de forma gratuita ou paga. Para sites simples que ocupa pouco espaço de armazenamento, como um portfólio, uma página de links ou até mesmo um blog você encontra hospedagens gratuitas na <a class="article-link" href="https://www.awardspace.com/" target="_blank">Awardspace</a>, <a class="article-link" href="https://www.hostinger.com.br/hospedagem-gratis" target="_blank">Hostinger</a> e <a class="article-link" href="https://infinityfree.net/" target="_blank">InfinityFree</a>, mas essas empresas também oferecem um serviço aprimorado por um valor mensal ou anual.</p>
+                    
+                    <p>A cada requisição que é feita pelo cliente, o site precisa estar no ar, precisa responder rapidamente, precisa ser seguro, e você só poderá exigir essas e outras coisas, se você estiver pagando. A empresa de hospedagem tem seus custos, a cada requisição feita é um gasto a mais nos equipamentos, nos megas de internet, na energia elétrica, em tudo.</p>
+                    
+                    <p>Agora, falando da hospedagem gratuita, tem algumas coisas importantes a serem avaliadas, mesmo que seu site seja leve, simples e pequeno, a hospedagem gratuita não suportará todo o tráfico dos usuário se estes forem muitos acessando simultaneamente e/ou exceder um determinado limite de acessos mensal. Essas hospedagens também não costumam oferecer um serviço de segurança satisfatório e pode até limitar os tipos de arquivos usados no site.</p>
+                    
+                    <p>Aí fica à sua escolha, a minha dica é que contate um desenvolvedor para fazer um dimensionamento e ver se vale a pena hospedar seu site gratuitamente. De qualquer maneira, se você perceber que o serviço gratuito está sendo insuficiente, você pode mudar para um plano pago imediatamente.</p>
+                    
+                    <p>O propósito deste artigo foi mostrar que todo conteúdo do seu site precisa está hospedado em algum lugar da <abbr title="Abreviação de World Wide Web, Rede Mundial de Computadores.">Web</abbr>, porém, para acessar esse site você precisa registrar um nome de domínio e vincular ao seu servidor de hospedagem.</p>
+                    
+                    <audio preload="auto" class="article-link-sound" src="/assets/sons/puxado-pop.wav"></audio>
+                </article>
+                <aside class="aside-article">
+                    <nav class="aside-article-nav">
+                        <h3>índice</h3>
+                        <a href="#">navegação Lorem ipsum dolor sit</a>
+                        <a href="#">navegação</a>
+                        <a href="#">navegação</a>
+                        <a href="#">navegação</a>
+                        <a href="#">navegação</a>
+                        <a href="#">navegação</a>
+                        <a href="#">navegação</a>
+                    </nav>
+                </aside>
+            </div>
+            <div class="compartilhe" onclick="shareUrl(event)">
+                <p >Compartilhe</p>
+                <i class="fa-solid fa-share-nodes"></i>
+                
+                <div class="compartilhe-icons">
+                    <img width="41" height="41" src="../img/icons/facebook_icon.svg" alt="icone do Facebbok" title="Facebook">
+                    <img width="41" height="41" src="../img/icons/whatsapp_icon.svg" alt="icone de WhatsApp" title="WhatsApp">
+                    <img width="41" height="41" src="../img/icons/twitter_icon.svg" alt="icone de Twitter" title="Twitter">
+                    <img width="41" height="41" src="../img/icons/linkedin_icon.svg" alt="icone do Linkedin" title="Linkedin">
+                    <img width="41" height="41" src="../img/icons/pocket_logo.svg" alt="icone do pocket" title="Pocket">
+                    <div class="like">
+                        <svg
+                        width="27"
+                        height="23"
+                        viewBox="0 0 23 20"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                        >
+                        <path
+                        d="M11.9649 3.12832C8.29171 -2.5454 0.857422 0.545461 0.857422 6.72603C0.857422 11.3672 11.0494 18.6272 11.9649 19.5712C12.8866 18.6272 22.5717 11.3672 22.5717 6.72603C22.5717 0.592318 15.6449 -2.5454 11.9649 3.12832Z"
+                        fill="#ff000086"
+                        />
+                    </svg>
+                    <span class="count-motion">10
+                        
+                    </span>
+                </div>
             </div>
         </div>
+        
     </div>
-    
-</div>
-<hr>
-<div class="artigos-relacionados">
-    <div>
-        <a href="#"><h2 class="title-article-related">O que é um Nome de Domínio?</h2></a>
-        <a href="">
-            <img width="302" height="166" src="/blog/img/article/domain-names.webp" alt="Várias placas com extensões de domínios. Ao fundo, algumas núvens, e um passaro voando à esquerda.">
-        </a>
+    <hr>
+    <div class="artigos-relacionados">
+        <div>
+            <a href="#"><h2 class="title-article-related">O que é um Nome de Domínio?</h2></a>
+            <a href="">
+                <img width="302" height="166" src="/blog/img/article/domain-names.webp" alt="Várias placas com extensões de domínios. Ao fundo, algumas núvens, e um passaro voando à esquerda.">
+            </a>
+        </div>
+        <div>
+            <a href="#"><h2 class="title-article-related">O que é um Nome de Domínio?</h2></a>
+            <a href="">
+                <img width="302" height="166" src="/blog/img/article/domain-names.webp" alt="Várias placas com extensões de domínios. Ao fundo, algumas núvens, e um passaro voando à esquerda.">
+            </a>
+        </div>
+        <div>
+            <a href="#"><h2 class="title-article-related">O que é um Nome de Domínio?</h2></a>
+            <a href="">
+                <img width="302" height="166" src="/blog/img/article/domain-names.webp" alt="Várias placas com extensões de domínios. Ao fundo, algumas núvens, e um passaro voando à esquerda.">
+            </a>
+        </div>
     </div>
-    <div>
-        <a href="#"><h2 class="title-article-related">O que é um Nome de Domínio?</h2></a>
-        <a href="">
-            <img width="302" height="166" src="/blog/img/article/domain-names.webp" alt="Várias placas com extensões de domínios. Ao fundo, algumas núvens, e um passaro voando à esquerda.">
-        </a>
-    </div>
-    <div>
-        <a href="#"><h2 class="title-article-related">O que é um Nome de Domínio?</h2></a>
-        <a href="">
-            <img width="302" height="166" src="/blog/img/article/domain-names.webp" alt="Várias placas com extensões de domínios. Ao fundo, algumas núvens, e um passaro voando à esquerda.">
-        </a>
-    </div>
-</div>
 </main>
 <footer>     
-        <!-- <div class="article-contact">
-            <p><a style="text-decoration: none;" href="mailto:contato@heleno.dev?subject=[Escreva o Assunto Aqui]">contato@heleno.dev</a></p>
-        </div> -->
-        <div class="newsletter-message">
+    <!-- <div class="article-contact">
+        <p><a style="text-decoration: none;" href="mailto:contato@heleno.dev?subject=[Escreva o Assunto Aqui]">contato@heleno.dev</a></p>
+    </div> -->
+    <div class="newsletter-message">
+        
+        <p>
+            Escrevo sobre HTML, CSS e JavaScript | Newsletter!
+        </p>
+        
+        <div class="newsletter">
             
-            <p>
-                Escrevo sobre HTML, CSS e JavaScript | Newsletter!
-            </p>
-            
-            <div class="newsletter">
-                
-                <form class="newsletter-form" action="https://formsubmit.co/helenosalgado19@gmail.com" method="post">
-                    <div class="group-name">
-                        <label for="nome">
-                            Nome completo
-                        </label>
-                        <input class="input-nome" type="text" name="nome">
-                    </div>
-                    <div class="group-email">
-                        <label for="email">
-                            Email
-                        </label>
-                        <input class="input-email" type="email" name="email">
-                    </div>
-                    <span class="mensagem-alerta"></span>
-                    <button type="submit" class="empurravel">
-                        <span class="sombra"></span>
-                        <span class="borda"></span>
-                        <span class="frente frente-enviar">
-                            Enviar
-                            <img width="23" height="23" src="/blog/img/icons/email-newsletter.svg" alt="Ilustração de email" title="Enviar Email">
-                        </span>
-                    </button> 
-                    <audio class="button-enviar" src="/assets/sons/button-mola.wav"></audio>
-                    <input type="hidden" name="_captcha" value="false">
-                </form>
-                
-                <div class="sobre-mim">
-                    <h4>Sobre o autor</h4>
-                    <p class="sobre-mim-texto">
-                        
-                    </p>
+            <form class="newsletter-form" action="https://formsubmit.co/helenosalgado19@gmail.com" method="post">
+                <div class="group-name">
+                    <label for="nome">
+                        Nome completo
+                    </label>
+                    <input class="input-nome" type="text" name="nome">
                 </div>
+                <div class="group-email">
+                    <label for="email">
+                        Email
+                    </label>
+                    <input class="input-email" type="email" name="email">
+                </div>
+                <span class="mensagem-alerta"></span>
+                <button type="submit" class="empurravel">
+                    <span class="sombra"></span>
+                    <span class="borda"></span>
+                    <span class="frente frente-enviar">
+                        Enviar
+                        <img width="23" height="23" src="/blog/img/icons/email-newsletter.svg" alt="Ilustração de email" title="Enviar Email">
+                    </span>
+                </button> 
+                <audio class="button-enviar" src="/assets/sons/button-mola.wav"></audio>
+                <input type="hidden" name="_captcha" value="false">
+            </form>
+            
+            <div class="sobre-mim">
+                <h4>Sobre o autor</h4>
+                <p class="sobre-mim-texto">
+                    
+                </p>
             </div>
         </div>
-        <div class="rodape02">
-            <aside class="recommendation">
-                <div>
-                    <h3>Meus Tutoriais</h3>
-                    <li><a href="">HTML</a></li>
-                    <li><a href="">CSS</a></li>
-                    <li><a href="">JavaScript</a></li>
-                </div>
-                <div>
-                    <h3>Materiais gratuitos</h3>
-                    <li><a href="https://www.cursoemvideo.com/">Curso em Video</a></li>
-                    <li><a href="https://www.horadecodar.com.br/">Hora de Codar</a></li>
-                    <li><a href="https://balta.io/cursos">balta.io</a></li>
-                </div>
-                <div>
-                    <h3>Sites recomendados</h3>
-                    <li><a href="https://developer.mozilla.org/">MDN Web Docs</a></li>
-                    <li><a href="https://www.joshwcomeau.com/">Josh Comeau (em Inglês)</a></li>
-                    <li><a href="http://www.maujor.com/">Maujor</a></li>
-                </div>
-                
-                <div class="media-sociais">
-                    <h3>Redes sociais</h3>
-                    <a href="https://www.linkedin.com/in/helenosalgado"><img width="35" height="35" src="/blog/img/icons/linkedin-media.svg" alt="Linkedin" title="linkedin"></a>
-                    <a href="https://www.facebook.com/heleno.salgado.16/"><img width="35" height="35" src="/blog/img/icons/facebook-media.svg" alt="Facebook" title="facebook"></a>
-                    <a href="https://www.instagram.com/heleno_salgado/"><img width="35" height="35" src="/blog/img/icons/instagram-media.svg" alt="Instagram" title="instagram"></a>
-                    <a href="https://github.com/HelenoSalgado/"><img width="35" height="35" src="/blog/img/icons/github-media.svg" alt="Github" title="github"></a>
-                </div> 
-                
-            </aside>
-            <div class="copyright">
-                <p>&copy;2022 Heleno Salgado Lopes | Obrigado pela visita.</p>
+    </div>
+    <div class="rodape02">
+        <aside class="recommendation">
+            <div>
+                <h3>Meus Tutoriais</h3>
+                <li><a href="">HTML</a></li>
+                <li><a href="">CSS</a></li>
+                <li><a href="">JavaScript</a></li>
+            </div>
+            <div>
+                <h3>Materiais gratuitos</h3>
+                <li><a href="https://www.cursoemvideo.com/">Curso em Video</a></li>
+                <li><a href="https://www.horadecodar.com.br/">Hora de Codar</a></li>
+                <li><a href="https://balta.io/cursos">balta.io</a></li>
+            </div>
+            <div>
+                <h3>Sites recomendados</h3>
+                <li><a href="https://developer.mozilla.org/">MDN Web Docs</a></li>
+                <li><a href="https://www.joshwcomeau.com/">Josh Comeau (em Inglês)</a></li>
+                <li><a href="http://www.maujor.com/">Maujor</a></li>
+            </div>
+            
+            <div class="media-sociais">
+                <h3>Redes sociais</h3>
+                <a href="https://www.linkedin.com/in/helenosalgado"><img width="35" height="35" src="/blog/img/icons/linkedin-media.svg" alt="Linkedin" title="linkedin"></a>
+                <a href="https://www.facebook.com/heleno.salgado.16/"><img width="35" height="35" src="/blog/img/icons/facebook-media.svg" alt="Facebook" title="facebook"></a>
+                <a href="https://www.instagram.com/heleno_salgado/"><img width="35" height="35" src="/blog/img/icons/instagram-media.svg" alt="Instagram" title="instagram"></a>
+                <a href="https://github.com/HelenoSalgado/"><img width="35" height="35" src="/blog/img/icons/github-media.svg" alt="Github" title="github"></a>
             </div> 
-        </div>
-    </footer>
-    <audio preload="auto" class="pop-sound" src="/assets/sons/pop.wav"></audio>
-    <audio preload="auto" class="button-enviar" src="/assets/sons/button-mola.wav"></audio>
-    <a href="#" class="link-topo">
-        <img width="40" height="40" src="/blog/img/icons/up-arrow.svg" alt="Botão para voltar ao topo" title="Voltar ao topo">
-    </a>
- <script defer src="/blog/js/index.js"></script>
+            
+        </aside>
+        <div class="copyright">
+            <p>&copy;2022 Heleno Salgado Lopes | Obrigado pela visita.</p>
+        </div> 
+    </div>
+</footer>
+<audio preload="auto" class="pop-sound" src="/assets/sons/pop.wav"></audio>
+<audio preload="auto" class="button-enviar" src="/assets/sons/button-mola.wav"></audio>
+<a href="#" class="link-topo">
+    <img width="40" height="40" src="/blog/img/icons/up-arrow.svg" alt="Botão para voltar ao topo" title="Voltar ao topo">
+</a>
+<script defer src="/blog/js/index.js"></script>
 </body>
 </html>
