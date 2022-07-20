@@ -501,7 +501,7 @@ footer textarea{
     .navigation-menu{
         position: fixed;
         padding-top: 20px;
-        top: 42px;
+        top: 41px;
         right: -101%;
         flex-direction: column;
         justify-content: end;
