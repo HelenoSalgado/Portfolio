@@ -21,8 +21,7 @@ body, .menu-item-articles, main, .recommendation{
 .config{
     background-color: var(--cor-secundaria);
 }
-.menu-link:hover, main a:hover, .search-link:hover, .media-sociais a i:hover,
-.fa-volume-low:hover, .fa-star-half-stroke:hover, .artigos-relacionados div p a:hover{
+.menu-link:hover, main a:hover, .title-article-related:hover{
     color: #fff;
 }
 main a:hover{
@@ -34,7 +33,7 @@ main a:hover{
 .compartilhe-icons img:hover, .media-sociais a img{
     filter: drop-shadow(1px 1px 1px #fff);
 }
-.aside-article, footer, .newsletter-message, .rodape02{
+.aside-article, footer, .rodape02{
     background-color: var(--cor-secundaria);
 }
 .menu-item-articles a:hover, .recommendation li:hover{

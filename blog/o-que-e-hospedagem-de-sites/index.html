@@ -10,21 +10,16 @@
     <meta property="og:title" content="O QUE É HOSPEDAGEM DE SITES" />
     <meta property="og:description" content="Nós, humanos, sempre que viajamos nos hospedamos em algum lugar. Ali, na hospedagem, alimentamos e podemos descansar em paz. Com sites não é muito diferente." />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://heleno.dev/blog/o-que-e-hospedagem-de-sites" />
+    <meta defer property="og:url" content="https://heleno.dev/blog/o-que-e-hospedagem-de-sites" />
     <meta property="og:image" content="https://heleno.dev/img-icon/android-chrome-512x512.png" />
-    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <!-- <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
     <meta http-equiv="Pragma" content="no-cache" />
-    <meta http-equiv="Expires" content="0" />
+    <meta http-equiv="Expires" content="0" /> -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700&family=Poppins:ital,wght@0,200;0,300;1,200&display=swap" rel="stylesheet">
-    <!-- Temas com CSS-->
-    <link rel="stylesheet" href="/assets/css/reset.css">
-    <link rel="stylesheet" href="/assets/css/global.css">
+    <!-- CSS -->
     <link rel="stylesheet" href="/blog/css/article.css">
-    <!-- <link id="temaEscuro" rel="stylesheet" href="/blog/css/mode-dark.css"> -->
-    <!-- <link id="temaClaro" rel="stylesheet" href="/blog/css/mode-light.css"> -->
-    <!-- <link rel="stylesheet" href="/blog/css/newsletter/article-newsletter.css"> -->
     <!-- Favicons. -->
     <link rel="apple-touch-icon" sizes="180x180" href="/assets/img-icon/apple-touch-icon.png">
     <link rel="icon" type="/image/png" sizes="32x32" href="/assets/img-icon/favicon-32x32.png">
@@ -34,7 +29,7 @@
 <body>
     <header id="header" class="header-fixed">
         <nav class="navigation">
-            <img width="35" height="40" class="logo" src="/blog/img/icons/hsl-logo-transparent-50px.png" alt="logo">
+            <img width="35" height="40" class="logo" src="/blog/img/hsl-logo.webp" alt="logo">
             <ul class="navigation-menu">
                 <li class="menu-item">
                     <a class="menu-link menu-link-articles" href="#/#">Posts 
@@ -151,15 +146,15 @@
             </aside>
         </div>
         <div class="compartilhe" onclick="shareUrl(event)">
-            <p >COMPARTILHE</p>
+            <p >Compartilhe</p>
             <i class="fa-solid fa-share-nodes"></i>
             
             <div class="compartilhe-icons">
-                <img width="43" height="43" src="../img/icons/facebook_icon.svg" alt="icone do Facebbok" title="Facebook">
-                <img width="43" height="43" src="../img/icons/whatsapp_icon.svg" alt="icone de WhatsApp" title="WhatsApp">
-                <img width="43" height="43" src="../img/icons/twitter_icon.svg" alt="icone de Twitter" title="Twitter">
-                <img width="43" height="43" src="../img/icons/linkedin_icon.svg" alt="icone do Linkedin" title="Linkedin">
-                <img width="43" height="43" src="../img/icons/pocket_logo.svg" alt="icone do pocket" title="Pocket">
+                <img width="41" height="41" src="../img/icons/facebook_icon.svg" alt="icone do Facebbok" title="Facebook">
+                <img width="41" height="41" src="../img/icons/whatsapp_icon.svg" alt="icone de WhatsApp" title="WhatsApp">
+                <img width="41" height="41" src="../img/icons/twitter_icon.svg" alt="icone de Twitter" title="Twitter">
+                <img width="41" height="41" src="../img/icons/linkedin_icon.svg" alt="icone do Linkedin" title="Linkedin">
+                <img width="41" height="41" src="../img/icons/pocket_logo.svg" alt="icone do pocket" title="Pocket">
                 <div class="like">
                     <svg
                     width="27"
@@ -184,12 +179,22 @@
 <hr>
 <div class="artigos-relacionados">
     <div>
-        <p><a href="/blog/index.html">Voltar</a></p>
-        <a class="far fa-arrow-alt-circle-left" href="/blog/index.html"></a> 
+        <a href="#"><h2 class="title-article-related">O que é um Nome de Domínio?</h2></a>
+        <a href="">
+            <img src="/blog/img/article/domain-names.webp" alt="Várias placas com extensões de domínios. Ao fundo, algumas núvens, e um passaro voando à esquerda.">
+        </a>
     </div>
     <div>
-        <p><a href="#">O que é um Nome de Domínio?</a></p>
-        <a class="far fa-arrow-alt-circle-right" href=""></a>
+        <a href="#"><h2 class="title-article-related">O que é um Nome de Domínio?</h2></a>
+        <a href="">
+            <img src="/blog/img/article/domain-names.webp" alt="Várias placas com extensões de domínios. Ao fundo, algumas núvens, e um passaro voando à esquerda.">
+        </a>
+    </div>
+    <div>
+        <a href="#"><h2 class="title-article-related">O que é um Nome de Domínio?</h2></a>
+        <a href="">
+            <img src="/blog/img/article/domain-names.webp" alt="Várias placas com extensões de domínios. Ao fundo, algumas núvens, e um passaro voando à esquerda.">
+        </a>
     </div>
 </div>
 </main>
@@ -279,8 +284,6 @@
     <a href="#" class="link-topo">
         <img width="40" height="40" src="/blog/img/icons/up-arrow.svg" alt="Botão para voltar ao topo" title="Voltar ao topo">
     </a>
-    <!-- <script src="/assets/js/menu.js"></script> -->
-    <script src="/blog/js/index.js"></script>
-    <script src="/blog/js/article.js"></script>
+    <script defer src="/blog/js/index.js"></script>
 </body>
 </html>

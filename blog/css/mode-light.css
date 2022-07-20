@@ -1,5 +1,5 @@
 /*Tema Claro */
-body, footer{
+body{
     background-color: rgb(248, 247, 247);
 }
 .line {
@@ -22,7 +22,7 @@ body, footer{
 }
 
 .menu-link:hover, .menu-item-articles a:hover, .search-link:hover,
-main a:hover, .artigos-relacionados div p a:hover, .recommendation li a{
+main a:hover, .title-article-related:hover, .recommendation li a{
     color: var(--cor-primaria);
 }
 .menu-link img:hover, .search-link img:hover, .compartilhe-icons img:hover{
@@ -38,8 +38,8 @@ main a:hover, .artigos-relacionados div p a:hover, .recommendation li a{
 abbr{
     text-shadow: .2px .5px 1px rgba(0, 0, 0, 0.514);
 }
-.newsletter-message{
-    background-color: #e7e7e7;
+footer{
+    background-color: rgb(240, 240, 240);
 }
 .newsletter-message > p:first-child{
     color: #2c2c2c;
