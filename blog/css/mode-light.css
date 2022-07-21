@@ -5,7 +5,7 @@ body{
 .line {
     background-color: var(--cor-destaque);
 }
-.logo, .header-fixed, main{ 
+.logo, .header-fixed, .navigation-menu, main{ 
     background-color: rgb(248, 247, 247);
 }
 .fa-sun, .fa-star-half-stroke, .search-link{

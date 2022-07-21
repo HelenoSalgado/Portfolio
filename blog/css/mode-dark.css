@@ -1,5 +1,5 @@
 /*Tema Claro */
-body, .menu-item-articles, main, .recommendation{
+body, .menu-item-articles, .navigation-menu, main, .recommendation{
     background-color: var(--cor-primaria);
 }
 .line {
