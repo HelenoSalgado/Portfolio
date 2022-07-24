@@ -23,7 +23,7 @@ hamburguer.addEventListener("click", function(){
       setTimeout(() => {
         config.style.opacity = "10"
       }, 500);
-      menu.style.top = "70px";
+      menu.style.top = "calc(0% + 70px)";
       iMenu++;
     }
     else{
