@@ -23,11 +23,11 @@ hamburguer.addEventListener("click", function(){
       setTimeout(() => {
         config.style.opacity = "10"
       }, 500);
-      menu.style.right = "0";
+      menu.style.top = "70px";
       iMenu++;
     }
     else{
-      menu.style.right = "-101%";
+      menu.style.top = "-101%";
       config.style.opacity = "0"
       iMenu--;
     }
