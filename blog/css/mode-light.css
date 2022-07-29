@@ -21,9 +21,10 @@ body{
     color: #424241;;
 }
 
-.menu-link:hover, .menu-item-articles a:hover, .search-link:hover,
+.menu-link:hover, .menu-link:hover,.menu-link:hover svg path,.search-link:hover svg path,.menu-item-articles a:hover, .search-link:hover,
 main a:hover, .title-article-related:hover, .recommendation li a{
     color: var(--cor-primaria);
+    fill: var(--cor-primaria);
 }
 .menu-link img:hover, .search-link img:hover, .compartilhe-icons img:hover{
     filter: drop-shadow(1px 1px 1px rgb(68, 68, 68));

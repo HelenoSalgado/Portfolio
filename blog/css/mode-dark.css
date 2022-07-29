@@ -21,8 +21,9 @@ body, .menu-item-articles, .navigation-menu, main, .recommendation{
 .config{
     background-color: var(--cor-secundaria);
 }
-.menu-link:hover, main a:hover, .title-article-related:hover{
+.menu-link:hover,.menu-link:hover,.menu-link:hover svg path,.search-link:hover svg path,main a:hover,.title-article-related:hover{
     color: #fff;
+    fill: #fff;
 }
 main a:hover{
     text-shadow: 1px .2px 1px rgba(0, 0, 0, 0.363);
