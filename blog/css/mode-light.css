@@ -33,7 +33,7 @@ main a:hover, .title-article-related:hover, .recommendation li a{
     background-color: #e7e7e7;
     margin-left: .2rem;
 }
-.autor h4, .autor time, .article h1, .article p, .compartilhe p, .compartilhe a, .sobre-mim h4, footer p, footer a{
+.autor h3, .autor time, .article h1, .article p, .compartilhe p, .compartilhe a, .sobre-mim h4, footer p, a, footer q, span{
     color: #424241;
 }
 abbr{

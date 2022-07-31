@@ -28,7 +28,7 @@ body, .menu-item-articles, .navigation-menu, main, .recommendation{
 main a:hover{
     text-shadow: 1px .2px 1px rgba(0, 0, 0, 0.363);
 }
-.autor h4, .autor time, .article h1, .article p, .aside-article-nav h3,.compartilhe p, .count-motion,footer p, footer a,.newsletter-message > p:first-child, .sobre-mim h4, .recommendation h3, .recommendation li a{
+.autor h3, .autor time, .article h1, .article p, .aside-article-nav h3,.compartilhe p, .count-motion,footer p, footer a,.newsletter-message > p:first-child, .sobre-mim h4, .recommendation h3, .recommendation li a, footer q, span{
     color: #eee;
 }
 .compartilhe-icons img:hover, .media-sociais a img{
