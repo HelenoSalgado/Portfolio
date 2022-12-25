@@ -1,5 +1,5 @@
 var hamburguer = document.querySelector('.menu-hamburguer'); 
-var botaoCurriculo = document.querySelector('.botao-empurravel-curriculo');
+var botaoCurriculo = document.querySelector('.botao-curriculo');
 var botoes = document.querySelectorAll('.botao-inclina');
 var icone = document.querySelectorAll('.icone-inclina');
 var cardProjetos = document.querySelectorAll('.card');
