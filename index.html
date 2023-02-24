@@ -2,6 +2,8 @@
 <html lang="pt-br">
 <head>
   <meta charset="UTF-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, user-scalable=no">
   <meta http-equiv="Cache-Control" content="no-store" />
@@ -14,9 +16,10 @@
   <meta property="og:url" content="https://heleno.dev/" />
   <meta property="og:image" content="https://heleno.dev/img-icon/android-chrome-512x512.png" />
   <!-- Fontes do google fontes. -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700&family=Poppins:wght@300&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700&family=Poppins:wght@300&display=swap" rel="stylesheet"> -->
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,300;1,300&family=Rubik:wght@700&display=swap" rel="stylesheet">
   <!-- Biblioteca de ícones.-->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <!-- CSS local. -->
@@ -55,22 +58,29 @@
         <p>Estudante e aspirante à desenvolvedor Front-end da web &#x1F60A;. Tenho 25 anos, formado em técnico em agropecuária, estudante de Teologia e apaixonado por programação, sou aluno no <em>One - Oracle Next Education</em>, um programa da Oracle em parceria com a Alura Cursos.</p>
         <div class="botoes">
 
-           <button class="botao-linkedin botao-inclina">
-             <a href="https://www.linkedin.com/in/helenosalgado">Linked<i class="fab fa-linkedin icone-inclina"></i></a>
-           </button>
+          <button class="empurravel">
+            <span class="sombra"></span>
+            <span class="borda"></span>
+            <span class="frente">
+              <a class="botao-linkedin" href="https://www.linkedin.com/in/helenosalgado">Linked<i class="fab fa-linkedin icone-inclina"></i></a>
+            </span>
+          </button> 
 
-           <button class="botao-curriculo" role="document">
-               <a href="#" target="_blank" rel="noopener noreferrer">CURRÍCULO</a>
+          <button class="empurravel">
+            <span class="sombra"></span>
+            <span class="borda"></span>
+            <span class="frente">
+              <a class="botao-curriculo">CURRÍCULO</a>
                <svg stroke="currentColor" fill="none" stroke-width="4" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg" style="margin-bottom: -1;"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
-           </button>
+            </span>
+          </button>
 
         </div>
       </div> 
       <div class="img-wrapper">
        <picture>
-          <source media="(min-width: 600px)" srcset="assets/img/development-600.png">
-          <img src="" alt="Ilustração de um programdor em seu escritório de programação.">
-        </picture>
+          <img src="assets/img/home/heleno-val-picture.webp" alt="">
+       </picture>
       </div> 
     </div>
     <aside class="sidebar">
@@ -153,10 +163,10 @@
          </div>
          <div class="certificado">
             <img class="slide-certificado" src="assets/img/certificados/heleno-salgado-lopes-formacao-conclusao-verso.webp" alt="">
-         </div> 
+         </div>
          <div class="slide-button">
-         <button onclick="showDivs(1)"><img src="assets/img/seta-a-esquerda.png" alt=""></button>
-         <button onclick="showDivs(-1)"><img src="assets/img/seta-para-a-direita.png" alt=""></button>
+         <button onclick="showDivs(1)"><img src="assets/img/home/seta-a-esquerda.png" alt=""></button>
+         <button onclick="showDivs(-1)"><img src="assets/img/home/seta-para-a-direita.png" alt=""></button>
         </div>
       </div>
       <a style="margin-top: 3rem; font-size:larger; display:block; text-align: center;" href="https://cursos.alura.com.br/emprega-one/profile/helenosalgado19">
@@ -199,7 +209,7 @@
         <div class="card-projetos">
           <div class="card">
             <picture >
-               <source media="(min-width: 600px)" srcset="assets/img/seo-6271942_640.webp">
+               <source media="(min-width: 600px)" srcset="assets/img/home/seo-6271942_640.webp">
                <img class="card-capa" src="" alt="">
             </picture>
             <div class="card-text">
@@ -213,7 +223,7 @@
           </div>
           <div class="card">
             <picture >
-              <source media="(min-width: 600px)" srcset="assets/img/a-book-1840910_640.webp">
+              <source media="(min-width: 600px)" srcset="assets/img/home/a-book-1840910_640.webp">
               <img class="card-capa" src="" alt="">
            </picture>
             <div class="card-text">
@@ -227,7 +237,7 @@
           </div>
           <div class="card">
             <picture >
-              <source media="(min-width: 600px)" srcset="assets/img/orar-e-labutar.webp">
+              <source media="(min-width: 600px)" srcset="assets/img/home/orar-e-labutar.webp">
               <img class="card-capa" src="" alt="">
            </picture>
             <div class="card-text">
@@ -241,7 +251,7 @@
           </div>
           <div class="card">
             <picture >
-              <source media="(min-width: 600px)" srcset="assets/img/like.webp">
+              <source media="(min-width: 600px)" srcset="assets/img/home/like.webp">
               <img class="card-capa" src="" alt="">
            </picture>
             <div class="card-text">
@@ -255,7 +265,7 @@
           </div>
           <div class="card">
             <picture >
-              <source media="(min-width: 600px)" srcset="assets/img/cybersecurity-6673412_640.webp">
+              <source media="(min-width: 600px)" srcset="assets/img/home/cybersecurity-6673412_640.webp">
               <img class="card-capa" src="" alt="">
            </picture>
             <div class="card-text">
@@ -269,7 +279,7 @@
           </div>
           <div class="card">
             <picture >
-              <source media="(min-width: 600px)" srcset="assets/img/work-developer.webp">
+              <source media="(min-width: 600px)" srcset="assets/img/home/work-developer.webp">
               <img class="card-capa" src="" alt="">
            </picture>
             <div class="card-text">
@@ -335,12 +345,6 @@
             <audio preload="auto" class="button-enviar" src="assets/sons/button-mola.wav"></audio>
             <input type="hidden" name="_captcha" value="false">
           </form>
-        <div>
-          <picture>
-            <source media="(min-width: 600px)" srcset="assets/img/heleno-formatura.webp">
-            <img src="assets/img/heleno-formatura-600px.webp" alt="Dia da minha formatura.">
-          </picture>
-        </div>
       </div>
         <div class="copy">
           <a href="https://heleno.dev/blog">BLOG</a>

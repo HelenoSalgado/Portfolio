@@ -3,15 +3,7 @@ header {
     position: relative;
     width: 100%;
     min-height: 100%;
-    background: var(--cor-primaria) url(../img/slopes.webp) no-repeat fixed;
     padding: 10px 0;
-}
-header::before{
-    content: "";
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    background-image: linear-gradient(rgba(255, 255, 255, 0), var(--cor-primaria));
 }
 .logo{
     position: fixed;
@@ -36,8 +28,10 @@ header::before{
 }
 .apresentacao{
     position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
     max-width: 1200px;
-    min-height: 100vh;
     margin: auto;
 }
 .banner{
@@ -55,9 +49,7 @@ header::before{
 }
 .banner h1 {
     width: 100%;
-    font-family: var(--font-primary);
     font-size: 3.5em;
-    font-weight: 500;
     text-shadow: 1px 1px 2px #000000;
     line-height: 3.5rem;
     animation: MoveBanner 1s;
@@ -65,20 +57,28 @@ header::before{
 .banner p { 
     font-size: 1.2rem;
     text-shadow: 1px 1px 2px #000000;
-    margin: .5rem 0  1rem .5rem;
+    margin: 1rem 0  1rem .5rem;
+    line-height: 27px;
     animation: MoveBanner 1.2s;
 }
 .banner .destaque{
     background-color: #bc56e4;
     padding: 0 3px;
 }
-.banner .botoes{
-    height: 50px;
+.botoes{
     display: flex;
-    align-items: center;
+    justify-content: start;
+    gap: 20px;
     padding-left: 7px;
 }
-.botao-linkedin, .botao-curriculo{
+.botoes a{
+    color: #eee;
+    font-size: 1rem;
+}
+.botoes .frente{
+    padding: 10px 10px;
+}
+/* .botao-linkedin, .botao-curriculo{
     position: relative;
     font-size: 1.3rem;
     font-weight: bold;
@@ -88,16 +88,16 @@ header::before{
     border-radius: 3px;
     box-shadow: 2px 2px 5px var(--cor-primaria);
     transition: all 300ms;
-}
-.botao-curriculo{
+} */
+/* .botao-curriculo{
     margin-left: 1.5rem;
     font-size: 1.2rem;
     color: #bc56e4;
-}
-.botao-linkedin:hover, .botao-curriculo:hover{
+} */
+/* .botao-linkedin:hover, .botao-curriculo:hover{
     color: #530b70;
     border-radius: 15px;
-}
+} */
 @keyframes MoveBanner {
     0% {
         transform: translateY(10rem);
@@ -109,27 +109,16 @@ header::before{
     }
 }
 .img-wrapper {
-    position: absolute;
-    top: -50px;
-    right: 80px;
+    max-width: 500px;
+    padding: 20px;
 }
 .img-wrapper img {
-    width: 500px;
-    animation: flutuar 5s ease-in-out infinite;
-}
-@keyframes flutuar {
-    0%{
-        transform: rotateX(0);
-        margin-top: 0;
-    }
-    50%{
-        transform: rotateX(25deg);
-        margin-top: 50px;
-    }
-    0%{
-        transform: rotateX(0);
-        margin-top: 0;
-    }
+    margin-top: 3.7rem;
+    width: 100%;
+    border-radius: 15px;
+    border: 2px solid #eee;
+    box-sizing: initial;
+    box-shadow: var(--shadow-elevation-medium);
 }
 .menu-hamburguer {
     width: 40px;

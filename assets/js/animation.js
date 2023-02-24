@@ -1,4 +1,5 @@
 var hamburguer = document.querySelector('.menu-hamburguer'); 
+var botaoLinkedin = document.querySelector('.botao-linkedin');
 var botaoCurriculo = document.querySelector('.botao-curriculo');
 var botoes = document.querySelectorAll('.botao-inclina');
 var icone = document.querySelectorAll('.icone-inclina');
@@ -33,6 +34,16 @@ hamburguer.addEventListener('click', () =>{
     desenho.removeEventListener('mousemove', sinalMouse);
   }
 
+})
+
+botaoLinkedin.addEventListener("click", () => {
+  //const urlCv = "https://heleno.dev/doc/curriculo-heleno-salgado.pdf";
+  if (iVolume == 0) {
+    somEnviar.play();
+  }
+  // setTimeout(() => {
+  //   window.open(urlCv, '_blank noopener noreferrer').focus();
+  // }, 500);
 })
 
 botaoCurriculo.addEventListener("click", () => {
