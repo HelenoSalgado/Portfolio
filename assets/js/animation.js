@@ -1,6 +1,5 @@
 var hamburguer = document.querySelector('.menu-hamburguer'); 
-var botaoLinkedin = document.querySelector('.botao-linkedin');
-var botaoCurriculo = document.querySelector('.botao-curriculo');
+var botaoEmpurravel = document.querySelectorAll('.empurravel')
 var botoes = document.querySelectorAll('.botao-inclina');
 var icone = document.querySelectorAll('.icone-inclina');
 var cardProjetos = document.querySelectorAll('.card');
@@ -36,17 +35,13 @@ hamburguer.addEventListener('click', () =>{
 
 })
 
-botaoLinkedin.addEventListener("click", () => {
-  //const urlCv = "https://heleno.dev/doc/curriculo-heleno-salgado.pdf";
+botaoEmpurravel[0].addEventListener("click", () => {
   if (iVolume == 0) {
     somEnviar.play();
   }
-  // setTimeout(() => {
-  //   window.open(urlCv, '_blank noopener noreferrer').focus();
-  // }, 500);
 })
 
-botaoCurriculo.addEventListener("click", () => {
+botaoEmpurravel[1].addEventListener("click", () => {
   const urlCv = "https://heleno.dev/doc/curriculo-heleno-salgado.pdf";
   if (iVolume == 0) {
     somEnviar.play();
@@ -54,6 +49,12 @@ botaoCurriculo.addEventListener("click", () => {
   setTimeout(() => {
     window.open(urlCv, '_blank noopener noreferrer').focus();
   }, 500);
+})
+
+botaoEmpurravel[2].addEventListener("click", () => {
+  if (iVolume == 0) {
+    somEnviar.play();
+  }
 })
 
 function sinalMouse(event){

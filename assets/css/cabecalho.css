@@ -78,26 +78,6 @@ header {
 .botoes .frente{
     padding: 10px 10px;
 }
-/* .botao-linkedin, .botao-curriculo{
-    position: relative;
-    font-size: 1.3rem;
-    font-weight: bold;
-    background-color: #fff;
-    padding: 5px 10px;
-    border: 1px solid var(--cor-destaque);
-    border-radius: 3px;
-    box-shadow: 2px 2px 5px var(--cor-primaria);
-    transition: all 300ms;
-} */
-/* .botao-curriculo{
-    margin-left: 1.5rem;
-    font-size: 1.2rem;
-    color: #bc56e4;
-} */
-/* .botao-linkedin:hover, .botao-curriculo:hover{
-    color: #530b70;
-    border-radius: 15px;
-} */
 @keyframes MoveBanner {
     0% {
         transform: translateY(10rem);

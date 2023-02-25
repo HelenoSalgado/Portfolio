@@ -23,6 +23,7 @@ html{
 body {
   overflow-X: hidden;
   min-width: 320px;
+  -webkit-font-smoothing: antialiased;
 }
 body::-webkit-scrollbar {
   width: 8px;
