@@ -66,6 +66,7 @@ header {
     padding: 0 3px;
 }
 .botoes{
+    margin-top: 2rem;
     display: flex;
     justify-content: start;
     gap: 20px;
@@ -91,6 +92,7 @@ header {
 .img-wrapper {
     max-width: 500px;
     padding: 20px;
+    z-index: 1;
 }
 .img-wrapper img {
     margin-top: 3.7rem;

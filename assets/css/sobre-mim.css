@@ -32,7 +32,7 @@
 .sobre-mim-container{
     position: relative;
     max-width: 800px;
-    margin: 10rem auto;
+    margin: 8rem auto;
     z-index: 1;
 }
 .sobre-mim-container div:first-child{
@@ -44,6 +44,7 @@
 .sobre-mim-container h3{
     text-align: center;
     font-size: 1.5rem;
+    margin-bottom: 3rem;
     color: var(--cor-font);
 }
 .sobre-mim-container div:last-child{

@@ -1,16 +1,17 @@
 /* CSS mobile */
 @media (max-width: 650px) {
     .img-wrapper img{
-       margin-top: 2rem;
+       margin: 2rem 0;
+       border-width: 1px;
+    }
+    .sobre-mim-container{
+        margin: 2rem auto 3rem auto;
     }
     .sobre-mim-container, 
     .github-container div, 
     .container-hobbies div{
         box-shadow: none;
     }
-    /* .banner{
-        backdrop-filter: none;
-    } */
     .github-atividade div, 
     .card, 
     .container-hobbies div{

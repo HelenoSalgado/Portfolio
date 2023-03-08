@@ -42,7 +42,7 @@ botaoEmpurravel[0].addEventListener("click", () => {
 })
 
 botaoEmpurravel[1].addEventListener("click", () => {
-  const urlCv = "https://heleno.dev/doc/curriculo-heleno-salgado.pdf";
+  const urlCv = "https://heleno.dev/assets/doc/curriculo-heleno-salgado.pdf";
   if (iVolume == 0) {
     somEnviar.play();
   }
