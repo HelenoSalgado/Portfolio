@@ -76,5 +76,6 @@
     cursor: pointer;
 }
 .weve-projetos{
-    background-color: var(--cor-secundaria);
+    background-color: transparent;
+    /* background-color: var(--cor-secundaria); */
 }
