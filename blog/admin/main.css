@@ -1,0 +1,45 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: none;
+}
+html{
+    font-size: 16px;
+}
+body{
+    position: relative;
+    background-color: rgb(13, 1, 24);
+}
+.comments{
+    position: relative;
+    height: 500px;
+    width: 100%;
+    background-color: blueviolet;
+}
+.comments h2{
+    text-align: center;
+    padding: 2rem 0;
+    color: #fff;
+}
+.comments-response{
+    position: absolute;
+    width: 80%;
+    min-height: 200px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 7px;
+    color: #eee;
+    background-color: rgb(42, 12, 71);
+    padding: 10px;
+}
+.search-comments{
+    display: block;
+    margin: auto;
+    padding: 10px;
+    border: none;
+    border-radius: 7px;
+    font-size: 1.2rem;
+    background-color: #0d0118;
+    color: #fff;
+}

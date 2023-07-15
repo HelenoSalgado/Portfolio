@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Heleno Salgado">
+    <title>Instalando MySQL Server 8.0 e MySQL Workbench no Debian 10</title>
+    <meta name="description" content="Se você está vindo de uma sequência de erros ao instalar o MySQL Server 8.0 e o MySQL Workbench no Debian, talvez essa sequência de comandos possa ajudar.
+    ">
+    <meta property="og:title" content="Instalando MySQL Server 8.0 e MySQL Workbench no Debian 10" />
+    <meta property="og:description" content="Se você está vindo de uma sequência de erros ao instalar o MySQL Server 8.0 e o MySQL Workbench no Debian, talvez essa sequência de comandos possa ajudar." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://heleno.dev/blog/instalar-mysql-e-workbench" />
+    <meta property="og:image" content="https://heleno.dev/assets/hsl-logo.png" />
+    <!-- Favicons. --> 
+    <link rel="stylesheet" href="/blog/css/min.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/img-icon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/img-icon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/img-icon/favicon-16x16.png">
+    <style>
+        @font-face {font-family: 'Nunito';font-style: normal;font-weight: 400;font-display: swap;src: url(https://fonts.gstatic.com/s/nunito/v25/XRXV3I6Li01BKofIOOaBXso.woff2) format('woff2');unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;}@font-face {font-family: 'Nunito';font-style: normal;font-weight: 400;font-display: swap;src: url(https://fonts.gstatic.com/s/nunito/v25/XRXV3I6Li01BKofIMeaBXso.woff2) format('woff2');unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;}@font-face {font-family: 'Nunito';font-style: normal;font-weight: 400;font-display: swap;src: url(https://fonts.gstatic.com/s/nunito/v25/XRXV3I6Li01BKofIOuaBXso.woff2) format('woff2');unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB;}@font-face {font-family: 'Nunito';font-style: normal;font-weight: 400;font-display: swap;src: url(https://fonts.gstatic.com/s/nunito/v25/XRXV3I6Li01BKofIO-aBXso.woff2) format('woff2');unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;}@font-face {font-family: 'Nunito';font-style: normal;font-weight: 400;font-display: swap;src: url(https://fonts.gstatic.com/s/nunito/v25/XRXV3I6Li01BKofINeaB.woff2) format('woff2');unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;}@font-face {font-family: 'Nunito';font-style: normal;font-weight: 700;font-display: swap;src: url(https://fonts.gstatic.com/s/nunito/v25/XRXV3I6Li01BKofIOOaBXso.woff2) format('woff2');unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;}@font-face {font-family: 'Nunito';font-style: normal;font-weight: 700;font-display: swap;src: url(https://fonts.gstatic.com/s/nunito/v25/XRXV3I6Li01BKofIMeaBXso.woff2) format('woff2');unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;}@font-face {font-family: 'Nunito';font-style: normal;font-weight: 700;font-display: swap;src: url(https://fonts.gstatic.com/s/nunito/v25/XRXV3I6Li01BKofIOuaBXso.woff2) format('woff2');unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB;}@font-face {font-family: 'Nunito';font-style: normal;font-weight: 700;font-display: swap;src: url(https://fonts.gstatic.com/s/nunito/v25/XRXV3I6Li01BKofIO-aBXso.woff2) format('woff2');unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;}@font-face {font-family: 'Nunito';font-style: normal;font-weight: 700;font-display: swap;src: url(https://fonts.gstatic.com/s/nunito/v25/XRXV3I6Li01BKofINeaB.woff2) format('woff2');unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;}
+    </style>
+</head>
+<body>
+    <header id="header" class="header-fixed">
+        <nav class="navigation">
+            <img width="45" height="50" class="logo" src="/blog/img/hsl-logo-transparent.webp" alt="logo">
+            <ul class="navigation-menu">
+                <li class="menu-item">
+                    <a class="menu-link menu-link-articles" href=".#">Posts 
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                    </a> 
+                    <div class="menu-item-articles"> 
+                        <a href="">HTML</a>
+                        <a href="">CSS</a>
+                        <a href="">JavaScript</a>
+                        <a href="">Fora do escopo</a>
+                    </div>
+                </li>
+                <li class="menu-item" title="Enviar Email">
+                    <a href="mailto:contato@heleno.dev?subject=[Escreva o Assunto Aqui]" class="menu-link">Email
+                        <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                        viewBox="0 0 75.294 75.294" widht="25" height="25" style=" fill:#971ac9;margin-top: -3px;" xml:space="preserve">
+                        <g>
+                            <path d="M66.097,12.089h-56.9C4.126,12.089,0,16.215,0,21.286v32.722c0,5.071,4.126,9.197,9.197,9.197h56.9
+                            c5.071,0,9.197-4.126,9.197-9.197V21.287C75.295,16.215,71.169,12.089,66.097,12.089z M61.603,18.089L37.647,33.523L13.691,18.089
+                            H61.603z M66.097,57.206h-56.9C7.434,57.206,6,55.771,6,54.009V21.457l29.796,19.16c0.04,0.025,0.083,0.042,0.124,0.065
+                            c0.043,0.024,0.087,0.047,0.131,0.069c0.231,0.119,0.469,0.215,0.712,0.278c0.025,0.007,0.05,0.01,0.075,0.016
+                            c0.267,0.063,0.537,0.102,0.807,0.102c0.001,0,0.002,0,0.002,0c0.002,0,0.003,0,0.004,0c0.27,0,0.54-0.038,0.807-0.102
+                            c0.025-0.006,0.05-0.009,0.075-0.016c0.243-0.063,0.48-0.159,0.712-0.278c0.044-0.022,0.088-0.045,0.131-0.069
+                            c0.041-0.023,0.084-0.04,0.124-0.065l29.796-19.16v32.551C69.295,55.771,67.86,57.206,66.097,57.206z"/>
+                        </g>
+                    </svg>
+                </a>
+            </li> 
+            <li class="menu-item search-link" title="Pesquisar">
+                <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                widht="20px" height="20px" viewBox="0 0 487.95 487.95" style="fill:#971ac9;" xml:space="preserve" title="Pesquisar">
+                <g>
+                    <g>
+                        <path d="M481.8,453l-140-140.1c27.6-33.1,44.2-75.4,44.2-121.6C386,85.9,299.5,0.2,193.1,0.2S0,86,0,191.4s86.5,191.1,192.9,191.1
+                        c45.2,0,86.8-15.5,119.8-41.4l140.5,140.5c8.2,8.2,20.4,8.2,28.6,0C490,473.4,490,461.2,481.8,453z M41,191.4
+                        c0-82.8,68.2-150.1,151.9-150.1s151.9,67.3,151.9,150.1s-68.2,150.1-151.9,150.1S41,274.1,41,191.4z"/>
+                    </g>
+                </g>
+            </svg>
+        </li>
+    </ul>
+    <div class="config">
+        <img width="25" height="25" class="sound" src="/blog/img/icons/sound.svg" alt="som de interatividade" title="Som">
+        <label class="dark-mode">
+            <img width="20" height="20" src="/blog/img/icons/clear-sun.svg" title="Modo Noturno" alt="Modo Noturno">
+            <input type="checkbox" onclick="alternaTema(checked)">
+        </label>
+        <a href="https://heleno.dev/blog/feed.xml"><img width="20" height="20" class="feed" src="/blog/img/icons/feed.svg" title="Feed" alt="Feed de posts"></a>
+    </div>
+    <div class="menu-hamburguer">
+        <div class="line" id="line1"></div>
+        <div class="line" id="line2"></div>
+        <div class="line" id="line3"></div>
+    </div> 
+</nav>
+</header>
+<div class="search">  
+</div>
+<main>
+    <div class="container-article">
+        <article class="article">
+            
+            <div class="autor">
+                <img width="70" height="70" src="/blog/img/heleno-picture.webp" alt="Foto do autor do artigo"><a class="info-sobre" href="https://heleno.dev/sobre"><span title="Sobre mim">!</span></a>
+                <div>
+                    <h3>Heleno Salgado Lopes</h3>
+                    <time>
+                       11/08/2022
+                    </time> 
+                </div>
+            </div>
+            
+    <h1>Instalando MySQL Server 8.0 e MySQL Workbench no Debian 10</h1>
+
+<p>
+    Se você está vindo de uma sequência de erros ao instalar o MySQL Server 8.0 e o MySQL Workbench no Debian, talvez essa sequência de comandos possa ajudar.
+    A primeira coisa a se fazer é remover qualquer vestígio de MYSQL do seu sistema, seja instalações malsucedidas do MySQL Server, ou seja algum vestígio do MySQL MariaDB, que é o pacote padrão do Debian.
+</p>
+
+<h2 id="desinstalando-mariadb">Desinstalando MySQL MariaDB</h2>
+
+<p><code style="margin: 2rem 0; padding: 10px; background-color: rgb(23, 23, 31); color: #eee; border-radius: 7px; overflow-y: auto;">sudo apt-get purge mariadb-server </code></p>
+
+<p>Fonte: <a href="http://www.codegrepper.com/code-examples/shell/uninstall+mariadb+on+debian+10" target="_blank" rel="noopener noreferrer">https://www.codegrepper.com/code-examples/shell/uninstall+mariadb+on+debian+10</a></p>
+
+<p><em>Se não tiver instalado, deixe como está.</em></p>
+
+<h2 id="desinstalando-mysql">Desinstalando MySQL Server</h2>
+
+<p><code style="margin: 2rem 0; padding: 10px; background-color: rgb(23, 23, 31); color: #eee; border-radius: 7px; overflow-y: auto;">
+    sudo apt-get remove --purge mysql-server</code>
+</p>
+
+<p><code style="margin: 2rem 0; padding: 10px; background-color: rgb(23, 23, 31); color: #eee; border-radius: 7px; overflow-y: auto;">
+    sudo /etc/init.d/mysql stop</code>
+</p>
+
+<p><code style="margin: 2rem 0; padding: 10px; background-color: rgb(23, 23, 31); color: #eee; border-radius: 7px; overflow-y: auto;">
+    sudo apt-get remove --purge mysql-common</code>
+</p>
+
+<p><code style="margin: 2rem 0; padding: 10px; background-color: rgb(23, 23, 31); color: #eee; border-radius: 7px; overflow-y: auto;">
+    sudo rm -rf /var/lib/mysql</code>
+</p>
+
+<p><code style="margin: 2rem 0; padding: 10px; background-color: rgb(23, 23, 31); color: #eee; border-radius: 7px; overflow-y: auto;">
+    sudo apt-get autoremove –purge</code>
+</p>
+
+<p><code style="margin: 2rem 0; padding: 10px; background-color: rgb(23, 23, 31); color: #eee; border-radius: 7px; overflow-y: auto;">
+    sudo apt-get autoclean</code>
+</p>
+
+<p><code style="margin: 2rem 0; padding: 10px; background-color: rgb(23, 23, 31); color: #eee; border-radius: 7px; overflow-y: auto;">
+    sudo apt-get clean</code>
+</p>
+
+<p><code style="margin: 2rem 0; padding: 10px; background-color: rgb(23, 23, 31); color: #eee; border-radius: 7px; overflow-y: auto;">
+    sudo apt update</code>
+</p>
+
+<h2 id="instalando-mysql">Instalando MySQL Server</h2>
+
+<p><code style="margin: 2rem 0; padding: 10px; background-color: rgb(23, 23, 31); color: #eee; border-radius: 7px; overflow-y: auto;">
+    sudo apt install wget -y</code>
+</p>
+
+<p><code style="margin: 2rem 0; padding: 10px; background-color: rgb(23, 23, 31); color: #eee; border-radius: 7px; overflow-y: auto;">
+    wget https://dev.mysql.com/get/mysql-apt-config_0.8.20-1_all.deb</code>
+</p>
+
+<p><code style="margin: 2rem 0; padding: 10px; background-color: rgb(23, 23, 31); color: #eee; border-radius: 7px; overflow-y: auto;">
+    sudo apt install ./mysql-apt-config_*_all.deb</code>
+</p>
+
+
+<p>Você terá a opção de selecionar o que deseja adicionar através do repositório. Use a tecla de seta, selecione <strong>MySQL Server & Cluster</strong> e pressione o botão TAB para selecionar OK e pressione a tecla Enter.</p>
+
+<img loading="lazy" src="https://www.how2shout.com/linux/wp-content/uploads/2021/11/Select-MySQL-server-and-cluster.png" alt>
+
+<p>Selecione a versão disponível do MySQL Server, aqui no nosso caso foi myslq-8.0. Depois disso, use a TAB para selecionar OK e pressione a tecla Enter.</p>
+
+<img loading="lazy" src="https://www.how2shout.com/linux/wp-content/uploads/2021/11/Select-Database-version-to-install.png" alt> 
+
+<p>Novamente, selecione OK e use a TAB para mover para OK e pressione a tecla Enter.</p>
+
+<img loading="lazy" src="https://www.how2shout.com/linux/wp-content/uploads/2021/11/Select-MySQL-8.0-repository-for-Debian-11-Bullseye.png" alt> 
+
+<p>Depois disso você deve atualizar o repositório APT e instalar o MySQL Server.</p>
+
+<p><code style="margin: 2rem 0; padding: 10px; background-color: rgb(23, 23, 31); color: #eee; border-radius: 7px; overflow-y: auto;">
+    sudo apt update</code>
+</p>
+
+<p><code style="margin: 2rem 0; padding: 10px; background-color: rgb(23, 23, 31); color: #eee; border-radius: 7px; overflow-y: auto;">
+    sudo apt install mysql-server</code>
+</p>
+
+<p>Digite a senha que você deseja usar com o servidor MySQL e selecione o método de autenticação forte:</p>
+
+<img loading="lazy" src="https://www.how2shout.com/linux/wp-content/uploads/2021/11/Use-Strong-authentication-method.png" alt> 
+
+<p>O comando abaixo fará com que o MySQL inicie com o sistema.</p>
+
+<p><code style="margin: 2rem 0; padding: 10px; background-color: rgb(23, 23, 31); color: #eee; border-radius: 7px; overflow-y: auto;">
+    sudo systemctl enable --now mysql</code>
+</p>
+
+<p>Configurando segurança.</p>
+
+<p><code style="margin: 2rem 0; padding: 10px; background-color: rgb(23, 23, 31); color: #eee; border-radius: 7px; overflow-y: auto;">
+    sudo mysql_secure_installation</code>
+</p>
+
+<p>Siga o assistente baseado em texto para definir uma senha de root (se necessário), remova o banco de dados de demonstração, não permita o login remoto de root e remova usuários anônimos.</p>
+
+<img loading="lazy" src="https://www.how2shout.com/linux/wp-content/uploads/2021/11/Secure-MySQL-database-deployement-on-Debian-11-bullseye.png" alt> 
+
+<p>Fonte:
+    <a href="http://www.digitalocean.com/community/tutorials/como-instalar-o-mysql-no-ubuntu-18-04-pt
+    " target="_blank" rel="noopener noreferrer">https://www.digitalocean.com/community/tutorials/como-instalar-o-mysql-no-ubuntu-18-04-pt</a>
+</p>
+<p>Fonte:
+    <a href="http://tipslegais10.blogspot.com/2013/01/desinstalar-mysql-no-linux-por-completo.html" target="_blank" rel="noopener noreferrer">http://tipslegais10.blogspot.com/2013/01/desinstalar-mysql-no-linux-por-completo.html</a></p>
+
+<h2 id="instalando-mysql-workbench">Agora é instalar o ambiente gráfico MySQL Workbench</h2>
+
+<p><code style="margin: 2rem 0; padding: 10px; background-color: rgb(23, 23, 31); color: #eee; border-radius: 7px; overflow-y: auto;">
+    sudo apt update</code>
+</p>
+<p><code style="margin: 2rem 0; padding: 10px; background-color: rgb(23, 23, 31); color: #eee; border-radius: 7px; overflow-y: auto;">
+    sudo apt install snapd</code>
+</p>
+<p><code style="margin: 2rem 0; padding: 10px; background-color: rgb(23, 23, 31); color: #eee; border-radius: 7px; overflow-y: auto;">
+    sudo snap install core</code>
+</p>
+<p><code style="margin: 2rem 0; padding: 10px; background-color: rgb(23, 23, 31); color: #eee; border-radius: 7px; overflow-y: auto;">
+    sudo snap install mysql-workbench-community</code>
+</p>
+
+<p>fonte: <a href="http://snapcraft.io/install/mysql-workbench-community/debian#install" target="_blank" rel="noopener noreferrer">https://snapcraft.io/install/mysql-workbench-community/debian#install</a></p>
+
+<p>Depois de instalado o MySQL Workbench, se o programa não aparecer, reinicie o Debian.</p>
+
+<p>Se isso resolveu seu problema, deixe um gostei aí.</p>
+
+        </article>
+        <aside class="aside-article">
+            <nav class="aside-article-nav">
+                <h3>índice</h3>
+                <a href="#desinstalando-mariadb">Desinstalando MySQL MariaDB</a>
+                <a href="#desinstalando-mysql">Desinstalando MySQL Server</a>
+                <a href="#instalando-mysql">Instalando MySQL Server</a>
+                <a href="#instalando-mysql-workbench">Instalando MySQL Workbench</a>
+            </nav>
+        </aside>
+    </div>
+    <div class="compartilhe" onclick="shareUrl(event)">
+        <p >Compartilhe</p>
+        <i class="fa-solid fa-share-nodes"></i>
+        
+        <div class="compartilhe-icons">
+            <img width="41" height="41" src="../img/icons/facebook_icon.svg" alt="icone do Facebbok" title="Facebook">
+            <img width="41" height="41" src="../img/icons/whatsapp_icon.svg" alt="icone de WhatsApp" title="WhatsApp">
+            <img width="41" height="41" src="../img/icons/twitter_icon.svg" alt="icone de Twitter" title="Twitter">
+            <img width="41" height="41" src="../img/icons/linkedin_icon.svg" alt="icone do Linkedin" title="Linkedin">
+            <img width="41" height="41" src="../img/icons/pocket_logo.svg" alt="icone do pocket" title="Pocket">
+            <div class="like">
+                <svg
+                width="27"
+                height="23"
+                viewBox="0 0 23 20"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                >
+                <path
+                d="M11.9649 3.12832C8.29171 -2.5454 0.857422 0.545461 0.857422 6.72603C0.857422 11.3672 11.0494 18.6272 11.9649 19.5712C12.8866 18.6272 22.5717 11.3672 22.5717 6.72603C22.5717 0.592318 15.6449 -2.5454 11.9649 3.12832Z"
+                fill="#ff000086"
+                />
+            </svg>
+            <span class="count-motion">10
+                
+            </span>
+        </div>
+    </div>
+</div>
+<hr>
+<div class="artigos-relacionados">
+    <div>
+        <a href="https://heleno.dev/blog/o-que-e-hospedagem-de-sites"><h2 class="title-article-related">O que é hospedagem de sites?</h2></a>
+        <a href="https://heleno.dev/blog/o-que-e-hospedagem-de-sites">
+            <img width="302" height="166" loading="lazy" src="/blog/img/article/hosting.webp" alt="Uma nuvem azul, com linhas que representam informações transpassando-a em seu eixo horizontal; e dois prédios ao lado.">
+        </a>
+        <a href="/blog/doc/o-que-e-hospedagem-de-sites.pdf" download type="application/pdf"><button class="baixar-pdf">Baixar <img width="30" height="30" src="/blog/img/icons/pdf-icon.svg" alt="Baixar arquivo em PDF"></button></a>
+    </div>
+    <div>
+        <a href="https://heleno.dev/blog/o-que-e-um-nome-de-dominio"><h2 class="title-article-related">O que é um Nome de Domínio?</h2></a>
+        <a href="https://heleno.dev/blog/o-que-e-um-nome-de-dominio">
+            <img width="302" height="166" loading="lazy" src="/blog/img/article/domain-names.webp" alt="Várias placas com extensões de domínios. Ao fundo, algumas núvens, e um passaro voando à esquerda.">
+        </a>
+        <a href="/blog/doc/o-que-e-um-nome-de-dominio.pdf" download type="application/pdf"><button class="baixar-pdf">Baixar <img width="30" height="30" src="/blog/img/icons/pdf-icon.svg" alt="Baixar arquivo em PDF"></button></a>
+    </div>
+    <div>
+        <a href="https://heleno.dev/blog/botao-de-compartilhamento-no-site"><h2 class="title-article-related">Botões de Compartilhamento | JS</h2></a>
+        <a href="https://heleno.dev/blog/botao-de-compartilhamento-no-site">
+            <img width="302" height="166" loading="lazy" src="/blog/img/article/share.webp" alt="Botões de redes socais para compartilhamento de conteúdo.">
+        </a>
+    </div>
+</div>
+<form class="form-comment" name="formComment">
+    <label for="caixaComentario"><h3 class="comment-title">O que achou? Comente aí, sô.</h3></label>
+    <textarea name="Comentario" id="caixaComentario" cols="30" rows="10" required></textarea>
+    <div>
+        <label for="nomeAutor"><span>Nome Completo</span>
+           <input type="text" name="Nome" id="nomeAutor" required>
+        </label>
+        <label for="emailAutor"><span>Email, por favor.</span>
+           <input type="email" name="Email" id="emailAutor" required>
+        </label>
+        <input name="idPost" value="3" type="hidden">
+    </div>
+    <button type="submit">Comentar</button>
+</form>
+  <aside class="comments-response">
+  </aside>
+</main>
+<footer>     
+    <div class="newsletter-message">
+        
+        <p>
+            Escrevo sobre HTML, CSS e JavaScript | Newsletter!
+        </p>
+        
+        <div class="newsletter">
+            <form class="newsletter-form" name="formNewsletter">
+                <div class="group-name">
+                    <label for="nomeLeitor">
+                        Nome completo
+                    </label>
+                    <input class="input-nome" type="text" name="Nome" id="nomeLeitor">
+                </div>
+                <div class="group-email">
+                    <label for="emailLeitor">
+                        Email
+                    </label>
+                    <input class="input-email" type="email" name="Email" id="emailLeitor">
+                </div>
+                <span class="mensagem-alerta"></span>
+                <button type="submit" class="button-newslleter">
+                        Inscrever
+                        <img width="23" height="23" src="/blog/img/icons/email-newsletter.svg" alt="Ilustração de email" title="Enviar Email">
+                </button> 
+                <input type="hidden" name="_captcha" value="false">
+            </form>
+        </div>
+    </div>
+    <div class="rodape02">
+        <aside class="recommendation">
+            <div>
+                <h3>Tutoriais</h3>
+                <ul>
+                    <li><a href="">HTML</a></li>
+                    <li><a href="">CSS</a></li>
+                    <li><a href="">JavaScript</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3>Materiais gratuitos</h3>
+                <ul>
+                    <li><a href="https://www.cursoemvideo.com/">Curso em Video</a></li>
+                    <li><a href="https://www.horadecodar.com.br/">Hora de Codar</a></li>
+                    <li><a href="https://balta.io/cursos">balta.io</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3>Sites recomendados</h3>
+                <ul>
+                    <li><a href="https://developer.mozilla.org/">MDN Web Docs</a></li>
+                    <li><a href="https://www.joshwcomeau.com/">Josh Comeau (em Inglês)</a></li>
+                    <li><a href="http://www.maujor.com/">Maujor</a></li>
+                </ul>
+            </div>
+            <div class="media-sociais">
+                <h3>Redes sociais</h3>
+                <a href="https://www.linkedin.com/in/helenosalgado"><img width="35" height="35" src="/blog/img/icons/linkedin-media.svg" alt="Linkedin" title="linkedin"></a>
+                <a href="https://www.facebook.com/heleno.salgado.16/"><img width="35" height="35" src="/blog/img/icons/facebook-media.svg" alt="Facebook" title="facebook"></a>
+                <a href="https://www.instagram.com/heleno_salgado/"><img width="35" height="35" src="/blog/img/icons/instagram-media.svg" alt="Instagram" title="instagram"></a>
+                <a href="https://github.com/HelenoSalgado/"><img width="35" height="35" src="/blog/img/icons/github-media.svg" alt="Github" title="github"></a>
+                <q style="display: block;width: 100%;margin-top: 1rem">
+                    Os olhos vêem apenas o que traz consigo o poder de ver.
+                </q>
+                <span style="display: block;margin-top: .5rem;font-family: var(--font-secundary);">- Cícero.</span>
+            </div> 
+            
+        </aside>
+        <div class="copyright">
+            <p>&copy;2022 Heleno Salgado Lopes | Obrigado pela visita.</p>
+        </div> 
+    </div>
+</footer>
+<audio preload="auto" class="pop-sound" src="/assets/sons/pop.wav"></audio>
+<audio preload="auto" class="article-link-sound" src="/assets/sons/puxado-pop.wav"></audio>
+<audio preload="auto" class="button-enviar" src="/assets/sons/button-mola.wav"></audio>
+<a href="#" class="link-topo">
+    <img width="40" height="40" src="/blog/img/icons/up-arrow.svg" alt="Botão para voltar ao topo" title="Voltar ao topo">
+</a>
+<script defer src="/blog/js/index.js"></script>
+<script defer>
+
+let mostra = document.querySelector('.count-motion');
+let curtidas = document.querySelector('.like');
+var commentsResponse = document.querySelector(".comments-response")
+let curtidasTotal;
+
+async function get(){
+
+    // Limpa campo de comentários
+
+    let boxComments = document.querySelectorAll(".box-comments")
+
+    boxComments.forEach((del) => {
+        del.remove()
+    })
+
+    // Busca likes e comentários
+
+    let responseLikes = await fetch("https://heleno.dev/php/get-likes.php");
+    var dataLikes = await responseLikes.json();
+
+    let idPost = 3;
+    
+    let responseComments = await fetch(`https://heleno.dev/php/get-comments.php?idpost=${idPost}`);
+    var dataComments = await responseComments.json();
+
+    // Insere comentários no HTML
+
+    dataComments.forEach((info) => {
+
+        let avatar = document.createElement("span")
+        avatar.classList.add("avatar-comments")
+
+        let nomeAutor = document.createElement("h3")
+        nomeAutor.classList.add("name-autor")
+
+        let data = document.createElement("span")
+        data.classList.add("data-comment")
+
+        let comment = document.createElement("p")
+        comment.classList.add("comments")
+
+        let box = document.createElement("div")
+        box.classList.add("box-comments")
+        
+        var info = info
+
+        nomeAutor.textContent = info['nome']
+        data.textContent = info['data']
+        comment.textContent = info['comentario']
+
+        box.appendChild(avatar)
+        box.appendChild(nomeAutor)
+        box.appendChild(data)
+        box.appendChild(comment)
+
+        commentsResponse.after(box)
+        
+    }) 
+    
+    // Insere likes
+    mostra.innerText = dataLikes[3].Likes;
+    
+}get();
+
+curtidas.addEventListener("click", () =>{
+    
+    if(localStorage.curtidasId3 == undefined){
+    localStorage.curtidasId3 = 0;
+    }
+    
+    if(localStorage.curtidasId3 == 0){
+        localStorage.curtidasId3++;
+        like = 1 + Number(mostra.textContent);
+        curtidasTotal++;
+    }else{
+        localStorage.curtidasId3 = 0;
+        like = -1 + Number(mostra.textContent);
+        curtidasTotal--;
+    }
+    mostra.innerText = like;
+    data = {
+      id: '3',
+      curtidas: like
+    }
+    postLike();
+})
+
+// Posta likes no banco
+
+async function postLike(){
+    fetch("https://heleno.dev/php/increment-likes.php", {
+      method: "POST",
+      body: JSON.stringify(data)
+    })
+}
+
+// Captura comentarios e os guarda no banco
+
+let comentar = document.forms.formComment
+
+comentar.addEventListener("submit", (e) => {
+
+    e.preventDefault();
+
+    const {Comentario, Nome, Email, idPost} = comentar;
+
+    const dataComment = {
+
+        comentario: Comentario.value,
+        nome: Nome.value,
+        email: Email.value,
+        idPost: idPost.value
+
+    };
+
+    fetch("https://heleno.dev/php/update-comments.php", {
+        method: "POST",
+        body: JSON.stringify(dataComment)
+    });
+    
+    //comentar.reset();
+
+    get();
+
+});
+</script>
+</body>
+</html>

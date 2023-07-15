@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex">
+    <link rel="stylesheet" href="main.css">
+    <title>ADMINISTRAÇÃO</title>
+</head>
+<body>
+    <div class="comments">
+        <h2>COMENTÁRIOS DO BLOG</h2>
+        <div class="comments-response">
+
+        </div>
+        <button class="search-comments">Buscar comentários</button>
+    </div>
+</body>
+<!--<script src="index.js"></script>-->
+<script>
+
+async function getGloogleAnalytics() {
+        
+  let response = await fetch("https://clicky.com/?site_id=101330379&sitekey=eac397bc9a744d3f")
+  
+  var dataResponseAnalytics = await response
+  
+  console.log(dataResponseAnalytics)
+
+
+  if(response.status == 200){
+
+      console.log(dataResponseAnalytics)
+
+      return dataResponseAnalytics
+      
+  }
+
+}getGloogleAnalytics();
+</script>
+</html>
