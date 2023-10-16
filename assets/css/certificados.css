@@ -3,7 +3,7 @@
     position: relative;
     width: 100%;
     /* background-color: var(--cor-primaria); */
-    padding-bottom: 50px;
+    padding: 1rem 1rem 5rem 1rem;
 }
 .container-certificados{
     max-width: 1000px;

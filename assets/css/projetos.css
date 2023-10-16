@@ -19,7 +19,7 @@
 }
 .card{
     position: relative;
-    flex: 1 1 300px;
+    flex: 1 1 250px;
     min-height: 250px;
     margin: 15px;
     background-color: hsl(231, 15%, 18%);
@@ -36,6 +36,7 @@
     filter: contrast(70%);
     transition: 250ms ease-in;
     z-index: 1;
+    object-fit: cover;
 }
 .card-text{
     width: 100%;

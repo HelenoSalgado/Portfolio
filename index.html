@@ -120,23 +120,15 @@
       <div class="container-conhecimentos"> 
           <div>
             <i class="fab fa-html5"></i>
-            <h3>HTML</h3>
-            <p>É a linguagem de marcação padrão para a criação de páginas da Web, além do <strong>conteúdo, tem uma parte semântica importante para os mecanismos de busca.</strong></p>
+            <h3>HTML</h3> 
         </div>
         <div>
             <i class="fab fa-css3-alt"></i>
-            <h3>CSS</h3>
-            <p>É a linguagem responsável por estilizar a página web e especificar o layout. <strong>O CSS descreve como os elementos HTML devem ser exibidos.</strong></p>
-        </div>
-        <div>
-            <i class="fas fa-pencil-alt"></i>
-            <h3>Design</h3>
-            <p><strong>É o que dá palatividade ao projeto</strong>. Existem técnicas bem definidas que vai desde o layouts, passando pelo conteúdo até a melhor cor a ser aplicada nas páginas.</p>
+            <h3>CSS</h3>    
         </div>
         <div>
             <i class="fab fa-js"></i>
             <h3>JavaScript</h3>
-            <p>O JavaScript trata das interações com o usuário e <strong>programa o comportamento das páginas da web</strong></p>
         </div>
         <!-- <div>
           <i class="fab fa-ts"></i>
@@ -146,12 +138,10 @@
         <div>
           <i class="fa-brands fa-node"></i>
           <h3>NodeJs</h3>
-          <p>Estou praticando backend com NodeJs na contrução de APIs.</p>
         </div>
         <div>
           <i class="fa-brands fa-vuejs"></i>
           <h3>VueJs</h3>
-          <p>Estou estudando e pratiando VueJs em projetos pessoais.</p>
         </div>
         <!-- <div>
           <i class="fa-solid fa-database"></i>
@@ -161,17 +151,18 @@
         <div>
             <i class="fa-brands fa-wordpress"></i>
             <h3>Wordpress</h3>
-            <p>O wordpress facilita a criação de sites de conteúdo dinâmicos ou <strong>loja virtual com o Woocommerce</strong>.</p>
-        </div>
-        <div>
-          <i class="fa-brands fa-linux"></i>
-          <h3>Linux</h3>
-          <p>Tenho conhecimentos básicos em linux, escolhi o Arch Linux, pois ele tem me desafiado com frequência</strong>.</p>
         </div>
         <div>
           <i class="fa-brands fa-git-alt"></i>
           <h3>Git</h3>
-          <p>O sistema de controle de versão distribuído, o git, permite a manutenção do código e o <strong>trabalho em equipe.</strong></p>
+        </div>
+        <div>
+          <i class="fa-brands fa-linux"></i>
+          <h3>Linux</h3>
+        </div>
+        <div>
+          <i class="fa-brands fa-docker"></i>
+          <h3>Docker</h3>
         </div>
     </div>
   </section>
@@ -193,9 +184,9 @@
          <button onclick="showDivs(-1)"><img src="assets/img/home/seta-para-a-direita.png" alt=""></button>
         </div>
       </div>
-      <a style="margin-top: 3rem; font-size:larger; display:block; text-align: center;" href="https://cursos.alura.com.br/emprega-one/profile/helenosalgado19">
-        Mais <i style="vertical-align: middle; margin-left: .5rem;" class="fa-solid fa-arrow-right"></i>
-      </a>
+      <!-- <a style="margin-top: 3rem; font-size:larger; display:block; text-align: center;" href="https://cursos.alura.com.br/emprega-one/profile/helenosalgado19">
+        <i class="fa-solid fa-plus" style="vertical-align: middle; margin-left: .5rem;" ></i> Mais 
+      </a> -->
     </div>
     <audio preload="auto" class="som-certificados" src="assets/sons/puxado-pop.wav"></audio>
     <!-- <div> Ícones feitos por <a href="https://www.freepik.com" title="Freepik"> Freepik </a> from <a href="https://www.flaticon.com/br/" title="Flaticon">www.flaticon.com'</a></div> -->
@@ -205,7 +196,7 @@
   </svg>
   <section class="info-github" id="github">
     <div class="github-container">
-      <h2>Atividades do GitHub</h2>
+      <h2>Atividades no GitHub</h2>
       <div class="github-atividade">
         <!-- <a href="https://github.com/HelenoSalgado"> --> 
           <div>
@@ -221,13 +212,6 @@
             <p>O objetivo é aprender o básico e essêncial para desenvolver um sistema completo, estou me especializando em React, Node e MongoDB. Para não ficar aborrecido, vou aprendendo outras coisinhas também.</p>
           </div>
         </div>
-        <button class="empurravel">
-          <span class="sombra"></span>
-          <span class="borda"></span>
-          <span class="frente">
-            <a href="https://github.com/HelenoSalgado/">GitHub<i class="fab fa-github"></i></a>
-          </span>
-        </button> 
         <!-- <button><a href="https://github.com/HelenoSalgado/">GitHub<i class="fab fa-github inclina"></i></a></button> -->
       </div>
     </section>
@@ -352,7 +336,8 @@
           https://www.joshwcomeau.com/_next/image/?url=%2Fimages%2Fshadow-palette%2Fslopes.png&w=3840&q=75
         -->
         <span class="luzes"></span><span class="luzes"></span><span class="luzes"></span><span class="luzes"></span><span class="luzes"></span><span class="luzes"></span><span class="luzes"></span><span class="luzes"></span><span class="luzes"></span><span class="luzes"></span><span class="luzes"></span><span class="luzes"></span><span class="luzes"></span><span class="luzes"></span><span class="luzes"></span>
-        <p class="mensagem-contato">Posso ajudá-lo(a) em alguma coisa? mande-me uma mensagem, responderei o mais rápido possível.</p>
+        <div class="container-contato">
+        <p class="mensagem-contato">Posso ajudá-lo(a) em algum projeto?</p>
         <div class="contato" id="contato">
           <form action="" method="post">
             <label for="nome">
@@ -376,6 +361,7 @@
             <audio preload="auto" class="button-enviar" src="assets/sons/button-mola.wav"></audio>
             <input type="hidden" name="_captcha" value="false">
           </form>
+      </div>
       </div>
         <div class="copy">
           <a href="https://heleno.dev/blog">BLOG</a>

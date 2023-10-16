@@ -46,16 +46,3 @@
 .weve-github{
     background-color: var(--cor-primaria);
 }
-.github-container button{
-    display: block;
-    margin: 2rem auto;
-}
-.github-container button .frente{
-    padding: 10px 10px;
-}
-.github-container button a{
-    color: #eee;
-}
-.github-container button a i{
-    margin-left: .3rem;
-}

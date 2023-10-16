@@ -15,27 +15,23 @@
 }
 .container-conhecimentos div{
     flex: 1 1 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: .5rem;
+    align-items: center;
     background-color: var(--cor-primaria);
     margin: 15px;
-    padding: 10px;
+    padding: 2rem;
     border-radius: 7px;
     box-shadow: var(--shadow-elevation-medium);
 }
-.container-conhecimentos div i{
+.container-conhecimentos div i, .container-conhecimentos div h3{
     font-size: 2rem;
     background: -webkit-linear-gradient(right, hsl(283, 100%, 45%) 60%, hsl(283, 100%, 60%));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     
-}
-.container-conhecimentos div h3{
-    font-size: 2rem;
-    background: -webkit-linear-gradient(right,hsl(283, 100%, 45%) 60%, hsl(283, 100%, 60%));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-.container-conhecimentos p{
-    color: var(--cor-font);
 }
 .weve-conhecimentos{
     background-color: var(--cor-primaria);
