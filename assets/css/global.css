@@ -132,3 +132,40 @@ a{
 .empurravel:focus:not(:focus-visible) {
   outline: none;
 }
+
+.loading {
+  display: block;
+  width: 4rem;
+  height: 4rem;
+  margin: auto;
+  /* border: 2px solid var(--bkg-dark-contrast); */
+  border-radius: 50%;
+}
+
+.loading::before {
+  position: absolute;
+  content: '';
+  width: 4rem;
+  height: 4rem;
+  border-top: 2px solid var(--cor-destaque);
+  border-radius: 50%;
+  animation: loading 700ms infinite ease-in-out;
+}
+
+@keyframes loading {
+  0% {
+    border-top: 4px solid var(--cor-destaque);
+  }
+
+  25% {
+    border-right: 4px solid var(--cor-destaque);
+  }
+
+  50% {
+    border-bottom: 4px solid var(--cor-destaque);
+  }
+
+  75% {
+    border-left: 4px solid var(--cor-destaque);
+  }
+}
