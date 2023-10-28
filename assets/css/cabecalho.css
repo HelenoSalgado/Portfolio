@@ -33,6 +33,7 @@ header {
     justify-content: space-evenly;
     max-width: 1200px;
     margin: auto;
+    z-index: 2;
 }
 .banner{
     position: relative;
@@ -44,8 +45,7 @@ header {
     padding: .5rem;
     color: #fff;
     border: 1px solid transparent;
-    border-radius: 5px;
-    z-index: 2;
+    border-radius: 5px; 
 }
 .banner h1 {
     width: 100%;
@@ -92,7 +92,6 @@ header {
 .img-wrapper {
     max-width: 500px;
     padding: 20px;
-    z-index: 1;
 }
 .img-wrapper img {
     margin-top: 3.7rem;
