@@ -10,4 +10,9 @@ Views.buttons();
 
 Views.slideCertifications();
 
+// Fixando primeiro slide
+Views.slideDivs(1);
+
+Views.projects();
+
 Views.sendEmail();

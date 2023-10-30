@@ -16,6 +16,9 @@
 .container-certificados h2{
     color: var(--cor-font);
 }
+/* .slide-certificado{
+    display: block;
+} */
 .certificados{
     position: relative;
     max-width: 700px;
