@@ -24,7 +24,7 @@
             border-radius: 10px;
             overflow: hidden;
 
-            & .card-capa {
+            & img {
                 position: absolute;
                 width: 100%;
                 min-height: 100%;
@@ -85,8 +85,8 @@
 
             &:hover{
 
-                & .card-capa{
-                    filter: opacity(0);
+                & img{
+                    filter: opacity(0.1);
                 }
             }
         }
