@@ -26,8 +26,14 @@
     border-radius: 7px;
     box-shadow: var(--shadow-elevation-medium);
 }
-.container-conhecimentos div i, .container-conhecimentos div h3{
-    font-size: 2rem;
+.container-conhecimentos div > svg{
+    width: 2.3rem;
+    fill: hsl(283, 100%, 45%);
+}
+.container-conhecimentos div > img{
+    fill: blueviolet;
+}
+.container-conhecimentos div h3{
     background: -webkit-linear-gradient(right, hsl(283, 100%, 45%) 60%, hsl(283, 100%, 60%));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;

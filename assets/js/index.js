@@ -1,18 +1,15 @@
 import Views from './Views.js';
+import sendEmail from './sendEmail.js';
 
 Views.activeHamburguer();
 
-Views.button_0();
-
 Views.sound();
-
-Views.buttons();
 
 Views.slideCertifications();
 
 // Fixando primeiro slide
 Views.slideDivs(1);
 
-Views.projects();
+sendEmail();
 
-Views.sendEmail();
+Views.buttonSoud();

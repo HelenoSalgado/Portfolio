@@ -1,84 +1,38 @@
 class Views {
-    
-    #hamburguer = document.querySelector('.menu-hamburguer');
-    //cursor = document.querySelector('.cursor');
-    #button = document.querySelectorAll('.empurravel');
-    #buttons = document.querySelectorAll('.botao-inclina');
-    #icone = document.querySelectorAll('.icone-inclina');
-    #cardProjects = document.querySelectorAll('.card');
-    #imgProject = document.querySelectorAll(".card-capa");
-    #textFocus = document.querySelectorAll('.card-text');
-    desenho = document.querySelector('body');
-    #send = document.querySelector('form button');
-    #somMenuOn = document.querySelector('.som-menu-on');
-    #somMenuOf = document.querySelector('.som-menu-of');
-    #soundCertificates = document.querySelector('.som-certificados');
-    #buttonsCertificates = document.querySelector('.slide-button');
-    #soundProjects = document.querySelector('.som-projetos');
-    #soundSend = document.querySelector('.button-enviar');
-    #volume = document.querySelector(".logo i");
-    #soundVolume = document.querySelector(".som-volume");
-    #x = document.querySelectorAll(".slide-certificado");
+    desenho = document.querySelector('header');
     #iVolume = 0;
     #slideIndex = 1;
 
+    #contentIconOf = "M320 64c0-12.6-7.4-24-18.9-29.2s-25-3.1-34.4 5.3L131.8 160H64c-35.3 0-64 28.7-64 64v64c0 35.3 28.7 64 64 64h67.8L266.7 471.9c9.4 8.4 22.9 10.4 34.4 5.3S320 460.6 320 448V64z";
+
+    #contentIconOn = "M301.1 34.8C312.6 40 320 51.4 320 64V448c0 12.6-7.4 24-18.9 29.2s-25 3.1-34.4-5.3L131.8 352H64c-35.3 0-64-28.7-64-64V224c0-35.3 28.7-64 64-64h67.8L266.7 40.1c9.4-8.4 22.9-10.4 34.4-5.3zM412.6 181.5C434.1 199.1 448 225.9 448 256s-13.9 56.9-35.4 74.5c-10.3 8.4-25.4 6.8-33.8-3.5s-6.8-25.4 3.5-33.8C393.1 284.4 400 271 400 256s-6.9-28.4-17.7-37.3c-10.3-8.4-11.8-23.5-3.5-33.8s23.5-11.8 33.8-3.5z";
+
 
   activeHamburguer() {
-    this.#hamburguer.addEventListener('click', () => {
-      let menuActive = document.querySelector('.container').classList.toggle('show-menu');
+    document.querySelector('.menu-hamburguer').addEventListener('click', () => {
+      let menuActive = document.querySelector('.menu-hamburguer').classList.toggle('show-menu');
+      document.querySelector('.sidebar').classList.toggle('sidebarVisible');
       menuActive;
 
       if (menuActive) {
         if (this.#iVolume == 0) {
-          this.#somMenuOn.play();
+          new Audio('assets/sons/puxado.wav').play();
         }
         this.desenho.addEventListener('mousemove', this.trailMouse);
       } else {
         if (this.#iVolume == 0) {
-          this.#somMenuOf.play();
+          new Audio('assets/sons/transicao.wav').play();
         }
         this.desenho.removeEventListener('mousemove', this.trailMouse);
       }
 
-    })
-  }
-
-  button_0() {
-    this.#button[0].addEventListener("click", () => {
-      if (this.#iVolume == 0) {
-        this.#soundSend.play();
-      }
-    })
-  }
-
-  button_1() {
-    this.#button[1].addEventListener("click", () => {
-      const urlCv = "https://heleno.dev/assets/doc/curriculo-heleno-salgado.pdf";
-      if (this.#iVolume == 0) {
-        this.#soundSend.play();
-      }
-      setTimeout(() => {
-        window.open(urlCv, '_blank noopener noreferrer').focus();
-      }, 500);
-    })
-  }
-
-  button_2() {
-    this.#button[2].addEventListener("click", () => {
-      if (this.#iVolume == 0) {
-        this.#soundSend.play();
-      }
-    })
+    });
   }
 
   trailMouse(event) {
-
-    let header = document.querySelector('header');
     let cursor = document.createElement('span');
     cursor.classList.add('cursor');
-
-    header.appendChild(cursor);
-
+    
     let x = event.clientX;
     let y = event.clientY;
 
@@ -87,160 +41,78 @@ class Views {
     setTimeout(() => {
       cursor.remove();
     }, 500);
+    
+    this.appendChild(cursor);
   }
 
   sound() {
-    this.#volume.addEventListener("click", () => {
-
+    document.querySelector(".volume").addEventListener("click", () => {
       if (this.#iVolume == 0) {
-        this.#volume.classList.add("fa-volume-xmark");
         this.#iVolume++;
+        this.renderSoundIcon(this.#contentIconOf);
       } else {
-        this.#soundVolume.play();
-        this.#volume.classList.remove("fa-volume-xmark");
+        new Audio('assets/sons/pop.wav').play();
         this.#iVolume--;
+        this.renderSoundIcon(this.#contentIconOn);
       }
-    })
-  }
-
-  projects() {
-    this.#cardProjects.forEach((card) => {
-      card.addEventListener('mouseenter', () => {
-        this.#imgProject.forEach((img) => {
-          img.addEventListener('mouseenter', () => {
-            if (window.innerWidth < 660) {
-              if (this.#iVolume == 0) {
-                this.#soundProjects.play();
-              }
-            }
-            img.classList.add("zoom");
-            setTimeout(() => {
-              img.style.display = "none";
-            }, 300);
-          })
-        })
-      })
-      card.addEventListener('mouseleave', () => {
-        this.#imgProject.forEach((img) => {
-          img.style.display = "block";
-          img.classList.remove("zoom");
-        })
-      })
-    })
-  }
-
-  buttons() {
-    this.#buttons.forEach((button) => {
-      button.addEventListener('mouseover', () => {
-        icone.forEach((icone) => {
-          icone.classList.add("inclina-icone");
-
-          button.addEventListener('mouseout', () => {
-            icone.classList.remove("inclina-icone");
-          })
-        });
-      })
     })
   }
 
   slideCertifications() {
-
-    this.#buttonsCertificates.children[0].addEventListener('click', () => {
+    document.querySelector('.slide-button').children[0].addEventListener('click', () => {
       this.showDivs(1);
-    })
-
-    this.#buttonsCertificates.children[1].addEventListener('click', () => {
+    });
+    document.querySelector('.slide-button').children[1].addEventListener('click', () => {
       this.showDivs(-1);
-    })
-
+    });
   }
 
   showDivs(n) {
-
     this.slideDivs(this.#slideIndex);
-
-    if (this.#iVolume == 0)
-      this.#soundCertificates.play();
-
+    if (this.#iVolume == 0) new Audio('assets/sons/puxado-pop.wav').play();
     this.slideDivs(this.#slideIndex += n);
   }
 
   slideDivs(n) {
-    if (n > this.#x.length) { this.#slideIndex = 1 }
-    if (n < 1) { this.#slideIndex = this.#x.length }
-    for (let i = 0; i < this.#x.length; i++) {
-      this.#x[i].style.display = "none";
+    const slides = document.querySelectorAll(".slide-certificado");
+    if (n > slides.length) { this.#slideIndex = 1 }
+    if (n < 1) { this.#slideIndex = slides.length }
+    for (let i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
     }
-    this.#x[this.#slideIndex - 1].style.display = "block";
-    this.#x[this.#slideIndex - 1].style.opacity = "0";
-    this.#x[this.#slideIndex - 1].style.transition = ".3s ease-in";
+    slides[this.#slideIndex - 1].style.display = "block";
+    slides[this.#slideIndex - 1].style.opacity = "0";
+    slides[this.#slideIndex - 1].style.transition = ".3s ease-in";
 
     setTimeout(() => {
-      this.#x[this.#slideIndex - 1].style.opacity = "10";
+      slides[this.#slideIndex - 1].style.opacity = "10";
     }, 100);
   }
 
-  sendEmail() {
-    this.#send.addEventListener("click", (event) => {
+  renderSoundIcon(content) {
+    const fixedBar = document.querySelector('.fixed-bar');
+    const iconSvg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+    const iconPath = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+  
+    iconSvg.setAttribute('xmlns', 'http://www.w3.org/2000/svg');
+    iconSvg.setAttribute('viewBox', '0 0 448 512');
+    iconPath.setAttribute('d', content);
+    iconSvg.appendChild(iconPath);
+    iconSvg.classList.add('volume');
 
-      event.preventDefault();
-
-      if (this.#iVolume == 0) {
-        this.#soundSend.play();
-      }
-
-      const contact = {
-        name: document.querySelector(".input-nome").value,
-        email: document.querySelector(".input-email").value,
-        text: document.querySelector(".input-texto").value,
-        alert: document.querySelector(".mensagem-alerta")
-      }
-
-      contact.alert.innerHTML = "";
-      contact.alert.classList.remove("mensagem-sucesso");
-
-      const message = [
-        'Por favor, preencha todos os campos.',
-        'Obrigado, email enviado com Sucesso.',
-        'Ops... Parece que seu e-mail está incompleto'
-      ]
-
-      if (((contact.name || contact.email) == "") || contact.text == "") return contact.alert.innerHTML += message[0];
-
-      const verifyEmail = /\S+@\S+\.\S+/;
-
-      if (!verifyEmail.test(contact.email)) return contact.alert.innerHTML += message[2];
-
-      (async () => {
-        await fetch('https://old-cloud-9768.fly.dev/user/email', {
-          method: 'POST',
-          headers: {
-            "Content-Type": "application/json"
-          },
-          body: JSON.stringify(contact)
-        }).then(async (res) => {
-
-          if (res.status == 201) {
-            const form = document.querySelector("form");
-            form.reset();
-
-            contact.alert.innerHTML += message[1];
-            contact.alert.classList.add("mensagem-sucesso");
-
-            return;
-          }
-
-          let result = await res.json();
-          contact.alert.innerHTML += result.message[0];
-
-        }).catch(err => {
-          contact.alert.innerHTML += err.message;
-        });
-
-      })();
-
-    });
+    document.querySelector('.volume').remove();
+    fixedBar.appendChild(iconSvg);
+  
   }
+
+  buttonSoud(){
+    document.querySelectorAll('.empurravel').forEach(button => {
+      button.addEventListener("click", () => {
+        if (this.#iVolume == 0) new Audio('assets/sons/button-mola.wav').play();
+      })
+    })
+  }
+  
 }
 
 export default new Views();

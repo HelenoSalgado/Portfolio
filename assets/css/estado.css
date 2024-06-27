@@ -1,15 +1,6 @@
-.menu-link:hover, 
-.social-media i:hover, 
-.media-sociais i:hover{
-    color: #fff;
-    text-shadow: 2px 2px 7px #fff;
-}
 .inclina-icone{
     transform: rotateZ(20deg) scale(1.2, 1.2);
     text-shadow: 5px 5px 12px hsl(0, 0%, 100%);
-}
-.banner img:hover{
-    box-shadow: 2px 2px 5px rgb(255, 255, 255);
 }
 .slide-button button img:hover{
     height: 70%;
