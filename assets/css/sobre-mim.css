@@ -1,52 +1,57 @@
 /* Sobre mim */
-.sobre-mim{
-    position: relative;
-    margin: -5px 0 ;
-    background-color: var(--cor-secundaria);
-    background-image: url("/assets/img/home/codigo-fonte-4733.gif");
-    background-size: cover;
-    background-position: center center;
-    padding: 50px 0;
-}
-.sobre-mim::after{
-    position: absolute;
-    content: "";
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 100%;
-    height: 100%;
-    background-image: radial-gradient(transparent, var(--cor-secundaria) 70%);
-}
-@keyframes backgroundMove {
-    0%{
-       background-position: 0% 50%;
-    }
-    50%{
-       background-position: 100% 50%;
-    }
-    100%{
-       background-position: 0% 50%;
-    }
-}
 .sobre-mim-container{
     position: relative;
-    max-width: 800px;
-    margin: 8rem auto;
-    z-index: 1;
-}
-.sobre-mim-container div:first-child{
-    position: relative;
-    width: 100%;
-    height: auto;
-    border-radius: 7px 7px 0 0;
-}
-.sobre-mim-container h3{
-    text-align: center;
-    font-size: 1.5rem;
-    margin-bottom: 7rem;
-    color: var(--cor-font);
-}
-.sobre-mim-container div:last-child{
-    position: relative;
+    margin: -7px 0 ;
+    background-color: var(--cor-secundaria);
+    padding: 50px 0;
+
+    & h2{
+        text-align: center;
+        margin-bottom: 7rem;
+        color: var(--cor-font);
+    }
+
+    & .video {
+        position: relative;
+        max-width: 600px;
+        margin: auto;
+        height: 300px;
+        overflow: hidden;
+
+        & video{
+            display: block;
+            object-fit: cover;
+        }
+
+        & .loading {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 4rem;
+            height: 4rem;
+            border-radius: 50%;
+          
+            &::before {
+              position: absolute;
+              content: '';
+              width: 4rem;
+              height: 4rem;
+              border-top: 2px solid var(--cor-destaque);
+              border-radius: 50%;
+              animation: loading 700ms infinite ease-in-out;
+            }
+        }
+
+        &::before{
+            position: absolute;
+            content: "";
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 100%;
+            height: 100%;
+            background-image: radial-gradient(#1e252e8f, var(--cor-secundaria) 70%);
+        }
+    }
 }

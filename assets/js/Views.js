@@ -59,10 +59,10 @@ class Views {
   }
 
   slideCertifications() {
-    document.querySelector('.slide-button').children[0].addEventListener('click', () => {
+    document.querySelector('.slides-button').children[0].addEventListener('click', () => {
       this.showDivs(1);
     });
-    document.querySelector('.slide-button').children[1].addEventListener('click', () => {
+    document.querySelector('.slides-button').children[1].addEventListener('click', () => {
       this.showDivs(-1);
     });
   }

@@ -2,8 +2,6 @@
 <html lang="pt-br">
 <head>
   <meta charset="UTF-8">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, user-scalable=no">
   <meta name="author" content="Heleno Salgado">
@@ -14,22 +12,22 @@
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://heleno.dev/" />
   <meta property="og:image" content="https://heleno.dev/img-icon/android-chrome-512x512.png" />
-  <!-- Fontes do google fontes. -->
-  <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,300;1,300&family=Rubik:wght@700&display=swap" rel="stylesheet">
   <!-- CSS local. -->
-  <link rel="stylesheet" href="assets/css/main.css">
+  <link rel="stylesheet" href="assets/css/main.min.css">
   <!-- Fim -->
   <link rel="apple-touch-icon" sizes="180x180" href="assets/img-icon/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="assets/img-icon/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="assets/img-icon/favicon-16x16.png">
   <link rel="manifest" href="assets/img-icon/site.webmanifest">
-  <!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
-  <!-- Som baixado de https://freesound.org/s/277031/ -->
+  <!--
+    * Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.
+    * Som baixado de https://freesound.org/s/277031/ 
+  -->
 </head>
 <body class="container" style="background-color: #14171a;">
   <header id="home">
     <div class="fixed-bar">
-      <img src="assets/img/hsl-logo-transparent-150px.png" alt="logo">
+      <img src="assets/img/hsl-logo-transparent.webp" alt="logo">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="volume"><path d="M301.1 34.8C312.6 40 320 51.4 320 64V448c0 12.6-7.4 24-18.9 29.2s-25 3.1-34.4-5.3L131.8 352H64c-35.3 0-64-28.7-64-64V224c0-35.3 28.7-64 64-64h67.8L266.7 40.1c9.4-8.4 22.9-10.4 34.4-5.3zM412.6 181.5C434.1 199.1 448 225.9 448 256s-13.9 56.9-35.4 74.5c-10.3 8.4-25.4 6.8-33.8-3.5s-6.8-25.4 3.5-33.8C393.1 284.4 400 271 400 256s-6.9-28.4-17.7-37.3c-10.3-8.4-11.8-23.5-3.5-33.8s23.5-11.8 33.8-3.5z"/></svg>
       <div class="menu-hamburguer">
         <span></span><span></span><span></span>
@@ -64,7 +62,7 @@
       </div> 
       <div class="img-wrapper">
        <picture>
-          <img src="assets/img/home/heleno-val-picture.webp" alt="">
+          <img src="assets/img/home/heleno-val-picture.webp" alt="Heleno Salgado">
        </picture>
       </div> 
     </div>
@@ -97,11 +95,14 @@
   <svg class="weve-header" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 150">
     <path fill="#14171a" fill-opacity="1" d="M0,64L80,53.3C160,43,320,21,480,21.3C640,21,800,43,960,53.3C1120,64,1280,64,1360,64L1440,64L1440,0L1360,0C1280,0,1120,0,960,0C800,0,640,0,480,0C320,0,160,0,80,0L0,0Z"></path>
   </svg>
-  <section class="sobre-mim" id="sobre">
-    <div class="sobre-mim-container">
-        <h3>Experiência Profissional</h3>
-        <div class="loading"></div>
-      </div>
+  <section class="sobre-mim-container" id="sobre">
+        <h2>Experiência Profissional</h2>
+        <div class="video">
+          <video width="1000" height="auto" autoplay muted loop playsinline>
+            <source src="assets/videos/4733-179738669_tiny.mp4" type="video/mp4">
+          </video>
+          <div class="loading"></div>
+        </div>
     </section>
     <section class="secao-conhecimentos" id="conhecimentos"> 
       <h2>Tecnologias</h2>
@@ -151,28 +152,25 @@
     <svg class="weve-conhecimentos" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 150">
       <path fill="#1e252e" fill-opacity="1" d="M0,64L80,53.3C160,43,320,21,480,21.3C640,21,800,43,960,53.3C1120,64,1280,64,1360,64L1440,64L1440,0L1360,0C1280,0,1120,0,960,0C800,0,640,0,480,0C320,0,160,0,80,0L0,0Z"></path>
     </svg>
-  <section class="secao-certificados" id="certificados">
-    <div class="container-certificados">
+  <section class="container-certificados" id="certificados">
       <h2>Certificados</h2>
       <div class="certificados">
-         <div class="certificado">
+         <div>
             <img class="slide-certificado" src="assets/img/certificados/heleno-salgado-lopes-formacao-alura-conclusao.webp" alt="">
          </div>
-         <div class="certificado">
+         <div>
             <img class="slide-certificado" src="assets/img/certificados/heleno-salgado-lopes-formacao-conclusao-verso.webp" alt="">
          </div>
-         <div class="slide-button">
-         <button><img src="assets/img/home/seta-a-esquerda.png" alt=""></button>
-         <button><img src="assets/img/home/seta-para-a-direita.png" alt=""></button>
-        </div>
       </div>
-    </div>
+      <div class="slides-button">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.2 288 416 288c17.7 0 32-14.3 32-32s-14.3-32-32-32l-306.7 0L214.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"/></svg>
+      </div>
   </section>
   <svg class="weve-certificados" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 150">
     <path fill="#14171a" fill-opacity="1" d="M0,64L80,53.3C160,43,320,21,480,21.3C640,21,800,43,960,53.3C1120,64,1280,64,1360,64L1440,64L1440,0L1360,0C1280,0,1120,0,960,0C800,0,640,0,480,0C320,0,160,0,80,0L0,0Z"></path>
   </svg>
-  <section class="info-github" id="github">
-    <div class="github-container">
+  <section class="github-container" id="github">
       <h2>Atividades no GitHub</h2>
       <div class="github-atividade">
           <div>
@@ -188,7 +186,6 @@
             <p>O objetivo é aprender o básico e essêncial para desenvolver um sistema completo, estou me especializando no ecossistema NodeJs. Para não ficar aborrecido, vou aprendendo outras coisinhas também.</p>
           </div>
         </div>
-      </div>
     </section>
     <svg class="weve-github" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 150">
       <path fill="#1e252e" fill-opacity="1" d="M0,64L80,53.3C160,43,320,21,480,21.3C640,21,800,43,960,53.3C1120,64,1280,64,1360,64L1440,64L1440,0L1360,0C1280,0,1120,0,960,0C800,0,640,0,480,0C320,0,160,0,80,0L0,0Z"></path>
@@ -271,7 +268,7 @@
         <div class="copy">
           <a href="https://heleno.dev/blog">BLOG</a>
           <p>&copy; 2022 Heleno Salgado Lopes | Obrigado pela visita.</p>
-          <img style="width: 40px; vertical-align: middle; background-color: #eee; border-radius: 7px;" src="assets/img/hsl-logo-transparent-150px.png" alt="">
+          <img style="width: 40px; vertical-align: middle; background-color: #eee; border-radius: 7px;" src="assets/img/hsl-logo-transparent.webp" alt="logo">
         </div>
         <a href="#home" class="link-topo">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path d="M214.6 41.4c-12.5-12.5-32.8-12.5-45.3 0l-160 160c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L160 141.2V448c0 17.7 14.3 32 32 32s32-14.3 32-32V141.2L329.4 246.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3l-160-160z"/></svg>
