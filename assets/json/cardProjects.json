@@ -1,0 +1,26 @@
+[
+    {
+        "id": "1",
+        "title": "Orar e Labutar", 
+        "languages": "HTML, CSS, JS" ,
+        "description": "Site de caráter religioso com várias páginas e posts por categorias, menu animado e aplicações diversas.",
+        "image": "/img/home/orar-e-labutar.webp",
+        "href": "https://orarelabutar.com"
+    },
+    {
+        "id": "2",
+        "title": "Botão de Curtir", 
+        "languages": "HTML, CSS, JS, PHP, SQL" ,
+        "description": "Um desafio que fiz para desenvolver habilidades de lógica de programação e FECTH API do JavaScript.",
+        "image": "/img/home/like.webp",
+        "href": "https://helenosalgado.github.io/Estudos/exercicios-javascript/botao-de-curtir"
+    },
+    {
+        "id": "3",
+        "title": "Encriptador de Texto", 
+        "languages": "HTML, CSS, JS" ,
+        "description": "Desafio desenvolvido como parte das atividades do programa One - Oracle Next Education.",
+        "image": "/img/home/cybersecurity-6673412_640.webp",
+        "href": "https://helenosalgado.github.io/Challenge-alura-oracle/encriptador-texto"
+    }
+]

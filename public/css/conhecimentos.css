@@ -1,0 +1,45 @@
+/* Seção conhecimentos */
+.secao-conhecimentos{
+    background-color: var(--cor-secundaria);
+    padding: 50px 0;
+    margin-top: -15px;
+}
+.secao-conhecimentos h2{
+    text-align: center;
+    color: var(--cor-font);
+}
+.container-conhecimentos{
+    max-width: 1000px;
+    margin: 50px auto; 
+    display: flex;
+    flex-wrap: wrap;
+}
+.container-conhecimentos div{
+    flex: 1 1 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: .5rem;
+    align-items: center;
+    background-color: var(--cor-primaria);
+    margin: 15px;
+    padding: 2rem;
+    border-radius: 7px;
+    box-shadow: var(--shadow-elevation-medium);
+}
+.container-conhecimentos div > svg{
+    width: 2.3rem;
+    fill: hsl(283, 100%, 45%);
+}
+.container-conhecimentos div > img{
+    fill: blueviolet;
+}
+.container-conhecimentos div h3{
+    background: -webkit-linear-gradient(right, hsl(283, 100%, 45%) 60%, hsl(283, 100%, 60%));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    
+}
+.weve-conhecimentos{
+    background-color: var(--cor-primaria);
+}

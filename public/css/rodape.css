@@ -1,0 +1,64 @@
+/* Seção de Rodapé */
+footer {
+    position: relative;
+    position: relative;
+    padding: .7rem;
+    width: 100%;
+    color: var(--cor-font);
+    overflow: hidden;
+
+    & .copy{
+        margin-top: 100px;
+        width: 100%;
+        text-align: center;
+        font-family: var(--font-secundary);
+
+        & p{
+            font-size: 1rem;
+            padding: 16px 0;
+        }
+
+        & a{
+            border-left: 3px solid var(--cor-destaque);
+            padding-left: 7px;
+            text-shadow: .5px .5px 0 #fff;
+        }
+
+    }
+
+    & .link-topo{
+        position: absolute;
+        right: 10px;
+        bottom: 20px;
+
+        & svg{
+            width: 2.5rem;
+            fill: var(--cor-destaque);
+            background: var(--cor-secundaria);
+            padding: .3rem .5rem;
+            border-radius: 50%;
+            z-index: 1;
+        }
+    }
+
+    & .background-footer {
+        position: absolute;
+        width: 100%;
+        inset: auto 0 0 0;
+        z-index: -1;
+    }
+}
+@keyframes piscar {
+    0%{
+        transform: scale(0.0);
+    }
+    50%{
+        transform: scale(1.1);
+    }
+    0%{
+        transform: scale(0.0);
+    }
+}
+.fa-arrow-up{
+    text-shadow: .1px .1px 1px #fff;
+}
