@@ -7,4 +7,5 @@ error/
 form/
 links/
 php/
-node_modules
+node_modules/
+dist/
