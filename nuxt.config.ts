@@ -1,3 +1,5 @@
+import { defineNuxtConfig } from "nuxt/config";
+
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   devtools: { enabled: false },
@@ -7,7 +9,10 @@ export default defineNuxtConfig({
       publicDir: 'dist',
     },
     baseURL: process.env.NUXT_APP_BASE_URL,
-    minify: true
+    minify: true,
+    prerender: {
+      failOnError: false
+    }
   },
   experimental: {
     renderJsonPayloads: false,
