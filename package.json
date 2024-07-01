@@ -1,7 +1,14 @@
 {
-  "name": "nuxt-app",
-  "private": true,
+  "name": "salop-web",
+  "private": "false",
+  "author": {
+    "name": "Heleno Salgado",
+    "url": "http://heleno.dev"
+  },
   "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
   "scripts": {
     "build": "nuxt build",
     "dev": "nuxt dev",

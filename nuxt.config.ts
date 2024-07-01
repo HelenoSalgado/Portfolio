@@ -11,8 +11,10 @@ export default defineNuxtConfig({
     baseURL: process.env.NUXT_APP_BASE_URL,
     minify: true,
     prerender: {
+      crawlLinks: true,
       failOnError: false
-    }
+    },
+    static: true
   },
   experimental: {
     renderJsonPayloads: false,
