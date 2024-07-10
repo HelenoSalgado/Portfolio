@@ -2,16 +2,13 @@
 import slides from 'assets/json/slidesCertificate.json';
 import projects from 'assets/json/cardProjects.json';
 
-useSeoMeta({
+definePageMeta({
+  title: 'Portfólio',
   description: 'Tenha seu site ou sistema web personalizado e otimizado',
-  ogTitle: 'Portfólio',
-  ogDescription: 'Tenha seu site ou sistema web personalizado e otimizado',
-  ogImage: '/img/hsl-logo.png',
+  image: '/img/hsl-logo.png',
   ogType: 'website',
 });
-definePageMeta({
-  title: 'Portfólio'
-});
+
 </script>
 <template>
   <DivisionBottom/>

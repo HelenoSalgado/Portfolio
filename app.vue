@@ -12,13 +12,21 @@ useHead({
 });
 
 useSeoMeta({
-  ogTitle: `${title.value}`,
-  twitterTitle: `${title.value}`,
-  author: 'Heleno Salgado',
   ogLocale: 'pt-BR',
+  author: 'Heleno Salgado',
   ogUrl: `${pub.site.url + route.path}`,
+  title: `${title.value}`,
+  description: `${route.meta.description}`,
+  ogTitle: `${title.value}`,
+  ogDescription: `${route.meta.description}`,
+  ogImage: `${pub.site.url + route.meta.image}`,
+  twitterTitle: `${title.value}`,
+  twitterDescription: `${route.meta.description}`,
+  twitterImage: `${pub.site.url + route.meta.image}`,
   twitterCard: 'summary_large_image',
-  twitterCreator: '@HelenoSalgado'
+  twitterCreator: '@HelenoSalgado',
+  ogType: `${route.meta.ogType}`,
+  type: `${route.meta.ogType}`,
 });
 </script>
 <template>

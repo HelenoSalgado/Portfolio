@@ -18,7 +18,9 @@
   },
   "dependencies": {
     "@nuxt/image": "^1.7.0",
-    "nuxt": "^3.12.2",
     "vue": "latest"
+  },
+  "devDependencies": {
+    "nuxt": "^3.12.3"
   }
 }

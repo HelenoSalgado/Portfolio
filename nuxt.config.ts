@@ -1,9 +1,7 @@
 import { defineNuxtConfig } from "nuxt/config";
 
-// https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  devtools: { enabled: false },
-  //ssr: false,
+  ssr: false,
   nitro: {
     output: {
       publicDir: 'dist',
@@ -13,14 +11,16 @@ export default defineNuxtConfig({
     prerender: {
       crawlLinks: true,
       failOnError: false
-    },
-    static: true
+    }
   },
+
   experimental: {
     renderJsonPayloads: false,
     payloadExtraction: true
   },
+
   telemetry: false,
+
   runtimeConfig: {
     public: {
       site: {
@@ -29,8 +29,8 @@ export default defineNuxtConfig({
       },
     }
   },
+
   app: {
-    //baseURL: process.env.BASE_URL,
     buildAssetsDir: 'nuxt',
     head: {
       base: {
@@ -42,20 +42,29 @@ export default defineNuxtConfig({
       charset: 'utf-8',
       viewport: 'width=device-width, initial-scale=1',
       meta: [
-        { name: 'theme-color', content: '#14171a'},
-        { name: 'author', content: 'Heleno Salgado' },
+        { name: 'theme-color', content: '#14171a'}
       ],
       link: [
-        {
-          rel: 'stylesheet',
-          href: '/css/main.min.css',
-          type: 'text/css'
-        }
+        { rel: 'icon', href: '/hsl-logo.ico', type:'image/x-icon' }
       ]
     }
   },
-  //css: ['assets/css/main.css'],
-  modules: ['@nuxt/image'],
+
+  $development: {
+    devtools: { enabled: false },
+    css: ['assets/css/main.css']
+  },
+
+  $production: {
+    app: {
+      head: {
+        link: [
+          { rel: 'stylesheet', href: '/css/main.min.css', type: 'text/css' }
+        ]
+      }
+    }
+  },
+
   // image: {
   //   format: ['webp'],
   //   // The screen sizes predefined by `@nuxt/image`:
@@ -69,4 +78,7 @@ export default defineNuxtConfig({
   //     '2xl': 1536
   //   },
   // }
+  modules: ['@nuxt/image'],
+
+  compatibilityDate: '2024-07-09'
 })

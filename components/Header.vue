@@ -2,7 +2,9 @@
     <header id="home">
     <div class="fixed-bar">
       <img src="/img/hsl-logo-transparent.webp" alt="logo">
-      <IconsVolume/>
+      <span class="volume">
+        <IconsVolume/>
+      </span>
       <div class="menu-hamburguer">
         <span></span><span></span><span></span>
       </div>

@@ -1,4 +1,5 @@
 let desenho = document.querySelector("header");
+const boxVolume = document.querySelector(".volume");
 let iVolume = 0;
 let slideIndex = 1;
 
@@ -44,7 +45,8 @@ function trailMouse(event) {
 }
 
 // Ativar|Desativar som
-document.querySelector(".volume").addEventListener("click", () => {
+boxVolume.addEventListener("click", () => {
+  boxVolume.firstChild.remove();
   if (iVolume == 0) {
     iVolume++;
     renderSoundIcon(contentIconOf);
@@ -85,21 +87,17 @@ function slideDivs(n) {
 }
 
 function renderSoundIcon(content) {
-  const fixedBar = document.querySelector(".fixed-bar");
   const iconSvg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
   const iconPath = document.createElementNS(
     "http://www.w3.org/2000/svg",
     "path"
   );
-
   iconSvg.setAttribute("xmlns", "http://www.w3.org/2000/svg");
   iconSvg.setAttribute("viewBox", "0 0 448 512");
   iconPath.setAttribute("d", content);
   iconSvg.appendChild(iconPath);
-  iconSvg.classList.add("volume");
+  boxVolume.appendChild(iconSvg);
 
-  document.querySelector(".volume").remove();
-  fixedBar.appendChild(iconSvg);
 }
 
 document.querySelectorAll(".empurravel").forEach((button) => {
