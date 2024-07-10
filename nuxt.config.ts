@@ -1,7 +1,6 @@
 import { defineNuxtConfig } from "nuxt/config";
 
 export default defineNuxtConfig({
-  ssr: false,
   nitro: {
     output: {
       publicDir: 'dist',
@@ -11,7 +10,8 @@ export default defineNuxtConfig({
     prerender: {
       crawlLinks: true,
       failOnError: false
-    }
+    },
+    static: true
   },
 
   experimental: {
