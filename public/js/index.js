@@ -134,7 +134,7 @@ document.querySelector('form button').addEventListener("click", (event) => {
   if (!verifyEmail.test(contact.email)) return contact.alert.innerHTML += message[2];
 
   (async () => {
-    await fetch('https://old-cloud-9768.fly.dev/user/email', {
+    await fetch('https://utils-production-bed1.up.railway.app/email', {
       method: 'POST',
       headers: {
         "Content-Type": "application/json"
@@ -145,10 +145,8 @@ document.querySelector('form button').addEventListener("click", (event) => {
       if (res.status == 201) {
         const form = document.querySelector("form");
         form.reset();
-
         contact.alert.innerHTML += message[1];
         contact.alert.classList.add("mensagem-sucesso");
-
         return;
       }
 

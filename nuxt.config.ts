@@ -10,8 +10,7 @@ export default defineNuxtConfig({
     prerender: {
       crawlLinks: true,
       failOnError: false
-    },
-    static: true
+    }
   },
 
   experimental: {
@@ -56,6 +55,9 @@ export default defineNuxtConfig({
   },
 
   $production: {
+    nitro: {
+      static: true
+    },
     app: {
       head: {
         link: [
